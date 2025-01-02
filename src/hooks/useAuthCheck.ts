@@ -1,3 +1,4 @@
+/*
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -24,3 +25,4 @@ export function useAuthCheck() {
 
   return { checkAuth };
 }
+*/

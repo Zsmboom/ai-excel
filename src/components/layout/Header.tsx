@@ -2,7 +2,6 @@ import React from 'react';
 import { Menu, X, FileSpreadsheet } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ExcelToolsMenu } from './ExcelToolsMenu';
-import LoginButton from '../auth/LoginButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -24,7 +23,6 @@ const Header = () => {
             <Link to="/about" className="text-gray-600 hover:text-blue-600">About</Link>
             <a href="#pricing" className="text-gray-600 hover:text-blue-600">Pricing</a>
             <a href="#testimonials" className="text-gray-600 hover:text-blue-600">Testimonials</a>
-            <LoginButton />
           </div>
 
           {/* Mobile Menu Button */}
@@ -44,13 +42,12 @@ const Header = () => {
               <Link to="/about" className="text-gray-600 hover:text-blue-600">About</Link>
               <a href="#pricing" className="text-gray-600 hover:text-blue-600">Pricing</a>
               <a href="#testimonials" className="text-gray-600 hover:text-blue-600">Testimonials</a>
-              <LoginButton />
             </div>
           </div>
         )}
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

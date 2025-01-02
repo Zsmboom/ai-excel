@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FileSpreadsheet, Send, Download } from 'lucide-react';
 import { useExcelGeneration } from '../hooks/useExcelGeneration';
-import { useAuthCheck } from '../hooks/useAuthCheck';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { ExcelPreview } from '../components/excel/ExcelPreview';
 import { TableConfig } from '../components/excel/TableConfig';
@@ -18,7 +17,6 @@ export default function Workspace() {
   });
   
   const { generateFromPrompt, loading, error } = useExcelGeneration();
-  const { checkAuth } = useAuthCheck();
   const [result, setResult] = useState<{
     fileName: string;
     blob: Blob;
@@ -26,32 +24,26 @@ export default function Workspace() {
     analysis: AnalysisResult;
   } | null>(null);
 
-  // Restore state from localStorage if available
-  useEffect(() => {
-    const savedState = localStorage.getItem('redirectState');
-    if (savedState) {
-      const { state } = JSON.parse(savedState);
-      if (state?.prompt) setPrompt(state.prompt);
-      if (state?.tableConfig) setTableConfig(state.tableConfig);
-      localStorage.removeItem('redirectState');
-    }
-  }, []);
-
   const handleTemplateSelect = (template: ExcelTemplate) => {
     setPrompt(template.prompt);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Check authentication before proceeding
-    if (!checkAuth({ prompt, tableConfig })) {
-      return;
-    }
-
-    const generationResult = await generateFromPrompt(prompt, tableConfig);
-    if (generationResult) {
-      setResult(generationResult);
+    try {
+      const generationResult = await generateFromPrompt(prompt, tableConfig);
+      console.log('API Response:', generationResult);
+      if (generationResult) {
+        setResult(generationResult);
+      }
+    } catch (error) {
+      console.error('Error generating Excel:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      if (errorMessage.includes('quota')) {
+        alert('API 配额已用完，请稍后再试或联系管理员更新配额。');
+      } else {
+        alert('生成 Excel 文件时出错: ' + errorMessage);
+      }
     }
   };
 
@@ -140,7 +132,7 @@ export default function Workspace() {
                 
                 <div className="bg-white rounded-lg shadow-md p-6">
                   <h2 className="text-xl font-semibold mb-4">Preview</h2>
-                  <ExcelPreview data={result.analysis} />
+                  <ExcelPreview data={result.analysis.data} />
                 </div>
               </div>
             )}

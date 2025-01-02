@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Wrench } from 'lucide-react';
 import { FunctionInput } from '../components/excel/FunctionInput';
 import { FunctionResult } from '../components/excel/FunctionResult';
 import { FunctionUsageInfo } from '../components/excel/FunctionUsageInfo';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { useExcelFunctions } from '../hooks/useExcelFunctions';
-import { useAuthCheck } from '../hooks/useAuthCheck';
 
 export default function ExcelFunctions() {
   const [prompt, setPrompt] = useState('');
@@ -17,27 +16,9 @@ export default function ExcelFunctions() {
     functionType,
     setFunctionType
   } = useExcelFunctions();
-  const { checkAuth } = useAuthCheck();
-
-  // Restore state from localStorage if available
-  useEffect(() => {
-    const savedState = localStorage.getItem('redirectState');
-    if (savedState) {
-      const { state } = JSON.parse(savedState);
-      if (state?.prompt) setPrompt(state.prompt);
-      if (state?.functionType) setFunctionType(state.functionType);
-      localStorage.removeItem('redirectState');
-    }
-  }, [setFunctionType]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Check authentication before proceeding
-    if (!checkAuth({ prompt, functionType })) {
-      return;
-    }
-
     await generateFunction(prompt);
   };
 

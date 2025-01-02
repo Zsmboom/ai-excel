@@ -4,18 +4,16 @@ import type { AnalysisResult, TableConfigOptions } from '../types/excel';
 export function generateExcel(analysis: AnalysisResult, config: TableConfigOptions): Blob {
   const workbook = XLSX.utils.book_new();
 
-  analysis.structure.sheets.forEach(sheet => {
-    let data = [...sheet.data];
+  analysis.data.forEach(sheet => {
+    let data = [...sheet.rows];
 
     // Apply sorting if enabled
-    if (config.enableSorting && sheet.sortedBy) {
-      const { column, direction } = sheet.sortedBy;
+    if (config.enableSorting) {
+      const firstHeader = sheet.headers[0];
       data.sort((a, b) => {
-        const aVal = a[column];
-        const bVal = b[column];
-        return direction === 'asc' ? 
-          (aVal > bVal ? 1 : -1) : 
-          (aVal < bVal ? 1 : -1);
+        const aVal = a[firstHeader];
+        const bVal = b[firstHeader];
+        return aVal > bVal ? 1 : -1;
       });
     }
 
