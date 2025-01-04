@@ -5,6 +5,10 @@ import { useNavigation } from '../../hooks/useNavigation';
 const Hero = () => {
   const { goToWorkspace } = useNavigation();
 
+  const openDemoVideo = () => {
+    window.open('https://www.youtube.com/watch?v=GzjJYMb7JsM&t=1s', '_blank');
+  };
+
   return (
     <section className="pt-32 pb-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-6">
@@ -23,7 +27,10 @@ const Hero = () => {
               Get Started Free
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
-            <button className="flex items-center justify-center border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-blue-600 hover:text-blue-600 transition-colors">
+            <button 
+              onClick={openDemoVideo}
+              className="flex items-center justify-center border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-blue-600 hover:text-blue-600 transition-colors"
+            >
               Watch Demo
             </button>
           </div>

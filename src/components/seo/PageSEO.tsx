@@ -13,8 +13,8 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
   return (
     <>
       <Helmet>
-        <title>{config.title}</title>
-        <meta name="description" content={config.description} />
+        <title>Exceleasy - AI Excel Generation Tool</title>
+        <meta name="description" content="Exceleasy is an AI-powered tool that transforms text into Excel spreadsheets. With AI Excel functions and VBA automation," />
         <meta name="keywords" content={config.keywords} />
         
         {/* Open Graph / Facebook */}
