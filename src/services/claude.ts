@@ -1,50 +1,66 @@
-import Anthropic from '@anthropic-ai/sdk';
+import OpenAI from 'openai';
+import type { AnalysisResult, TableConfigOptions } from '../types/excel';
+import { getEnvVars } from '../config/env';
 
-const anthropic = new Anthropic({
-  apiKey: import.meta.env.VITE_ANTHROPIC_API_KEY,
+const { openaiApiKey } = getEnvVars();
+
+const openai = new OpenAI({
+  apiKey: openaiApiKey,
+  baseURL: 'https://vip.apiyi.com/v1',
+  dangerouslyAllowBrowser: true
 });
 
-export interface AnalysisResult {
-  structure: {
-    sheets: Array<{
-      name: string;
-      headers: string[];
-      data: Array<Record<string, any>>;
-    }>;
-  };
-  summary: string;
-}
-
-export async function analyzeWithClaude(prompt: string): Promise<AnalysisResult> {
+export async function analyzeImageWithClaude(
+  imageBase64: string,
+  description: string,
+  config: TableConfigOptions
+): Promise<AnalysisResult> {
   const systemPrompt = `You are an expert in data analysis and Excel spreadsheet creation. 
-    Analyze the user's request and provide a structured response that can be used to generate an Excel file.
+    Analyze the image that contains tabular data and provide a structured response that can be used to generate an Excel file.
     Always generate exactly 5 rows of sample data.
     Response must be in JSON format with the following structure:
     {
-      "structure": {
-        "sheets": [
-          {
-            "name": "Sheet name",
-            "headers": ["Column names"],
-            "data": [{"column": "value"}] // Exactly 5 rows of realistic sample data
-          }
-        ]
-      },
+      "data": [
+        {
+          "name": "Sheet name",
+          "headers": ["Column names"],
+          "rows": [{"column": "value"}] // Exactly 5 rows of realistic sample data
+        }
+      ],
       "summary": "Brief description of the generated spreadsheet"
     }`;
 
-  const message = await anthropic.messages.create({
-    model: 'claude-3-opus-20240229',
-    max_tokens: 4096,
-    messages: [
-      { role: 'system', content: systemPrompt },
-      { role: 'user', content: prompt }
-    ]
-  });
-
   try {
-    return JSON.parse(message.content[0].text) as AnalysisResult;
+    const response = await openai.chat.completions.create({
+      model: 'claude-3-haiku-20240307',
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { 
+          role: 'user', 
+          content: [
+            {
+              type: 'text',
+              text: `Please analyze this image and extract the tabular data. ${description ? `Additional context: ${description}` : ''}`
+            },
+            {
+              type: 'image_url',
+              image_url: {
+                url: `data:image/jpeg;base64,${imageBase64}`
+              }
+            }
+          ]
+        }
+      ],
+      response_format: { type: 'json_object' }
+    });
+
+    const result = JSON.parse(response.choices[0].message.content || '{}') as AnalysisResult;
+    if (!result.data || !Array.isArray(result.data)) {
+      throw new Error('Invalid response format');
+    }
+    return result;
   } catch (error) {
-    throw new Error('Failed to parse Claude response');
+    console.error('Claude API error:', error);
+    throw new Error('Failed to analyze image: ' + (error instanceof Error ? error.message : 'Unknown error'));
   }
 }

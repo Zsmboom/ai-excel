@@ -28,7 +28,6 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-8">
             <ExcelToolsMenu />
             <Link to={`/${currentLang}/about`} className="text-gray-600 hover:text-blue-600">{t('common.about')}</Link>
-            <a href="#pricing" className="text-gray-600 hover:text-blue-600">{t('common.pricing')}</a>
             <a href="#testimonials" className="text-gray-600 hover:text-blue-600">{t('common.features')}</a>
             <LanguageSelector />
           </div>
@@ -48,7 +47,6 @@ const Header = () => {
             <div className="flex flex-col space-y-4">
               <ExcelToolsMenu />
               <Link to={`/${currentLang}/about`} className="text-gray-600 hover:text-blue-600">{t('common.about')}</Link>
-              <a href="#pricing" className="text-gray-600 hover:text-blue-600">{t('common.pricing')}</a>
               <a href="#testimonials" className="text-gray-600 hover:text-blue-600">{t('common.features')}</a>
               <div className="pt-2">
                 <LanguageSelector />

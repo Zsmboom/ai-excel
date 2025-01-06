@@ -1,7 +1,6 @@
 import i18n from 'i18next';
 import { InitOptions } from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
 import enTranslation from './locales/en.json';
 import zhTranslation from './locales/zh.json';
@@ -34,11 +33,6 @@ const i18nConfig: InitOptions = {
   interpolation: {
     escapeValue: false,
   },
-  detection: {
-    order: ['path', 'localStorage', 'navigator'],
-    lookupFromPathIndex: 0,
-    caches: ['localStorage'],
-  },
   supportedLngs: ['en', 'zh', 'ko', 'de', 'hi'],
   react: {
     useSuspense: false,
@@ -51,7 +45,6 @@ const i18nConfig: InitOptions = {
 };
 
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init(i18nConfig);
 

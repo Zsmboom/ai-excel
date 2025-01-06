@@ -16,7 +16,8 @@
     "allRightsReserved": "版权所有",
     "excelTools": "Excel 工具",
     "excelGenerator": "AI Excel 生成器",
-    "excelFunctions": "AI Excel 函数"
+    "excelFunctions": "AI Excel 函数",
+    "picToExcel": "图片转 Excel"
   },
   "hero": {
     "title": "用 AI 将文本转换为 Excel",
@@ -136,6 +137,10 @@
     "title": "常见问题",
     "subtitle": "查找有关我们服务的常见问题解答",
     "items": [
+      {
+        "question": "ExcelEasy 能把图片转换成 Excel 吗？",
+        "answer": "是的，ExcelEasy 可以使用先进的 AI 技术将图片转换为 Excel 表格。您只需上传包含表格数据的图片，我们的 AI 就会分析并将信息提取到结构良好的 Excel 文件中。您还可以添加可选的描述来帮助 AI 更好地理解上下文，并根据需要对生成的表格进行调整。"
+      },
       {
         "question": "AI 能创建 Excel 电子表格吗？",
         "answer": "是的，AI 可以通过自然语言描述创建 Excel 电子表格。用户只需用文字描述他们的需求，AI 就会生成具有适当内容和格式的 Excel 文件。生成的电子表格可以根据需要进行进一步修改和自定义。这种方法使电子表格创建更加直观和高效，无需手动格式化和编写复杂的公式。"
@@ -332,6 +337,24 @@
       "keywords": "Excel函数, VBA宏, Excel自动化, 公式生成器, 办公脚本, Excel编程",
       "schemaName": "ExcelEasy 函数生成器",
       "schemaDescription": "由 AI 驱动的高级 Excel 函数和 VBA 宏生成工具，通过自然语言实现复杂的自动化和计算"
+    }
+  },
+  "picToExcel": {
+    "title": "图片转 Excel",
+    "subtitle": "上传图片，快速生成 Excel 表格",
+    "form": {
+      "uploadImage": "上传图片",
+      "description": "描述（可选）",
+      "descriptionPlaceholder": "添加额外的描述来帮助 AI 更好地理解图片内容...",
+      "generateButton": "生成 Excel",
+      "downloadButton": "下载 Excel",
+      "previewTitle": "预览",
+      "readyMessage": "您的 Excel 文件已准备就绪！"
+    },
+    "errors": {
+      "imageRequired": "请先上传图片",
+      "invalidImage": "无效的图片格式",
+      "generateError": "生成 Excel 时出错："
     }
   }
 } 

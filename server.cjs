@@ -3,6 +3,9 @@ const cors = require('cors');
 const { google } = require('googleapis');
 const dotenv = require('dotenv');
 const path = require('path');
+const multer = require('multer');
+const { Configuration, OpenAIApi } = require('openai');
+const ExcelJS = require('exceljs');
 const { useTranslation } = require('react-i18next');
 
 // 加载环境变量
@@ -179,6 +182,12 @@ app.get('/sitemap.xml', (req, res) => {
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
+      <url>
+        <loc>${frontendUrl}/pic-to-excel</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      </url>
     </urlset>
   `);
 });
@@ -199,6 +208,109 @@ app.use((req, res) => {
     message: 'Not Found',
     path: req.path
   });
+});
+
+// 配置 multer 用于处理文件上传
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 10 * 1024 * 1024, // 10MB
+  },
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype.startsWith('image/')) {
+      cb(null, true);
+    } else {
+      cb(new Error('只支持图片文件'));
+    }
+  },
+});
+
+// 配置 OpenAI
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+
+// 添加图片转Excel的API端点
+app.post('/api/pic-to-excel', upload.single('image'), async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ error: '请上传图片' });
+    }
+
+    const description = req.body.description || '';
+    const config = JSON.parse(req.body.config || '{}');
+
+    // 将图片转换为base64
+    const base64Image = req.file.buffer.toString('base64');
+    const imageType = req.file.mimetype;
+
+    // 使用 OpenAI Vision API 分析图片
+    const response = await openai.createChatCompletion({
+      model: "gpt-4-vision-preview",
+      messages: [
+        {
+          role: "user",
+          content: [
+            {
+              type: "text",
+              text: `请分析这张图片，并将其内容转换为Excel表格格式。${description ? '附加说明：' + description : ''}`
+            },
+            {
+              type: "image_url",
+              image_url: {
+                url: `data:${imageType};base64,${base64Image}`
+              }
+            }
+          ]
+        }
+      ],
+      max_tokens: 4096,
+    });
+
+    // 解析 AI 返回的内容
+    const content = response.data.choices[0].message.content;
+    
+    // 创建 Excel 工作簿
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet('Sheet1');
+
+    // 解析内容并填充工作表
+    // 这里需要根据实际的AI返回格式进行调整
+    const rows = content.split('\n').map(row => row.split('\t'));
+    const headers = rows[0];
+    worksheet.addRow(headers);
+    rows.slice(1).forEach(row => worksheet.addRow(row));
+
+    // 生成Excel文件
+    const buffer = await workbook.xlsx.writeBuffer();
+    const blob = Buffer.from(buffer);
+
+    // 准备预览数据
+    const previewData = {
+      fileName: 'converted.xlsx',
+      blob: blob,
+      data: [{
+        name: 'Sheet1',
+        headers: headers,
+        rows: rows.slice(1).map(row => {
+          const rowData = {};
+          headers.forEach((header, index) => {
+            rowData[header] = row[index];
+          });
+          return rowData;
+        })
+      }]
+    };
+
+    res.json(previewData);
+  } catch (error) {
+    console.error('Error processing image:', error);
+    res.status(500).json({ 
+      error: '处理图片时出错',
+      details: error.message 
+    });
+  }
 });
 
 app.listen(port, () => {

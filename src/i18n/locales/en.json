@@ -16,7 +16,8 @@
     "allRightsReserved": "All rights reserved",
     "excelTools": "Excel Tools",
     "excelGenerator": "AI Excel Generator",
-    "excelFunctions": "AI Excel Functions"
+    "excelFunctions": "AI Excel Functions",
+    "picToExcel": "Image to Excel"
   },
   "hero": {
     "title": "Transform Text to Excel with AI",
@@ -136,6 +137,10 @@
     "title": "Frequently Asked Questions",
     "subtitle": "Find answers to common questions about our service",
     "items": [
+      {
+        "question": "Can ExcelEasy convert images to Excel?",
+        "answer": "Yes, ExcelEasy can convert images to Excel spreadsheets using advanced AI technology. Simply upload your image containing tabular data, and our AI will analyze and extract the information into a well-structured Excel file. You can also add optional descriptions to help the AI better understand the context and make adjustments to the generated spreadsheet as needed."
+      },
       {
         "question": "Can AI create an Excel spreadsheet?",
         "answer": "Yes, AI can create Excel spreadsheets through natural language descriptions. Users can simply describe their requirements in text, and the AI will generate the desired Excel file with appropriate content and formatting. The generated spreadsheets can be further modified and customized as needed. This approach makes spreadsheet creation more intuitive and efficient, eliminating the need for manual formatting and complex formula writing."
@@ -332,6 +337,24 @@
       "keywords": "Excel functions, VBA macros, Excel automation, formula generator, office scripts, Excel programming",
       "schemaName": "ExcelEasy Function Generator",
       "schemaDescription": "Advanced Excel function and VBA macro generation tool powered by AI, enabling complex automation and calculations through natural language"
+    }
+  },
+  "picToExcel": {
+    "title": "Image to Excel Converter",
+    "subtitle": "Upload an image and quickly convert it to Excel spreadsheet",
+    "form": {
+      "uploadImage": "Upload Image",
+      "description": "Description (Optional)",
+      "descriptionPlaceholder": "Add additional description to help AI better understand the image content...",
+      "generateButton": "Generate Excel",
+      "downloadButton": "Download Excel",
+      "previewTitle": "Preview",
+      "readyMessage": "Your Excel file is ready!"
+    },
+    "errors": {
+      "imageRequired": "Please upload an image first",
+      "invalidImage": "Invalid image format",
+      "generateError": "Error generating Excel: "
     }
   }
 } 

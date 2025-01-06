@@ -4,6 +4,7 @@ import LandingPage from '../pages/LandingPage';
 import Workspace from '../pages/Workspace';
 import ExcelFunctions from '../pages/ExcelFunctions';
 import About from '../pages/About';
+import PicToExcel from '../pages/PicToExcel';
 import { languages } from '../i18n/config';
 import { LanguageRoute } from '../components/LanguageRoute';
 
@@ -33,6 +34,7 @@ const AppRoutes = () => {
           <Route index element={<LandingPage />} />
           <Route path="ai-excel-generator" element={<Workspace />} />
           <Route path="excel-functions" element={<ExcelFunctions />} />
+          <Route path="pic-to-excel" element={<PicToExcel />} />
           <Route path="about" element={<About />} />
         </Route>
       </Route>

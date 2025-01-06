@@ -88,23 +88,23 @@
     }
   },
   "testimonials": {
-    "title": "Von Excel-Nutzern geliebt",
-    "subtitle": "Sehen Sie, wie ExcelEasy Fachleuten und Studenten hilft, intelligenter zu arbeiten",
+    "title": "Das sagen unsere Nutzer",
+    "subtitle": "Erfahren Sie, wie ExcelEasy Fachleuten und Studierenden hilft, effizienter zu arbeiten",
     "items": [
       {
-        "quote": "Als Finanzanalyst arbeite ich täglich mit komplexen Excel-Formeln. Der KI-Funktionsgenerator von ExcelEasy ist zu meinem bevorzugten Werkzeug für die Erstellung und Fehlersuche von Formeln geworden. Die VBA-Makro-Generierung spart mir stundenlange Codierungszeit.",
+        "quote": "In meiner Rolle als Finanzanalyst arbeite ich täglich mit komplexen Excel-Formeln. Der KI-gestützte Formelgenerator von ExcelEasy ist mittlerweile mein unverzichtbares Werkzeug für die Entwicklung und Fehlersuche von Formeln. Die automatische VBA-Makro-Erstellung spart mir täglich wertvolle Arbeitszeit.",
         "author": "Thomas Schmidt",
         "role": "Senior Finanzanalyst",
         "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80"
       },
       {
-        "quote": "Die Verwaltung von Verkaufsdaten war früher eine zeitaufwändige Aufgabe. Jetzt beschreibe ich einfach, was ich brauche, und ExcelEasy erstellt sofort perfekt formatierte Tabellenkalkulationen. Es hat die Art und Weise, wie unser Verkaufsteam Berichte erstellt, revolutioniert.",
+        "quote": "Die Verwaltung unserer Verkaufsdaten war früher sehr zeitaufwendig. Heute beschreibe ich einfach meine Anforderungen, und ExcelEasy erstellt sofort perfekt formatierte Tabellen. Das hat die Berichtserstellung in unserem Verkaufsteam grundlegend verbessert.",
         "author": "Michael Weber",
-        "role": "Verkaufsleiter",
+        "role": "Vertriebsleiter",
         "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80"
       },
       {
-        "quote": "Als Student waren Excel-Funktionen immer eine Herausforderung. ExcelEasy hat mir mit klaren Erklärungen und Beispielen geholfen, komplexe Formeln zu verstehen. Es ist wie ein persönlicher Excel-Tutor, der rund um die Uhr verfügbar ist.",
+        "quote": "Als Studentin fand ich Excel-Funktionen oft herausfordernd. ExcelEasy hat mir durch verständliche Erklärungen und praxisnahe Beispiele geholfen, komplexe Formeln zu verstehen. Es ist wie ein persönlicher Excel-Tutor, der rund um die Uhr zur Verfügung steht.",
         "author": "Lisa Müller",
         "role": "BWL-Studentin",
         "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80"
@@ -112,12 +112,12 @@
     ]
   },
   "footer": {
-    "description": "Wandeln Sie Text sofort in Excel-Tabellen um mit KI.",
+    "description": "Verwandeln Sie Ihre Textbeschreibungen sofort in professionelle Excel-Tabellen mit KI.",
     "product": {
-      "title": "Produkt",
+      "title": "Produkte",
       "features": "Funktionen",
       "pricing": "Preise",
-      "testimonials": "Testimonials"
+      "testimonials": "Referenzen"
     },
     "company": {
       "title": "Unternehmen",
@@ -126,7 +126,7 @@
       "careers": "Karriere"
     },
     "connect": {
-      "title": "Verbinden",
+      "title": "Kontakt",
       "github": "GitHub",
       "twitter": "Twitter",
       "linkedin": "LinkedIn"
@@ -138,15 +138,19 @@
     "items": [
       {
         "question": "Kann KI eine Excel-Tabelle erstellen?",
-        "answer": "Ja, KI kann Excel-Tabellen durch natürlichsprachliche Beschreibungen erstellen. Benutzer müssen nur ihre Anforderungen in Text beschreiben, und die KI generiert die gewünschte Excel-Datei mit entsprechendem Inhalt und Formatierung. Die generierten Tabellen können nach Bedarf weiter modifiziert und angepasst werden. Dieser Ansatz macht die Tabellenerstellung intuitiver und effizienter, ohne manuelle Formatierung und komplexe Formelschreibung."
+        "answer": "Ja, durch die Beschreibung in natürlicher Sprache kann die KI Excel-Tabellen erstellen. Sie beschreiben einfach Ihre Anforderungen, und die KI generiert die gewünschte Excel-Datei mit passenden Inhalten und Formatierungen. Die erstellten Tabellen können nach Bedarf angepasst werden. Diese Herangehensweise macht die Tabellenerstellung intuitiver und effizienter, ohne manuelle Formatierung und komplexe Formelschreibung."
       },
       {
-        "question": "Wie genau ist die KI Excel-Generierung?",
-        "answer": "Unsere KI Excel-Generierung ist sehr genau und wird ständig verbessert. Sie versteht Kontext, Formatierungsanforderungen und komplexe Datenbeziehungen. Wir empfehlen jedoch immer, die generierten Tabellen für Ihre spezifischen Anforderungen zu überprüfen."
+        "question": "Wie zuverlässig ist die KI-basierte Excel-Generierung?",
+        "answer": "Unsere KI-basierte Excel-Generierung arbeitet sehr präzise und wird kontinuierlich weiterentwickelt. Sie versteht den Kontext, Formatierungsvorgaben und komplexe Datenbeziehungen. Wir empfehlen dennoch, die generierten Tabellen auf Ihre spezifischen Anforderungen hin zu überprüfen."
       },
       {
-        "question": "Kann ich die generierten Tabellen anpassen?",
-        "answer": "Absolut! Alle generierten Tabellen sind vollständig editierbar. Sie können Formeln, Formatierung, Daten und Struktur genau wie bei jeder anderen Excel-Datei modifizieren."
+        "question": "Kann ExcelEasy Bilder in Excel-Tabellen umwandeln?",
+        "answer": "Ja, ExcelEasy kann mithilfe fortschrittlicher KI-Technologie Bilder in Excel-Tabellen umwandeln. Sie müssen lediglich Ihr Bild mit Tabellendaten hochladen, und unsere KI analysiert und extrahiert die Informationen in eine gut strukturierte Excel-Datei. Sie können auch zusätzliche Beschreibungen hinzufügen, damit die KI den Kontext besser versteht, und die generierte Tabelle bei Bedarf anpassen."
+      },
+      {
+        "question": "Kann ich die erstellten Tabellen nachträglich bearbeiten?",
+        "answer": "Selbstverständlich! Alle generierten Tabellen sind vollständig bearbeitbar. Sie können Formeln, Formatierungen, Daten und Struktur genauso wie in jeder anderen Excel-Datei anpassen."
       },
       {
         "question": "Welche Excel-Funktionen werden unterstützt?",
@@ -155,17 +159,11 @@
     ]
   },
   "about": {
-    "title": "Excel einfach für alle",
-    "subtitle": "ExcelEasy ist ein KI-gestützter Excel-Assistent, der entwickelt wurde, um alle Excel-Aufgaben zu lösen und Tabellenkalkulationen einfach zu machen.",
+    "title": "Excel leicht gemacht - für alle",
+    "subtitle": "ExcelEasy ist Ihr KI-gestützter Excel-Assistent, entwickelt um jede Excel-Aufgabe zu vereinfachen.",
     "mission": {
-      "title": "Unsere Mission",
-      "description": "Wir glauben, dass jeder die volle Leistungsfähigkeit von Excel ohne steile Lernkurve nutzen können sollte. ExcelEasy kombiniert fortschrittliche KI-Technologie mit benutzerfreundlichem Design, um häufige Excel-Herausforderungen zu lösen:",
-      "challenges": {
-        "formulas": "Komplexe Formelerstellung und Debugging",
-        "data": "Zeitaufwändige manuelle Datenbereinigung",
-        "spreadsheets": "Wiederholte Tabellenerstellung und Formatierung",
-        "macros": "VBA-Makro-Entwicklung für Automatisierung"
-      }
+      "title": "Unsere Vision",
+      "description": "Wir sind überzeugt, dass jeder die volle Leistungsfähigkeit von Excel ohne steile Lernkurve nutzen können sollte. ExcelEasy verbindet modernste KI-Technologie mit benutzerfreundlichem Design, um alltägliche Excel-Herausforderungen zu meistern:"
     },
     "howItWorks": {
       "title": "So funktioniert ExcelEasy",
