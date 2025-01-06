@@ -1,0 +1,337 @@
+{
+  "common": {
+    "login": "登录",
+    "signup": "注册",
+    "logout": "退出",
+    "pricing": "价格",
+    "features": "功能",
+    "about": "关于",
+    "contact": "联系我们",
+    "home": "首页",
+    "getStarted": "免费开始",
+    "watchDemo": "观看演示",
+    "month": "/月",
+    "save": "节省",
+    "mostPopular": "最受欢迎",
+    "allRightsReserved": "版权所有",
+    "excelTools": "Excel 工具",
+    "excelGenerator": "AI Excel 生成器",
+    "excelFunctions": "AI Excel 函数"
+  },
+  "hero": {
+    "title": "用 AI 将文本转换为 Excel",
+    "subtitle": "只需用自然语言描述您的数据需求，我们的 AI 就能立即创建专业的 Excel 电子表格。",
+    "cta": "立即开始",
+    "imageAlt": "AI Excel 分析"
+  },
+  "features": {
+    "title": "AI 驱动的 Excel 解决方案",
+    "subtitle": "使用我们先进的 AI 工具简化您的 Excel 工作",
+    "items": {
+      "generation": {
+        "title": "AI Excel 生成",
+        "description": "在几秒钟内将自然语言描述转换为完整、专业格式的 Excel 电子表格。"
+      },
+      "assistant": {
+        "title": "Excel 函数助手",
+        "description": "获取复杂 Excel 公式的即时帮助，包含详细解释和实施指南。"
+      },
+      "macro": {
+        "title": "VBA 宏生成",
+        "description": "生成自定义 VBA 宏以自动化您的 Excel 工作流程，并提供分步说明。"
+      }
+    }
+  },
+  "pricing": {
+    "title": "简单透明的定价",
+    "subtitle": "选择适合您的方案",
+    "monthly": "月付",
+    "yearly": "年付",
+    "free": {
+      "name": "免费版",
+      "price": "¥0",
+      "description": "体验 ExcelEasy 的完美选择",
+      "features": [
+        "每月 10 次生成",
+        "基础 Excel 文件生成",
+        "基础公式生成",
+        "基础 VBA 宏生成",
+        "社区支持"
+      ]
+    },
+    "proMonthly": {
+      "name": "专业版月付",
+      "price": "¥39",
+      "description": "适合经常使用 Excel 的用户",
+      "features": [
+        "无限 Excel 文件生成",
+        "无限公式生成",
+        "无限 VBA 宏生成",
+        "优先支持",
+        "抢先体验新功能",
+        "直接开发者反馈"
+      ]
+    },
+    "proYearly": {
+      "name": "专业版年付",
+      "price": "¥339",
+      "description": "为忠实用户提供最佳价值",
+      "originalPrice": "¥468",
+      "savePercent": "29%",
+      "features": [
+        "包含专业版月付所有功能",
+        "比月付节省 29%",
+        "优先支持",
+        "抢先体验新功能",
+        "直接开发者反馈"
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "Excel 用户的选择",
+    "subtitle": "看看 ExcelEasy 如何帮助专业人士和学生更智能地工作",
+    "items": [
+      {
+        "quote": "作为一名财务分析师，我每天都要处理复杂的 Excel 公式。ExcelEasy 的 AI 函数生成器已成为我创建和调试公式的首选工具。VBA 宏生成为我节省了大量编码时间。",
+        "author": "陈明",
+        "role": "高级财务分析师",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80"
+      },
+      {
+        "quote": "管理销售数据曾经是一项耗时的任务。现在我只需描述我需要什么，ExcelEasy 就能立即创建格式完美的电子表格。它彻底改变了我们销售团队处理报告的方式。",
+        "author": "李强",
+        "role": "销售经理",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80"
+      },
+      {
+        "quote": "作为一名学生，Excel 函数一直是一个挑战。ExcelEasy 通过清晰的解释和示例帮助我理解复杂的公式。就像有一个全天候的个人 Excel 导师。",
+        "author": "张小雨",
+        "role": "商科学生",
+        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80"
+      }
+    ]
+  },
+  "footer": {
+    "description": "使用 AI 即时将文本转换为 Excel 电子表格。",
+    "product": {
+      "title": "产品",
+      "features": "功能",
+      "pricing": "价格",
+      "testimonials": "用户评价"
+    },
+    "company": {
+      "title": "公司",
+      "about": "关于我们",
+      "blog": "博客",
+      "careers": "招聘"
+    },
+    "connect": {
+      "title": "关注我们",
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "查找有关我们服务的常见问题解答",
+    "items": [
+      {
+        "question": "AI 能创建 Excel 电子表格吗？",
+        "answer": "是的，AI 可以通过自然语言描述创建 Excel 电子表格。用户只需用文字描述他们的需求，AI 就会生成具有适当内容和格式的 Excel 文件。生成的电子表格可以根据需要进行进一步修改和自定义。这种方法使电子表格创建更加直观和高效，无需手动格式化和编写复杂的公式。"
+      },
+      {
+        "question": "AI Excel 生成的准确度如何？",
+        "answer": "我们的 AI Excel 生成非常准确，并且在不断改进。它能理解上下文、格式要求和复杂的数据关系。不过，我们始终建议根据您的具体需求检查生成的电子表格。"
+      },
+      {
+        "question": "我可以自定义生成的电子表格吗？",
+        "answer": "当然可以！所有生成的电子表格都是完全可编辑的。您可以像处理其他 Excel 文件一样修改公式、格式、数据和结构。"
+      },
+      {
+        "question": "支持哪些类型的 Excel 函数？",
+        "answer": "我们支持所有标准 Excel 函数和公式，包括复杂的数学运算、逻辑函数、查找函数等。我们的 AI 可以帮助您实现和理解任何 Excel 函数。"
+      }
+    ]
+  },
+  "about": {
+    "title": "让 Excel 变得简单易用",
+    "subtitle": "ExcelEasy 是您的 AI 驱动的 Excel 助手，旨在解决各种 Excel 挑战，让电子表格工作变得轻松自如。",
+    "mission": {
+      "title": "我们的使命",
+      "description": "我们相信每个人都应该能够充分利用 Excel 的强大功能，而无需经历陡峭的学习曲线。ExcelEasy 将先进的 AI 技术与用户友好的设计相结合，解决常见的 Excel 挑战：",
+      "challenges": {
+        "formulas": "复杂公式的创建和调试",
+        "data": "耗时的手动数据整理",
+        "spreadsheets": "重复性的电子表格创建和格式化",
+        "macros": "VBA 宏的开发和自动化"
+      }
+    },
+    "howItWorks": {
+      "title": "ExcelEasy 如何工作",
+      "steps": {
+        "step1": {
+          "title": "描述您的需求",
+          "description": "只需用自然语言告诉我们您想要创建什么"
+        },
+        "step2": {
+          "title": "AI 处理",
+          "description": "我们的 AI 分析您的请求并生成完美的解决方案"
+        },
+        "step3": {
+          "title": "获取结果",
+          "description": "下载即用的 Excel 文件或复制生成的公式"
+        }
+      }
+    }
+  },
+  "workspace": {
+    "title": "AI Excel 生成器",
+    "subtitle": "选择模板或用自然语言描述您的 Excel 需求",
+    "form": {
+      "promptLabel": "您的请求",
+      "promptPlaceholder": "例如：创建一个包含收入、支出和储蓄类别的月度预算表...",
+      "generateButton": "生成 Excel",
+      "downloadButton": "下载",
+      "readyMessage": "您的 Excel 文件已准备就绪！",
+      "previewTitle": "预览"
+    },
+    "errors": {
+      "quota": "API 配额已超出。请稍后再试或联系管理员更新配额。",
+      "unknown": "生成 Excel 文件时出错："
+    }
+  },
+  "excelFunctions": {
+    "title": "Excel 函数和 VBA 宏生成器",
+    "subtitle": "用自然语言描述您的需求，快速生成 Excel 函数和 VBA 宏",
+    "form": {
+      "promptLabel": "您的请求",
+      "promptPlaceholder": "例如：创建一个 VLOOKUP 公式来查找两个表格之间的匹配值...",
+      "generateButton": "生成函数",
+      "typeSelector": {
+        "formula": "Excel 公式",
+        "macro": "VBA 宏"
+      }
+    }
+  },
+  "functionUsage": {
+    "faq": {
+      "title": "常见问题",
+      "isFree": {
+        "question": "ExcelEasy 是免费的吗？",
+        "answer": "是的，ExcelEasy 提供免费版本！登录后，您每月可以免费生成 10 次。这让您可以免费体验我们的 AI 驱动的 Excel 函数生成功能。"
+      },
+      "howToUse": {
+        "question": "如何使用 ExcelEasy 函数？",
+        "intro": "ExcelEasy 函数通过两种方式帮助您创建 Excel 解决方案：",
+        "features": {
+          "formulas": "Excel 公式：生成复杂的 Excel 公式，并提供分步实施指南",
+          "macros": "VBA 宏：创建自定义 VBA 宏代码，实现 Excel 任务和流程自动化"
+        },
+        "description": "只需用自然语言描述您想要实现的目标，我们的 AI 就会生成相应的 Excel 公式或 VBA 代码，并提供详细的使用说明。"
+      }
+    }
+  },
+  "generatorUsage": {
+    "faq": {
+      "title": "常见问题",
+      "isFree": {
+        "question": "ExcelEasy 是免费的吗？",
+        "answer": "是的，ExcelEasy 提供免费版本！登录后，您每月可以免费生成 10 次。这让您可以免费体验我们的 AI 驱动的 Excel 生成功能。"
+      },
+      "howToUse": {
+        "question": "如何使用 ExcelEasy？",
+        "intro": "ExcelEasy 提供多种方式来创建 Excel 文件：",
+        "features": {
+          "aiGeneration": "AI 生成：只需用自然语言描述您的 Excel 需求，我们的 AI 就会创建定制的电子表格",
+          "templates": "模板：从我们的预建模板集合中选择，并根据您的需求进行自定义"
+        },
+        "comingSoon": "即将推出：文档转换功能 - 上传 Word 或 PDF 文件，根据您的要求自动转换为结构良好的 Excel 电子表格。"
+      }
+    }
+  },
+  "aboutFeatures": {
+    "aiGeneration": {
+      "title": "AI 智能生成",
+      "description": "瞬间将文本描述转换为完整的 Excel 电子表格"
+    },
+    "smartFunctions": {
+      "title": "智能函数",
+      "description": "获取 Excel 公式和 VBA 宏的专业帮助"
+    },
+    "templates": {
+      "title": "智能模板",
+      "description": "访问满足常见业务需求的预建模板"
+    },
+    "forEveryone": {
+      "title": "适合所有人",
+      "description": "从初学者到 Excel 专家，我们都能满足您的需求"
+    }
+  },
+  "excelTemplates": {
+    "title": "Excel 模板",
+    "sales-stats": {
+      "name": "销售数据统计",
+      "description": "通过详细的统计和指标跟踪销售业绩"
+    },
+    "customer-info": {
+      "name": "客户信息管理",
+      "description": "组织客户详细信息和互动历史"
+    },
+    "sales-plan": {
+      "name": "销售计划模板",
+      "description": "规划和跟踪销售目标及成果"
+    },
+    "inventory": {
+      "name": "库存管理",
+      "description": "跟踪库存水平和库存变动"
+    },
+    "sales-performance": {
+      "name": "销售业绩报告",
+      "description": "分析销售团队表现和指标"
+    },
+    "budget": {
+      "name": "预算模板",
+      "description": "规划和跟踪支出与收入"
+    },
+    "work-schedule": {
+      "name": "工作排班模板",
+      "description": "组织工作班次和任务分配"
+    },
+    "attendance": {
+      "name": "员工考勤跟踪",
+      "description": "监控员工出勤和请假情况"
+    },
+    "invoice": {
+      "name": "发票模板",
+      "description": "带有自动计算的专业发票"
+    },
+    "calendar": {
+      "name": "日历模板",
+      "description": "带事件跟踪的月度日历"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "ExcelEasy - AI 驱动的 Excel 生成工具",
+      "description": "使用 AI 即时将数据转换为专业的 Excel 电子表格。我们的工具通过简单的自然语言命令帮助您创建复杂的 Excel 文件、图表和报告。",
+      "keywords": "Excel生成器, AI Excel, 电子表格自动化, 数据可视化, 商业智能, 办公自动化",
+      "schemaName": "ExcelEasy AI Excel 生成器",
+      "schemaDescription": "AI 驱动的 Excel 电子表格生成工具，将自然语言转换为带有图表、公式和数据分析的专业 Excel 文件"
+    },
+    "workspace": {
+      "title": "AI Excel 生成器 - 创建自定义电子表格 | ExcelEasy",
+      "description": "使用 AI 生成自定义 Excel 电子表格。使用自然语言创建表格、图表和报告。功能包括数据透视表、数据分析和自动格式化。",
+      "keywords": "Excel创建器, 电子表格生成器, AI表格, 数据分析, 商业报告, 自动化Excel",
+      "schemaName": "ExcelEasy 工作区",
+      "schemaDescription": "用于生成自定义 Excel 电子表格的交互式工作区，具有自动表格创建、图表生成和数据分析工具功能"
+    },
+    "functions": {
+      "title": "Excel 函数和 VBA 宏生成器 | ExcelEasy",
+      "description": "使用 AI 即时生成复杂的 Excel 函数和 VBA 宏。通过自然语言命令自动化计算、数据处理和重复性任务。",
+      "keywords": "Excel函数, VBA宏, Excel自动化, 公式生成器, 办公脚本, Excel编程",
+      "schemaName": "ExcelEasy 函数生成器",
+      "schemaDescription": "由 AI 驱动的高级 Excel 函数和 VBA 宏生成工具，通过自然语言实现复杂的自动化和计算"
+    }
+  }
+} 

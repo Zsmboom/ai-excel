@@ -1,0 +1,337 @@
+{
+  "common": {
+    "login": "Anmelden",
+    "signup": "Registrieren",
+    "logout": "Abmelden",
+    "pricing": "Preise",
+    "features": "Funktionen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "home": "Startseite",
+    "getStarted": "Kostenlos starten",
+    "watchDemo": "Demo ansehen",
+    "month": "/Monat",
+    "save": "Sparen",
+    "mostPopular": "Beliebteste",
+    "allRightsReserved": "Alle Rechte vorbehalten",
+    "excelTools": "Excel-Tools",
+    "excelGenerator": "KI Excel-Generator",
+    "excelFunctions": "KI Excel-Funktionen"
+  },
+  "hero": {
+    "title": "Text mit KI in Excel umwandeln",
+    "subtitle": "Beschreiben Sie einfach Ihre Datenanforderungen in natürlicher Sprache und lassen Sie unsere KI sofort professionelle Excel-Tabellen erstellen.",
+    "cta": "Jetzt starten",
+    "imageAlt": "KI Excel Analyse"
+  },
+  "features": {
+    "title": "KI-gestützte Excel-Lösungen",
+    "subtitle": "Vereinfachen Sie Ihre Excel-Arbeit mit unseren fortschrittlichen KI-Tools",
+    "items": {
+      "generation": {
+        "title": "KI Excel-Generierung",
+        "description": "Wandeln Sie natürlichsprachliche Beschreibungen in Sekundenschnelle in vollständig formatierte Excel-Tabellen um."
+      },
+      "assistant": {
+        "title": "Excel-Funktionsassistent",
+        "description": "Erhalten Sie sofortige Hilfe bei komplexen Excel-Formeln mit ausführlichen Erklärungen und Implementierungsleitfäden."
+      },
+      "macro": {
+        "title": "VBA-Makro-Generierung",
+        "description": "Generieren Sie benutzerdefinierte VBA-Makros zur Automatisierung Ihrer Excel-Workflows mit Schritt-für-Schritt-Anleitungen."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Einfache, transparente Preise",
+    "subtitle": "Wählen Sie den Plan, der zu Ihnen passt",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "free": {
+      "name": "Kostenlos",
+      "price": "€0",
+      "description": "Perfekt zum Ausprobieren von ExcelEasy",
+      "features": [
+        "10 Generierungen pro Monat",
+        "Basis Excel-Dateigenerierung",
+        "Basis Formelgenerierung",
+        "Basis VBA-Makro-Generierung",
+        "Community-Support"
+      ]
+    },
+    "proMonthly": {
+      "name": "Pro Monatlich",
+      "price": "€5,99",
+      "description": "Für regelmäßige Excel-Nutzer",
+      "features": [
+        "Unbegrenzte Excel-Dateigenerierung",
+        "Unbegrenzte Formelgenerierung",
+        "Unbegrenzte VBA-Makro-Generierung",
+        "Prioritäts-Support",
+        "Frühzeitiger Zugang zu neuen Funktionen",
+        "Direktes Entwickler-Feedback"
+      ]
+    },
+    "proYearly": {
+      "name": "Pro Jährlich",
+      "price": "€50,99",
+      "description": "Bester Wert für engagierte Nutzer",
+      "originalPrice": "€71,88",
+      "savePercent": "29%",
+      "features": [
+        "Alle Funktionen von Pro Monatlich",
+        "29% Rabatt gegenüber monatlich",
+        "Prioritäts-Support",
+        "Frühzeitiger Zugang zu neuen Funktionen",
+        "Direktes Entwickler-Feedback"
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "Von Excel-Nutzern geliebt",
+    "subtitle": "Sehen Sie, wie ExcelEasy Fachleuten und Studenten hilft, intelligenter zu arbeiten",
+    "items": [
+      {
+        "quote": "Als Finanzanalyst arbeite ich täglich mit komplexen Excel-Formeln. Der KI-Funktionsgenerator von ExcelEasy ist zu meinem bevorzugten Werkzeug für die Erstellung und Fehlersuche von Formeln geworden. Die VBA-Makro-Generierung spart mir stundenlange Codierungszeit.",
+        "author": "Thomas Schmidt",
+        "role": "Senior Finanzanalyst",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80"
+      },
+      {
+        "quote": "Die Verwaltung von Verkaufsdaten war früher eine zeitaufwändige Aufgabe. Jetzt beschreibe ich einfach, was ich brauche, und ExcelEasy erstellt sofort perfekt formatierte Tabellenkalkulationen. Es hat die Art und Weise, wie unser Verkaufsteam Berichte erstellt, revolutioniert.",
+        "author": "Michael Weber",
+        "role": "Verkaufsleiter",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80"
+      },
+      {
+        "quote": "Als Student waren Excel-Funktionen immer eine Herausforderung. ExcelEasy hat mir mit klaren Erklärungen und Beispielen geholfen, komplexe Formeln zu verstehen. Es ist wie ein persönlicher Excel-Tutor, der rund um die Uhr verfügbar ist.",
+        "author": "Lisa Müller",
+        "role": "BWL-Studentin",
+        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Wandeln Sie Text sofort in Excel-Tabellen um mit KI.",
+    "product": {
+      "title": "Produkt",
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "testimonials": "Testimonials"
+    },
+    "company": {
+      "title": "Unternehmen",
+      "about": "Über uns",
+      "blog": "Blog",
+      "careers": "Karriere"
+    },
+    "connect": {
+      "title": "Verbinden",
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu unserem Service",
+    "items": [
+      {
+        "question": "Kann KI eine Excel-Tabelle erstellen?",
+        "answer": "Ja, KI kann Excel-Tabellen durch natürlichsprachliche Beschreibungen erstellen. Benutzer müssen nur ihre Anforderungen in Text beschreiben, und die KI generiert die gewünschte Excel-Datei mit entsprechendem Inhalt und Formatierung. Die generierten Tabellen können nach Bedarf weiter modifiziert und angepasst werden. Dieser Ansatz macht die Tabellenerstellung intuitiver und effizienter, ohne manuelle Formatierung und komplexe Formelschreibung."
+      },
+      {
+        "question": "Wie genau ist die KI Excel-Generierung?",
+        "answer": "Unsere KI Excel-Generierung ist sehr genau und wird ständig verbessert. Sie versteht Kontext, Formatierungsanforderungen und komplexe Datenbeziehungen. Wir empfehlen jedoch immer, die generierten Tabellen für Ihre spezifischen Anforderungen zu überprüfen."
+      },
+      {
+        "question": "Kann ich die generierten Tabellen anpassen?",
+        "answer": "Absolut! Alle generierten Tabellen sind vollständig editierbar. Sie können Formeln, Formatierung, Daten und Struktur genau wie bei jeder anderen Excel-Datei modifizieren."
+      },
+      {
+        "question": "Welche Excel-Funktionen werden unterstützt?",
+        "answer": "Wir unterstützen alle Standard Excel-Funktionen und Formeln, einschließlich komplexer mathematischer Operationen, logischer Funktionen, Suchfunktionen und mehr. Unsere KI kann Ihnen bei der Implementierung und dem Verständnis jeder Excel-Funktion helfen."
+      }
+    ]
+  },
+  "about": {
+    "title": "Excel einfach für alle",
+    "subtitle": "ExcelEasy ist ein KI-gestützter Excel-Assistent, der entwickelt wurde, um alle Excel-Aufgaben zu lösen und Tabellenkalkulationen einfach zu machen.",
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Wir glauben, dass jeder die volle Leistungsfähigkeit von Excel ohne steile Lernkurve nutzen können sollte. ExcelEasy kombiniert fortschrittliche KI-Technologie mit benutzerfreundlichem Design, um häufige Excel-Herausforderungen zu lösen:",
+      "challenges": {
+        "formulas": "Komplexe Formelerstellung und Debugging",
+        "data": "Zeitaufwändige manuelle Datenbereinigung",
+        "spreadsheets": "Wiederholte Tabellenerstellung und Formatierung",
+        "macros": "VBA-Makro-Entwicklung für Automatisierung"
+      }
+    },
+    "howItWorks": {
+      "title": "So funktioniert ExcelEasy",
+      "steps": {
+        "step1": {
+          "title": "Anforderungen beschreiben",
+          "description": "Beschreiben Sie in natürlicher Sprache, was Sie erstellen möchten"
+        },
+        "step2": {
+          "title": "KI-Verarbeitung",
+          "description": "Die KI analysiert Ihre Anfrage und generiert die perfekte Lösung"
+        },
+        "step3": {
+          "title": "Ergebnisse erhalten",
+          "description": "Laden Sie die sofort einsatzbereite Excel-Datei herunter oder kopieren Sie die generierten Formeln"
+        }
+      }
+    }
+  },
+  "workspace": {
+    "title": "KI Excel-Generator",
+    "subtitle": "Wählen Sie eine Vorlage oder beschreiben Sie Ihre Excel-Anforderungen in natürlicher Sprache",
+    "form": {
+      "promptLabel": "Ihre Anfrage",
+      "promptPlaceholder": "Beispiel: Erstellen Sie eine monatliche Budgettabelle mit Kategorien für Einnahmen, Ausgaben und Ersparnisse...",
+      "generateButton": "Excel generieren",
+      "downloadButton": "Herunterladen",
+      "readyMessage": "Ihre Excel-Datei ist bereit!",
+      "previewTitle": "Vorschau"
+    },
+    "errors": {
+      "quota": "API-Kontingent überschritten. Bitte versuchen Sie es später erneut oder kontaktieren Sie den Administrator für eine Kontingentaktualisierung.",
+      "unknown": "Fehler bei der Excel-Dateigenerierung: "
+    }
+  },
+  "excelFunctions": {
+    "title": "Excel-Funktionen und VBA-Makro-Generator",
+    "subtitle": "Generieren Sie schnell Excel-Funktionen und VBA-Makros, indem Sie Ihre Anforderungen in natürlicher Sprache beschreiben",
+    "form": {
+      "promptLabel": "Ihre Anfrage",
+      "promptPlaceholder": "Beispiel: Erstellen Sie eine VLOOKUP-Formel, um übereinstimmende Werte zwischen zwei Tabellen zu finden...",
+      "generateButton": "Funktion generieren",
+      "typeSelector": {
+        "formula": "Excel-Formel",
+        "macro": "VBA-Makro"
+      }
+    }
+  },
+  "functionUsage": {
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "isFree": {
+        "question": "Ist ExcelEasy kostenlos?",
+        "answer": "Ja, ExcelEasy bietet einen kostenlosen Plan! Nach der Anmeldung erhalten Sie 10 kostenlose Generierungen pro Monat. Damit können Sie unsere KI-gestützte Excel-Funktionsgenerierung kostenlos testen."
+      },
+      "howToUse": {
+        "question": "Wie verwende ich ExcelEasy-Funktionen?",
+        "intro": "ExcelEasy-Funktionen helfen Ihnen auf zwei Arten bei der Erstellung von Excel-Lösungen:",
+        "features": {
+          "formulas": "Excel-Formeln: Generieren Sie komplexe Excel-Formeln mit Schritt-für-Schritt-Implementierungsleitfäden",
+          "macros": "VBA-Makros: Erstellen Sie benutzerdefinierte VBA-Makro-Codes zur Automatisierung von Excel-Aufgaben und -Prozessen"
+        },
+        "description": "Beschreiben Sie einfach in natürlicher Sprache, was Sie erreichen möchten, und unsere KI generiert die entsprechende Excel-Formel oder den VBA-Code zusammen mit detaillierten Anwendungshinweisen."
+      }
+    }
+  },
+  "generatorUsage": {
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "isFree": {
+        "question": "Ist ExcelEasy kostenlos?",
+        "answer": "Ja, ExcelEasy bietet einen kostenlosen Plan! Nach der Anmeldung erhalten Sie 10 kostenlose Generierungen pro Monat. Damit können Sie unsere KI-gestützte Excel-Generierung kostenlos testen."
+      },
+      "howToUse": {
+        "question": "Wie verwende ich ExcelEasy?",
+        "intro": "ExcelEasy bietet mehrere Möglichkeiten zur Erstellung von Excel-Dateien:",
+        "features": {
+          "aiGeneration": "KI-Generierung: Beschreiben Sie Ihre Excel-Anforderungen in natürlicher Sprache, und die KI erstellt eine maßgeschneiderte Tabelle",
+          "templates": "Vorlagen: Wählen Sie aus einer Sammlung vorgefertigter Vorlagen und passen Sie sie nach Bedarf an"
+        },
+        "comingSoon": "Demnächst verfügbar: Dokumentenkonvertierung - Laden Sie Word- oder PDF-Dateien hoch und konvertieren Sie sie automatisch in strukturierte Excel-Tabellen nach Ihren Anforderungen."
+      }
+    }
+  },
+  "aboutFeatures": {
+    "aiGeneration": {
+      "title": "KI-gestützte Generierung",
+      "description": "Wandeln Sie Textbeschreibungen sofort in vollständige Excel-Tabellen um"
+    },
+    "smartFunctions": {
+      "title": "Intelligente Funktionen",
+      "description": "Erhalten Sie Expertenunterstützung für Excel-Formeln und VBA-Makros"
+    },
+    "templates": {
+      "title": "Intelligente Vorlagen",
+      "description": "Greifen Sie auf vorgefertigte Vorlagen für gängige Geschäftsanforderungen zu"
+    },
+    "forEveryone": {
+      "title": "Für jeden",
+      "description": "Von Anfängern bis zu Excel-Experten - wir unterstützen Sie alle"
+    }
+  },
+  "excelTemplates": {
+    "title": "Excel-Vorlagen",
+    "sales-stats": {
+      "name": "Verkaufsdatenstatistik",
+      "description": "Verfolgen Sie Verkaufsleistung mit detaillierten Statistiken und Kennzahlen"
+    },
+    "customer-info": {
+      "name": "Kundeninformationsverwaltung",
+      "description": "Organisieren Sie Kundendetails und Interaktionshistorie"
+    },
+    "sales-plan": {
+      "name": "Verkaufsplanungsvorlage",
+      "description": "Planen und verfolgen Sie Verkaufsziele und Erfolge"
+    },
+    "inventory": {
+      "name": "Bestandsverwaltung",
+      "description": "Verfolgen Sie Lagerbestände und Bestandsbewegungen"
+    },
+    "sales-performance": {
+      "name": "Verkaufsleistungsbericht",
+      "description": "Analysieren Sie Verkaufsteamleistung und Kennzahlen"
+    },
+    "budget": {
+      "name": "Budgetvorlage",
+      "description": "Planen und verfolgen Sie Ausgaben und Einnahmen"
+    },
+    "work-schedule": {
+      "name": "Arbeitszeitplanvorlage",
+      "description": "Organisieren Sie Arbeitsschichten und Aufgaben"
+    },
+    "attendance": {
+      "name": "Mitarbeiteranwesenheitsverfolgung",
+      "description": "Überwachen Sie Mitarbeiteranwesenheit und Urlaub"
+    },
+    "invoice": {
+      "name": "Rechnungsvorlage",
+      "description": "Professionelle Rechnung mit Berechnungen"
+    },
+    "calendar": {
+      "name": "Kalendervorlage",
+      "description": "Monatskalender mit Ereignisverfolgung"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "ExcelEasy - KI-gestütztes Excel-Generierungstool",
+      "description": "Wandeln Sie Ihre Daten sofort mit KI in professionelle Excel-Tabellen um. Unser Tool hilft Ihnen, komplexe Excel-Dateien, Diagramme und Berichte mit einfachen natürlichsprachlichen Befehlen zu erstellen.",
+      "keywords": "Excel-Generator, KI Excel, Tabellenautomatisierung, Datenvisualisierung, Business Intelligence, Büroautomatisierung",
+      "schemaName": "ExcelEasy KI Excel-Generator",
+      "schemaDescription": "KI-gestütztes Excel-Tabellenkalkulationsgenerierungstool, das natürliche Sprache in professionelle Excel-Dateien mit Diagrammen, Formeln und Datenanalyse umwandelt"
+    },
+    "workspace": {
+      "title": "KI Excel-Generator - Erstellen Sie benutzerdefinierte Tabellen | ExcelEasy",
+      "description": "Generieren Sie benutzerdefinierte Excel-Tabellen mit KI. Erstellen Sie Tabellen, Diagramme und Berichte mit natürlicher Sprache. Funktionen umfassen Pivot-Tabellen, Datenanalyse und automatische Formatierung.",
+      "keywords": "Excel-Ersteller, Tabellengenerator, KI-Tabellen, Datenanalyse, Geschäftsberichte, automatisiertes Excel",
+      "schemaName": "ExcelEasy Arbeitsbereich",
+      "schemaDescription": "Interaktiver Arbeitsbereich für KI-gestützte benutzerdefinierte Excel-Tabellengenerierung mit automatischer Tabellenerstellung, Diagrammerstellung und Datenanalysetools"
+    },
+    "functions": {
+      "title": "Excel-Funktionen & VBA-Makro-Generator | ExcelEasy",
+      "description": "Generieren Sie komplexe Excel-Funktionen und VBA-Makros sofort mit KI. Automatisieren Sie Berechnungen, Datenverarbeitung und sich wiederholende Aufgaben mit natürlichsprachlichen Befehlen.",
+      "keywords": "Excel-Funktionen, VBA-Makros, Excel-Automatisierung, Formelgenerator, Office-Skripte, Excel-Programmierung",
+      "schemaName": "ExcelEasy Funktionsgenerator",
+      "schemaDescription": "KI-gestütztes fortgeschrittenes Excel-Funktions- und VBA-Makro-Generierungstool, das komplexe Automatisierung und Berechnungen durch natürliche Sprache ermöglicht"
+    }
+  }
+} 

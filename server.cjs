@@ -3,6 +3,7 @@ const cors = require('cors');
 const { google } = require('googleapis');
 const dotenv = require('dotenv');
 const path = require('path');
+const { useTranslation } = require('react-i18next');
 
 // 加载环境变量
 dotenv.config();
@@ -210,3 +211,9 @@ app.listen(port, () => {
   console.log('  - GET /api/auth/google');
   console.log('  - GET /api/auth/callback');
 }); 
+
+async function getUserCountry() {
+  const response = await fetch('https://ipinfo.io/json?token=YOUR_API_KEY');
+  const data = await response.json();
+  return data.country;
+} 

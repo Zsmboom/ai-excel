@@ -1,9 +1,12 @@
 import React from 'react';
 import { FileSpreadsheet } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Features } from '../components/about/Features';
 import { Step } from '../components/about/Step';
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
       <div className="container mx-auto px-4 py-12">
@@ -13,10 +16,10 @@ export default function About() {
             <FileSpreadsheet className="h-16 w-16 text-blue-600" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Making Excel Simple for Everyone
+            {t('about.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            ExcelEasy is your AI-powered companion for all things Excel, designed to solve every Excel challenge and make spreadsheet work effortless.
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -24,48 +27,48 @@ export default function About() {
 
         {/* Mission Statement */}
         <div className="bg-white rounded-lg shadow-md p-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('about.mission.title')}</h2>
           <p className="text-gray-600 leading-relaxed">
-            We believe that everyone should have access to the full power of Excel without the steep learning curve. ExcelEasy combines advanced AI technology with user-friendly design to solve common Excel challenges:
+            {t('about.mission.description')}
           </p>
           <ul className="mt-4 space-y-2 text-gray-600">
             <li className="flex items-center">
               <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-              Complex formula creation and troubleshooting
+              {t('about.mission.challenges.formulas')}
             </li>
             <li className="flex items-center">
               <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-              Time-consuming manual data organization
+              {t('about.mission.challenges.data')}
             </li>
             <li className="flex items-center">
               <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-              Repetitive spreadsheet creation and formatting
+              {t('about.mission.challenges.spreadsheets')}
             </li>
             <li className="flex items-center">
               <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-              VBA macro development for automation
+              {t('about.mission.challenges.macros')}
             </li>
           </ul>
         </div>
 
         {/* How It Works */}
         <div className="bg-gradient-to-br from-blue-50 to-white rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">How ExcelEasy Works</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('about.howItWorks.title')}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Step
               number="1"
-              title="Describe Your Needs"
-              description="Simply tell us what you want to create in plain language"
+              title={t('about.howItWorks.steps.step1.title')}
+              description={t('about.howItWorks.steps.step1.description')}
             />
             <Step
               number="2"
-              title="AI Processing"
-              description="Our AI analyzes your request and generates the perfect solution"
+              title={t('about.howItWorks.steps.step2.title')}
+              description={t('about.howItWorks.steps.step2.description')}
             />
             <Step
               number="3"
-              title="Get Results"
-              description="Download your ready-to-use Excel file or copy the generated formulas"
+              title={t('about.howItWorks.steps.step3.title')}
+              description={t('about.howItWorks.steps.step3.description')}
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FileSpreadsheet, Send, Download } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useExcelGeneration } from '../hooks/useExcelGeneration';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { ExcelPreview } from '../components/excel/ExcelPreview';
@@ -18,6 +19,7 @@ export default function Workspace() {
   });
   
   const { generateFromPrompt, loading, error } = useExcelGeneration();
+  const { t } = useTranslation();
   const [result, setResult] = useState<{
     fileName: string;
     blob: Blob;
@@ -41,9 +43,9 @@ export default function Workspace() {
       console.error('Error generating Excel:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
       if (errorMessage.includes('quota')) {
-        alert('API quota exceeded. Please try again later or contact administrator to update quota.');
+        alert(t('workspace.errors.quota'));
       } else {
-        alert('Error generating Excel file: ' + errorMessage);
+        alert(t('workspace.errors.unknown') + errorMessage);
       }
     }
   };
@@ -68,9 +70,9 @@ export default function Workspace() {
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-6xl mx-auto">
             <header className="mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">AI Excel Generator</h1>
+              <h1 className="text-3xl font-bold text-gray-900">{t('workspace.title')}</h1>
               <p className="text-gray-600 mt-2">
-                Choose a template or describe your Excel needs in natural language
+                {t('workspace.subtitle')}
               </p>
             </header>
 
@@ -82,13 +84,13 @@ export default function Workspace() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="prompt" className="block text-sm font-medium text-gray-700 mb-2">
-                    Your Request
+                    {t('workspace.form.promptLabel')}
                   </label>
                   <textarea
                     id="prompt"
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
-                    placeholder="E.g., Create a monthly budget spreadsheet with categories for income, expenses, and savings..."
+                    placeholder={t('workspace.form.promptPlaceholder')}
                     className="w-full h-32 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                   />
                 </div>
@@ -104,7 +106,7 @@ export default function Workspace() {
                     <LoadingSpinner />
                   ) : (
                     <>
-                      Generate Excel <Send className="ml-2 h-4 w-4" />
+                      {t('workspace.form.generateButton')} <Send className="ml-2 h-4 w-4" />
                     </>
                   )}
                 </button>
@@ -122,21 +124,21 @@ export default function Workspace() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <FileSpreadsheet className="h-6 w-6 text-green-600" />
-                        <span className="font-medium">Your Excel file is ready!</span>
+                        <span className="font-medium">{t('workspace.form.readyMessage')}</span>
                       </div>
                       <button
                         onClick={handleDownload}
                         className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
                       >
                         <Download className="h-4 w-4" />
-                        <span>Download</span>
+                        <span>{t('workspace.form.downloadButton')}</span>
                       </button>
                     </div>
                     <p className="mt-4 text-gray-600">{result.summary}</p>
                   </div>
                   
                   <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-semibold mb-4">Preview</h2>
+                    <h2 className="text-xl font-semibold mb-4">{t('workspace.form.previewTitle')}</h2>
                     <ExcelPreview data={result.analysis.data} />
                   </div>
                 </article>

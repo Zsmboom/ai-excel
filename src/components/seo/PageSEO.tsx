@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { SchemaOrg } from './SchemaOrg';
 import { SEOConfig } from '../../config/seo';
+import { useTranslation } from 'react-i18next';
 
 interface PageSEOProps {
   page: keyof typeof SEOConfig;
 }
 
 export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
-  const config = SEOConfig[page];
+  const { i18n } = useTranslation();
+  const [config, setConfig] = useState(SEOConfig[page]);
+
+  useEffect(() => {
+    // 当语言改变时更新配置
+    setConfig(SEOConfig[page]);
+  }, [i18n.language, page]);
 
   return (
     <>
       <Helmet>
-        <title>Exceleasy - AI Excel Generation Tool</title>
-        <meta name="description" content="Exceleasy is an AI-powered tool that transforms text into Excel spreadsheets. With AI Excel functions and VBA automation," />
+        <html lang={i18n.language} />
+        <title>{config.title}</title>
+        <meta name="description" content={config.description} />
         <meta name="keywords" content={config.keywords} />
         
         {/* Open Graph / Facebook */}

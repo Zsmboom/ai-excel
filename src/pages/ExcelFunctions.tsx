@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Wrench } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { FunctionInput } from '../components/excel/FunctionInput';
 import { FunctionResult } from '../components/excel/FunctionResult';
 import { FunctionUsageInfo } from '../components/excel/FunctionUsageInfo';
@@ -17,6 +18,7 @@ export default function ExcelFunctions() {
     functionType,
     setFunctionType
   } = useExcelFunctions();
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,9 +32,9 @@ export default function ExcelFunctions() {
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-6xl mx-auto">
             <header className="mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Excel Functions & VBA Macro Generator</h1>
+              <h1 className="text-3xl font-bold text-gray-900">{t('excelFunctions.title')}</h1>
               <p className="text-gray-600 mt-2">
-                Describe your needs in natural language to quickly generate Excel functions and VBA macros
+                {t('excelFunctions.subtitle')}
               </p>
             </header>
 

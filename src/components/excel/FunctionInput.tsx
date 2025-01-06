@@ -1,5 +1,6 @@
 import React from 'react';
 import { Send } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { LoadingSpinner } from '../ui/LoadingSpinner';
 import type { FunctionType } from '../../types/excel';
 
@@ -20,6 +21,8 @@ export function FunctionInput({
   functionType,
   onTypeChange
 }: FunctionInputProps) {
+  const { t } = useTranslation();
+
   return (
     <form onSubmit={onSubmit} className="space-y-4">
       <div className="flex gap-4 mb-4">
@@ -30,7 +33,7 @@ export function FunctionInput({
             onChange={() => onTypeChange('formula')}
             className="w-4 h-4 text-blue-600"
           />
-          <span className="text-sm font-medium text-gray-700">Excel Formula</span>
+          <span className="text-sm font-medium text-gray-700">{t('excelFunctions.form.typeSelector.formula')}</span>
         </label>
         <label className="flex items-center gap-2">
           <input
@@ -39,21 +42,19 @@ export function FunctionInput({
             onChange={() => onTypeChange('vba')}
             className="w-4 h-4 text-blue-600"
           />
-          <span className="text-sm font-medium text-gray-700">VBA Macro</span>
+          <span className="text-sm font-medium text-gray-700">{t('excelFunctions.form.typeSelector.macro')}</span>
         </label>
       </div>
 
       <div>
         <label htmlFor="prompt" className="block text-sm font-medium text-gray-700 mb-2">
-          Describe Your {functionType === 'formula' ? 'Excel Function' : 'VBA Macro'} Need
+          {t('excelFunctions.form.promptLabel')}
         </label>
         <textarea
           id="prompt"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          placeholder={functionType === 'formula' 
-            ? "E.g., Compare column A in Sheet1 with column B in Sheet2 and show differences in Sheet3..."
-            : "E.g., Create a macro that copies specific rows based on a condition to a new sheet..."}
+          placeholder={t('excelFunctions.form.promptPlaceholder')}
           className="w-full h-32 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
         />
       </div>
@@ -66,7 +67,7 @@ export function FunctionInput({
           <LoadingSpinner />
         ) : (
           <>
-            Generate {functionType === 'formula' ? 'Function' : 'Macro'} <Send className="ml-2 h-4 w-4" />
+            {t('excelFunctions.form.generateButton')} <Send className="ml-2 h-4 w-4" />
           </>
         )}
       </button>

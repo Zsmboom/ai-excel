@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 interface SchemaOrgProps {
   type: 'WebApplication' | 'SoftwareApplication';
@@ -16,6 +17,8 @@ export const SchemaOrg: React.FC<SchemaOrgProps> = ({
   applicationCategory,
   url = typeof window !== 'undefined' ? window.location.href : '',
 }) => {
+  const { i18n } = useTranslation();
+
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': type,
@@ -24,10 +27,11 @@ export const SchemaOrg: React.FC<SchemaOrgProps> = ({
     applicationCategory,
     operatingSystem: 'Web',
     url,
+    inLanguage: i18n.language,
     offers: {
       '@type': 'Offer',
       price: '0',
-      priceCurrency: 'USD',
+      priceCurrency: i18n.language === 'zh' ? 'CNY' : 'USD',
     },
   };
 

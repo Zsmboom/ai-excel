@@ -1,0 +1,337 @@
+{
+  "common": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "pricing": "Pricing",
+    "features": "Features",
+    "about": "About",
+    "contact": "Contact",
+    "home": "Home",
+    "getStarted": "Get Started Free",
+    "watchDemo": "Watch Demo",
+    "month": "/month",
+    "save": "Save",
+    "mostPopular": "Most Popular",
+    "allRightsReserved": "All rights reserved",
+    "excelTools": "Excel Tools",
+    "excelGenerator": "AI Excel Generator",
+    "excelFunctions": "AI Excel Functions"
+  },
+  "hero": {
+    "title": "Transform Text to Excel with AI",
+    "subtitle": "Simply describe your data needs in natural language, and let our AI create professional Excel spreadsheets instantly.",
+    "cta": "Get Started",
+    "imageAlt": "AI Excel Analysis"
+  },
+  "features": {
+    "title": "AI-Powered Excel Solutions",
+    "subtitle": "Simplify your Excel work with our advanced AI tools",
+    "items": {
+      "generation": {
+        "title": "AI Excel Generation",
+        "description": "Transform natural language descriptions into complete, professionally formatted Excel spreadsheets in seconds."
+      },
+      "assistant": {
+        "title": "Excel Function Assistant",
+        "description": "Get instant help with complex Excel formulas, complete with explanations and implementation guides."
+      },
+      "macro": {
+        "title": "VBA Macro Generation",
+        "description": "Generate custom VBA macros to automate your Excel workflows with step-by-step instructions."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the plan that's right for you",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "description": "Perfect for trying out ExcelEasy",
+      "features": [
+        "10 generations per month",
+        "Basic Excel file generation",
+        "Basic formula generation",
+        "Basic VBA macro generation",
+        "Community support"
+      ]
+    },
+    "proMonthly": {
+      "name": "Pro Monthly",
+      "price": "$5.99",
+      "description": "For regular Excel users",
+      "features": [
+        "Unlimited Excel file generation",
+        "Unlimited formula generation",
+        "Unlimited VBA macro generation",
+        "Priority support",
+        "Early access to new features",
+        "Direct developer feedback"
+      ]
+    },
+    "proYearly": {
+      "name": "Pro Yearly",
+      "price": "$50.99",
+      "description": "Best value for committed users",
+      "originalPrice": "$71.88",
+      "savePercent": "29%",
+      "features": [
+        "Everything in Pro Monthly",
+        "29% discount vs monthly",
+        "Priority support",
+        "Early access to new features",
+        "Direct developer feedback"
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "Loved by Excel Users",
+    "subtitle": "See how ExcelEasy helps professionals and students work smarter",
+    "items": [
+      {
+        "quote": "As a financial analyst, I deal with complex Excel formulas daily. ExcelEasy's AI function generator has become my go-to tool for creating and troubleshooting formulas. The VBA macro generation saves me hours of coding time.",
+        "author": "Sarah Chen",
+        "role": "Senior Financial Analyst",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80"
+      },
+      {
+        "quote": "Managing sales data used to be a time-consuming task. Now I just describe what I need, and ExcelEasy creates perfectly formatted spreadsheets instantly. It's revolutionized how our sales team handles reporting.",
+        "author": "Michael Rodriguez",
+        "role": "Sales Manager",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80"
+      },
+      {
+        "quote": "As a student, Excel functions were always challenging. ExcelEasy helped me understand complex formulas with clear explanations and examples. It's like having a personal Excel tutor available 24/7.",
+        "author": "Emily Zhang",
+        "role": "Business Student",
+        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Transform text into Excel spreadsheets instantly with AI.",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "testimonials": "Testimonials"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers"
+    },
+    "connect": {
+      "title": "Connect",
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our service",
+    "items": [
+      {
+        "question": "Can AI create an Excel spreadsheet?",
+        "answer": "Yes, AI can create Excel spreadsheets through natural language descriptions. Users can simply describe their requirements in text, and the AI will generate the desired Excel file with appropriate content and formatting. The generated spreadsheets can be further modified and customized as needed. This approach makes spreadsheet creation more intuitive and efficient, eliminating the need for manual formatting and complex formula writing."
+      },
+      {
+        "question": "How accurate is the AI Excel generation?",
+        "answer": "Our AI Excel generation is highly accurate and constantly improving. It understands context, formatting requirements, and complex data relationships. However, we always recommend reviewing the generated spreadsheets for your specific needs."
+      },
+      {
+        "question": "Can I customize the generated spreadsheets?",
+        "answer": "Absolutely! All generated spreadsheets are fully editable. You can modify formulas, formatting, data, and structure just like any other Excel file."
+      },
+      {
+        "question": "What types of Excel functions are supported?",
+        "answer": "We support all standard Excel functions and formulas, including complex mathematical operations, logical functions, lookup functions, and more. Our AI can help you implement and understand any Excel function."
+      }
+    ]
+  },
+  "about": {
+    "title": "Making Excel Simple for Everyone",
+    "subtitle": "ExcelEasy is your AI-powered companion for all things Excel, designed to solve every Excel challenge and make spreadsheet work effortless.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We believe that everyone should have access to the full power of Excel without the steep learning curve. ExcelEasy combines advanced AI technology with user-friendly design to solve common Excel challenges:",
+      "challenges": {
+        "formulas": "Complex formula creation and troubleshooting",
+        "data": "Time-consuming manual data organization",
+        "spreadsheets": "Repetitive spreadsheet creation and formatting",
+        "macros": "VBA macro development for automation"
+      }
+    },
+    "howItWorks": {
+      "title": "How ExcelEasy Works",
+      "steps": {
+        "step1": {
+          "title": "Describe Your Needs",
+          "description": "Simply tell us what you want to create in plain language"
+        },
+        "step2": {
+          "title": "AI Processing",
+          "description": "Our AI analyzes your request and generates the perfect solution"
+        },
+        "step3": {
+          "title": "Get Results",
+          "description": "Download your ready-to-use Excel file or copy the generated formulas"
+        }
+      }
+    }
+  },
+  "workspace": {
+    "title": "AI Excel Generator",
+    "subtitle": "Choose a template or describe your Excel needs in natural language",
+    "form": {
+      "promptLabel": "Your Request",
+      "promptPlaceholder": "E.g., Create a monthly budget spreadsheet with categories for income, expenses, and savings...",
+      "generateButton": "Generate Excel",
+      "downloadButton": "Download",
+      "readyMessage": "Your Excel file is ready!",
+      "previewTitle": "Preview"
+    },
+    "errors": {
+      "quota": "API quota exceeded. Please try again later or contact administrator to update quota.",
+      "unknown": "Error generating Excel file: "
+    }
+  },
+  "excelFunctions": {
+    "title": "Excel Functions & VBA Macro Generator",
+    "subtitle": "Describe your needs in natural language to quickly generate Excel functions and VBA macros",
+    "form": {
+      "promptLabel": "Your Request",
+      "promptPlaceholder": "E.g., Create a VLOOKUP formula to find matching values between two tables...",
+      "generateButton": "Generate Function",
+      "typeSelector": {
+        "formula": "Excel Formula",
+        "macro": "VBA Macro"
+      }
+    }
+  },
+  "functionUsage": {
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "isFree": {
+        "question": "Is ExcelEasy free?",
+        "answer": "Yes, ExcelEasy offers a free tier! After logging in, you get 10 free generations per month. This allows you to try out our AI-powered Excel function generation capabilities without any cost."
+      },
+      "howToUse": {
+        "question": "How do I use ExcelEasy Functions?",
+        "intro": "ExcelEasy Functions helps you create Excel solutions in two ways:",
+        "features": {
+          "formulas": "Excel Formulas: Generate complex Excel formulas with step-by-step implementation guides",
+          "macros": "VBA Macros: Create custom VBA macro code to automate Excel tasks and processes"
+        },
+        "description": "Simply describe what you want to achieve in natural language, and our AI will generate the appropriate Excel formula or VBA code along with detailed instructions on how to use it."
+      }
+    }
+  },
+  "generatorUsage": {
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "isFree": {
+        "question": "Is ExcelEasy free?",
+        "answer": "Yes, ExcelEasy offers a free tier! After logging in, you get 10 free generations per month. This allows you to try out our AI-powered Excel generation capabilities without any cost."
+      },
+      "howToUse": {
+        "question": "How do I use ExcelEasy?",
+        "intro": "ExcelEasy offers multiple ways to create Excel files:",
+        "features": {
+          "aiGeneration": "AI Generation: Simply describe your Excel needs in natural language, and our AI will create a customized spreadsheet",
+          "templates": "Templates: Choose from our collection of pre-built templates and customize them to your needs"
+        },
+        "comingSoon": "Coming soon: Document conversion feature - Upload Word or PDF files and automatically convert them into well-structured Excel spreadsheets based on your requirements."
+      }
+    }
+  },
+  "aboutFeatures": {
+    "aiGeneration": {
+      "title": "AI-Powered Generation",
+      "description": "Transform text descriptions into complete Excel spreadsheets instantly"
+    },
+    "smartFunctions": {
+      "title": "Smart Functions",
+      "description": "Get expert help with Excel formulas and VBA macros"
+    },
+    "templates": {
+      "title": "Intelligent Templates",
+      "description": "Access pre-built templates for common business needs"
+    },
+    "forEveryone": {
+      "title": "For Everyone",
+      "description": "From beginners to Excel experts, we've got you covered"
+    }
+  },
+  "excelTemplates": {
+    "title": "Excel Templates",
+    "sales-stats": {
+      "name": "Sales Data Statistics",
+      "description": "Track sales performance with detailed statistics and metrics"
+    },
+    "customer-info": {
+      "name": "Customer Information Management",
+      "description": "Organize customer details and interaction history"
+    },
+    "sales-plan": {
+      "name": "Sales Planning Template",
+      "description": "Plan and track sales targets and achievements"
+    },
+    "inventory": {
+      "name": "Inventory Management",
+      "description": "Track stock levels and inventory movements"
+    },
+    "sales-performance": {
+      "name": "Sales Performance Report",
+      "description": "Analyze sales team performance and metrics"
+    },
+    "budget": {
+      "name": "Budget Template",
+      "description": "Plan and track expenses and income"
+    },
+    "work-schedule": {
+      "name": "Work Schedule Template",
+      "description": "Organize work shifts and assignments"
+    },
+    "attendance": {
+      "name": "Employee Attendance Tracker",
+      "description": "Monitor employee attendance and leave"
+    },
+    "invoice": {
+      "name": "Invoice Template",
+      "description": "Professional invoice with calculations"
+    },
+    "calendar": {
+      "name": "Calendar Template",
+      "description": "Monthly calendar with event tracking"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "ExcelEasy - AI-Powered Excel Generation Tool",
+      "description": "Transform your data into professional Excel spreadsheets instantly with AI. Our tool helps you create complex Excel files, charts, and reports with simple natural language commands.",
+      "keywords": "Excel generator, AI Excel, spreadsheet automation, data visualization, business intelligence, office automation",
+      "schemaName": "ExcelEasy AI Excel Generator",
+      "schemaDescription": "AI-powered Excel spreadsheet generation tool that transforms natural language into professional Excel files with charts, formulas, and data analysis"
+    },
+    "workspace": {
+      "title": "AI Excel Generator - Create Custom Spreadsheets | ExcelEasy",
+      "description": "Generate custom Excel spreadsheets using AI. Create tables, charts, and reports with natural language. Features include pivot tables, data analysis, and automated formatting.",
+      "keywords": "Excel creator, spreadsheet generator, AI tables, data analysis, business reports, automated Excel",
+      "schemaName": "ExcelEasy Workspace",
+      "schemaDescription": "Interactive workspace for generating custom Excel spreadsheets with AI, featuring automated table creation, chart generation, and data analysis tools"
+    },
+    "functions": {
+      "title": "Excel Functions & VBA Macro Generator | ExcelEasy",
+      "description": "Generate complex Excel functions and VBA macros instantly with AI. Automate calculations, data processing, and repetitive tasks with natural language commands.",
+      "keywords": "Excel functions, VBA macros, Excel automation, formula generator, office scripts, Excel programming",
+      "schemaName": "ExcelEasy Function Generator",
+      "schemaDescription": "Advanced Excel function and VBA macro generation tool powered by AI, enabling complex automation and calculations through natural language"
+    }
+  }
+} 
