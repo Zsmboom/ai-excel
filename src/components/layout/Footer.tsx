@@ -71,6 +71,9 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-white" aria-label={t('footer.connect.linkedin')}>
                 <Linkedin className="h-6 w-6" />
               </a>
+              <a href="https://x.com/ShiMin_alcor" className="text-gray-400 hover:text-white" aria-label="X">
+                <Twitter className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>
