@@ -40,6 +40,18 @@
       "macro": {
         "title": "VBA Macro Generation",
         "description": "Generate custom VBA macros to automate your Excel workflows with step-by-step instructions."
+      },
+      "aiExcelGenerator": {
+        "title": "AI Excel Generator",
+        "description": "AI Excel Generator is a powerful tool that helps you quickly generate Excel spreadsheets."
+      },
+      "aiExcelFunctions": {
+        "title": "AI Excel Functions & AI Excel VBA Generator",
+        "description": "With AI Excel Functions & AI Excel VBA Generator, you can easily create complex Excel functions and VBA code."
+      },
+      "imageToExcel": {
+        "title": "Image to Excel",
+        "description": "Image to Excel tool quickly converts data from images into Excel spreadsheets."
       }
     }
   },

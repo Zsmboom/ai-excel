@@ -1,48 +1,57 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { FileSpreadsheet, Calculator, Code } from 'lucide-react';
+import { FileSpreadsheet, Calculator, Code, ArrowRight } from 'lucide-react';
+import { useNavigation } from '../../hooks/useNavigation';
 
 const Features = () => {
   const { t } = useTranslation();
+  const { goToWorkspace, goToFunctions } = useNavigation();
 
   const features = [
     {
-      icon: <FileSpreadsheet className="h-8 w-8 text-blue-600" />,
-      title: t('features.items.generation.title'),
-      description: t('features.items.generation.description')
+      icon: <img src="/images/ai-excel-generator.png" alt={t('features.items.aiExcelGenerator.title')} className="w-4/5 rounded-lg shadow-lg" />,
+      title: t('features.items.aiExcelGenerator.title'),
+      description: t('features.items.aiExcelGenerator.description'),
+      action: goToWorkspace,
+      buttonText: t('common.getStarted')
     },
     {
-      icon: <Calculator className="h-8 w-8 text-blue-600" />,
-      title: t('features.items.assistant.title'),
-      description: t('features.items.assistant.description')
+      icon: <img src="/images/ai-excel-functions.png" alt={t('features.items.aiExcelFunctions.title')} className="w-4/5 rounded-lg shadow-lg" />,
+      title: t('features.items.aiExcelFunctions.title'),
+      description: t('features.items.aiExcelFunctions.description'),
+      action: goToFunctions,
+      buttonText: t('common.getStarted')
     },
     {
-      icon: <Code className="h-8 w-8 text-blue-600" />,
-      title: t('features.items.macro.title'),
-      description: t('features.items.macro.description')
+      icon: <img src="/images/image-to-excel.png" alt={t('features.items.imageToExcel.title')} className="w-4/5 rounded-lg shadow-lg" />,
+      title: t('features.items.imageToExcel.title'),
+      description: t('features.items.imageToExcel.description'),
+      action: goToWorkspace,
+      buttonText: t('common.getStarted')
     }
   ];
 
   return (
-    <section id="features" className="py-20 bg-white">
+    <section id="features" className="py-12 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            {t('features.title')}
-          </h2>
-          <p className="text-xl text-gray-600">
-            {t('features.subtitle')}
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="space-y-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              className="flex items-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <div className="mr-8 flex-shrink-0 w-2/5">{feature.icon}</div>
+              <div className="flex-1 max-w-xl">
+                <h1 className="text-3xl font-bold mb-3 text-gray-900">{feature.title}</h1>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">{feature.description}</p>
+                <button
+                  onClick={feature.action}
+                  className="flex items-center text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg transition-colors"
+                >
+                  {feature.buttonText}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+              </div>
             </div>
           ))}
         </div>

@@ -11,5 +11,10 @@ export const useNavigation = () => {
     navigate(`/${currentLang}/ai-excel-generator`);
   };
 
-  return { goToWorkspace };
+  const goToFunctions = () => {
+    const currentLang = lang || i18n.language || 'en';
+    navigate(`/${currentLang}/excel-functions`);
+  };
+
+  return { goToWorkspace, goToFunctions };
 };

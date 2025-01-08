@@ -40,6 +40,18 @@
       "macro": {
         "title": "VBA 宏生成",
         "description": "生成自定义 VBA 宏以自动化您的 Excel 工作流程，并提供分步说明。"
+      },
+      "aiExcelGenerator": {
+        "title": "AI Excel 生成器",
+        "description": "AI Excel 生成器是一个强大的工具，可以帮助您快速生成 Excel 表格。"
+      },
+      "aiExcelFunctions": {
+        "title": "AI Excel 函数 & AI Excel VBA 生成器",
+        "description": "使用 AI Excel 函数 & AI Excel VBA 生成器，您可以轻松创建复杂的 Excel 函数和 VBA 代码。"
+      },
+      "imageToExcel": {
+        "title": "图片转 Excel",
+        "description": "图片转 Excel 工具可以将图片中的数据快速转换为 Excel 表格。"
       }
     }
   },
@@ -356,5 +368,11 @@
       "invalidImage": "无效的图片格式",
       "generateError": "生成 Excel 时出错："
     }
-  }
+  },
+  "aiExcelGeneratorTitle": "AI Excel 生成器",
+  "aiExcelGeneratorDescription": "AI Excel 生成器是一个强大的工具，可以帮助您快速生成 Excel 表格。",
+  "aiExcelFunctionsTitle": "AI Excel 函数 & AI Excel VBA 生成器",
+  "aiExcelFunctionsDescription": "使用 AI Excel 函数 & AI Excel VBA 生成器，您可以轻松创建复杂的 Excel 函数和 VBA 代码。",
+  "imageToExcelTitle": "图片转 Excel",
+  "imageToExcelDescription": "图片转 Excel 工具可以将图片中的数据快速转换为 Excel 表格。"
 } 
