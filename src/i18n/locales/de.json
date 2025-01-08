@@ -16,7 +16,8 @@
     "allRightsReserved": "Alle Rechte vorbehalten",
     "excelTools": "Excel-Tools",
     "excelGenerator": "KI Excel-Generator",
-    "excelFunctions": "KI Excel-Funktionen"
+    "excelFunctions": "KI Excel-Funktionen",
+    "picToExcel": "Bild zu Excel"
   },
   "hero": {
     "title": "Text mit KI in Excel umwandeln",
@@ -39,6 +40,18 @@
       "macro": {
         "title": "VBA-Makro-Generierung",
         "description": "Generieren Sie benutzerdefinierte VBA-Makros zur Automatisierung Ihrer Excel-Workflows mit Schritt-für-Schritt-Anleitungen."
+      },
+      "aiExcelGenerator": {
+        "title": "KI-Excel-Generator",
+        "description": "Der KI-Excel-Generator ist ein leistungsstarkes Tool, mit dem Sie schnell Excel-Tabellen erstellen können."
+      },
+      "aiExcelFunctions": {
+        "title": "KI-Excel-Funktionen & VBA-Generator",
+        "description": "Mit dem KI-Excel-Funktionen & VBA-Generator können Sie mühelos komplexe Excel-Funktionen und VBA-Code erstellen."
+      },
+      "imageToExcel": {
+        "title": "Bild zu Excel",
+        "description": "Das Bild-zu-Excel-Tool konvertiert Daten aus Bildern schnell in Excel-Tabellen."
       }
     }
   },
@@ -330,6 +343,24 @@
       "keywords": "Excel-Funktionen, VBA-Makros, Excel-Automatisierung, Formelgenerator, Office-Skripte, Excel-Programmierung",
       "schemaName": "ExcelEasy Funktionsgenerator",
       "schemaDescription": "KI-gestütztes fortgeschrittenes Excel-Funktions- und VBA-Makro-Generierungstool, das komplexe Automatisierung und Berechnungen durch natürliche Sprache ermöglicht"
+    }
+  },
+  "picToExcel": {
+    "title": "Bild zu Excel Konverter",
+    "subtitle": "Laden Sie ein Bild hoch und konvertieren Sie es schnell in eine Excel-Tabelle",
+    "form": {
+      "uploadImage": "Bild hochladen",
+      "description": "Beschreibung (Optional)",
+      "descriptionPlaceholder": "Fügen Sie zusätzliche Beschreibungen hinzu, damit die KI den Bildinhalt besser versteht...",
+      "generateButton": "Excel generieren",
+      "downloadButton": "Excel herunterladen",
+      "previewTitle": "Vorschau",
+      "readyMessage": "Ihre Excel-Datei ist bereit!"
+    },
+    "errors": {
+      "imageRequired": "Bitte laden Sie zuerst ein Bild hoch",
+      "invalidImage": "Ungültiges Bildformat",
+      "generateError": "Fehler beim Generieren von Excel: "
     }
   }
 } 

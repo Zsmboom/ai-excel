@@ -16,7 +16,8 @@
     "allRightsReserved": "모든 권리 보유",
     "excelTools": "Excel 도구",
     "excelGenerator": "AI Excel 생성기",
-    "excelFunctions": "AI Excel 함수"
+    "excelFunctions": "AI Excel 함수",
+    "picToExcel": "이미지를 Excel로"
   },
   "hero": {
     "title": "AI로 텍스트를 Excel로 변환",
@@ -39,6 +40,18 @@
       "macro": {
         "title": "VBA 매크로 생성",
         "description": "Excel 워크플로우를 자동화하기 위한 맞춤형 VBA 매크로를 생성하고 단계별 지침을 제공합니다."
+      },
+      "aiExcelGenerator": {
+        "title": "AI 엑셀 생성기",
+        "description": "AI 엑셀 생성기는 엑셀 스프레드시트를 빠르게 생성할 수 있는 강력한 도구입니다."
+      },
+      "aiExcelFunctions": {
+        "title": "AI 엑셀 함수 & VBA 생성기",
+        "description": "AI 엑셀 함수 & VBA 생성기를 사용하면 복잡한 엑셀 함수와 VBA 코드를 쉽게 만들 수 있습니다."
+      },
+      "imageToExcel": {
+        "title": "이미지를 엑셀로",
+        "description": "이미지를 엑셀로 변환 도구는 이미지의 데이터를 빠르게 엑셀 스프레드시트로 변환합니다."
       }
     }
   },
@@ -227,7 +240,7 @@
       },
       "howToUse": {
         "question": "ExcelEasy 함수는 어떻게 사용하나요?",
-        "intro": "ExcelEasy 함수는 두 가지 방식으로 Excel 솔루션 생성을 도와줍니다:",
+        "intro": "ExcelEasy 함수는 두 가지 방식으로 Excel 솔루션 생성을 도와줍니니다:",
         "features": {
           "formulas": "Excel 수식: 단계별 구현 가이드와 함께 복잡한 Excel 수식 생성",
           "macros": "VBA 매크로: Excel 작업과 프로세스를 자동화하는 맞춤형 VBA 매크로 코드 생성"
@@ -257,7 +270,7 @@
   "aboutFeatures": {
     "aiGeneration": {
       "title": "AI 기반 생성",
-      "description": "텍스트 설명을 즉시 완성된 Excel 스프레드시트로 변환"
+      "description": "텍텍스트 설명을 즉시 완성된 Excel 스프레드시트로 변환"
     },
     "smartFunctions": {
       "title": "스마트 함수",
@@ -336,6 +349,24 @@
       "keywords": "Excel 함수, VBA 매크로, Excel 자동화, 수식 생성기, 오피스 스크립트, Excel 프로그래밍",
       "schemaName": "ExcelEasy 함수 생성기",
       "schemaDescription": "자연어를 통해 복잡한 자동화와 계산을 가능하게 하는 AI 기반 고급 Excel 함수 및 VBA 매크로 생성 도구"
+    }
+  },
+  "picToExcel": {
+    "title": "이미지를 Excel로 변환",
+    "subtitle": "이미지를 업로드하고 빠르게 Excel 스프레드시트로 변환하세요",
+    "form": {
+      "uploadImage": "이미지 업로드",
+      "description": "설명 (선택사항)",
+      "descriptionPlaceholder": "AI가 이미지 내용을 더 잘 이해할 수 있도록 추가 설명을 입력하세요...",
+      "generateButton": "Excel 생성",
+      "downloadButton": "Excel 다운로드",
+      "previewTitle": "미리보기",
+      "readyMessage": "Excel 파일이 준비되었습니다!"
+    },
+    "errors": {
+      "imageRequired": "이미지를 먼저 업로드해 주세요",
+      "invalidImage": "잘못된 이미지 형식",
+      "generateError": "Excel 생성 중 오류 발생: "
     }
   }
 } 
