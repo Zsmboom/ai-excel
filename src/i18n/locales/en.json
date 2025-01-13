@@ -17,7 +17,13 @@
     "excelTools": "Excel Tools",
     "excelGenerator": "AI Excel Generator",
     "excelFunctions": "AI Excel Functions",
-    "picToExcel": "Image to Excel"
+    "picToExcel": "Image to Excel",
+    "share": "Share",
+    "shareFeatures": {
+      "free": "100% Free to Use",
+      "noLogin": "No Login Required",
+      "multiLanguage": "Multi-language Support"
+    }
   },
   "hero": {
     "title": "Transform Text to Excel with AI",
@@ -216,7 +222,9 @@
     "errors": {
       "quota": "API quota exceeded. Please try again later or contact administrator to update quota.",
       "unknown": "Error generating Excel file: "
-    }
+    },
+    "shareTitle": "AI Excel Assistant Workspace",
+    "shareDescription": "Your intelligent Excel workspace with AI-powered features. No login required, completely free!"
   },
   "excelFunctions": {
     "title": "Excel Functions & VBA Macro Generator",
@@ -229,7 +237,9 @@
         "formula": "Excel Formula",
         "macro": "VBA Macro"
       }
-    }
+    },
+    "shareTitle": "AI-Powered Excel Functions",
+    "shareDescription": "Create complex Excel formulas with natural language. Free AI assistant for Excel functions!"
   },
   "functionUsage": {
     "faq": {
@@ -367,6 +377,22 @@
       "imageRequired": "Please upload an image first",
       "invalidImage": "Invalid image format",
       "generateError": "Error generating Excel: "
+    },
+    "shareTitle": "Convert Images to Excel with AI",
+    "shareDescription": "Transform your images into editable Excel spreadsheets instantly. Free, no login required!"
+  },
+  "pages": {
+    "picToExcel": {
+      "shareTitle": "Convert Images to Excel with AI",
+      "shareDescription": "Transform your images into editable Excel spreadsheets instantly. Free, no login required!"
+    },
+    "excelFunctions": {
+      "shareTitle": "AI-Powered Excel Functions",
+      "shareDescription": "Create complex Excel formulas with natural language. Free AI assistant for Excel functions!"
+    },
+    "workspace": {
+      "shareTitle": "AI Excel Assistant Workspace",
+      "shareDescription": "Your intelligent Excel workspace with AI-powered features. No login required, completely free!"
     }
   }
 } 

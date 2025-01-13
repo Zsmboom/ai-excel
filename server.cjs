@@ -4,9 +4,8 @@ const { google } = require('googleapis');
 const dotenv = require('dotenv');
 const path = require('path');
 const multer = require('multer');
-const { Configuration, OpenAIApi } = require('openai');
 const ExcelJS = require('exceljs');
-const { useTranslation } = require('react-i18next');
+const { OpenAI } = require('openai');
 
 // 加载环境变量
 dotenv.config();
@@ -226,10 +225,9 @@ const upload = multer({
 });
 
 // 配置 OpenAI
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
 // 添加图片转Excel的API端点
 app.post('/api/pic-to-excel', upload.single('image'), async (req, res) => {
@@ -246,7 +244,7 @@ app.post('/api/pic-to-excel', upload.single('image'), async (req, res) => {
     const imageType = req.file.mimetype;
 
     // 使用 OpenAI Vision API 分析图片
-    const response = await openai.createChatCompletion({
+    const response = await openai.chat.completions.create({
       model: "gpt-4-vision-preview",
       messages: [
         {
@@ -269,7 +267,7 @@ app.post('/api/pic-to-excel', upload.single('image'), async (req, res) => {
     });
 
     // 解析 AI 返回的内容
-    const content = response.data.choices[0].message.content;
+    const content = response.choices[0].message.content;
     
     // 创建 Excel 工作簿
     const workbook = new ExcelJS.Workbook();

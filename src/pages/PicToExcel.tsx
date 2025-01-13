@@ -6,6 +6,7 @@ import { ExcelPreview } from '../components/excel/ExcelPreview';
 import { TableConfig } from '../components/excel/TableConfig';
 import { UsageInfo } from '../components/excel/UsageInfo';
 import { PageSEO } from '../components/seo/PageSEO';
+import ShareButtons from '../components/common/ShareButtons';
 import { analyzeImageWithClaude } from '../services/claude';
 import { generateExcel } from '../services/excel';
 import type { ExcelData, AnalysisResult } from '../types/excel';
@@ -111,6 +112,19 @@ export default function PicToExcel() {
               <p className="text-gray-600 mt-2">
                 {t('picToExcel.subtitle')}
               </p>
+              <div className="mt-4">
+                <ShareButtons
+                  url={window.location.href}
+                  title={t('pages.picToExcel.shareTitle')}
+                  description={t('pages.picToExcel.shareDescription')}
+                  hashtags={['AIExcel', 'FreeTools', 'ImageToExcel']}
+                />
+                <div className="mt-2 flex flex-wrap gap-2 text-sm text-gray-600">
+                  <span>✨ {t('common.shareFeatures.free')}</span>
+                  <span>🔒 {t('common.shareFeatures.noLogin')}</span>
+                  <span>🌍 {t('common.shareFeatures.multiLanguage')}</span>
+                </div>
+              </div>
             </header>
 
             <section className="bg-white rounded-lg shadow-md p-6" aria-label="Excel Generation">

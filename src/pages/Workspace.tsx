@@ -9,6 +9,7 @@ import { UsageInfo } from '../components/excel/UsageInfo';
 import { TemplateGallery } from '../components/excel/TemplateGallery';
 import { PageSEO } from '../components/seo/PageSEO';
 import type { AnalysisResult, TableConfigOptions, ExcelTemplate } from '../types/excel';
+import ShareButtons from '../components/common/ShareButtons';
 
 export default function Workspace() {
   const [prompt, setPrompt] = useState('');
@@ -74,6 +75,19 @@ export default function Workspace() {
               <p className="text-gray-600 mt-2">
                 {t('workspace.subtitle')}
               </p>
+              <div className="mt-4">
+                <ShareButtons
+                  url={window.location.href}
+                  title={t('pages.workspace.shareTitle')}
+                  description={t('pages.workspace.shareDescription')}
+                  hashtags={['AIExcel', 'FreeTools', 'ExcelWorkspace']}
+                />
+                <div className="mt-2 flex flex-wrap gap-2 text-sm text-gray-600">
+                  <span>✨ {t('common.shareFeatures.free')}</span>
+                  <span>🔒 {t('common.shareFeatures.noLogin')}</span>
+                  <span>🌍 {t('common.shareFeatures.multiLanguage')}</span>
+                </div>
+              </div>
             </header>
 
             <section aria-label="Template Selection">
