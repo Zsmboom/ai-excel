@@ -16,14 +16,13 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
   const location = useLocation();
 
   useEffect(() => {
-    // 当语言改变时更新配置
     setConfig(SEOConfig[page]);
   }, [i18n.language, page]);
 
-  // 获取当前路径（不包含语言代码）
   const pathWithoutLang = location.pathname.split('/').slice(2).join('/');
   const baseUrl = window.location.origin;
   const currentUrl = `${baseUrl}/${i18n.language}/${pathWithoutLang}`;
+  const imageUrl = `${baseUrl}${config.image.url}`;
 
   return (
     <>
@@ -32,31 +31,39 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
         <meta name="keywords" content={config.keywords} />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="ExcelEasy" />
         <meta property="og:url" content={currentUrl} />
         <meta property="og:title" content={config.title} />
         <meta property="og:description" content={config.description} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:secure_url" content={imageUrl} />
+        <meta property="og:image:alt" content={config.image.alt} />
+        <meta property="og:image:type" content={config.image.type} />
+        <meta property="og:image:width" content={String(config.image.width)} />
+        <meta property="og:image:height" content={String(config.image.height)} />
         <meta property="og:locale" content={i18n.language} />
-        {languages.map((lang) => (
-          <meta 
-            key={`og-locale-${lang.code}`}
-            property="og:locale:alternate" 
-            content={lang.code} 
-          />
-        ))}
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ExcelEasy" />
+        <meta name="twitter:creator" content="@ExcelEasy" />
         <meta name="twitter:url" content={currentUrl} />
         <meta name="twitter:title" content={config.title} />
         <meta name="twitter:description" content={config.description} />
+        <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:image:alt" content={config.image.alt} />
+        <meta name="twitter:domain" content={baseUrl} />
 
-        {/* 添加 canonical 和 hreflang 标签 */}
+        {/* 其他元标签 */}
         <link rel="canonical" href={currentUrl} />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        {/* 多语言支持 */}
         {languages.map((lang) => (
           <link
             key={lang.code}
@@ -70,12 +77,6 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
           hrefLang="x-default"
           href={`${baseUrl}/en/${pathWithoutLang}`}
         />
-
-        {/* 添加其他有用的元标签 */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="theme-color" content="#ffffff" />
       </Helmet>
       <SchemaOrg
         type={config.schemaType}
@@ -83,6 +84,7 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
         description={config.schemaDescription}
         applicationCategory={config.schemaCategory}
         url={currentUrl}
+        image={imageUrl}
       />
     </>
   );

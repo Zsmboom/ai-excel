@@ -1,13 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useTranslation } from 'react-i18next';
+import { SchemaType } from '../../types/schema';
 
 interface SchemaOrgProps {
-  type: 'WebApplication' | 'SoftwareApplication';
+  type: SchemaType;
   name: string;
   description: string;
-  applicationCategory: string;
-  url?: string;
+  applicationCategory?: string;
+  url: string;
+  image?: string;
 }
 
 export const SchemaOrg: React.FC<SchemaOrgProps> = ({
@@ -15,30 +16,28 @@ export const SchemaOrg: React.FC<SchemaOrgProps> = ({
   name,
   description,
   applicationCategory,
-  url = typeof window !== 'undefined' ? window.location.href : '',
+  url,
+  image
 }) => {
-  const { i18n } = useTranslation();
-
-  const schemaData = {
+  const schema = {
     '@context': 'https://schema.org',
     '@type': type,
     name,
     description,
-    applicationCategory,
-    operatingSystem: 'Web',
+    ...(applicationCategory && { applicationCategory }),
     url,
-    inLanguage: i18n.language,
+    ...(image && { image }),
     offers: {
       '@type': 'Offer',
       price: '0',
-      priceCurrency: i18n.language === 'zh' ? 'CNY' : 'USD',
-    },
+      priceCurrency: 'USD'
+    }
   };
 
   return (
     <Helmet>
       <script type="application/ld+json">
-        {JSON.stringify(schemaData)}
+        {JSON.stringify(schema)}
       </script>
     </Helmet>
   );
