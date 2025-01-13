@@ -8,6 +8,7 @@
     "about": "关于",
     "contact": "联系我们",
     "home": "首页",
+    "blog": "博客",
     "getStarted": "免费开始",
     "watchDemo": "观看演示",
     "month": "/月",
@@ -374,5 +375,9 @@
   "aiExcelFunctionsTitle": "AI Excel 函数 & AI Excel VBA 生成器",
   "aiExcelFunctionsDescription": "使用 AI Excel 函数 & AI Excel VBA 生成器，您可以轻松创建复杂的 Excel 函数和 VBA 代码。",
   "imageToExcelTitle": "图片转 Excel",
-  "imageToExcelDescription": "图片转 Excel 工具可以将图片中的数据快速转换为 Excel 表格。"
+  "imageToExcelDescription": "图片转 Excel 工具可以将图片中的数据快速转换为 Excel 表格。",
+  "blog": {
+    "postNotFound": "文章未找到",
+    "backToBlog": "返回博客列表"
+  }
 } 

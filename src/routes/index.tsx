@@ -6,6 +6,8 @@ import Workspace from '../pages/Workspace';
 import ExcelFunctions from '../pages/ExcelFunctions';
 import About from '../pages/About';
 import PicToExcel from '../pages/PicToExcel';
+import Blog from '../pages/Blog';
+import BlogDetail from '../pages/BlogDetail';
 import { languages } from '../i18n/config';
 
 const AppRoutes = () => {
@@ -50,6 +52,8 @@ const AppRoutes = () => {
         <Route path="excel-functions" element={<ExcelFunctions />} />
         <Route path="pic-to-excel" element={<PicToExcel />} />
         <Route path="about" element={<About />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="blog/:id" element={<BlogDetail />} />
       </Route>
 
       {/* 捕获所有其他路由并重定向到默认语言的相应路径 */}

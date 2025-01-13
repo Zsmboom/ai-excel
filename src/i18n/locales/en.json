@@ -8,6 +8,7 @@
     "about": "About",
     "contact": "Contact",
     "home": "Home",
+    "blog": "Blog",
     "getStarted": "Get Started Free",
     "watchDemo": "Watch Demo",
     "month": "/month",
@@ -394,5 +395,9 @@
       "shareTitle": "AI Excel Assistant Workspace",
       "shareDescription": "Your intelligent Excel workspace with AI-powered features. No login required, completely free!"
     }
+  },
+  "blog": {
+    "postNotFound": "Post not found",
+    "backToBlog": "Back to Blog"
   }
 } 

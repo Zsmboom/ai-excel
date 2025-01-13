@@ -187,6 +187,12 @@ app.get('/sitemap.xml', (req, res) => {
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
+      <url>
+        <loc>${frontendUrl}/blog</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+      </url>
     </urlset>
   `);
 });

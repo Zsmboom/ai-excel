@@ -81,5 +81,20 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       height: 630,
       type: 'image/png'
     }
+  },
+  blog: {
+    title: 'Blog - Excel Tips & AI Insights | ExcelEasy',
+    description: 'Discover the latest Excel tips, AI technology insights, and data processing best practices. Learn how to improve your productivity with ExcelEasy.',
+    keywords: 'Excel tips, AI insights, data processing, productivity tips, Excel tutorials, AI technology',
+    schemaType: 'Blog',
+    schemaName: 'ExcelEasy Blog',
+    schemaDescription: 'Excel tips, AI technology insights, and data processing best practices to help you work more efficiently',
+    image: {
+      url: '/images/social/blog-preview.png',
+      alt: 'ExcelEasy Blog',
+      width: 1200,
+      height: 630,
+      type: 'image/png'
+    }
   }
 }; 

@@ -8,6 +8,7 @@
     "about": "Über uns",
     "contact": "Kontakt",
     "home": "Startseite",
+    "blog": "Blog",
     "getStarted": "Kostenlos starten",
     "watchDemo": "Demo ansehen",
     "month": "/Monat",
@@ -362,5 +363,9 @@
       "invalidImage": "Ungültiges Bildformat",
       "generateError": "Fehler beim Generieren von Excel: "
     }
+  },
+  "blog": {
+    "postNotFound": "Beitrag nicht gefunden",
+    "backToBlog": "Zurück zum Blog"
   }
 } 

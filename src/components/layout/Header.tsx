@@ -27,6 +27,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <ExcelToolsMenu />
+            <Link to={`/${currentLang}/blog`} className="text-gray-600 hover:text-blue-600">{t('common.blog')}</Link>
             <Link to={`/${currentLang}/about`} className="text-gray-600 hover:text-blue-600">{t('common.about')}</Link>
             <a href="#testimonials" className="text-gray-600 hover:text-blue-600">{t('common.features')}</a>
             <LanguageSelector />
@@ -46,6 +47,7 @@ const Header = () => {
           <div className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-4">
               <ExcelToolsMenu />
+              <Link to={`/${currentLang}/blog`} className="text-gray-600 hover:text-blue-600">{t('common.blog')}</Link>
               <Link to={`/${currentLang}/about`} className="text-gray-600 hover:text-blue-600">{t('common.about')}</Link>
               <a href="#testimonials" className="text-gray-600 hover:text-blue-600">{t('common.features')}</a>
               <div className="pt-2">

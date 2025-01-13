@@ -56,6 +56,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('footer.company.title')}</h3>
             <ul className="space-y-2">
               <li><Link to={`/${currentLang}/about`} className="text-gray-400 hover:text-white">{t('footer.company.about')}</Link></li>
+              <li><Link to={`/${currentLang}/blog`} className="text-gray-400 hover:text-white">{t('footer.company.blog')}</Link></li>
             </ul>
           </div>
           
