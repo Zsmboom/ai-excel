@@ -2,6 +2,8 @@
 
 AI-powered Excel spreadsheet generator built with React and Supabase.
 
+Visit our website: [https://exceleasy.org/](https://exceleasy.org/)
+
 ## Setup Instructions
 
 1. Clone the repository
