@@ -58,7 +58,7 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
         <meta name="twitter:domain" content={baseUrl} />
 
         {/* 其他元标签 */}
-        <link rel="canonical" href={currentUrl} />
+        <link rel="canonical" href={`${baseUrl}/en/${pathWithoutLang}`} />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
