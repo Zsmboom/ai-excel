@@ -125,25 +125,20 @@
     ]
   },
   "footer": {
-    "description": "AI로 텍스트를 바로 전문적인 Excel 스프레드시트로 변환하세요.",
-    "product": {
-      "title": "서비스",
-      "features": "주요 기능",
-      "pricing": "요금제",
-      "testimonials": "이용후기"
+    "description": "AI로 데이터를 전문적인 Excel 스프레드시트로 변환",
+    "tools": {
+      "title": "Excel 도구"
     },
     "company": {
-      "title": "회사 소개",
-      "about": "ExcelEasy 소개",
-      "blog": "블로그",
-      "careers": "채용정보"
+      "title": "회사",
+      "about": "소개",
+      "blog": "블로그"
     },
     "connect": {
-      "title": "소셜 미디어",
-      "github": "GitHub",
-      "twitter": "Twitter",
-      "linkedin": "LinkedIn"
-    }
+      "title": "연결하기",
+      "github": "GitHub에서 보기"
+    },
+    "openSource": "GitHub에서 오픈소스 프로젝트 방문하기"
   },
   "faq": {
     "title": "자주 묻는 질문",

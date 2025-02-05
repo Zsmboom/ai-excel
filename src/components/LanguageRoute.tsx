@@ -58,13 +58,7 @@ export const LanguageRoute: React.FC<LanguageRouteProps> = ({ children }) => {
     const currentPath = location.pathname.split('/').slice(2).join('/');
     const newPath = currentPath ? `/${defaultLang}/${currentPath}` : `/${defaultLang}`;
     
-    // 添加状态以防止循环重定向
-    return <Navigate to={newPath} replace state={{ redirected: true }} />;
-  }
-
-  // 检查是否已经重定向过
-  if (location.state && (location.state as any).redirected) {
-    return <Outlet />;
+    return <Navigate to={newPath} replace />;
   }
 
   return <Outlet />;

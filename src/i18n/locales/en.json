@@ -132,25 +132,20 @@
     ]
   },
   "footer": {
-    "description": "Transform text into Excel spreadsheets instantly with AI.",
-    "product": {
-      "title": "Product",
-      "features": "Features",
-      "pricing": "Pricing",
-      "testimonials": "Testimonials"
+    "description": "Transform your data into professional Excel spreadsheets with AI",
+    "tools": {
+      "title": "Excel Tools"
     },
     "company": {
       "title": "Company",
       "about": "About",
-      "blog": "Blog",
-      "careers": "Careers"
+      "blog": "Blog"
     },
     "connect": {
       "title": "Connect",
-      "github": "GitHub",
-      "twitter": "Twitter",
-      "linkedin": "LinkedIn"
-    }
+      "github": "View on GitHub"
+    },
+    "openSource": "Visit our open source project on GitHub"
   },
   "faq": {
     "title": "Frequently Asked Questions",

@@ -1,0 +1,28 @@
+# ExcelEasy Development Rules
+
+## SEO Guidelines
+1. URL Stability
+   - Existing page URLs must not be modified without explicit request
+   - URL changes require thorough discussion and approval
+   - URL structure should follow the pattern: /[language]/[feature-name]
+
+2. SEO Content Stability
+   - Page titles, meta descriptions, and other SEO-related content must not be modified without explicit request
+   - All SEO modifications need to be documented and approved
+   - Maintain keyword consistency across pages
+
+## Multilingual Implementation
+1. Default Language
+   - All new features must be implemented in English first
+   - English serves as the source language for all translations
+
+2. Language Implementation Structure
+   - Use i18n translation keys for all text content
+   - Add new translations in src/i18n/locales/[language].json
+   - Follow existing translation key naming conventions
+   - All components must support language switching
+
+3. Content Guidelines
+   - Keep translation keys organized by feature/page
+   - Use semantic naming for translation keys
+   - Include placeholder text in English during development 

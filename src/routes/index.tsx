@@ -40,7 +40,6 @@ const AppRoutes = () => {
           <Navigate 
             to={`/${getDefaultLanguage()}`} 
             replace={true}
-            state={{ isRootRedirect: true }}
           />
         } 
       />
@@ -63,7 +62,6 @@ const AppRoutes = () => {
           <Navigate 
             to={`/${getDefaultLanguage()}`} 
             replace={true}
-            state={{ isRootRedirect: true }}
           />
         } 
       />

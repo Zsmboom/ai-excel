@@ -29,7 +29,7 @@ export const LanguageSelector = () => {
     localStorage.setItem('preferredLanguage', newLang);
     
     // 更新 URL
-    navigate(newPath);
+    navigate(newPath, { replace: true });
   };
 
   return (

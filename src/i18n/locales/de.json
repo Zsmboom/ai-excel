@@ -126,25 +126,20 @@
     ]
   },
   "footer": {
-    "description": "Verwandeln Sie Ihre Textbeschreibungen sofort in professionelle Excel-Tabellen mit KI.",
-    "product": {
-      "title": "Produkte",
-      "features": "Funktionen",
-      "pricing": "Preise",
-      "testimonials": "Referenzen"
+    "description": "Verwandeln Sie Ihre Daten mit KI in professionelle Excel-Tabellen",
+    "tools": {
+      "title": "Excel-Tools"
     },
     "company": {
       "title": "Unternehmen",
       "about": "Über uns",
-      "blog": "Blog",
-      "careers": "Karriere"
+      "blog": "Blog"
     },
     "connect": {
-      "title": "Kontakt",
-      "github": "GitHub",
-      "twitter": "Twitter",
-      "linkedin": "LinkedIn"
-    }
+      "title": "Verbinden",
+      "github": "Auf GitHub ansehen"
+    },
+    "openSource": "Besuchen Sie unser Open-Source-Projekt auf GitHub"
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
@@ -340,7 +335,7 @@
     },
     "functions": {
       "title": "Excel-Funktionen & VBA-Makro-Generator | ExcelEasy",
-      "description": "Generieren Sie komplexe Excel-Funktionen und VBA-Makros sofort mit KI. Automatisieren Sie Berechnungen, Datenverarbeitung und sich wiederholende Aufgaben mit natürlichsprachlichen Befehlen.",
+      "description": "Generieren Sie komplexe Excel-Funktionen und VBA-Makros sofort mit KI. Automatisieren Sie Berechnungen, Datenverarbeitung und sich wiederholende Aufgaben mit natürlichersprachlichen Befehlen.",
       "keywords": "Excel-Funktionen, VBA-Makros, Excel-Automatisierung, Formelgenerator, Office-Skripte, Excel-Programmierung",
       "schemaName": "ExcelEasy Funktionsgenerator",
       "schemaDescription": "KI-gestütztes fortgeschrittenes Excel-Funktions- und VBA-Makro-Generierungstool, das komplexe Automatisierung und Berechnungen durch natürliche Sprache ermöglicht"

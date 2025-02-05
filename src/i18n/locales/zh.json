@@ -126,25 +126,20 @@
     ]
   },
   "footer": {
-    "description": "使用 AI 即时将文本转换为 Excel 电子表格。",
-    "product": {
-      "title": "产品",
-      "features": "功能",
-      "pricing": "价格",
-      "testimonials": "用户评价"
+    "description": "使用 AI 将您的数据转换为专业的 Excel 电子表格",
+    "tools": {
+      "title": "Excel 工具"
     },
     "company": {
       "title": "公司",
       "about": "关于我们",
-      "blog": "博客",
-      "careers": "招聘"
+      "blog": "博客"
     },
     "connect": {
       "title": "关注我们",
-      "github": "GitHub",
-      "twitter": "Twitter",
-      "linkedin": "LinkedIn"
-    }
+      "github": "在 GitHub 上查看"
+    },
+    "openSource": "访问我们的开源项目"
   },
   "faq": {
     "title": "常见问题",
