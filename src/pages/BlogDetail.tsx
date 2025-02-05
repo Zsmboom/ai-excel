@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Typography, IconButton, Box } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useTranslation } from 'react-i18next';
+import SchemaMarkup from '../components/seo/SchemaMarkup';
 
 interface BlogPost {
   id: string;
@@ -238,8 +239,22 @@ const BlogDetail: React.FC = () => {
     );
   }
 
+  const articleSchema = {
+    type: 'Article' as const,
+    headline: content.title,
+    description: content.preview,
+    image: `${window.location.origin}/images/blog/${post.id}.jpg`, // 假设博客图片的命名规则
+    datePublished: post.date,
+    dateModified: post.date, // 如果有修改日期，应该使用实际的修改日期
+    author: {
+      name: 'ExcelEasy',
+      url: window.location.origin
+    }
+  };
+
   return (
     <Container maxWidth="lg" sx={{ py: 4, mt: 8 }}>
+      <SchemaMarkup schema={articleSchema} />
       <Box sx={{ mb: 4 }}>
         <IconButton onClick={() => navigate(`/${lang}/blog`)} sx={{ mr: 2 }}>
           <ArrowBackIcon />

@@ -164,6 +164,14 @@
       {
         "question": "Welche Excel-Funktionen werden unterstützt?",
         "answer": "Wir unterstützen alle Standard Excel-Funktionen und Formeln, einschließlich komplexer mathematischer Operationen, logischer Funktionen, Suchfunktionen und mehr. Unsere KI kann Ihnen bei der Implementierung und dem Verständnis jeder Excel-Funktion helfen."
+      },
+      {
+        "question": "Wie kann ich automatisch Excel-Diagramme erstellen?",
+        "answer": "Unsere KI kann Ihnen helfen, verschiedene Arten von Excel-Diagrammen automatisch zu erstellen. Beschreiben Sie einfach die Art des Diagramms (z.B. Balkendiagramm, Kreisdiagramm, Liniendiagramm) und die zu visualisierenden Daten. Die KI erstellt eine korrekt formatierte Excel-Datei mit dem bereits eingerichteten Diagramm. Sie können in Ihrer Beschreibung Diagrammtitel, Achsenbeschriftungen, Datenbereiche und sogar benutzerdefinierte Formatierungen angeben."
+      },
+      {
+        "question": "Wie verwendet man den Online Excel-Vorlagengenerator?",
+        "answer": "Die Verwendung unseres Online Excel-Vorlagengenerators ist einfach: 1) Wählen Sie die gewünschte Vorlagenart aus oder beschreiben Sie Ihre Anforderungen in natürlicher Sprache, 2) Passen Sie die Vorlage an, indem Sie Ihre Präferenzen für Layout, Formatierung und Berechnungen angeben, 3) Die KI erstellt eine professionelle Vorlage, die Sie sofort herunterladen und verwenden können. Sie können Vorlagen für Budgets, Rechnungen, Projekt-Tracker und vieles mehr erstellen."
       }
     ]
   },

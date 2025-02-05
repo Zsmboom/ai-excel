@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Container, Typography, Box, Button, Grid, Paper } from '@mui/material';
 import { Download, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SchemaMarkup from '../components/seo/SchemaMarkup';
 
 interface GameDetail {
   id: string;
@@ -121,8 +122,22 @@ const ExcelGameDetail: React.FC = () => {
     }
   };
 
+  const gameSchema = {
+    type: 'Game' as const,
+    name: game.name,
+    description: game.description,
+    image: `${window.location.origin}${game.image}`,
+    url: window.location.href,
+    author: {
+      name: 'ExcelEasy',
+      url: window.location.origin
+    },
+    datePublished: '2024-01-01' // 这里应该使用实际的发布日期
+  };
+
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
+      <SchemaMarkup schema={gameSchema} />
       <Box sx={{ mb: 4 }}>
         <Link 
           to={`/${currentLang}/excel-games`}

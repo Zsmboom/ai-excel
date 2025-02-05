@@ -170,6 +170,14 @@
       {
         "question": "What types of Excel functions are supported?",
         "answer": "We support all standard Excel functions and formulas, including complex mathematical operations, logical functions, lookup functions, and more. Our AI can help you implement and understand any Excel function."
+      },
+      {
+        "question": "How to automatically generate Excel charts?",
+        "answer": "Our AI can help you create various types of Excel charts automatically. Simply describe the type of chart you want (e.g., bar chart, pie chart, line graph) and the data you want to visualize. The AI will generate a properly formatted Excel file with the chart already set up. You can specify chart titles, axis labels, data ranges, and even custom formatting in your description."
+      },
+      {
+        "question": "How to use the online Excel template generator?",
+        "answer": "Using our online Excel template generator is simple: 1) Select the type of template you need or describe your requirements in natural language, 2) Customize the template by specifying your preferences for layout, formatting, and calculations, 3) The AI will generate a professional template that you can download and use immediately. You can create templates for budgets, invoices, project trackers, and more."
       }
     ]
   },

@@ -53,6 +53,26 @@ export interface Database {
           created_at?: string;
         };
       };
+      tool_usage_stats: {
+        Row: {
+          id: string;
+          tool_type: string;  // 'generator' | 'functions' | 'pic-to-excel'
+          user_id: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          tool_type: string;
+          user_id?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          tool_type?: string;
+          user_id?: string | null;
+          created_at?: string;
+        };
+      };
     };
   };
 }
