@@ -28,6 +28,7 @@ const Footer = () => {
               <li><Link to={`/${currentLang}/ai-excel-generator`} className="text-gray-400 hover:text-white">{t('common.excelGenerator')}</Link></li>
               <li><Link to={`/${currentLang}/excel-functions`} className="text-gray-400 hover:text-white">{t('common.excelFunctions')}</Link></li>
               <li><Link to={`/${currentLang}/pic-to-excel`} className="text-gray-400 hover:text-white">{t('common.picToExcel')}</Link></li>
+              <li><Link to={`/${currentLang}/ai-excel-chart`} className="text-gray-400 hover:text-white">{t('common.excelChart')}</Link></li>
             </ul>
           </div>
 

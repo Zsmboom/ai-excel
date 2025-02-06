@@ -1,14 +1,13 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import SchemaMarkup from '../seo/SchemaMarkup';
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
+export default function RootLayout() {
+  const location = useLocation();
+  const isPreviewMode = new URLSearchParams(location.search).get('viewMode') === 'preview';
 
-const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   const organizationSchema = {
     type: 'Organization' as const,
     name: 'ExcelEasy',
@@ -21,16 +20,17 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     ]
   };
 
+  // 如果是预览模式，只显示内容，不显示任何其他组件
+  if (isPreviewMode) {
+    return <Outlet />;
+  }
+
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <>
       <SchemaMarkup schema={organizationSchema} />
       <Header />
-      <Box component="main" sx={{ flexGrow: 1 }}>
-        {children}
-      </Box>
+      <Outlet />
       <Footer />
-    </Box>
+    </>
   );
-};
-
-export default RootLayout; 
+} 

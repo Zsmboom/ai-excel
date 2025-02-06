@@ -27,11 +27,11 @@
     "imageAlt": "KI Excel Analyse"
   },
   "features": {
-    "title": "KI-gestützte Excel-Lösungen",
-    "subtitle": "Vereinfachen Sie Ihre Excel-Arbeit mit unseren fortschrittlichen KI-Tools",
+    "title": "AI-gestützte Excel-Lösungen",
+    "subtitle": "Vereinfachen Sie Ihre Excel-Arbeit mit unseren fortschrittlichen AI-Tools",
     "items": {
       "generation": {
-        "title": "KI Excel-Generierung",
+        "title": "AI Excel-Generierung",
         "description": "Wandeln Sie natürlichsprachliche Beschreibungen in Sekundenschnelle in vollständig formatierte Excel-Tabellen um."
       },
       "assistant": {
@@ -43,16 +43,32 @@
         "description": "Generieren Sie benutzerdefinierte VBA-Makros zur Automatisierung Ihrer Excel-Workflows mit Schritt-für-Schritt-Anleitungen."
       },
       "aiExcelGenerator": {
-        "title": "KI-Excel-Generator",
-        "description": "Der KI-Excel-Generator ist ein leistungsstarkes Tool, mit dem Sie schnell Excel-Tabellen erstellen können."
+        "title": "KI Excel-Generator",
+        "description": "Der KI Excel-Generator ist ein leistungsstarkes Tool, mit dem Sie schnell Excel-Tabellen erstellen können."
       },
       "aiExcelFunctions": {
-        "title": "KI-Excel-Funktionen & VBA-Generator",
-        "description": "Mit dem KI-Excel-Funktionen & VBA-Generator können Sie mühelos komplexe Excel-Funktionen und VBA-Code erstellen."
+        "title": "KI Excel-Funktionen & VBA-Generator",
+        "description": "Mit dem KI Excel-Funktionen & VBA-Generator können Sie mühelos komplexe Excel-Funktionen und VBA-Code erstellen."
       },
       "imageToExcel": {
         "title": "Bild zu Excel",
         "description": "Das Bild-zu-Excel-Tool konvertiert Daten aus Bildern schnell in Excel-Tabellen."
+      },
+      "chartGenerator": {
+        "title": "Diagramm-Generator",
+        "description": "Erstellen Sie professionelle Excel-Diagramme mit KI-gestützter Datenanalyse und automatischer Formatierung."
+      },
+      "dataAnalysis": {
+        "title": "Datenanalyse",
+        "description": "Nutzen Sie KI für tiefgehende Datenanalysen und automatische Berichtserstellung."
+      },
+      "automation": {
+        "title": "Workflow-Automatisierung",
+        "description": "Automatisieren Sie wiederkehrende Excel-Aufgaben mit intelligenten Makros und Skripten."
+      },
+      "aiExcelChartGenerator": {
+        "title": "KI Excel-Diagramm-Generator",
+        "description": "Verwandeln Sie Ihre Excel-Daten mit KI-Unterstützung in ansprechende Diagramme."
       }
     }
   },
@@ -370,5 +386,47 @@
   "blog": {
     "postNotFound": "Beitrag nicht gefunden",
     "backToBlog": "Zurück zum Blog"
+  },
+  "aiExcelChart": {
+    "title": "KI Excel-Diagramm-Generator",
+    "subtitle": "Verwandeln Sie Ihre Excel-Daten mit KI-Unterstützung in ansprechende Diagramme",
+    "description": "Mit dem KI Excel-Diagramm-Generator können Sie komplexe Daten in leicht verständliche visuelle Diagramme umwandeln.",
+    "features": {
+      "dataVisualization": "Datenvisualisierung",
+      "chartTypes": "Verschiedene Diagrammtypen",
+      "aiAnalysis": "KI-gestützte Datenanalyse",
+      "customization": "Diagrammanpassung"
+    },
+    "form": {
+      "uploadExcel": "Excel-Datei hochladen",
+      "uploadHint": "Excel-Datei hier ablegen oder klicken zum Auswählen",
+      "selectChartType": "Diagrammtyp auswählen",
+      "analysisPrompt": "Analyseanforderung",
+      "analysisPromptPlaceholder": "Beschreiben Sie, was Sie im Diagramm darstellen möchten...",
+      "generateButton": "Diagramm erstellen"
+    },
+    "chartTypes": {
+      "bar": "Balkendiagramm",
+      "line": "Liniendiagramm",
+      "pie": "Kreisdiagramm",
+      "scatter": "Streudiagramm"
+    },
+    "preview": {
+      "title": "Diagrammvorschau",
+      "insights": "Dateneinblicke",
+      "downloadImageButton": "Bild herunterladen",
+      "shareButton": "Teilen",
+      "viewFullVersion": "Vollversion anzeigen",
+      "chartTitle": "Generiertes Diagramm"
+    },
+    "share": {
+      "shareUrlLabel": "Freigabelink",
+      "copyButton": "Link kopieren",
+      "linkCopied": "Link wurde kopiert!",
+      "description": "Über diesen Link können andere Personen das generierte Diagramm ansehen."
+    },
+    "errors": {
+      "invalidFile": "Nicht unterstütztes Dateiformat. Nur Excel-Dateien (.xlsx, .xls) sind erlaubt."
+    }
   }
 } 

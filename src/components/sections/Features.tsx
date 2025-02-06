@@ -28,6 +28,13 @@ const Features = () => {
       description: t('features.items.imageToExcel.description'),
       action: goToWorkspace,
       buttonText: t('common.getStarted')
+    },
+    {
+      icon: <img src="/images/ai-excel-chart.png" alt={t('features.items.aiExcelChart.title')} className="w-4/5 rounded-lg shadow-lg" />,
+      title: t('features.items.aiExcelChart.title'),
+      description: t('features.items.aiExcelChart.description'),
+      action: goToWorkspace,
+      buttonText: t('common.getStarted')
     }
   ];
 
@@ -45,7 +52,10 @@ const Features = () => {
                 <h1 className="text-3xl font-bold mb-3 text-gray-900">{feature.title}</h1>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">{feature.description}</p>
                 <button
-                  onClick={feature.action}
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    feature.action();
+                  }}
                   className="flex items-center text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg transition-colors"
                 >
                   {feature.buttonText}

@@ -24,7 +24,8 @@
       "free": "100% Free to Use",
       "noLogin": "No Login Required",
       "multiLanguage": "Multi-language Support"
-    }
+    },
+    "excelChart": "AI Excel Charts"
   },
   "hero": {
     "title": "Transform Text to Excel with AI",
@@ -59,6 +60,10 @@
       "imageToExcel": {
         "title": "Image to Excel",
         "description": "Image to Excel tool quickly converts data from images into Excel spreadsheets."
+      },
+      "aiExcelChart": {
+        "title": "AI Excel Chart",
+        "description": "Transform your Excel data into beautiful charts with AI-powered analysis and visualization."
       }
     }
   },
@@ -397,10 +402,66 @@
     "workspace": {
       "shareTitle": "AI Excel Assistant Workspace",
       "shareDescription": "Your intelligent Excel workspace with AI-powered features. No login required, completely free!"
+    },
+    "aiExcelChart": {
+      "shareTitle": "AI Excel Chart Generator - Smart Data Visualization | ExcelEasy",
+      "shareDescription": "Transform your Excel data into beautiful charts with AI. Support bar charts, line charts, pie charts, and scatter plots. Free and no login required."
     }
   },
   "blog": {
     "postNotFound": "Post not found",
     "backToBlog": "Back to Blog"
+  },
+  "aiExcelChart": {
+    "title": "AI Excel Chart Generator",
+    "subtitle": "Transform your Excel data into beautiful charts with AI assistance",
+    "chartTypes": {
+      "bar": "Bar Chart",
+      "line": "Line Chart",
+      "pie": "Pie Chart",
+      "scatter": "Scatter Plot"
+    },
+    "form": {
+      "uploadExcel": "Upload Excel File",
+      "uploadHint": "Support .xlsx and .xls files",
+      "selectChartType": "Select Chart Type",
+      "generateButton": "Generate Chart",
+      "analysisPrompt": "Analysis Requirements (Optional)",
+      "analysisPromptPlaceholder": "Enter your data analysis requirements, e.g., analyze sales trends, identify best-performing products, compare regional performance..."
+    },
+    "preview": {
+      "title": "Generated Chart",
+      "chartTitle": "Chart Preview",
+      "chartAlt": "Generated data visualization chart",
+      "downloadButton": "Download Excel",
+      "downloadImageButton": "Download Chart",
+      "shareButton": "Share Chart",
+      "insights": "Data Insights",
+      "viewFullVersion": "View Full Version"
+    },
+    "share": {
+      "shareUrlLabel": "Share URL",
+      "copyButton": "Copy Link",
+      "linkCopied": "Link copied to clipboard!",
+      "description": "Copy this link and share it with others. They can view the same chart analysis results directly."
+    },
+    "errors": {
+      "invalidFile": "Please upload a valid Excel file (.xlsx or .xls)",
+      "fileRequired": "Please select an Excel file first",
+      "generateError": "Failed to generate chart: "
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How to use AI Excel Chart Generator?",
+          "answer": "Using AI Excel Chart Generator is simple: Upload your Excel file that needs to be processed, then describe what you want to analyze. The AI will automatically generate appropriate charts and insights based on your data and requirements."
+        },
+        {
+          "question": "What happens when I share a chart link?",
+          "answer": "When you share a chart link, it only displays the generated charts and insights. The original file data is not included in the shared link, and we do not store any of your file data on our servers. This ensures your data privacy while allowing you to share visualizations easily."
+        }
+      ]
+    }
   }
 } 

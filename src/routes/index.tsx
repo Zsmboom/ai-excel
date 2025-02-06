@@ -8,6 +8,7 @@ import About from '../pages/About';
 import PicToExcel from '../pages/PicToExcel';
 import Blog from '../pages/Blog';
 import BlogDetail from '../pages/BlogDetail';
+import AIExcelChart from '../pages/AiExcelChart';
 import { languages } from '../i18n/config';
 
 const AppRoutes = () => {
@@ -50,6 +51,7 @@ const AppRoutes = () => {
         <Route path="ai-excel-generator" element={<Workspace />} />
         <Route path="excel-functions" element={<ExcelFunctions />} />
         <Route path="pic-to-excel" element={<PicToExcel />} />
+        <Route path="ai-excel-chart" element={<AIExcelChart />} />
         <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:id" element={<BlogDetail />} />

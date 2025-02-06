@@ -18,7 +18,8 @@
     "excelTools": "Excel 工具",
     "excelGenerator": "AI Excel 生成器",
     "excelFunctions": "AI Excel 函数",
-    "picToExcel": "图片转 Excel"
+    "picToExcel": "图片转 Excel",
+    "excelChart": "AI Excel 图表"
   },
   "hero": {
     "title": "用 AI 将文本转换为 Excel",
@@ -53,6 +54,10 @@
       "imageToExcel": {
         "title": "图片转 Excel",
         "description": "图片转 Excel 工具可以将图片中的数据快速转换为 Excel 表格。"
+      },
+      "aiExcelChart": {
+        "title": "AI Excel 图表",
+        "description": "使用 AI 智能分析和可视化功能，将您的 Excel 数据转换为精美的图表。"
       }
     }
   },
@@ -382,5 +387,59 @@
   "blog": {
     "postNotFound": "文章未找到",
     "backToBlog": "返回博客列表"
+  },
+  "aiExcelChart": {
+    "title": "AI Excel 图表生成器",
+    "subtitle": "使用AI智能助手将Excel数据转换为精美图表",
+    "chartTypes": {
+      "bar": "柱状图",
+      "line": "折线图",
+      "pie": "饼图",
+      "scatter": "散点图"
+    },
+    "form": {
+      "uploadExcel": "上传Excel文件",
+      "uploadHint": "支持.xlsx和.xls格式",
+      "selectChartType": "选择图表类型",
+      "generateButton": "生成图表",
+      "analysisPrompt": "分析需求（可选）",
+      "analysisPromptPlaceholder": "请输入您的数据分析需求，例如：分析销售趋势、找出最佳表现的产品、比较不同地区的业绩等..."
+    },
+    "preview": {
+      "title": "生成的图表",
+      "chartTitle": "图表预览",
+      "chartAlt": "生成的数据可视化图表",
+      "downloadButton": "下载Excel",
+      "downloadImageButton": "下载图表",
+      "shareButton": "分享图表",
+      "insights": "数据洞察",
+      "viewFullVersion": "查看完整版本"
+    },
+    "share": {
+      "shareUrlLabel": "分享链接",
+      "copyButton": "复制链接",
+      "linkCopied": "链接已复制到剪贴板！",
+      "description": "复制此链接并分享给他人，他们可以直接查看相同的图表分析结果。"
+    },
+    "errors": {
+      "invalidFile": "请上传有效的Excel文件（.xlsx或.xls格式）",
+      "fileRequired": "请先选择Excel文件",
+      "generateError": "生成图表失败："
+    },
+    "shareTitle": "AI Excel 图表生成器 - 智能数据可视化 | ExcelEasy",
+    "shareDescription": "使用AI智能分析Excel数据并生成专业的数据可视化图表。支持柱状图、折线图、饼图、散点图等多种图表类型。完全免费，无需登录。",
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "question": "AI Excel 图表生成器怎么使用？",
+          "answer": "使用 AI Excel 图表生成器非常简单：上传需要处理的 Excel 文件，然后描述你想要分析的内容。AI 会根据你的数据和需求自动生成合适的图表和见解。"
+        },
+        {
+          "question": "分享图表链接会发生什么？",
+          "answer": "当你分享图表链接时，链接中只包含生成的图表和分析见解。原始文件数据不会包含在分享链接中，我们也不会在服务器上存储任何你的文件数据。这样既确保了你的数据隐私，又能让你轻松分享可视化结果。"
+        }
+      ]
+    }
   }
 } 

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown, FileText, Wrench, Image } from 'lucide-react';
+import { ChevronDown, FileText, Wrench, Image, BarChart } from 'lucide-react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -59,6 +59,14 @@ export function ExcelToolsMenu() {
           >
             <Image className="h-4 w-4 mr-2" />
             {t('common.picToExcel')}
+          </Link>
+          <Link
+            to={`/${currentLang}/ai-excel-chart`}
+            className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            onClick={() => setIsOpen(false)}
+          >
+            <BarChart className="h-4 w-4 mr-2" />
+            {t('common.excelChart')}
           </Link>
         </div>
       )}

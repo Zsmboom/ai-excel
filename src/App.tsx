@@ -11,6 +11,7 @@ export default function App() {
   const { i18n } = useTranslation();
   const location = useLocation();
   const supportedLangs = languages.map(l => l.code);
+  const isPreviewMode = new URLSearchParams(location.search).get('viewMode') === 'preview';
 
   useEffect(() => {
     // 从路径中获取语言代码
@@ -29,6 +30,15 @@ export default function App() {
       }
     }
   }, [location.pathname, i18n, supportedLangs]);
+
+  // 在预览模式下只显示主要内容
+  if (isPreviewMode) {
+    return (
+      <div className="min-h-screen">
+        <AppRoutes />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col">

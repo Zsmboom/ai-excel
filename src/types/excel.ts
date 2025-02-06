@@ -30,3 +30,25 @@ export interface ExcelTemplate {
   description: string;
   prompt: string;
 }
+
+export interface ChartConfig {
+  title: string;
+  xAxis: {
+    title: string;
+    data: string[];
+  };
+  yAxis: {
+    title: string;
+    data: number[];
+  };
+  series: Array<{
+    name: string;
+    data: number[];
+  }>;
+}
+
+export interface ChartAnalysisResult {
+  chartConfig: ChartConfig;
+  summary: string;
+  insights: string[];
+}

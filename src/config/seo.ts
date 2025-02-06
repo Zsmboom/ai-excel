@@ -86,12 +86,28 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     title: 'Blog - Excel Tips & AI Insights | ExcelEasy',
     description: 'Discover the latest Excel tips, AI technology insights, and data processing best practices. Learn how to improve your productivity with ExcelEasy.',
     keywords: 'Excel tips, AI insights, data processing, productivity tips, Excel tutorials, AI technology',
-    schemaType: 'Blog',
+    schemaType: 'WebSite',
     schemaName: 'ExcelEasy Blog',
     schemaDescription: 'Excel tips, AI technology insights, and data processing best practices to help you work more efficiently',
     image: {
       url: '/images/social/blog-preview.png',
       alt: 'ExcelEasy Blog',
+      width: 1200,
+      height: 630,
+      type: 'image/png'
+    }
+  },
+  aiExcelChart: {
+    title: 'AI Excel Chart Generator - Smart Data Visualization | ExcelEasy',
+    description: 'Use AI to analyze Excel data and create professional data visualization charts. Support bar charts, line charts, pie charts, scatter plots, and more. Free to use, no login required.',
+    keywords: 'Excel chart generator, AI data visualization, Excel data analysis, chart creation, data visualization tools',
+    schemaType: 'SoftwareApplication',
+    schemaName: 'ExcelEasy AI Excel Chart Generator',
+    schemaDescription: 'AI-powered Excel chart generation tool that intelligently analyzes data and creates professional visualization charts',
+    schemaCategory: 'BusinessApplication',
+    image: {
+      url: '/images/social/chart-preview.png',
+      alt: 'AI Excel Chart Generator',
       width: 1200,
       height: 630,
       type: 'image/png'
