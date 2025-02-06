@@ -59,7 +59,7 @@ const blogPosts: BlogPost[] = [
 
 **How to Use:**
 
-1. Go to the "AI Excel Chart Generation" page.
+1. Go to the [AI Excel Chart Generation](https://exceleasy.org/en/ai-excel-chart) page.
 2. Click the "Upload File" button and select your Excel file.
 3. Enter your data analysis requirements in the text box.
 4. Click the "Generate Chart" button and wait for AI to generate charts.
@@ -100,7 +100,7 @@ const blogPosts: BlogPost[] = [
 
 **使用方法：**
 
-1. 进入"AI Excel 图表生成"页面。
+1. 进入 [AI Excel 图表生成](https://exceleasy.org/zh/ai-excel-chart) 页面。
 2. 点击"上传文件"按钮，选择你的 Excel 文件。
 3. 在文本框中输入你对数据分析的需求描述。
 4. 点击"生成图表"按钮，等待 AI 生成图表。
@@ -177,7 +177,7 @@ Key Features and Solutions:
 - Suggest optimal data structures and organizations
 - Handle large datasets with intelligent optimization
 
-3. Advanced Function Assistant
+3. [Advanced Function Assistant](https://exceleasy.org/en/excel-functions)
 - Get instant help with complex Excel functions
 - Receive step-by-step explanations of formula logic
 - Access real-world examples and use cases
@@ -242,7 +242,7 @@ Exceleasy是一个全面的AI驱动平台，旨在解决您所有与Excel相关�
 - 建议最佳数据结构和组织
 - 通过智能优化处理大型数据集
 
-3. 高级函数助手
+3. [高级函数助手](https://exceleasy.org/zh/excel-functions)
 - 获取复杂Excel函数的即时帮助
 - 接收公式逻辑的分步解释
 - 访问真实世界的示例和用例
