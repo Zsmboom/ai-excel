@@ -9,6 +9,7 @@ interface SchemaOrgProps {
   applicationCategory?: string;
   url: string;
   image?: string;
+  lastModified?: string;
 }
 
 export const SchemaOrg: React.FC<SchemaOrgProps> = ({
@@ -17,7 +18,8 @@ export const SchemaOrg: React.FC<SchemaOrgProps> = ({
   description,
   applicationCategory,
   url,
-  image
+  image,
+  lastModified
 }) => {
   const schema = {
     '@context': 'https://schema.org',
@@ -27,6 +29,7 @@ export const SchemaOrg: React.FC<SchemaOrgProps> = ({
     ...(applicationCategory && { applicationCategory }),
     url,
     ...(image && { image }),
+    ...(lastModified && { dateModified: lastModified }),
     offers: {
       '@type': 'Offer',
       price: '0',

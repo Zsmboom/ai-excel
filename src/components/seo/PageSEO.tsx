@@ -8,9 +8,10 @@ import { useLocation } from 'react-router-dom';
 
 interface PageSEOProps {
   page: keyof typeof SEOConfig;
+  lastModified?: string;
 }
 
-export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
+export const PageSEO: React.FC<PageSEOProps> = ({ page, lastModified }) => {
   const { i18n } = useTranslation();
   const [config, setConfig] = useState(SEOConfig[page]);
   const location = useLocation();
@@ -23,6 +24,11 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
   const baseUrl = window.location.origin;
   const currentUrl = `${baseUrl}/${i18n.language}/${pathWithoutLang}`;
   const imageUrl = `${baseUrl}${config.image.url}`;
+
+  const alternateLinks = languages.map((lang) => ({
+    hrefLang: lang.code,
+    href: `${baseUrl}/${lang.code}/${pathWithoutLang}`,
+  }));
 
   return (
     <>
@@ -63,13 +69,13 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         
-        {/* 多语言支持 */}
-        {languages.map((lang) => (
+        {/* 多语言备用链接 */}
+        {alternateLinks.map(({ hrefLang, href }) => (
           <link
-            key={lang.code}
+            key={hrefLang}
             rel="alternate"
-            hrefLang={lang.code}
-            href={`${baseUrl}/${lang.code}/${pathWithoutLang}`}
+            hrefLang={hrefLang}
+            href={href}
           />
         ))}
         <link
@@ -77,6 +83,11 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
           hrefLang="x-default"
           href={`${baseUrl}/en/${pathWithoutLang}`}
         />
+
+        {/* 最后修改日期 */}
+        {lastModified && (
+          <meta name="last-modified" content={lastModified} />
+        )}
       </Helmet>
       <SchemaOrg
         type={config.schemaType}
@@ -85,6 +96,7 @@ export const PageSEO: React.FC<PageSEOProps> = ({ page }) => {
         applicationCategory={config.schemaCategory}
         url={currentUrl}
         image={imageUrl}
+        lastModified={lastModified}
       />
     </>
   );

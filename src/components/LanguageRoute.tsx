@@ -35,6 +35,18 @@ export const LanguageRoute: React.FC<LanguageRouteProps> = ({ children }) => {
   };
 
   useEffect(() => {
+    // 处理 HTTP 到 HTTPS 的重定向
+    if (window.location.protocol === 'http:' && window.location.hostname !== 'localhost') {
+      window.location.href = window.location.href.replace('http:', 'https:');
+      return;
+    }
+
+    // 处理 www 到非 www 的重定向
+    if (window.location.hostname.startsWith('www.')) {
+      window.location.href = window.location.href.replace('www.', '');
+      return;
+    }
+
     const currentLang = getPreferredLanguage();
     if (currentLang && currentLang !== i18n.language) {
       i18n.changeLanguage(currentLang);
@@ -45,6 +57,18 @@ export const LanguageRoute: React.FC<LanguageRouteProps> = ({ children }) => {
       }
     }
   }, [lang, i18n]);
+
+  // 处理根路径重定向
+  if (location.pathname === '/') {
+    const defaultLang = getPreferredLanguage();
+    return <Navigate to={`/${defaultLang}`} replace />;
+  }
+
+  // 处理 /about 路径重定向
+  if (location.pathname === '/about') {
+    const defaultLang = getPreferredLanguage();
+    return <Navigate to={`/${defaultLang}/about`} replace />;
+  }
 
   // 如果是根路径直接渲染子组件
   if (children) {
