@@ -113,6 +113,44 @@ app.get('/api/auth/callback', async (req: Request, res: Response) => {
   }
 });
 
+// 添加sitemap路由
+app.get('/sitemap.xml', (_req: Request, res: Response) => {
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://exceleasy.org';
+  const languages = ['en', 'zh', 'ko', 'de', 'hi'];
+  
+  const routes = [
+    { path: '/', changefreq: 'daily', priority: 1.0 },
+    { path: '/ai-excel-generator', changefreq: 'weekly', priority: 0.9 },
+    { path: '/ai-excel-chart', changefreq: 'weekly', priority: 0.9 },
+    { path: '/blog', changefreq: 'weekly', priority: 0.8 },
+    { path: '/contact', changefreq: 'monthly', priority: 0.7 },
+    { path: '/about', changefreq: 'monthly', priority: 0.7 },
+    { path: '/privacy', changefreq: 'monthly', priority: 0.6 },
+    { path: '/terms', changefreq: 'monthly', priority: 0.6 }
+  ];
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  ${routes.map(route => languages.map(lang => `
+  <url>
+    <loc>${baseUrl}/${lang}${route.path}</loc>
+    ${languages.map(alterLang => `
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="${alterLang}" 
+      href="${baseUrl}/${alterLang}${route.path}"/>`).join('')}
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+  </url>
+  `).join('')).join('')}
+</urlset>`;
+
+  res.header('Content-Type', 'application/xml');
+  res.send(xml);
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
   console.log(`Callback URL: ${redirectUrl}/api/auth/callback`);

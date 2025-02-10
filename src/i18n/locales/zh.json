@@ -19,7 +19,12 @@
     "excelGenerator": "AI Excel 生成器",
     "excelFunctions": "AI Excel 函数",
     "picToExcel": "图片转 Excel",
-    "excelChart": "AI Excel 图表"
+    "excelChart": "AI Excel 图表",
+    "imageLoadError": "图片加载失败",
+    "loading": "加载中...",
+    "error": "出错了",
+    "retry": "重试",
+    "close": "关闭"
   },
   "hero": {
     "title": "用 AI 将文本转换为 Excel",
@@ -441,5 +446,16 @@
         }
       ]
     }
+  },
+  "images": {
+    "logo": "ExcelEasy - 智能Excel工具平台",
+    "excel_generator": "AI驱动的Excel生成器界面展示",
+    "excel_chart": "智能Excel图表生成工具界面",
+    "feature_preview": "功能预览和演示截图",
+    "tutorial": "使用教程和指导说明图",
+    "profile_placeholder": "用户头像占位图",
+    "loading": "加载中...",
+    "error": "图片加载失败",
+    "placeholder": "占位图片"
   }
 } 

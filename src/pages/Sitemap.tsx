@@ -1,97 +1,57 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Link, useParams } from 'react-router-dom';
-import { PageSEO } from '../components/seo/PageSEO';
-import { FileSpreadsheet, ChartBar, Image, Code, BookOpen, Users, Mail, Shield, Map } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { languages } from '../i18n/config';
+
+// 定义所有路由配置
+const routes = [
+  { path: '/', changefreq: 'daily', priority: 1.0 },
+  { path: '/ai-excel-generator', changefreq: 'weekly', priority: 0.9 },
+  { path: '/ai-excel-chart', changefreq: 'weekly', priority: 0.9 },
+  { path: '/blog', changefreq: 'weekly', priority: 0.8 },
+  { path: '/contact', changefreq: 'monthly', priority: 0.7 },
+  // 添加其他路由...
+];
 
 const Sitemap: React.FC = () => {
-  const { t } = useTranslation();
-  const { lang = 'en' } = useParams();
+  const location = useLocation();
+  const baseUrl = window.location.origin;
 
-  const sections = [
-    {
-      title: t('sitemap.mainFeatures'),
-      icon: <FileSpreadsheet className="h-6 w-6 text-blue-600" />,
-      links: [
-        { to: '/ai-excel-generator', label: t('common.excelGenerator') },
-        { to: '/excel-functions', label: t('common.excelFunctions') },
-        { to: '/pic-to-excel', label: t('common.picToExcel') },
-        { to: '/ai-excel-chart', label: t('common.excelChart') }
-      ]
-    },
-    {
-      title: t('sitemap.resources'),
-      icon: <BookOpen className="h-6 w-6 text-green-600" />,
-      links: [
-        { to: '/blog', label: t('common.blog') }
-      ]
-    },
-    {
-      title: t('sitemap.company'),
-      icon: <Users className="h-6 w-6 text-purple-600" />,
-      links: [
-        { to: '/about', label: t('common.about') },
-        { to: '/contact', label: t('common.contact') }
-      ]
-    },
-    {
-      title: t('sitemap.legal'),
-      icon: <Shield className="h-6 w-6 text-red-600" />,
-      links: [
-        { to: '/privacy', label: t('privacy.title') },
-        { to: '/terms', label: t('terms.title') }
-      ]
-    }
-  ];
+  useEffect(() => {
+    generateSitemap();
+  }, []);
 
-  return (
-    <>
-      <PageSEO 
-        page="sitemap"
-        lastModified="2025-02-10"
-      />
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Map className="mx-auto h-16 w-16 text-blue-600 mb-4" />
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                {t('sitemap.title')}
-              </h1>
-              <p className="text-xl text-gray-600">
-                {t('sitemap.subtitle')}
-              </p>
-            </div>
+  const generateSitemap = () => {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  ${routes.map(route => languages.map(lang => `
+  <url>
+    <loc>${baseUrl}/${lang.code}${route.path}</loc>
+    ${languages.map(alterLang => `
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="${alterLang.code}" 
+      href="${baseUrl}/${alterLang.code}${route.path}"/>`).join('')}
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+  </url>
+  `).join('')).join('')}
+</urlset>`;
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {sections.map((section) => (
-                <div key={section.title} className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="flex items-center mb-4">
-                    {section.icon}
-                    <h2 className="text-xl font-semibold text-gray-900 ml-3">
-                      {section.title}
-                    </h2>
-                  </div>
-                  <ul className="space-y-3">
-                    {section.links.map((link) => (
-                      <li key={link.to}>
-                        <Link
-                          to={`/${lang}${link.to}`}
-                          className="text-gray-600 hover:text-blue-600 transition-colors"
-                        >
-                          {link.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    // 创建Blob并下载
+    const blob = new Blob([xml], { type: 'application/xml' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'sitemap.xml';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  return null;
 };
 
 export default Sitemap; 
