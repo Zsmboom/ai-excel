@@ -112,5 +112,50 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       height: 630,
       type: 'image/png'
     }
+  },
+  privacy: {
+    title: 'Privacy Policy | ExcelEasy - AI Excel Generator',
+    description: 'Learn how ExcelEasy protects your privacy and handles your data. Our comprehensive privacy policy explains our data collection, usage, and protection practices.',
+    keywords: 'privacy policy, data protection, user privacy, data security, GDPR compliance, data handling',
+    schemaType: 'WebPage',
+    schemaName: 'ExcelEasy Privacy Policy',
+    schemaDescription: 'Comprehensive privacy policy detailing how ExcelEasy handles and protects user data',
+    image: {
+      url: '/images/social/privacy-preview.png',
+      alt: 'ExcelEasy Privacy Policy',
+      width: 1200,
+      height: 630,
+      type: 'image/png'
+    }
+  },
+  contact: {
+    title: 'Contact Us | ExcelEasy - AI Excel Generator',
+    description: 'Get in touch with the ExcelEasy team. We\'re here to help with your questions, feedback, and support needs regarding our AI Excel generation tools.',
+    keywords: 'contact us, customer support, help desk, technical support, feedback, business inquiries',
+    schemaType: 'ContactPage',
+    schemaName: 'ExcelEasy Contact Page',
+    schemaDescription: 'Contact information and support channels for ExcelEasy users',
+    image: {
+      url: '/images/social/contact-preview.png',
+      alt: 'Contact ExcelEasy Support',
+      width: 1200,
+      height: 630,
+      type: 'image/png'
+    }
+  },
+  notFound: {
+    title: 'Page Not Found | ExcelEasy - AI Excel Generator',
+    description: 'The page you are looking for could not be found. Please check the URL or return to our homepage to continue using our AI Excel generation tools.',
+    keywords: '404, page not found, error page, missing page',
+    schemaType: 'WebPage',
+    schemaName: 'ExcelEasy 404 Page',
+    schemaDescription: 'Page not found error page for ExcelEasy website',
+    image: {
+      url: '/images/social/404-preview.png',
+      alt: 'Page Not Found',
+      width: 1200,
+      height: 630,
+      type: 'image/png'
+    }
   }
 }; 

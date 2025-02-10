@@ -1,28 +1,23 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import Header from './Header';
+import { Outlet } from 'react-router-dom';
+import Navbar from './Navbar';
 import Footer from './Footer';
+import Breadcrumb from '../common/Breadcrumb';
+import ErrorBoundary from '../common/ErrorBoundary';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const location = useLocation();
-  const isPreviewMode = new URLSearchParams(location.search).get('viewMode') === 'preview';
-
-  // 如果是预览模式，只显示内容，不显示导航栏和页脚
-  if (isPreviewMode) {
-    return <>{children}</>;
-  }
-
+const Layout: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow">
-        {children}
-      </main>
-      <Footer />
+      <ErrorBoundary>
+        <Navbar />
+        <div className="flex-grow pt-16">
+          <Breadcrumb />
+          <main>
+            <Outlet />
+          </main>
+        </div>
+        <Footer />
+      </ErrorBoundary>
     </div>
   );
 };
