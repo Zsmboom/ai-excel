@@ -35,16 +35,16 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     }
   },
   workspace: {
-    title: 'AI Excel Generator - Create Custom Spreadsheets | ExcelEasy',
-    description: 'Generate custom Excel spreadsheets using AI, completely free. Create tables, charts, and reports with natural language. Features include pivot tables, data analysis, and automated formatting. No login required.',
-    keywords: 'Excel creator, spreadsheet generator, AI tables, data analysis, business reports, automated Excel',
+    title: 'AI Excel Generator - Transform Text to Professional Excel Spreadsheets | ExcelEasy',
+    description: 'Create custom Excel spreadsheets instantly using AI-powered natural language processing. Generate professional templates for budgets, invoices, project trackers, and data analysis. Free to use, no login required.',
+    keywords: 'AI Excel Generator, spreadsheet generator, Excel automation, Excel templates, data analysis, business reports, automated Excel, professional spreadsheets, Excel creation tool, AI spreadsheets',
     schemaType: 'SoftwareApplication',
-    schemaName: 'ExcelEasy Workspace',
-    schemaDescription: 'Interactive workspace for generating custom Excel spreadsheets with AI, featuring automated table creation, chart generation, and data analysis tools',
+    schemaName: 'AI Excel Generator',
+    schemaDescription: 'Transform text descriptions into professionally formatted Excel spreadsheets using AI. Create budgets, invoices, project trackers, and data analysis templates instantly.',
     schemaCategory: 'BusinessApplication',
     image: {
       url: '/images/social/workspace-preview.png',
-      alt: 'AI Excel Generator Workspace',
+      alt: 'AI Excel Generator - Text to Excel Transformation',
       width: 1200,
       height: 630,
       type: 'image/png'
@@ -117,7 +117,7 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     title: 'Privacy Policy | ExcelEasy - AI Excel Generator',
     description: 'Learn how ExcelEasy protects your privacy and handles your data. Our comprehensive privacy policy explains our data collection, usage, and protection practices.',
     keywords: 'privacy policy, data protection, user privacy, data security, GDPR compliance, data handling',
-    schemaType: 'WebPage',
+    schemaType: 'WebSite',
     schemaName: 'ExcelEasy Privacy Policy',
     schemaDescription: 'Comprehensive privacy policy detailing how ExcelEasy handles and protects user data',
     image: {
@@ -132,7 +132,7 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     title: 'Contact Us | ExcelEasy - AI Excel Generator',
     description: 'Get in touch with the ExcelEasy team. We\'re here to help with your questions, feedback, and support needs regarding our AI Excel generation tools.',
     keywords: 'contact us, customer support, help desk, technical support, feedback, business inquiries',
-    schemaType: 'ContactPage',
+    schemaType: 'WebSite',
     schemaName: 'ExcelEasy Contact Page',
     schemaDescription: 'Contact information and support channels for ExcelEasy users',
     image: {
@@ -147,7 +147,7 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     title: 'Page Not Found | ExcelEasy - AI Excel Generator',
     description: 'The page you are looking for could not be found. Please check the URL or return to our homepage to continue using our AI Excel generation tools.',
     keywords: '404, page not found, error page, missing page',
-    schemaType: 'WebPage',
+    schemaType: 'WebSite',
     schemaName: 'ExcelEasy 404 Page',
     schemaDescription: 'Page not found error page for ExcelEasy website',
     image: {

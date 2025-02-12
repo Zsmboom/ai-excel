@@ -233,16 +233,55 @@
     }
   },
   "excelFunctions": {
-    "title": "Excel 函数和 VBA 宏生成器",
-    "subtitle": "用自然语言描述您的需求，快速生成 Excel 函数和 VBA 宏",
+    "title": "AI Excel 函数与 VBA 宏生成器 - 智能 Excel 自动化",
+    "subtitle": "使用自然语言处理创建强大的 Excel 函数和 VBA 宏",
+    "description": "通过我们的 AI 驱动的函数生成器，将复杂的 Excel 任务转化为简单的命令。完美支持创建高级公式、自定义函数和自动化 VBA 宏。",
+    "features": {
+      "title": "核心功能",
+      "list": [
+        "即时 Excel 公式生成及说明",
+        "自定义 VBA 宏创建与自动化",
+        "复杂函数组合与嵌套",
+        "数据验证和错误处理",
+        "分步实施指南"
+      ]
+    },
     "form": {
-      "promptLabel": "您的请求",
-      "promptPlaceholder": "例如：创建一个 VLOOKUP 公式来查找两个表格之间的匹配值...",
-      "generateButton": "生成函数",
+      "promptLabel": "描述您的 Excel 函数需求",
+      "promptPlaceholder": "例如：创建一个 VLOOKUP 公式来查找两个表格之间的匹配值，或生成一个 VBA 宏来自动处理数据...",
+      "generateButton": "生成 Excel 函数",
       "typeSelector": {
-        "formula": "Excel 公式",
-        "macro": "VBA 宏"
+        "formula": "Excel 公式生成器",
+        "macro": "VBA 宏生成器"
       }
+    },
+    "shareTitle": "AI 驱动的 Excel 函数与 VBA 生成器",
+    "shareDescription": "使用自然语言创建复杂的 Excel 公式和 VBA 宏。免费的 Excel 自动化助手！",
+    "faq": {
+      "title": "Excel 函数与 VBA 常见问题",
+      "subtitle": "了解我们的 Excel 函数生成工具",
+      "items": [
+        {
+          "question": "AI 可以生成哪些类型的 Excel 函数？",
+          "answer": "我们的 AI Excel 函数生成器可以创建广泛的函数，包括：查找函数（VLOOKUP、HLOOKUP、INDEX-MATCH）、数学函数（SUM、AVERAGE、COUNT）、逻辑函数（IF、AND、OR）、文本函数（CONCATENATE、LEFT、RIGHT）、日期函数（DATEVALUE、NETWORKDAYS）以及复杂的嵌套函数组合。AI 能理解您的需求并生成最合适的函数，并附带详细说明。"
+        },
+        {
+          "question": "VBA 宏生成器是如何工作的？",
+          "answer": "VBA 宏生成器使用 AI 将您的自然语言描述转换为功能性 VBA 代码。只需描述您的自动化需求，如数据处理、格式化或重复性任务，AI 就会生成带有适当错误处理和优化的自定义 VBA 宏。每个宏都附带实施说明和自定义选项。"
+        },
+        {
+          "question": "是否可以生成复杂的嵌套函数？",
+          "answer": "是的！我们的 AI Excel 函数生成器擅长创建复杂的嵌套函数。它可以组合多个 Excel 函数，如带有 VLOOKUP 的 IF 语句、嵌套的 INDEX-MATCH 组合或数组公式。AI 会提供清晰的解释，说明每个部分的工作原理及其协同方式。"
+        },
+        {
+          "question": "AI 函数生成器与传统 Excel 帮助有何不同？",
+          "answer": "我们的 AI 函数生成器具有独特优势：1) 自然语言理解 - 用普通话描述您的需求，2) 上下文感知建议 - AI 理解您的具体用例，3) 完整解决方案生成 - 获取带有解释和示例的工作函数，4) VBA 自动化功能 - 超越基本 Excel 函数，5) 持续学习 - AI 保持最新的 Excel 功能更新。"
+        },
+        {
+          "question": "如何实施生成的 VBA 宏？",
+          "answer": "实施 VBA 宏非常简单：1) 将生成的代码复制到 Excel 的 VBA 编辑器中，2) 按照我们的分步实施指南操作，3) 根据需要自定义变量和参数，4) 使用示例数据测试宏，5) 将工作簿保存为启用宏的文件（.xlsm）。我们为每个宏提供详细说明和最佳实践。"
+        }
+      ]
     }
   },
   "functionUsage": {
@@ -366,21 +405,60 @@
     }
   },
   "picToExcel": {
-    "title": "图片转 Excel",
-    "subtitle": "上传图片，快速生成 Excel 表格",
+    "title": "图片转 Excel 转换器 - 从图片提取表格",
+    "subtitle": "将包含表格、数据或文本的图片即时转换为可编辑的 Excel 电子表格",
+    "description": "我们的 AI 驱动的图片转 Excel 转换器可以准确地从图片、截图或扫描文档中提取表格和数据。完美适用于数字化打印表格、转换 PDF 表格和处理基于图片的数据。",
+    "features": {
+      "title": "核心功能",
+      "list": [
+        "精确的表格结构识别",
+        "多格式图片支持（PNG、JPG、PDF）",
+        "智能数据提取和格式化",
+        "自动列行检测",
+        "数据验证和校正"
+      ]
+    },
     "form": {
-      "uploadImage": "上传图片",
-      "description": "描述（可选）",
-      "descriptionPlaceholder": "添加额外的描述来帮助 AI 更好地理解图片内容...",
-      "generateButton": "生成 Excel",
-      "downloadButton": "下载 Excel",
-      "previewTitle": "预览",
+      "uploadImage": "上传包含表格的图片",
+      "description": "补充说明（可选）",
+      "descriptionPlaceholder": "添加详细信息以帮助 AI 更好地理解表格结构和数据要求...",
+      "generateButton": "转换为 Excel",
+      "downloadButton": "下载 Excel 文件",
+      "previewTitle": "Excel 预览",
       "readyMessage": "您的 Excel 文件已准备就绪！"
     },
     "errors": {
-      "imageRequired": "请先上传图片",
-      "invalidImage": "无效的图片格式",
-      "generateError": "生成 Excel 时出错："
+      "imageRequired": "请上传包含表格或数据的图片",
+      "invalidImage": "不支持的图片格式。请使用 PNG、JPG 或 PDF",
+      "generateError": "转换图片为 Excel 时出错："
+    },
+    "shareTitle": "AI 图片转 Excel 转换器 - 从图片提取表格",
+    "shareDescription": "使用 AI 即时将图片转换为可编辑的 Excel 电子表格。支持表格、数据和文本提取。免费使用！",
+    "faq": {
+      "title": "图片转 Excel 转换常见问题",
+      "subtitle": "了解我们的 AI 驱动的图片转 Excel 转换过程",
+      "items": [
+        {
+          "question": "可以转换哪些类型的图片？",
+          "answer": "我们的图片转 Excel 转换器支持各种包含表格或结构化数据的图片类型：1) 表格和电子表格的截图，2) 带有表格数据的扫描文档，3) 打印表格和报告的照片，4) 带有表格的 PDF 页面，5) 财务报表或报告的数字图片。AI 可以高精度处理 PNG、JPG 和 PDF 格式。"
+        },
+        {
+          "question": "图片转 Excel 的转换准确度如何？",
+          "answer": "我们的 AI 驱动转换系统通过先进的表格识别算法实现高准确度。它能准确检测表格结构、识别列标题和行标签，并保持数据关系。AI 还执行数据验证和校正以确保准确性。为获得最佳效果，请使用清晰且对比度良好的图片。"
+        },
+        {
+          "question": "转换器能处理复杂的表格布局吗？",
+          "answer": "是的！我们的图片转 Excel 转换器可以处理各种复杂的表格：1) 合并单元格和嵌套表格，2) 一张图片中的多个表格，3) 不同边框样式的表格，4) 带有颜色的单元格和背景，5) 混合数据类型（文本、数字、日期）的表格。AI 智能保持原始结构，同时创建可编辑的 Excel 格式。"
+        },
+        {
+          "question": "如何获得最佳转换效果？",
+          "answer": "为获得最佳转换效果：1) 使用清晰、高分辨率的图片，2) 确保照片光线充足且对比度适当，3) 最小化图片倾斜和变形，4) 必要时在描述字段提供额外上下文，5) 在预览中检查和验证转换后的数据。我们的 AI 可以处理大多数图片质量问题，但更好的输入质量会带来更好的结果。"
+        },
+        {
+          "question": "转换后我的图片会怎样？",
+          "answer": "我们优先考虑您的数据隐私和安全：1) 图片在实时安全处理，2) 转换后不存储任何数据，3) 所有处理都在加密服务器上进行，4) 您可以立即下载 Excel 文件，5) 原始图片和转换后的数据会在处理后自动删除。"
+        }
+      ]
     }
   },
   "aiExcelGeneratorTitle": "AI Excel 生成器",
@@ -394,55 +472,80 @@
     "backToBlog": "返回博客列表"
   },
   "aiExcelChart": {
-    "title": "AI Excel 图表生成器",
-    "subtitle": "使用AI智能助手将Excel数据转换为精美图表",
+    "title": "AI Excel 图表生成器 - 智能数据可视化工具",
+    "subtitle": "使用 AI 驱动的分析将 Excel 数据转换为专业图表和洞察",
+    "description": "我们的 AI Excel 图表生成器分析您的数据并自动创建有意义的可视化。完美适用于业务报告、数据分析、趋势可视化和性能跟踪。",
+    "features": {
+      "title": "核心功能",
+      "list": [
+        "智能图表类型选择",
+        "自动数据分析和洞察",
+        "专业图表格式化",
+        "多种可视化选项",
+        "交互式图表定制"
+      ]
+    },
     "chartTypes": {
-      "bar": "柱状图",
-      "line": "折线图",
-      "pie": "饼图",
-      "scatter": "散点图"
+      "title": "支持的图表类型",
+      "bar": "条形图和柱状图",
+      "line": "折线图和面积图",
+      "pie": "饼图和环形图",
+      "scatter": "散点图和气泡图",
+      "combo": "组合图表",
+      "advanced": "高级可视化"
     },
     "form": {
-      "uploadExcel": "上传Excel文件",
-      "uploadHint": "支持.xlsx和.xls格式",
-      "selectChartType": "选择图表类型",
-      "generateButton": "生成图表",
-      "analysisPrompt": "分析需求（可选）",
-      "analysisPromptPlaceholder": "请输入您的数据分析需求，例如：分析销售趋势、找出最佳表现的产品、比较不同地区的业绩等..."
+      "uploadExcel": "上传 Excel 数据文件",
+      "uploadHint": "支持 .xlsx 和 .xls 文件用于可视化",
+      "selectChartType": "选择可视化类型",
+      "generateButton": "生成图表和洞察",
+      "analysisPrompt": "分析要求（可选）",
+      "analysisPromptPlaceholder": "指定您的可视化需求，例如，显示销售趋势、比较区域表现、分析产品类别..."
     },
     "preview": {
-      "title": "生成的图表",
-      "chartTitle": "图表预览",
-      "chartAlt": "生成的数据可视化图表",
-      "downloadButton": "下载Excel",
-      "downloadImageButton": "下载图表",
-      "shareButton": "分享图表",
-      "insights": "数据洞察",
-      "viewFullVersion": "查看完整版本"
+      "title": "图表预览和分析",
+      "chartTitle": "交互式图表预览",
+      "chartAlt": "AI 生成的数据可视化图表",
+      "downloadButton": "下载带图表的 Excel",
+      "downloadImageButton": "导出图表为图片",
+      "shareButton": "分享交互式图表",
+      "insights": "AI 生成的数据洞察",
+      "viewFullVersion": "查看完整分析"
     },
     "share": {
-      "shareUrlLabel": "分享链接",
-      "copyButton": "复制链接",
-      "linkCopied": "链接已复制到剪贴板！",
-      "description": "复制此链接并分享给他人，他们可以直接查看相同的图表分析结果。"
+      "shareUrlLabel": "分享图表链接",
+      "copyButton": "复制分享链接",
+      "linkCopied": "图表链接已复制到剪贴板！",
+      "description": "与他人分享您的交互式图表和洞察。查看者可以探索可视化效果而无需访问原始数据。"
     },
     "errors": {
-      "invalidFile": "请上传有效的Excel文件（.xlsx或.xls格式）",
-      "fileRequired": "请先选择Excel文件",
-      "generateError": "生成图表失败："
+      "invalidFile": "请上传有效的 Excel 文件（.xlsx 或 .xls）用于可视化",
+      "fileRequired": "选择包含数据的 Excel 文件以生成图表",
+      "generateError": "生成图表可视化时出错："
     },
-    "shareTitle": "AI Excel 图表生成器 - 智能数据可视化 | ExcelEasy",
-    "shareDescription": "使用AI智能分析Excel数据并生成专业的数据可视化图表。支持柱状图、折线图、饼图、散点图等多种图表类型。完全免费，无需登录。",
     "faq": {
-      "title": "常见问题",
+      "title": "Excel 图表生成常见问题",
+      "subtitle": "了解我们的 AI 驱动的图表生成和数据可视化",
       "items": [
         {
-          "question": "AI Excel 图表生成器怎么使用？",
-          "answer": "使用 AI Excel 图表生成器非常简单：上传需要处理的 Excel 文件，然后描述你想要分析的内容。AI 会根据你的数据和需求自动生成合适的图表和见解。"
+          "question": "AI 可以生成哪些类型的图表？",
+          "answer": "我们的 AI Excel 图表生成器支持全面的可视化类型：1) 用于比较的条形图和柱状图，2) 用于趋势的折线图和面积图，3) 用于比例的饼图和环形图，4) 用于相关性的散点图和气泡图，5) 用于复杂数据的组合图表，6) 高级可视化如瀑布图、雷达图和树形图。AI 会根据您的数据自动推荐最合适的图表类型。"
         },
         {
-          "question": "分享图表链接会发生什么？",
-          "answer": "当你分享图表链接时，链接中只包含生成的图表和分析见解。原始文件数据不会包含在分享链接中，我们也不会在服务器上存储任何你的文件数据。这样既确保了你的数据隐私，又能让你轻松分享可视化结果。"
+          "question": "AI 如何分析我的 Excel 数据？",
+          "answer": "AI 执行全面的数据分析：1) 识别数据模式和关系，2) 检测趋势和季节性，3) 识别数据层次结构和分组，4) 分析数值和分类数据，5) 生成统计洞察。基于这些分析，它创建优化的可视化并提供有意义的数据洞察。"
+        },
+        {
+          "question": "我可以自定义生成的图表吗？",
+          "answer": "是的！所有生成的图表都可以完全自定义：1) 修改颜色、字体和样式，2) 调整图表尺寸和布局，3) 编辑标题、标签和图例，4) 更改坐标轴比例和格式，5) 添加或删除数据系列。AI 提供专业的起点，您可以根据具体需求进行调整。"
+        },
+        {
+          "question": "我们的图表生成器有什么特别之处？",
+          "answer": "我们的 AI 图表生成器具有独特优势：1) 基于数据特征的智能图表类型选择，2) 自动数据分析和洞察生成，3) 专业设计原则应用，4) 交互式自定义选项，5) 多种导出格式支持。AI 不仅创建视觉吸引力的图表，还帮助您更好地理解数据。"
+        },
+        {
+          "question": "如何准备 Excel 数据用于可视化？",
+          "answer": "为获得最佳效果：1) 用清晰的列标题组织数据，2) 清理不一致或缺失的值，3) 适当格式化日期和数字，4) 删除不必要的格式和合并单元格，5) 在列名中包含相关上下文。AI 可以处理大多数数据结构，但组织良好的数据会产生更好的可视化效果。"
         }
       ]
     }

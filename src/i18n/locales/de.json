@@ -233,16 +233,55 @@
     }
   },
   "excelFunctions": {
-    "title": "Excel-Funktionen und VBA-Makro-Generator",
-    "subtitle": "Generieren Sie schnell Excel-Funktionen und VBA-Makros, indem Sie Ihre Anforderungen in natürlicher Sprache beschreiben",
+    "title": "AI Excel Funktionen & VBA Makro Generator - Intelligente Excel Automatisierung",
+    "subtitle": "Erstellen Sie leistungsstarke Excel-Funktionen und VBA-Makros mit natürlicher Sprachverarbeitung",
+    "description": "Verwandeln Sie komplexe Excel-Aufgaben in einfache Befehle mit unserem KI-gesteuerten Funktionsgenerator. Perfekt für die Erstellung fortgeschrittener Formeln, benutzerdefinierter Funktionen und automatisierter VBA-Makros.",
+    "features": {
+      "title": "Kernfunktionen",
+      "list": [
+        "Sofortige Excel-Formelgenerierung mit Erklärungen",
+        "Benutzerdefinierte VBA-Makro-Erstellung für Automatisierung",
+        "Komplexe Funktionskombinationen und Verschachtelung",
+        "Datenvalidierung und Fehlerbehandlung",
+        "Schrittweise Implementierungsanleitungen"
+      ]
+    },
     "form": {
-      "promptLabel": "Ihre Anfrage",
-      "promptPlaceholder": "Beispiel: Erstellen Sie eine VLOOKUP-Formel, um übereinstimmende Werte zwischen zwei Tabellen zu finden...",
-      "generateButton": "Funktion generieren",
+      "promptLabel": "Beschreiben Sie Ihre Excel-Funktionsanforderungen",
+      "promptPlaceholder": "Z.B.: Erstellen Sie eine VLOOKUP-Formel, um übereinstimmende Werte zwischen zwei Tabellen zu finden, oder generieren Sie ein VBA-Makro zur automatischen Datenverarbeitung...",
+      "generateButton": "Excel-Funktion generieren",
       "typeSelector": {
-        "formula": "Excel-Formel",
-        "macro": "VBA-Makro"
+        "formula": "Excel-Formelgenerator",
+        "macro": "VBA-Makro-Generator"
       }
+    },
+    "shareTitle": "KI-gesteuerter Excel-Funktionen & VBA-Generator",
+    "shareDescription": "Erstellen Sie komplexe Excel-Formeln und VBA-Makros mit natürlicher Sprache. Kostenloser KI-Assistent für Excel-Automatisierung!",
+    "faq": {
+      "title": "Excel-Funktionen & VBA FAQ",
+      "subtitle": "Häufig gestellte Fragen zu unseren Excel-Funktionsgenerierungswerkzeugen",
+      "items": [
+        {
+          "question": "Welche Arten von Excel-Funktionen kann die KI generieren?",
+          "answer": "Unser KI-Excel-Funktionsgenerator kann eine breite Palette von Funktionen erstellen, darunter: Nachschlagefunktionen (VLOOKUP, HLOOKUP, INDEX-MATCH), mathematische Funktionen (SUMME, MITTELWERT, ANZAHL), logische Funktionen (WENN, UND, ODER), Textfunktionen (VERKETTEN, LINKS, RECHTS), Datumsfunktionen (DATWERT, NETTOARBEITSTAGE) und komplexe verschachtelte Funktionskombinationen. Die KI versteht Ihre Anforderungen und generiert die am besten geeignete Funktion mit Erklärungen."
+        },
+        {
+          "question": "Wie funktioniert der VBA-Makro-Generator?",
+          "answer": "Der VBA-Makro-Generator verwendet KI, um Ihre natürlichsprachlichen Beschreibungen in funktionalen VBA-Code umzuwandeln. Beschreiben Sie einfach Ihre Automatisierungsanforderungen wie Datenverarbeitung, Formatierung oder sich wiederholende Aufgaben, und die KI generiert benutzerdefinierte VBA-Makros mit angemessener Fehlerbehandlung und Optimierung. Jedes Makro wird mit Implementierungsanweisungen und Anpassungsoptionen geliefert."
+        },
+        {
+          "question": "Können komplexe verschachtelte Funktionen generiert werden?",
+          "answer": "Ja! Unser KI-Excel-Funktionsgenerator ist Experte für die Erstellung komplexer verschachtelter Funktionen. Er kann mehrere Excel-Funktionen wie WENN-Anweisungen mit VLOOKUP, verschachtelte INDEX-MATCH-Kombinationen oder Array-Formeln kombinieren. Die KI bietet klare Erklärungen, wie jeder Teil funktioniert und wie sie zusammenarbeiten."
+        },
+        {
+          "question": "Was macht den KI-Funktionsgenerator anders als herkömmliche Excel-Hilfe?",
+          "answer": "Unser KI-Funktionsgenerator bietet einzigartige Vorteile: 1) Verständnis natürlicher Sprache - beschreiben Sie Ihre Anforderungen in normalem Deutsch, 2) Kontextbewusste Vorschläge - die KI versteht Ihren spezifischen Anwendungsfall, 3) Vollständige Lösungsgenerierung - erhalten Sie funktionierende Funktionen mit Erklärungen und Beispielen, 4) VBA-Automatisierungsfähigkeiten - gehen Sie über grundlegende Excel-Funktionen hinaus, 5) Kontinuierliches Lernen - die KI bleibt auf dem neuesten Stand der Excel-Funktionen."
+        },
+        {
+          "question": "Wie implementiere ich die generierten VBA-Makros?",
+          "answer": "Die Implementierung von VBA-Makros ist unkompliziert: 1) Kopieren Sie den generierten Code in den VBA-Editor in Excel, 2) Folgen Sie unserer schrittweisen Implementierungsanleitung, 3) Passen Sie Variablen und Parameter nach Bedarf an, 4) Testen Sie das Makro mit Beispieldaten, 5) Speichern Sie Ihre Arbeitsmappe als makroaktivierte Datei (.xlsm). Wir bieten detaillierte Anweisungen und Best Practices für jedes Makro."
+        }
+      ]
     }
   },
   "functionUsage": {
@@ -366,21 +405,60 @@
     }
   },
   "picToExcel": {
-    "title": "Bild zu Excel Konverter",
-    "subtitle": "Laden Sie ein Bild hoch und konvertieren Sie es schnell in eine Excel-Tabelle",
+    "title": "Bild zu Excel Konverter - Tabellen aus Bildern extrahieren",
+    "subtitle": "Konvertieren Sie Bilder mit Tabellen, Daten oder Text sofort in bearbeitbare Excel-Tabellen",
+    "description": "Unser KI-gesteuerter Bild-zu-Excel-Konverter extrahiert präzise Tabellen und Daten aus Bildern, Screenshots oder gescannten Dokumenten. Perfekt für die Digitalisierung gedruckter Tabellen, Konvertierung von PDF-Tabellen und Verarbeitung bildbasierter Daten.",
+    "features": {
+      "title": "Kernfunktionen",
+      "list": [
+        "Präzise Tabellenstrukturerkennung",
+        "Unterstützung mehrerer Bildformate (PNG, JPG, PDF)",
+        "Intelligente Datenextraktion und Formatierung",
+        "Automatische Spalten- und Zeilenerkennung",
+        "Datenvalidierung und -korrektur"
+      ]
+    },
     "form": {
-      "uploadImage": "Bild hochladen",
-      "description": "Beschreibung (Optional)",
-      "descriptionPlaceholder": "Fügen Sie zusätzliche Beschreibungen hinzu, damit die KI den Bildinhalt besser versteht...",
-      "generateButton": "Excel generieren",
-      "downloadButton": "Excel herunterladen",
-      "previewTitle": "Vorschau",
-      "readyMessage": "Ihre Excel-Datei ist bereit!"
+      "uploadImage": "Bild mit Tabellen hochladen",
+      "description": "Zusätzlicher Kontext (Optional)",
+      "descriptionPlaceholder": "Fügen Sie Details hinzu, um der KI zu helfen, die Tabellenstruktur und Datenanforderungen besser zu verstehen...",
+      "generateButton": "In Excel konvertieren",
+      "downloadButton": "Excel-Datei herunterladen",
+      "previewTitle": "Excel-Vorschau",
+      "readyMessage": "Ihre Excel-Datei ist fertig!"
     },
     "errors": {
-      "imageRequired": "Bitte laden Sie zuerst ein Bild hoch",
-      "invalidImage": "Ungültiges Bildformat",
-      "generateError": "Fehler beim Generieren von Excel: "
+      "imageRequired": "Bitte laden Sie ein Bild mit Tabellen oder Daten hoch",
+      "invalidImage": "Nicht unterstütztes Bildformat. Bitte verwenden Sie PNG, JPG oder PDF",
+      "generateError": "Fehler bei der Konvertierung des Bildes in Excel: "
+    },
+    "shareTitle": "KI Bild-zu-Excel-Konverter - Tabellen aus Bildern extrahieren",
+    "shareDescription": "Konvertieren Sie Bilder sofort in bearbeitbare Excel-Tabellen mit KI. Unterstützung für Tabellen-, Daten- und Textextraktion. Kostenlos nutzbar!",
+    "faq": {
+      "title": "Bild-zu-Excel-Konvertierung FAQ",
+      "subtitle": "Erfahren Sie mehr über unseren KI-gesteuerten Bild-zu-Excel-Konvertierungsprozess",
+      "items": [
+        {
+          "question": "Welche Arten von Bildern können konvertiert werden?",
+          "answer": "Unser Bild-zu-Excel-Konverter unterstützt verschiedene Bildtypen mit Tabellen oder strukturierten Daten: 1) Screenshots von Tabellen und Tabellenkalkulationen, 2) Gescannte Dokumente mit Tabellendaten, 3) Fotos von gedruckten Tabellen und Berichten, 4) PDF-Seiten mit Tabellen, 5) Digitale Bilder von Finanzberichten oder Berichten. Die KI kann PNG-, JPG- und PDF-Formate mit hoher Genauigkeit verarbeiten."
+        },
+        {
+          "question": "Wie genau ist die Bild-zu-Excel-Konvertierung?",
+          "answer": "Unser KI-gesteuertes Konvertierungssystem erreicht hohe Genauigkeit durch fortschrittliche Tabellenerkennungsalgorithmen. Es erkennt präzise Tabellenstrukturen, identifiziert Spaltenüberschriften und Zeilenbezeichnungen und bewahrt Datenbeziehungen. Die KI führt auch Datenvalidierung und -korrektur durch, um Genauigkeit zu gewährleisten. Verwenden Sie für beste Ergebnisse klare Bilder mit gutem Kontrast."
+        },
+        {
+          "question": "Kann der Konverter komplexe Tabellenlayouts verarbeiten?",
+          "answer": "Ja! Unser Bild-zu-Excel-Konverter kann verschiedene Tabellenkomplexitäten verarbeiten: 1) Verbundene Zellen und verschachtelte Tabellen, 2) Mehrere Tabellen in einem Bild, 3) Tabellen mit verschiedenen Rahmenstilen, 4) Farbige Zellen und Hintergründe, 5) Tabellen mit gemischten Datentypen (Text, Zahlen, Daten). Die KI bewahrt intelligent die ursprüngliche Struktur während der Erstellung eines bearbeitbaren Excel-Formats."
+        },
+        {
+          "question": "Wie erhalte ich die besten Konvertierungsergebnisse?",
+          "answer": "Für optimale Konvertierungsergebnisse: 1) Verwenden Sie klare, hochauflösende Bilder, 2) Stellen Sie gute Beleuchtung und Kontrast bei Fotos sicher, 3) Minimieren Sie Bildverzerrungen und -verzerrungen, 4) Geben Sie bei Bedarf zusätzlichen Kontext im Beschreibungsfeld an, 5) Überprüfen und validieren Sie die konvertierten Daten in der Vorschau. Unsere KI behandelt die meisten Bildqualitätsprobleme, aber bessere Eingabequalität führt zu besseren Ergebnissen."
+        },
+        {
+          "question": "Was passiert mit meinen Bildern nach der Konvertierung?",
+          "answer": "Wir priorisieren Ihre Datenprivatsphäre und Sicherheit: 1) Bilder werden in Echtzeit sicher verarbeitet, 2) Nach der Konvertierung werden keine Daten gespeichert, 3) Die gesamte Verarbeitung erfolgt auf verschlüsselten Servern, 4) Sie können Ihre Excel-Datei sofort herunterladen, 5) Originalbilder und konvertierte Daten werden nach der Verarbeitung automatisch gelöscht."
+        }
+      ]
     }
   },
   "blog": {
@@ -388,45 +466,82 @@
     "backToBlog": "Zurück zum Blog"
   },
   "aiExcelChart": {
-    "title": "KI Excel-Diagramm-Generator",
-    "subtitle": "Verwandeln Sie Ihre Excel-Daten mit KI-Unterstützung in ansprechende Diagramme",
-    "description": "Mit dem KI Excel-Diagramm-Generator können Sie komplexe Daten in leicht verständliche visuelle Diagramme umwandeln.",
+    "title": "KI Excel Diagramm Generator - Intelligentes Datenvisualisierungstool",
+    "subtitle": "Transformieren Sie Excel-Daten in professionelle Diagramme und Erkenntnisse mit KI-gesteuerter Analyse",
+    "description": "Unser KI Excel Diagramm Generator analysiert Ihre Daten und erstellt automatisch aussagekräftige Visualisierungen. Perfekt für Geschäftsberichte, Datenanalyse, Trendvisualisierung und Leistungsverfolgung.",
     "features": {
-      "dataVisualization": "Datenvisualisierung",
-      "chartTypes": "Verschiedene Diagrammtypen",
-      "aiAnalysis": "KI-gestützte Datenanalyse",
-      "customization": "Diagrammanpassung"
-    },
-    "form": {
-      "uploadExcel": "Excel-Datei hochladen",
-      "uploadHint": "Excel-Datei hier ablegen oder klicken zum Auswählen",
-      "selectChartType": "Diagrammtyp auswählen",
-      "analysisPrompt": "Analyseanforderung",
-      "analysisPromptPlaceholder": "Beschreiben Sie, was Sie im Diagramm darstellen möchten...",
-      "generateButton": "Diagramm erstellen"
+      "title": "Kernfunktionen",
+      "list": [
+        "Intelligente Diagrammtypauswahl",
+        "Automatisierte Datenanalyse und Erkenntnisse",
+        "Professionelle Diagrammformatierung",
+        "Mehrere Visualisierungsoptionen",
+        "Interaktive Diagrammanpassung"
+      ]
     },
     "chartTypes": {
-      "bar": "Balkendiagramm",
-      "line": "Liniendiagramm",
-      "pie": "Kreisdiagramm",
-      "scatter": "Streudiagramm"
+      "title": "Unterstützte Diagrammtypen",
+      "bar": "Balken- & Säulendiagramme",
+      "line": "Linien- & Flächendiagramme",
+      "pie": "Kreis- & Ringdiagramme",
+      "scatter": "Streu- & Blasendiagramme",
+      "combo": "Kombinationsdiagramme",
+      "advanced": "Erweiterte Visualisierungen"
+    },
+    "form": {
+      "uploadExcel": "Excel-Datendatei hochladen",
+      "uploadHint": "Unterstützt .xlsx und .xls Dateien für Visualisierung",
+      "selectChartType": "Visualisierungstyp wählen",
+      "generateButton": "Diagramme & Erkenntnisse generieren",
+      "analysisPrompt": "Analyseanforderungen (Optional)",
+      "analysisPromptPlaceholder": "Geben Sie Ihre Visualisierungsanforderungen an, z.B. Verkaufstrends anzeigen, regionale Leistung vergleichen, Produktkategorien analysieren..."
     },
     "preview": {
-      "title": "Diagrammvorschau",
-      "insights": "Dateneinblicke",
-      "downloadImageButton": "Bild herunterladen",
-      "shareButton": "Teilen",
-      "viewFullVersion": "Vollversion anzeigen",
-      "chartTitle": "Generiertes Diagramm"
+      "title": "Diagrammvorschau & Analyse",
+      "chartTitle": "Interaktive Diagrammvorschau",
+      "chartAlt": "KI-generiertes Datenvisualisierungsdiagramm",
+      "downloadButton": "Excel mit Diagrammen herunterladen",
+      "downloadImageButton": "Diagramm als Bild exportieren",
+      "shareButton": "Interaktives Diagramm teilen",
+      "insights": "KI-generierte Datenerkenntnisse",
+      "viewFullVersion": "Vollständige Analyse anzeigen"
     },
     "share": {
-      "shareUrlLabel": "Freigabelink",
-      "copyButton": "Link kopieren",
-      "linkCopied": "Link wurde kopiert!",
-      "description": "Über diesen Link können andere Personen das generierte Diagramm ansehen."
+      "shareUrlLabel": "Diagramm-URL teilen",
+      "copyButton": "Share-Link kopieren",
+      "linkCopied": "Diagramm-Link in die Zwischenablage kopiert!",
+      "description": "Teilen Sie Ihr interaktives Diagramm und Erkenntnisse mit anderen. Betrachter können die Visualisierung erkunden, ohne auf die Originaldaten zuzugreifen."
     },
     "errors": {
-      "invalidFile": "Nicht unterstütztes Dateiformat. Nur Excel-Dateien (.xlsx, .xls) sind erlaubt."
+      "invalidFile": "Bitte laden Sie eine gültige Excel-Datei (.xlsx oder .xls) mit Daten zur Visualisierung hoch",
+      "fileRequired": "Wählen Sie eine Excel-Datei mit Daten für die Diagrammerstellung aus",
+      "generateError": "Fehler bei der Generierung der Diagrammvisualisierung: "
+    },
+    "faq": {
+      "title": "Excel-Diagrammerstellung FAQ",
+      "subtitle": "Erfahren Sie mehr über unsere KI-gesteuerte Diagrammerstellung und Datenvisualisierung",
+      "items": [
+        {
+          "question": "Welche Arten von Diagrammen kann die KI generieren?",
+          "answer": "Unser KI Excel Diagramm Generator unterstützt eine umfassende Palette von Visualisierungen: 1) Balken- und Säulendiagramme für Vergleiche, 2) Linien- und Flächendiagramme für Trends, 3) Kreis- und Ringdiagramme für Proportionen, 4) Streu- und Blasendiagramme für Korrelationen, 5) Kombinationsdiagramme für komplexe Daten, 6) Erweiterte Visualisierungen wie Wasserfalldiagramme, Radardiagramme und Treemaps. Die KI schlägt automatisch den am besten geeigneten Diagrammtyp basierend auf Ihren Daten vor."
+        },
+        {
+          "question": "Wie analysiert die KI meine Excel-Daten?",
+          "answer": "Die KI führt eine umfassende Datenanalyse durch: 1) Identifiziert Datenmuster und Beziehungen, 2) Erkennt Trends und Saisonalität, 3) Erkennt Datenhierarchien und Gruppierungen, 4) Analysiert numerische und kategorische Daten, 5) Generiert statistische Erkenntnisse. Basierend auf dieser Analyse erstellt sie optimierte Visualisierungen und liefert aussagekräftige Einblicke in Ihre Daten."
+        },
+        {
+          "question": "Kann ich die generierten Diagramme anpassen?",
+          "answer": "Ja! Alle generierten Diagramme sind vollständig anpassbar: 1) Farben, Schriftarten und Stile ändern, 2) Diagrammabmessungen und Layouts anpassen, 3) Titel, Beschriftungen und Legenden bearbeiten, 4) Achsenskalen und Formate ändern, 5) Datenreihen hinzufügen oder entfernen. Die KI bietet einen professionellen Ausgangspunkt, den Sie an Ihre genauen Anforderungen anpassen können."
+        },
+        {
+          "question": "Was macht unseren Diagrammgenerator besonders?",
+          "answer": "Unser KI-Diagrammgenerator zeichnet sich aus durch: 1) Intelligente Diagrammtypauswahl basierend auf Datenmerkmalen, 2) Automatisierte Datenanalyse und Erkenntnisgewinnung, 3) Anwendung professioneller Designprinzipien, 4) Interaktive Anpassungsoptionen, 5) Unterstützung mehrerer Exportformate. Die KI erstellt nicht nur visuell ansprechende Diagramme, sondern hilft Ihnen auch, Ihre Daten besser zu verstehen."
+        },
+        {
+          "question": "Wie bereite ich meine Excel-Daten für die Visualisierung vor?",
+          "answer": "Für beste Ergebnisse: 1) Organisieren Sie Daten in klaren Spalten mit Überschriften, 2) Bereinigen Sie inkonsistente oder fehlende Werte, 3) Formatieren Sie Daten und Zahlen angemessen, 4) Entfernen Sie unnötige Formatierung und verbundene Zellen, 5) Fügen Sie relevanten Kontext in Spaltennamen ein. Die KI kann die meisten Datenstrukturen verarbeiten, aber gut organisierte Daten produzieren bessere Visualisierungen."
+        }
+      ]
     }
   }
 } 
