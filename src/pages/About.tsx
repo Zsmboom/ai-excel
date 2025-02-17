@@ -6,7 +6,7 @@ import { Step } from '../components/about/Step';
 import { PageSEO } from '../components/seo/PageSEO';
 import { SiDevpost } from 'react-icons/si';
 
-export default function About() {
+const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -116,4 +116,6 @@ export default function About() {
       </div>
     </div>
   );
-}
+};
+
+export default About;
