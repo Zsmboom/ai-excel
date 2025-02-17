@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FileSpreadsheet, Github, Twitter, Linkedin } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
+import { BsReddit } from 'react-icons/bs';
 
 const Footer: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -46,6 +47,14 @@ const Footer: React.FC = () => {
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Linkedin className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.reddit.com/r/excel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <BsReddit className="h-6 w-6" />
               </a>
             </div>
           </div>
