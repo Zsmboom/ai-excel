@@ -192,6 +192,23 @@
   "about": {
     "title": "Making Excel Simple for Everyone",
     "subtitle": "ExcelEasy is your AI-powered companion for all things Excel, designed to solve every Excel challenge and make spreadsheet work effortless.",
+    "showcase": {
+      "title": "Project Showcase",
+      "viewOnDevpost": "View on Devpost",
+      "description": "ExcelEasy has been featured on Devpost as an innovative AI-powered Excel solution. Our project showcases how we're revolutionizing spreadsheet creation and management through advanced AI technology.",
+      "innovation": {
+        "title": "Innovation",
+        "description": "Combining AI with Excel to create an intuitive, powerful spreadsheet assistant"
+      },
+      "impact": {
+        "title": "Impact",
+        "description": "Making Excel accessible to users of all skill levels"
+      },
+      "technology": {
+        "title": "Technology",
+        "description": "Built with cutting-edge AI and web technologies"
+      }
+    },
     "mission": {
       "title": "Our Mission",
       "description": "We believe that everyone should have access to the full power of Excel without the steep learning curve. ExcelEasy combines advanced AI technology with user-friendly design to solve common Excel challenges:",

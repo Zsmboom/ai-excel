@@ -1,14 +1,17 @@
 import React from 'react';
-import { FileSpreadsheet } from 'lucide-react';
+import { FileSpreadsheet, Trophy } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Features } from '../components/about/Features';
 import { Step } from '../components/about/Step';
+import { PageSEO } from '../components/seo/PageSEO';
+import { SiDevpost } from 'react-icons/si';
 
 export default function About() {
   const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
+      <PageSEO page="about" />
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -21,6 +24,44 @@ export default function About() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t('about.subtitle')}
           </p>
+        </div>
+
+        {/* Devpost Project Showcase */}
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-md p-8 mb-16">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <Trophy className="h-8 w-8 text-blue-600" />
+              <h2 className="text-2xl font-bold text-gray-900">{t('about.showcase.title')}</h2>
+            </div>
+            <a
+              href="https://devpost.com/software/ai-excel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-blue-600 hover:text-blue-700"
+            >
+              <SiDevpost className="h-6 w-6" />
+              <span>{t('about.showcase.viewOnDevpost')}</span>
+            </a>
+          </div>
+          <div className="prose prose-blue max-w-none">
+            <p className="text-lg text-gray-700">
+              {t('about.showcase.description')}
+            </p>
+            <div className="mt-4 grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('about.showcase.innovation.title')}</h3>
+                <p className="text-gray-600">{t('about.showcase.innovation.description')}</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('about.showcase.impact.title')}</h3>
+                <p className="text-gray-600">{t('about.showcase.impact.description')}</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('about.showcase.technology.title')}</h3>
+                <p className="text-gray-600">{t('about.showcase.technology.description')}</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <Features />
