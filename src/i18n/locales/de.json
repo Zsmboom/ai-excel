@@ -214,6 +214,23 @@
           "description": "Laden Sie die sofort einsatzbereite Excel-Datei herunter oder kopieren Sie die generierten Formeln"
         }
       }
+    },
+    "showcase": {
+      "title": "Projekt-Showcase",
+      "viewOnDevpost": "Auf Devpost ansehen",
+      "description": "ExcelEasy ist ein innovatives Projekt, das beim Devpost Hackathon Anerkennung gefunden hat. Wir setzen uns dafür ein, Excel-Workflows durch KI-Technologie zu vereinfachen und Benutzern intuitive, effiziente Lösungen anzubieten.",
+      "innovation": {
+        "title": "Innovative Lösung",
+        "description": "Durch Natural Language Processing und KI-Technologie haben wir die Art und Weise, wie Excel-Dateien erstellt und verwaltet werden, revolutioniert und komplexe Tabellenkalkulationsaufgaben einfach und intuitiv gestaltet."
+      },
+      "impact": {
+        "title": "Gesellschaftliche Auswirkungen",
+        "description": "Unser Tool hat Benutzern weltweit geholfen, wertvolle Zeit zu sparen, sodass sie sich auf wichtigere Aufgaben konzentrieren können, anstatt sich mit mühsamen Excel-Operationen zu beschäftigen."
+      },
+      "technology": {
+        "title": "Technologie-Highlights",
+        "description": "Wir nutzen modernste KI-Technologien, einschließlich Large Language Models und Computer Vision, um präzise und effiziente Excel-Automatisierungslösungen anzubieten."
+      }
     }
   },
   "workspace": {

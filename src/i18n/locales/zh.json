@@ -214,6 +214,23 @@
           "description": "下载即用的 Excel 文件或复制生成的公式"
         }
       }
+    },
+    "showcase": {
+      "title": "项目展示",
+      "viewOnDevpost": "在 Devpost 上查看",
+      "description": "ExcelEasy 是一个在 Devpost 黑客马拉松上获得认可的创新项目。我们致力于通过人工智能技术简化 Excel 工作流程，为用户提供直观、高效的解决方案。",
+      "innovation": {
+        "title": "创新方案",
+        "description": "通过自然语言处理和人工智能技术，我们彻底改变了 Excel 文件的创建和管理方式，使复杂的电子表格任务变得简单直观。"
+      },
+      "impact": {
+        "title": "社会影响",
+        "description": "我们的工具帮助世界各地的用户节省了大量时间，使他们能够专注于更有价值的工作，而不是繁琐的 Excel 操作。"
+      },
+      "technology": {
+        "title": "技术亮点",
+        "description": "采用最新的 AI 技术，包括大型语言模型和计算机视觉，为用户提供准确、高效的 Excel 自动化解决方案。"
+      }
     }
   },
   "workspace": {

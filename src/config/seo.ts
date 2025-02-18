@@ -157,5 +157,20 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       height: 630,
       type: 'image/png'
     }
+  },
+  about: {
+    title: 'About ExcelEasy - AI-Powered Excel Generation Tool',
+    description: 'Learn more about ExcelEasy, the innovative AI-powered Excel generation tool. Discover how we transform natural language into professional Excel spreadsheets.',
+    keywords: 'ExcelEasy about, AI Excel tool, spreadsheet automation, Excel generation platform, business intelligence tool',
+    schemaType: 'AboutPage',
+    schemaName: 'About ExcelEasy',
+    schemaDescription: 'Learn about ExcelEasy - the AI-powered Excel generation tool that transforms natural language into professional spreadsheets',
+    image: {
+      url: '/images/social/about-preview.png',
+      alt: 'About ExcelEasy',
+      width: 1200,
+      height: 630,
+      type: 'image/png'
+    }
   }
 }; 

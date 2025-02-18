@@ -223,6 +223,23 @@
           "description": "바로 사용할 수 있는 Excel 파일을 다운로드하거나 생성된 수식을 복사하세요"
         }
       }
+    },
+    "showcase": {
+      "title": "프로젝트 쇼케이스",
+      "viewOnDevpost": "Devpost에서 보기",
+      "description": "ExcelEasy는 Devpost 해커톤에서 인정받은 혁신적인 프로젝트입니다. 우리는 AI 기술을 통해 Excel 워크플로우를 단순화하고 사용자에게 직관적이고 효율적인 솔루션을 제공하기 위해 노력하고 있습니다.",
+      "innovation": {
+        "title": "혁신적인 솔루션",
+        "description": "자연어 처리와 AI 기술을 통해 Excel 파일 생성 및 관리 방식을 혁신적으로 변화시켜, 복잡한 스프레드시트 작업을 간단하고 직관적으로 만들었습니다."
+      },
+      "impact": {
+        "title": "사회적 영향",
+        "description": "전 세계 사용자들이 반복적인 Excel 작업 대신 더 가치 있는 일에 집중할 수 있도록 도움으로써 많은 시간을 절약하게 해주었습니다."
+      },
+      "technology": {
+        "title": "기술적 특징",
+        "description": "대규모 언어 모델과 컴퓨터 비전을 포함한 최신 AI 기술을 활용하여 정확하고 효율적인 Excel 자동화 솔루션을 제공합니다."
+      }
     }
   },
   "workspace": {
