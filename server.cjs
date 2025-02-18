@@ -14,7 +14,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5177',
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
   credentials: true
 }));
 app.use(express.json());
@@ -34,7 +34,7 @@ app.get('/health', (req, res) => {
 // 确保环境变量存在
 const clientId = process.env.GOOGLE_CLIENT_ID;
 const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
-const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5177';
+const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
 const redirectUrl = process.env.REDIRECT_URL || `${frontendUrl}/api/auth/callback`;
 
 console.log('Environment variables:', {

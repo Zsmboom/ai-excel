@@ -1,1 +1,8 @@
-export type SchemaType = 'WebApplication' | 'SoftwareApplication' | 'WebSite'; 
+export type SchemaType = 
+  | 'WebApplication' 
+  | 'SoftwareApplication' 
+  | 'WebSite'
+  | 'Blog'
+  | 'WebPage'
+  | 'ContactPage'
+  | 'AboutPage'; 

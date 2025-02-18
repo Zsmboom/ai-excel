@@ -41,6 +41,11 @@ export const PageSEO: React.FC<PageSEOProps> = ({
     setConfig(SEOConfig[page]);
   }, [i18n.language, page]);
 
+  const getLocalizedValue = (field: any) => {
+    if (typeof field === 'string') return field;
+    return field[i18n.language as keyof typeof field] || field.en;
+  };
+
   const pathWithoutLang = location.pathname.split('/').slice(2).join('/');
   const baseUrl = window.location.origin;
   const currentUrl = canonicalUrl || `${baseUrl}/${i18n.language}/${pathWithoutLang}`;
@@ -100,9 +105,9 @@ export const PageSEO: React.FC<PageSEOProps> = ({
     <>
       <Helmet>
         <html lang={i18n.language} />
-        <title>{config.title}</title>
-        <meta name="description" content={config.description} />
-        <meta name="keywords" content={config.keywords} />
+        <title>{getLocalizedValue(config.title)}</title>
+        <meta name="description" content={getLocalizedValue(config.description)} />
+        <meta name="keywords" content={getLocalizedValue(config.keywords)} />
         
         {/* Robots 指令 */}
         <meta name="robots" content={robotsContent} />
@@ -114,11 +119,11 @@ export const PageSEO: React.FC<PageSEOProps> = ({
         <meta property="og:type" content={article ? 'article' : 'website'} />
         <meta property="og:site_name" content="ExcelEasy" />
         <meta property="og:url" content={currentUrl} />
-        <meta property="og:title" content={config.title} />
-        <meta property="og:description" content={config.description} />
+        <meta property="og:title" content={getLocalizedValue(config.title)} />
+        <meta property="og:description" content={getLocalizedValue(config.description)} />
         <meta property="og:image" content={imageUrl} />
         <meta property="og:image:secure_url" content={imageUrl} />
-        <meta property="og:image:alt" content={config.image.alt} />
+        <meta property="og:image:alt" content={getLocalizedValue(config.image.alt)} />
         <meta property="og:image:type" content={config.image.type} />
         <meta property="og:image:width" content={String(config.image.width)} />
         <meta property="og:image:height" content={String(config.image.height)} />
@@ -143,10 +148,10 @@ export const PageSEO: React.FC<PageSEOProps> = ({
         <meta name="twitter:site" content="@ExcelEasy" />
         <meta name="twitter:creator" content="@ExcelEasy" />
         <meta name="twitter:url" content={currentUrl} />
-        <meta name="twitter:title" content={config.title} />
-        <meta name="twitter:description" content={config.description} />
+        <meta name="twitter:title" content={getLocalizedValue(config.title)} />
+        <meta name="twitter:description" content={getLocalizedValue(config.description)} />
         <meta name="twitter:image" content={imageUrl} />
-        <meta name="twitter:image:alt" content={config.image.alt} />
+        <meta name="twitter:image:alt" content={getLocalizedValue(config.image.alt)} />
         <meta name="twitter:domain" content={baseUrl} />
 
         {/* 其他元标签 */}
@@ -189,8 +194,8 @@ export const PageSEO: React.FC<PageSEOProps> = ({
       
       <SchemaOrg
         type={config.schemaType}
-        name={config.schemaName}
-        description={config.schemaDescription}
+        name={getLocalizedValue(config.schemaName)}
+        description={getLocalizedValue(config.schemaDescription)}
         applicationCategory={config.schemaCategory}
         url={currentUrl}
         image={imageUrl}
