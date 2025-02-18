@@ -9,6 +9,7 @@ import ReactMarkdown from 'react-markdown';
 import { format } from 'date-fns';
 import { zhCN, enUS, de } from 'date-fns/locale';
 import blogPosts from '../data/blogPosts';
+console.log('导入的 blogPosts:', blogPosts);
 
 const getLocale = (lang: string) => {
   switch (lang) {
@@ -22,11 +23,16 @@ const getLocale = (lang: string) => {
 };
 
 const BlogDetail: React.FC = () => {
-  const { id, lang = 'en' } = useParams<{ id: string; lang: string }>();
+  const { slug, lang = 'en' } = useParams<{ slug: string; lang: string }>();
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const post = blogPosts.find((post) => post.id === id);
+  console.log('当前 URL 参数:', { slug, lang });
+  console.log('所有文章:', blogPosts);
+  
+  const post = blogPosts.find((post) => post.slug === slug);
+  console.log('找到的文章:', post);
+  
   const content = post?.translations[lang] || post?.translations['en'];
 
   if (!post || !content) {

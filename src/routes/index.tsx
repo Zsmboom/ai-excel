@@ -54,7 +54,7 @@ const AppRoutes = () => {
         <Route path="ai-excel-chart" element={<AIExcelChart />} />
         <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
-        <Route path="blog/:id" element={<BlogDetail />} />
+        <Route path="blog/:slug" element={<BlogDetail />} />
       </Route>
 
       {/* 捕获所有其他路由并重定向到默认语言的相应路径 */}
