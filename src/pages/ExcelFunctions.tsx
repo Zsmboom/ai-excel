@@ -8,6 +8,8 @@ import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { useExcelFunctions } from '../hooks/useExcelFunctions';
 import { PageSEO } from '../components/seo/PageSEO';
 import ShareButtons from '../components/common/ShareButtons';
+import { useExcelFunctionGeneration } from '../hooks/useExcelFunctionGeneration';
+import { ProgressBar } from '../components/common/ProgressBar';
 
 export default function ExcelFunctions() {
   const [prompt, setPrompt] = useState('');
@@ -20,6 +22,9 @@ export default function ExcelFunctions() {
     setFunctionType
   } = useExcelFunctions();
   const { t } = useTranslation();
+  const {
+    progress
+  } = useExcelFunctionGeneration();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,6 +66,15 @@ export default function ExcelFunctions() {
                 functionType={functionType}
                 onTypeChange={setFunctionType}
               />
+
+              {loading && (
+                <div className="mt-4">
+                  <ProgressBar 
+                    progress={progress.progress} 
+                    status={progress.status}
+                  />
+                </div>
+              )}
 
               {error && (
                 <div role="alert" className="mt-4 p-4 bg-red-50 text-red-700 rounded-md">

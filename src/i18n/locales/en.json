@@ -252,16 +252,24 @@
       ]
     },
     "form": {
-      "promptLabel": "Describe Your Excel Spreadsheet Needs",
-      "promptPlaceholder": "E.g., Create a monthly budget spreadsheet with income categories, expense tracking, and savings calculations...",
-      "generateButton": "Generate Excel Spreadsheet",
-      "downloadButton": "Download Excel File",
-      "readyMessage": "Your Excel spreadsheet is ready!",
-      "previewTitle": "Excel Preview"
+      "promptLabel": "Describe your Excel requirements",
+      "promptPlaceholder": "Example: Create a sales data table with product name, price, quantity sold, and total revenue...",
+      "generateButton": "Generate Excel",
+      "generatingMessage": "Generating...",
+      "readyMessage": "Your Excel file is ready!",
+      "downloadButton": "Download File",
+      "previewTitle": "Preview",
+      "progressStatus": {
+        "analyzing": "Analyzing your requirements...",
+        "structuring": "Using AI to analyze data structure...",
+        "generating": "Generating Excel file...",
+        "completed": "Generation complete!",
+        "failed": "Generation failed"
+      }
     },
     "errors": {
-      "quota": "API quota exceeded. Please try again later or contact administrator to update quota.",
-      "unknown": "Error generating Excel spreadsheet: "
+      "quota": "You've used up your free generations. Please login or upgrade to continue.",
+      "unknown": "Generation failed: "
     },
     "shareTitle": "AI Excel Generator - Your Smart Spreadsheet Assistant",
     "shareDescription": "Transform text to Excel spreadsheets instantly with AI. Free to use, no login required!"
@@ -282,11 +290,19 @@
     },
     "form": {
       "promptLabel": "Describe Your Excel Function Needs",
-      "promptPlaceholder": "E.g., Create a VLOOKUP formula to find matching values between two tables, or generate a VBA macro to automate data processing...",
+      "promptPlaceholder": "Example: Create a VLOOKUP formula to find matching values between two tables, or generate a VBA macro for automated data processing...",
       "generateButton": "Generate Excel Function",
+      "generatingMessage": "Generating...",
       "typeSelector": {
         "formula": "Excel Formula Generator",
         "macro": "VBA Macro Generator"
+      },
+      "progressStatus": {
+        "analyzing": "Analyzing your requirements...",
+        "processing": "Processing function logic...",
+        "generating": "Generating function code...",
+        "completed": "Generation complete!",
+        "failed": "Generation failed"
       }
     },
     "shareTitle": "AI-Powered Excel Functions & VBA Generator",
@@ -459,7 +475,14 @@
       "generateButton": "Convert to Excel",
       "downloadButton": "Download Excel File",
       "previewTitle": "Excel Preview",
-      "readyMessage": "Your Excel file is ready!"
+      "readyMessage": "Your Excel file is ready!",
+      "progressStatus": {
+        "processing": "Processing image...",
+        "analyzing": "Analyzing table structure...",
+        "generating": "Generating Excel file...",
+        "completed": "Excel file ready!",
+        "failed": "Generation failed"
+      }
     },
     "errors": {
       "imageRequired": "Please upload an image containing tables or data",
@@ -546,7 +569,14 @@
       "selectChartType": "Choose Visualization Type",
       "generateButton": "Generate Charts & Insights",
       "analysisPrompt": "Analysis Requirements (Optional)",
-      "analysisPromptPlaceholder": "Specify your visualization needs, e.g., show sales trends over time, compare regional performance, analyze product categories..."
+      "analysisPromptPlaceholder": "Specify your visualization needs, e.g., show sales trends over time, compare regional performance, analyze product categories...",
+      "progressStatus": {
+        "processing": "Processing Excel file...",
+        "analyzing": "Analyzing data structure...",
+        "generating": "Generating chart visualization...",
+        "completed": "Chart generation complete!",
+        "failed": "Generation failed"
+      }
     },
     "preview": {
       "title": "Chart Preview & Analysis",

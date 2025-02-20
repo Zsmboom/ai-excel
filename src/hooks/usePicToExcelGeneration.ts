@@ -1,22 +1,22 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { analyzeWithOpenAI } from '../services/openai';
+import { analyzeImageWithClaude } from '../services/claude';
 import { generateExcel } from '../services/excel';
-import type { AnalysisResult, TableConfigOptions } from '../types/excel';
-
-export interface ExcelGenerationResult {
-  fileName: string;
-  blob: Blob;
-  summary: string;
-  analysis: AnalysisResult;
-}
+import type { TableConfigOptions } from '../types/excel';
 
 export interface GenerationProgress {
   status: string;
   progress: number;
 }
 
-export function useExcelGeneration() {
+export interface PicToExcelResult {
+  fileName: string;
+  blob: Blob;
+  data: any[];
+  summary: string;
+}
+
+export function usePicToExcelGeneration() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [progress, setProgress] = useState<GenerationProgress>({
@@ -27,36 +27,39 @@ export function useExcelGeneration() {
 
   const updateProgress = (statusKey: string, progress: number) => {
     setProgress({ 
-      status: t(`workspace.form.progressStatus.${statusKey}`), 
+      status: t(`picToExcel.form.progressStatus.${statusKey}`), 
       progress 
     });
   };
 
-  const generateFromPrompt = async (
-    prompt: string,
+  const generateFromImage = async (
+    imageBase64: string,
+    description: string,
     config: TableConfigOptions
-  ): Promise<ExcelGenerationResult | null> => {
+  ): Promise<PicToExcelResult | null> => {
     setLoading(true);
     setError(null);
-    updateProgress('analyzing', 10);
-
+    
     try {
-      // 分析需求
-      updateProgress('structuring', 30);
-      const analysis = await analyzeWithOpenAI(prompt, config);
+      // 开始处理图片
+      updateProgress('processing', 20);
+      
+      // 使用 Claude 分析图片
+      updateProgress('analyzing', 40);
+      const analysis = await analyzeImageWithClaude(imageBase64, description, config);
       
       // 生成 Excel
-      updateProgress('generating', 60);
+      updateProgress('generating', 70);
       const blob = generateExcel(analysis, config);
       
       // 完成
       updateProgress('completed', 100);
       
       return {
-        fileName: 'generated_spreadsheet.xlsx',
+        fileName: 'image_to_excel.xlsx',
         blob,
-        summary: analysis.summary,
-        analysis
+        data: analysis.data,
+        summary: analysis.summary
       };
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
@@ -72,9 +75,9 @@ export function useExcelGeneration() {
   };
 
   return {
-    generateFromPrompt,
+    generateFromImage,
     loading,
     error,
     progress
   };
-}
+} 

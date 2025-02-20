@@ -3,6 +3,7 @@ import { FileSpreadsheet, Send, Download } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useExcelGeneration } from '../hooks/useExcelGeneration';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
+import { ProgressBar } from '../components/ui/ProgressBar';
 import { ExcelPreview } from '../components/excel/ExcelPreview';
 import { TableConfig } from '../components/excel/TableConfig';
 import { UsageInfo } from '../components/excel/UsageInfo';
@@ -19,7 +20,7 @@ export default function Workspace() {
     enableSorting: false,
   });
   
-  const { generateFromPrompt, loading, error } = useExcelGeneration();
+  const { generateFromPrompt, loading, error, progress } = useExcelGeneration();
   const { t } = useTranslation();
   const [result, setResult] = useState<{
     fileName: string;
@@ -111,13 +112,22 @@ export default function Workspace() {
                 
                 <TableConfig config={tableConfig} onChange={setTableConfig} />
 
+                {loading && progress.status && (
+                  <div className="my-4">
+                    <ProgressBar progress={progress.progress} status={progress.status} />
+                  </div>
+                )}
+
                 <button
                   type="submit"
                   disabled={loading || !prompt.trim()}
                   className="flex items-center justify-center w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   {loading ? (
-                    <LoadingSpinner />
+                    <div className="flex items-center space-x-2">
+                      <LoadingSpinner />
+                      <span className="ml-2">{t('workspace.form.generatingMessage')}</span>
+                    </div>
                   ) : (
                     <>
                       {t('workspace.form.generateButton')} <Send className="ml-2 h-4 w-4" />

@@ -7,24 +7,28 @@ const timestamp = new Date().getTime();
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
     rollupOptions: {
       output: {
-        // 添加时间戳到文件名
-        entryFileNames: `[name].${timestamp}.js`,
-        chunkFileNames: `[name].${timestamp}.js`,
-        assetFileNames: `[name].${timestamp}.[ext]`,
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
+          openai: ['openai'],
+          xlsx: ['xlsx']
         }
       }
     }
   },
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    include: ['react', 'react-dom', 'react-router-dom', 'openai', 'xlsx'],
+    exclude: ['lucide-react']
   },
+  server: {
+    port: 3000,
+    host: true,
+    cors: true
+  }
 });

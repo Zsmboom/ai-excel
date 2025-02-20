@@ -237,16 +237,21 @@
     "title": "KI Excel-Generator",
     "subtitle": "Wählen Sie eine Vorlage oder beschreiben Sie Ihre Excel-Anforderungen in natürlicher Sprache",
     "form": {
-      "promptLabel": "Ihre Anfrage",
-      "promptPlaceholder": "Beispiel: Erstellen Sie eine monatliche Budgettabelle mit Kategorien für Einnahmen, Ausgaben und Ersparnisse...",
+      "promptLabel": "Beschreiben Sie Ihre Excel-Anforderungen",
+      "promptPlaceholder": "Zum Beispiel: Erstellen Sie eine Verkaufsdatentabelle mit Produktname, Preis, verkaufter Menge und Gesamtumsatz...",
       "generateButton": "Excel generieren",
-      "downloadButton": "Herunterladen",
-      "readyMessage": "Ihre Excel-Datei ist bereit!",
-      "previewTitle": "Vorschau"
+      "generatingMessage": "Wird generiert...",
+      "progressStatus": {
+        "analyzing": "Analysiere Ihre Anforderungen...",
+        "structuring": "Analysiere Datenstruktur mit KI...",
+        "generating": "Generiere Excel-Datei...",
+        "completed": "Generierung abgeschlossen!",
+        "failed": "Generierung fehlgeschlagen"
+      }
     },
     "errors": {
-      "quota": "API-Kontingent überschritten. Bitte versuchen Sie es später erneut oder kontaktieren Sie den Administrator für eine Kontingentaktualisierung.",
-      "unknown": "Fehler bei der Excel-Dateigenerierung: "
+      "quota": "Sie haben Ihre kostenlosen Generierungen aufgebraucht. Bitte melden Sie sich an oder upgraden Sie, um fortzufahren.",
+      "unknown": "Generierung fehlgeschlagen: "
     }
   },
   "excelFunctions": {

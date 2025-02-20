@@ -6,6 +6,10 @@ import { useTranslation } from 'react-i18next';
 import { languages } from '../../i18n/config';
 import { useLocation } from 'react-router-dom';
 
+type LocalizedValue = {
+  [key: string]: string;
+};
+
 interface PageSEOProps {
   page: keyof typeof SEOConfig;
   lastModified?: string;
@@ -41,10 +45,14 @@ export const PageSEO: React.FC<PageSEOProps> = ({
     setConfig(SEOConfig[page]);
   }, [i18n.language, page]);
 
-  const getLocalizedValue = (field: any) => {
-    if (typeof field === 'string') return field;
-    return field[i18n.language as keyof typeof field] || field.en;
+  const getLocalizedValue = (value: string | LocalizedValue) => {
+    if (typeof value === 'string') return value;
+    return value[i18n.language] || value.en || Object.values(value)[0];
   };
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
 
   const pathWithoutLang = location.pathname.split('/').slice(2).join('/');
   const baseUrl = window.location.origin;

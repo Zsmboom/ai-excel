@@ -1,22 +1,14 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { analyzeWithOpenAI } from '../services/openai';
-import { generateExcel } from '../services/excel';
-import type { AnalysisResult, TableConfigOptions } from '../types/excel';
-
-export interface ExcelGenerationResult {
-  fileName: string;
-  blob: Blob;
-  summary: string;
-  analysis: AnalysisResult;
-}
+import { analyzeExcelFunction } from '../services/openai';
+import type { FunctionGenerationResult, FunctionType } from '../types/excel';
 
 export interface GenerationProgress {
   status: string;
   progress: number;
 }
 
-export function useExcelGeneration() {
+export function useExcelFunctionGeneration() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [progress, setProgress] = useState<GenerationProgress>({
@@ -27,37 +19,31 @@ export function useExcelGeneration() {
 
   const updateProgress = (statusKey: string, progress: number) => {
     setProgress({ 
-      status: t(`workspace.form.progressStatus.${statusKey}`), 
+      status: t(`excelFunctions.form.progressStatus.${statusKey}`), 
       progress 
     });
   };
 
-  const generateFromPrompt = async (
+  const generateFunction = async (
     prompt: string,
-    config: TableConfigOptions
-  ): Promise<ExcelGenerationResult | null> => {
+    type: FunctionType
+  ): Promise<FunctionGenerationResult | null> => {
     setLoading(true);
     setError(null);
     updateProgress('analyzing', 10);
 
     try {
       // 分析需求
-      updateProgress('structuring', 30);
-      const analysis = await analyzeWithOpenAI(prompt, config);
+      updateProgress('processing', 30);
       
-      // 生成 Excel
+      // 生成函数或宏
       updateProgress('generating', 60);
-      const blob = generateExcel(analysis, config);
+      const result = await analyzeExcelFunction(prompt, type);
       
       // 完成
       updateProgress('completed', 100);
       
-      return {
-        fileName: 'generated_spreadsheet.xlsx',
-        blob,
-        summary: analysis.summary,
-        analysis
-      };
+      return result;
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
       updateProgress('failed', 0);
@@ -72,9 +58,9 @@ export function useExcelGeneration() {
   };
 
   return {
-    generateFromPrompt,
+    generateFunction,
     loading,
     error,
     progress
   };
-}
+} 

@@ -1,8 +1,14 @@
 import React from 'react';
 
-export const LoadingSpinner = () => (
+interface LoadingSpinnerProps {
+  size?: number;
+}
+
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 24 }) => (
   <div className="flex justify-center items-center">
-    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
-    <span className="ml-2">Processing...</span>
+    <div 
+      className="animate-spin rounded-full border-b-2 border-blue-600"
+      style={{ width: size, height: size }}
+    />
   </div>
 );

@@ -2,6 +2,7 @@ import OpenAI from 'openai';
 import type { ChartAnalysisResult } from '../types/excel';
 import { getEnvVars } from '../config/env';
 import * as XLSX from 'xlsx';
+import i18next from 'i18next';
 
 const { openaiApiKey } = getEnvVars();
 
@@ -16,6 +17,9 @@ export async function analyzeExcelForChart(
   chartType: string,
   analysisPrompt?: string
 ): Promise<ChartAnalysisResult> {
+  // 获取当前语言
+  const currentLanguage = i18next.language;
+  
   try {
     // 读取Excel文件内容
     const arrayBuffer = await file.arrayBuffer();
@@ -29,44 +33,46 @@ export async function analyzeExcelForChart(
     const jsonData = XLSX.utils.sheet_to_json(worksheet);
     
     // 准备系统提示
-    const systemPrompt = `你是一个数据可视化专家。分析提供的Excel数据并生成图表建议。
-    请考虑以下因素：
-    1. 数据类型和分布
-    2. 数据之间的关系
-    3. 最佳的可视化方式
-    4. 图表的标题、轴标签和图例
+    const systemPrompt = `You are a data visualization expert. Analyze the provided Excel data and generate chart suggestions.
+    Consider the following factors:
+    1. Data types and distribution
+    2. Relationships between data
+    3. Best visualization methods
+    4. Chart titles, axis labels, and legends
 
-    当前选择的图表类型是：${chartType}
-    ${analysisPrompt ? `用户的分析需求是：${analysisPrompt}` : ''}
+    Current chart type: ${chartType}
+    ${analysisPrompt ? `User's analysis requirements: ${analysisPrompt}` : ''}
+    
+    IMPORTANT: Please provide the response in ${currentLanguage === 'zh' ? 'Chinese' : 'English'} language.
     
     Response must be in JSON format with the following structure:
     {
       "chartConfig": {
-        "title": "图表标题",
+        "title": "Chart title",
         "xAxis": {
-          "title": "X轴标题",
-          "data": ["数据1", "数据2"]
+          "title": "X-axis title",
+          "data": ["data1", "data2"]
         },
         "yAxis": {
-          "title": "Y轴标题",
-          "data": [值1, 值2]
+          "title": "Y-axis title",
+          "data": [value1, value2]
         },
         "series": [{
-          "name": "系列名称",
-          "data": [值1, 值2]
+          "name": "Series name",
+          "data": [value1, value2]
         }]
       },
-      "summary": "对图表的简要描述",
-      "insights": ["数据洞察1", "数据洞察2"]
+      "summary": "Brief description of the chart",
+      "insights": ["Data insight 1", "Data insight 2"]
     }
 
-    请确保：
-    1. 根据选择的图表类型生成合适的数据结构
-    2. 对于饼图，使用第一列作为类别名称，最后一列作为数值
-    3. 对于散点图，使用前两列数值作为X和Y坐标
-    4. 对于柱状图和折线图，使用第一列作为X轴类别，其他列作为数据系列
-    5. 生成的数据必须是有效的数值（对于数值列）
-    6. 如果用户提供了分析需求，请特别关注相关的数据特征和趋势`;
+    Please ensure:
+    1. Generate appropriate data structure based on the selected chart type
+    2. For pie charts, use the first column as category names and the last column as values
+    3. For scatter plots, use the first two numeric columns as X and Y coordinates
+    4. For bar and line charts, use the first column as X-axis categories and other columns as data series
+    5. Generated data must be valid numbers (for numeric columns)
+    6. If user provided analysis requirements, pay special attention to related data features and trends`;
 
     // 调用OpenAI API
     const response = await openai.chat.completions.create({
@@ -75,7 +81,7 @@ export async function analyzeExcelForChart(
         { role: 'system', content: systemPrompt },
         { 
           role: 'user', 
-          content: `请分析以下Excel数据并生成${chartType}图表的配置：\n${JSON.stringify(jsonData, null, 2)}`
+          content: `Please analyze the following Excel data and generate ${chartType} chart configuration:\n${JSON.stringify(jsonData, null, 2)}`
         }
       ],
       response_format: { type: 'json_object' }
@@ -90,7 +96,10 @@ export async function analyzeExcelForChart(
     return result;
   } catch (error) {
     console.error('Chart analysis error:', error);
-    throw new Error('Failed to analyze Excel data: ' + (error instanceof Error ? error.message : 'Unknown error'));
+    const errorMessage = currentLanguage === 'zh' 
+      ? '分析 Excel 数据失败：' 
+      : 'Failed to analyze Excel data: ';
+    throw new Error(errorMessage + (error instanceof Error ? error.message : 'Unknown error'));
   }
 }
 

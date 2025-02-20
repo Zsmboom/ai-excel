@@ -7,27 +7,26 @@ const { openaiApiKey } = getEnvVars();
 const openai = new OpenAI({
   apiKey: openaiApiKey,
   baseURL: 'https://vip.apiyi.com/v1',
-  dangerouslyAllowBrowser: true
+  dangerouslyAllowBrowser: true,
+  timeout: 30000, // 30秒超时
+  maxRetries: 2
 });
 
 export async function analyzeWithOpenAI(
   prompt: string, 
   config: TableConfigOptions
 ): Promise<AnalysisResult> {
-  const systemPrompt = `You are an expert in data analysis and Excel spreadsheet creation. 
-    Analyze the user's request and provide a structured response that can be used to generate an Excel file.
-    Always generate exactly 5 rows of sample data.
-    Response must be in JSON format with the following structure:
-    {
-      "data": [
-        {
-          "name": "Sheet name",
-          "headers": ["Column names"],
-          "rows": [{"column": "value"}] // Exactly 5 rows of realistic sample data
-        }
-      ],
-      "summary": "Brief description of the generated spreadsheet"
-    }`;
+  const systemPrompt = `Excel专家。根据用户需求生成Excel数据。
+生成3行示例数据。
+JSON格式响应：
+{
+  "data": [{
+    "name": "工作表名",
+    "headers": ["列名"],
+    "rows": [{"列名": "值"}]
+  }],
+  "summary": "简述"
+}`;
 
   try {
     const response = await openai.chat.completions.create({
@@ -36,7 +35,9 @@ export async function analyzeWithOpenAI(
         { role: 'system', content: systemPrompt },
         { role: 'user', content: prompt }
       ],
-      response_format: { type: 'json_object' }
+      response_format: { type: 'json_object' },
+      temperature: 0.7,
+      max_tokens: 1000
     });
 
     const result = JSON.parse(response.choices[0].message.content || '{}') as AnalysisResult;

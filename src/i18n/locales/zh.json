@@ -237,16 +237,24 @@
     "title": "AI Excel 生成器",
     "subtitle": "选择模板或用自然语言描述您的 Excel 需求",
     "form": {
-      "promptLabel": "您的请求",
-      "promptPlaceholder": "例如：创建一个包含收入、支出和储蓄类别的月度预算表...",
+      "promptLabel": "描述您需要的 Excel 表格",
+      "promptPlaceholder": "例如：创建一个销售数据表，包含产品名称、价格、销量和总收入...",
       "generateButton": "生成 Excel",
-      "downloadButton": "下载",
+      "generatingMessage": "正在生成...",
       "readyMessage": "您的 Excel 文件已准备就绪！",
-      "previewTitle": "预览"
+      "downloadButton": "下载文件",
+      "previewTitle": "预览",
+      "progressStatus": {
+        "analyzing": "正在分析您的需求...",
+        "structuring": "正在使用 AI 分析数据结构...",
+        "generating": "正在生成 Excel 文件...",
+        "completed": "生成完成！",
+        "failed": "生成失败"
+      }
     },
     "errors": {
-      "quota": "API 配额已超出。请稍后再试或联系管理员更新配额。",
-      "unknown": "生成 Excel 文件时出错："
+      "quota": "您的免费生成次数已用完。请登录或升级以继续使用。",
+      "unknown": "生成失败: "
     }
   },
   "excelFunctions": {
@@ -267,9 +275,17 @@
       "promptLabel": "描述您的 Excel 函数需求",
       "promptPlaceholder": "例如：创建一个 VLOOKUP 公式来查找两个表格之间的匹配值，或生成一个 VBA 宏来自动处理数据...",
       "generateButton": "生成 Excel 函数",
+      "generatingMessage": "正在生成...",
       "typeSelector": {
         "formula": "Excel 公式生成器",
         "macro": "VBA 宏生成器"
+      },
+      "progressStatus": {
+        "analyzing": "正在分析您的需求...",
+        "processing": "正在处理函数逻辑...",
+        "generating": "正在生成函数代码...",
+        "completed": "生成完成！",
+        "failed": "生成失败"
       }
     },
     "shareTitle": "AI 驱动的 Excel 函数与 VBA 生成器",
@@ -442,7 +458,14 @@
       "generateButton": "转换为 Excel",
       "downloadButton": "下载 Excel 文件",
       "previewTitle": "Excel 预览",
-      "readyMessage": "您的 Excel 文件已准备就绪！"
+      "readyMessage": "您的 Excel 文件已准备就绪！",
+      "progressStatus": {
+        "processing": "正在处理图片...",
+        "analyzing": "正在分析表格结构...",
+        "generating": "正在生成 Excel 文件...",
+        "completed": "Excel 文件已就绪！",
+        "failed": "生成失败"
+      }
     },
     "errors": {
       "imageRequired": "请上传包含表格或数据的图片",
@@ -517,7 +540,14 @@
       "selectChartType": "选择可视化类型",
       "generateButton": "生成图表和洞察",
       "analysisPrompt": "分析要求（可选）",
-      "analysisPromptPlaceholder": "指定您的可视化需求，例如，显示销售趋势、比较区域表现、分析产品类别..."
+      "analysisPromptPlaceholder": "指定您的可视化需求，例如，显示销售趋势、比较区域表现、分析产品类别...",
+      "progressStatus": {
+        "processing": "正在处理 Excel 文件...",
+        "analyzing": "正在分析数据结构...",
+        "generating": "正在生成图表可视化...",
+        "completed": "图表生成完成！",
+        "failed": "生成失败"
+      }
     },
     "preview": {
       "title": "图表预览和分析",

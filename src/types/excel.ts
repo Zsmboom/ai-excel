@@ -52,3 +52,17 @@ export interface ChartAnalysisResult {
   summary: string;
   insights: string[];
 }
+
+export interface ChartConfigOptions {
+  enableAnimation?: boolean;
+  theme?: string;
+  backgroundColor?: string;
+}
+
+export interface ChartGenerationResult {
+  fileName: string;
+  blob: Blob;
+  summary: string;
+  insights: string[];
+  chartConfig: ChartConfig;
+}

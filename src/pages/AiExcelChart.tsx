@@ -3,10 +3,11 @@ import { FileSpreadsheet, Send, Download, Upload, BarChart, LineChart, PieChart,
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
+import { ProgressBar } from '../components/ui/ProgressBar';
 import { UsageInfo } from '../components/excel/UsageInfo';
 import { PageSEO } from '../components/seo/PageSEO';
 import ShareButtons from '../components/common/ShareButtons';
-import { useExcelChart } from '../hooks/useExcelChart';
+import { useExcelChartGeneration } from '../hooks/useExcelChartGeneration';
 import { ChartPreview, ChartPreviewRef } from '../components/excel/ChartPreview';
 import type { ChartGenerationResult } from '../hooks/useExcelChart';
 
@@ -29,7 +30,12 @@ export default function AIExcelChart() {
   const [shareUrl, setShareUrl] = useState<string>('');
   const [showShareModal, setShowShareModal] = useState(false);
 
-  const { generateChart, loading, error } = useExcelChart();
+  const {
+    generateFromExcel,
+    loading,
+    error,
+    progress
+  } = useExcelChartGeneration();
 
   const chartOptions: ChartOption[] = [
     { id: 'bar', name: t('aiExcelChart.chartTypes.bar'), icon: <BarChart className="h-6 w-6" /> },
@@ -103,7 +109,7 @@ export default function AIExcelChart() {
     if (!selectedFile) return;
 
     try {
-      const result = await generateChart(selectedFile, selectedChartType, analysisPrompt);
+      const result = await generateFromExcel(selectedFile, selectedChartType, analysisPrompt, {});
       if (result) {
         setPreviewData(result);
       }
@@ -305,7 +311,7 @@ export default function AIExcelChart() {
                   className="flex items-center justify-center w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   {loading ? (
-                    <LoadingSpinner />
+                    <LoadingSpinner size={20} />
                   ) : (
                     <>
                       {t('aiExcelChart.form.generateButton')} <Send className="ml-2 h-4 w-4" />
@@ -313,6 +319,15 @@ export default function AIExcelChart() {
                   )}
                 </button>
               </form>
+
+              {loading && progress.status && (
+                <div className="mt-4">
+                  <ProgressBar 
+                    progress={progress.progress} 
+                    status={progress.status}
+                  />
+                </div>
+              )}
 
               {error && (
                 <div role="alert" className="mt-4 p-4 bg-red-50 text-red-700 rounded-md">

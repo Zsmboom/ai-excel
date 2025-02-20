@@ -246,16 +246,24 @@
     "title": "AI Excel 생성기",
     "subtitle": "템플릿을 선택하거나 자연어로 Excel 요구사항을 설명하세요",
     "form": {
-      "promptLabel": "요청 사항",
-      "promptPlaceholder": "예: 수입, 지출, 저축 카테고리가 있는 월간 예산 스프레드시트 만들기...",
+      "promptLabel": "Excel 요구사항 설명",
+      "promptPlaceholder": "예시: 제품명, 가격, 판매량, 총 수익이 포함된 판매 데이터 테이블 생성...",
       "generateButton": "Excel 생성",
-      "downloadButton": "다운로드",
+      "generatingMessage": "생성 중...",
       "readyMessage": "Excel 파일이 준비되었습니다!",
-      "previewTitle": "미리보기"
+      "downloadButton": "파일 다운로드",
+      "previewTitle": "미리보기",
+      "progressStatus": {
+        "analyzing": "요구사항 분석 중...",
+        "structuring": "AI로 데이터 구조 분석 중...",
+        "generating": "Excel 파일 생성 중...",
+        "completed": "생성 완료!",
+        "failed": "생성 실패"
+      }
     },
     "errors": {
-      "quota": "API 할당량이 초과되었습니다. 나중에 다시 시도하거나 관리자에게 할당량 업데이트를 요청하세요.",
-      "unknown": "Excel 파일 생성 중 오류 발생: "
+      "quota": "무료 생성 횟수를 모두 사용하셨습니다. 계속하려면 로그인하거나 업그레이드하세요.",
+      "unknown": "생성 실패: "
     }
   },
   "excelFunctions": {
@@ -274,11 +282,19 @@
     },
     "form": {
       "promptLabel": "Excel 함수 요구사항 설명",
-      "promptPlaceholder": "예: 두 테이블 간의 일치하는 값을 찾는 VLOOKUP 수식을 만들거나, 데이터 처리를 자동화하는 VBA 매크로 생성...",
+      "promptPlaceholder": "예시: 두 테이블 간의 일치하는 값을 찾기 위한 VLOOKUP 공식을 만들거나, 자동 데이터 처리를 위한 VBA 매크로 생성...",
       "generateButton": "Excel 함수 생성",
+      "generatingMessage": "생성 중...",
       "typeSelector": {
-        "formula": "Excel 수식 생성기",
+        "formula": "Excel 공식 생성기",
         "macro": "VBA 매크로 생성기"
+      },
+      "progressStatus": {
+        "analyzing": "요구사항 분석 중...",
+        "processing": "함수 로직 처리 중...",
+        "generating": "함수 코드 생성 중...",
+        "completed": "생성 완료!",
+        "failed": "생성 실패"
       }
     },
     "shareTitle": "AI 기반 Excel 함수 및 VBA 생성기",
