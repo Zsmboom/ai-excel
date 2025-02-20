@@ -66,6 +66,15 @@ const Footer: React.FC = () => {
               >
                 <SiDevpost className="h-6 w-6" />
               </a>
+              <a
+                href="https://iuu.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors px-2 py-1 border border-gray-400 rounded hover:border-white"
+                title="iuu AI"
+              >
+                iuu AI
+              </a>
             </div>
           </div>
 
