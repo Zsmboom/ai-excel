@@ -11,28 +11,7 @@ export const LanguageRoute: React.FC<LanguageRouteProps> = ({ children }) => {
   const { lang } = useParams<{ lang: string }>();
   const { i18n } = useTranslation();
   const location = useLocation();
-  const supportedLangs = languages.map(l => l.code);
-
-  const getPreferredLanguage = () => {
-    // 优先使用 URL 中的语言参数
-    if (lang && supportedLangs.includes(lang)) {
-      return lang;
-    }
-
-    try {
-      // 尝试从 localStorage 获取
-      const savedLang = localStorage.getItem('preferredLanguage');
-      if (savedLang && supportedLangs.includes(savedLang)) {
-        return savedLang;
-      }
-
-      // 使用浏览器语言
-      const browserLang = navigator.language.split('-')[0];
-      return supportedLangs.includes(browserLang) ? browserLang : 'en';
-    } catch (e) {
-      return 'en';
-    }
-  };
+  const supportedLangs = languages.map(l => l.code).filter(l => l !== 'en'); // 排除英语
 
   useEffect(() => {
     // 处理 HTTP 到 HTTPS 的重定向
@@ -47,42 +26,29 @@ export const LanguageRoute: React.FC<LanguageRouteProps> = ({ children }) => {
       return;
     }
 
-    const currentLang = getPreferredLanguage();
-    if (currentLang && currentLang !== i18n.language) {
-      i18n.changeLanguage(currentLang);
-      try {
-        localStorage.setItem('preferredLanguage', currentLang);
-      } catch (e) {
-        // localStorage 不可用时忽略错误
+    // 如果是英语路径，重定向到根路径
+    if (lang === 'en') {
+      const currentPath = location.pathname.replace('/en', '');
+      window.location.href = currentPath || '/';
+      return;
+    }
+
+    // 如果语言代码有效，设置语言
+    if (lang && supportedLangs.includes(lang)) {
+      if (lang !== i18n.language) {
+        i18n.changeLanguage(lang);
+        try {
+          localStorage.setItem('preferredLanguage', lang);
+        } catch (e) {
+          // localStorage 不可用时忽略错误
+        }
       }
     }
-  }, [lang, i18n]);
+  }, [lang, i18n, location.pathname]);
 
-  // 处理根路径重定向
-  if (location.pathname === '/') {
-    const defaultLang = getPreferredLanguage();
-    return <Navigate to={`/${defaultLang}`} replace />;
-  }
-
-  // 处理 /about 路径重定向
-  if (location.pathname === '/about') {
-    const defaultLang = getPreferredLanguage();
-    return <Navigate to={`/${defaultLang}/about`} replace />;
-  }
-
-  // 如果是根路径直接渲染子组件
-  if (children) {
-    return <>{children}</>;
-  }
-
-  // 如果语言代码无效，重定向到默认语言
+  // 如果语言代码无效，重定向到根路径
   if (!lang || !supportedLangs.includes(lang)) {
-    const defaultLang = getPreferredLanguage();
-    // 保持当前路径，只改变语言部分
-    const currentPath = location.pathname.split('/').slice(2).join('/');
-    const newPath = currentPath ? `/${defaultLang}/${currentPath}` : `/${defaultLang}`;
-    
-    return <Navigate to={newPath} replace />;
+    return <Navigate to="/" replace />;
   }
 
   return <Outlet />;

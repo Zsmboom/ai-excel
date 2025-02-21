@@ -132,10 +132,18 @@ app.get('/sitemap.xml', (_req: Request, res: Response) => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  ${routes.map(route => languages.map(lang => `
+  ${routes.map(route => {
+    // 为英文版本使用根路径
+    const enUrl = `${baseUrl}${route.path}`;
+    // 为其他语言添加语言前缀
+    const otherLangUrls = languages.filter(lang => lang !== 'en')
+      .map(lang => `${baseUrl}/${lang}${route.path}`);
+    
+    return `
   <url>
-    <loc>${baseUrl}/${lang}${route.path}</loc>
-    ${languages.map(alterLang => `
+    <loc>${enUrl}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
+    ${languages.filter(lang => lang !== 'en').map(alterLang => `
     <xhtml:link 
       rel="alternate" 
       hreflang="${alterLang}" 
@@ -144,7 +152,20 @@ app.get('/sitemap.xml', (_req: Request, res: Response) => {
     <priority>${route.priority}</priority>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
   </url>
-  `).join('')).join('')}
+  ${otherLangUrls.map((url, index) => `
+  <url>
+    <loc>${url}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
+    ${languages.filter(lang => lang !== 'en').map(alterLang => `
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="${alterLang}" 
+      href="${baseUrl}/${alterLang}${route.path}"/>`).join('')}
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+  </url>`).join('')}`;
+  }).join('')}
 </urlset>`;
 
   res.header('Content-Type', 'application/xml');

@@ -10,23 +10,21 @@ export const LanguageSelector = () => {
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLang = e.target.value;
     const currentPath = location.pathname;
-    const supportedLangs = languages.map(l => l.code);
-    
-    // 获取当前路径中除去语言代码的部分
     const pathParts = currentPath.split('/');
-    const hasLangPrefix = pathParts[1] && supportedLangs.includes(pathParts[1]);
-    const pathWithoutLang = hasLangPrefix 
+    
+    // 移除当前的语言前缀（如果有）
+    const pathWithoutLang = pathParts.length > 1 && languages.map(l => l.code).includes(pathParts[1])
       ? '/' + pathParts.slice(2).join('/')
       : currentPath;
     
-    // 构建新的 URL，始终包含语言代码
-    const newPath = `/${newLang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
-    
     // 更新语言
     i18n.changeLanguage(newLang);
-    
-    // 保存到 localStorage
     localStorage.setItem('preferredLanguage', newLang);
+    
+    // 英语版本使用根路径，其他语言添加语言前缀
+    const newPath = newLang === 'en' 
+      ? pathWithoutLang 
+      : `/${newLang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
     
     // 更新 URL
     navigate(newPath, { replace: true });

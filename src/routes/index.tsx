@@ -12,40 +12,19 @@ import AIExcelChart from '../pages/AiExcelChart';
 import { languages } from '../i18n/config';
 
 const AppRoutes = () => {
-  // 获取默认语言
-  const getDefaultLanguage = (): string => {
-    const supportedLangs = languages.map(lang => lang.code);
-    
-    try {
-      // 尝试从 localStorage 获取
-      const savedLang = localStorage.getItem('preferredLanguage');
-      if (savedLang && supportedLangs.includes(savedLang)) {
-        return savedLang;
-      }
-
-      // 使用浏览器语言
-      const browserLang = navigator.language.split('-')[0];
-      return supportedLangs.includes(browserLang) ? browserLang : 'en';
-    } catch (e) {
-      // 如果出现错误，返回默认语言
-      return 'en';
-    }
-  };
-
   return (
     <Routes>
-      {/* 根路径重定向到默认语言 */}
-      <Route 
-        path="/" 
-        element={
-          <Navigate 
-            to={`/${getDefaultLanguage()}`} 
-            replace={true}
-          />
-        } 
-      />
+      {/* 英文版本直接使用根路径 */}
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/ai-excel-generator" element={<Workspace />} />
+      <Route path="/excel-functions" element={<ExcelFunctions />} />
+      <Route path="/pic-to-excel" element={<PicToExcel />} />
+      <Route path="/ai-excel-chart" element={<AIExcelChart />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogDetail />} />
 
-      {/* 语言路由 */}
+      {/* 其他语言使用语言前缀 */}
       <Route path=":lang" element={<LanguageRoute />}>
         <Route index element={<LandingPage />} />
         <Route path="ai-excel-generator" element={<Workspace />} />
@@ -57,15 +36,10 @@ const AppRoutes = () => {
         <Route path="blog/:slug" element={<BlogDetail />} />
       </Route>
 
-      {/* 捕获所有其他路由并重定向到默认语言的相应路径 */}
+      {/* 捕获所有其他路由并重定向到根路径 */}
       <Route 
         path="*" 
-        element={
-          <Navigate 
-            to={`/${getDefaultLanguage()}`} 
-            replace={true}
-          />
-        } 
+        element={<Navigate to="/" replace={true} />} 
       />
     </Routes>
   );
