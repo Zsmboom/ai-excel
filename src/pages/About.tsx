@@ -93,6 +93,18 @@ const About: React.FC = () => {
           <p className="mt-6 text-gray-600">
             {t('about.mission.toolsfine')} <a href="https://toolsfine.com/" target="_blank" rel="follow" className="text-blue-600 hover:text-blue-800 underline">ToolsFine</a>
           </p>
+          <div className="mt-4 flex items-center">
+            <span className="text-gray-600 mr-3">{t('about.mission.yodirectory')}</span>
+            <a href="https://yo.directory/" target="_blank" rel="follow">
+              <img 
+                src="https://cdn.prod.website-files.com/65c1546fa73ea974db789e3d/65e1e171f89ebfa7bd0129ac_yodirectory-featured.png" 
+                alt="yo.directory" 
+                className="w-[150px] h-[54px]"
+                width="150" 
+                height="54"
+              />
+            </a>
+          </div>
         </div>
 
         {/* How It Works */}
