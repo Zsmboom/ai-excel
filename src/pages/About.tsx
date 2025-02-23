@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FileSpreadsheet, Trophy } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Features } from '../components/about/Features';
@@ -8,6 +8,23 @@ import { SiDevpost } from 'react-icons/si';
 
 const About: React.FC = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    // 检测广告拦截器
+    const checkAdBlocker = async () => {
+      try {
+        await fetch('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', {
+          method: 'HEAD',
+          mode: 'no-cors'
+        });
+      } catch (error) {
+        console.log('AdBlock may be enabled');
+        // 这里可以添加广告被屏蔽时的替代内容
+      }
+    };
+    
+    checkAdBlocker();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16">

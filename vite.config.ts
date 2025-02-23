@@ -18,7 +18,17 @@ export default defineConfig({
           vendor: ['react', 'react-dom', 'react-router-dom'],
           openai: ['openai'],
           xlsx: ['xlsx']
-        }
+        },
+        entryFileNames: `[name].[hash].js`,
+        chunkFileNames: `[name].[hash].js`,
+        assetFileNames: `[name].[hash].[ext]`
+      }
+    },
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
       }
     }
   },
