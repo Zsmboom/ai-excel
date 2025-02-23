@@ -90,6 +90,9 @@ const About: React.FC = () => {
               {t('about.mission.challenges.macros')}
             </li>
           </ul>
+          <p className="mt-6 text-gray-600">
+            {t('about.mission.toolsfine')} <a href="https://toolsfine.com/" target="_blank" rel="follow" className="text-blue-600 hover:text-blue-800 underline">ToolsFine</a>
+          </p>
         </div>
 
         {/* How It Works */}
