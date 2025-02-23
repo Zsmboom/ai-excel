@@ -49,7 +49,7 @@ const Features = () => {
             >
               <div className="mr-8 flex-shrink-0 w-2/5">{feature.icon}</div>
               <div className="flex-1 max-w-xl">
-                <h1 className="text-3xl font-bold mb-3 text-gray-900">{feature.title}</h1>
+                <h2 className="text-3xl font-bold mb-3 text-gray-900">{feature.title}</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">{feature.description}</p>
                 <button
                   onClick={() => {
