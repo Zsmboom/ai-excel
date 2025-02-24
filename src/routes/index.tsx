@@ -14,7 +14,7 @@ import { languages } from '../i18n/config';
 const AppRoutes = () => {
   return (
     <Routes>
-      {/* 英文版本直接使用根路径 */}
+      {/* 英文版本路由 */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/ai-excel-generator" element={<Workspace />} />
       <Route path="/excel-functions" element={<ExcelFunctions />} />
@@ -24,8 +24,8 @@ const AppRoutes = () => {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogDetail />} />
 
-      {/* 其他语言使用语言前缀 */}
-      <Route path=":lang" element={<LanguageRoute />}>
+      {/* 其他语言路由 */}
+      <Route path=":lang/*" element={<LanguageRoute />}>
         <Route index element={<LandingPage />} />
         <Route path="ai-excel-generator" element={<Workspace />} />
         <Route path="excel-functions" element={<ExcelFunctions />} />

@@ -11,7 +11,7 @@ export const LanguageRoute: React.FC<LanguageRouteProps> = ({ children }) => {
   const { lang } = useParams<{ lang: string }>();
   const { i18n } = useTranslation();
   const location = useLocation();
-  const supportedLangs = languages.map(l => l.code).filter(l => l !== 'en'); // 排除英语
+  const supportedLangs = languages.map(l => l.code);
 
   useEffect(() => {
     // 处理 HTTP 到 HTTPS 的重定向
@@ -23,13 +23,6 @@ export const LanguageRoute: React.FC<LanguageRouteProps> = ({ children }) => {
     // 处理 www 到非 www 的重定向
     if (window.location.hostname.startsWith('www.')) {
       window.location.href = window.location.href.replace('www.', '');
-      return;
-    }
-
-    // 如果是英语路径，重定向到根路径
-    if (lang === 'en') {
-      const currentPath = location.pathname.replace('/en', '');
-      window.location.href = currentPath || '/';
       return;
     }
 
@@ -46,10 +39,16 @@ export const LanguageRoute: React.FC<LanguageRouteProps> = ({ children }) => {
     }
   }, [lang, i18n, location.pathname]);
 
+  // 如果是英语路径，移除语言前缀
+  if (lang === 'en') {
+    const pathWithoutLang = location.pathname.replace('/en', '');
+    return <Navigate to={pathWithoutLang || '/'} replace />;
+  }
+
   // 如果语言代码无效，重定向到根路径
   if (!lang || !supportedLangs.includes(lang)) {
     return <Navigate to="/" replace />;
   }
 
-  return <Outlet />;
+  return children || <Outlet />;
 }; 
