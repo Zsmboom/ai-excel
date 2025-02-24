@@ -133,34 +133,33 @@ app.get('/sitemap.xml', (_req: Request, res: Response) => {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   ${routes.map(route => {
-    // 为英文版本使用根路径
+    // 为英文版本使用根路径（不带语言前缀）
     const enUrl = `${baseUrl}${route.path}`;
-    // 为其他语言添加语言前缀
-    const otherLangUrls = languages.filter(lang => lang !== 'en')
-      .map(lang => `${baseUrl}/${lang}${route.path}`);
     
     return `
   <url>
     <loc>${enUrl}</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
-    ${languages.filter(lang => lang !== 'en').map(alterLang => `
+    ${languages.filter(lang => lang !== 'en').map(lang => `
     <xhtml:link 
       rel="alternate" 
-      hreflang="${alterLang}" 
-      href="${baseUrl}/${alterLang}${route.path}"/>`).join('')}
+      hreflang="${lang}" 
+      href="${baseUrl}/${lang}${route.path}"/>`).join('')}
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
   </url>
-  ${otherLangUrls.map((url, index) => `
+  ${languages.filter(lang => lang !== 'en').map(lang => `
   <url>
-    <loc>${url}</loc>
+    <loc>${baseUrl}/${lang}${route.path}</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
-    ${languages.filter(lang => lang !== 'en').map(alterLang => `
+    ${languages.filter(l => l !== 'en').map(l => `
     <xhtml:link 
       rel="alternate" 
-      hreflang="${alterLang}" 
-      href="${baseUrl}/${alterLang}${route.path}"/>`).join('')}
+      hreflang="${l}" 
+      href="${baseUrl}/${l}${route.path}"/>`).join('')}
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>

@@ -3,8 +3,8 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- English Pages -->
   <url>
-    <loc>https://exceleasy.org/en</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en"/>
+    <loc>https://exceleasy.org</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko"/>
@@ -15,8 +15,8 @@
 
   <!-- Main Features -->
   <url>
-    <loc>https://exceleasy.org/en/ai-excel-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-generator"/>
+    <loc>https://exceleasy.org/ai-excel-generator</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-generator"/>
@@ -26,8 +26,8 @@
   </url>
 
   <url>
-    <loc>https://exceleasy.org/en/excel-functions</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/excel-functions"/>
+    <loc>https://exceleasy.org/excel-functions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/excel-functions"/>
@@ -37,8 +37,8 @@
   </url>
 
   <url>
-    <loc>https://exceleasy.org/en/pic-to-excel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/pic-to-excel"/>
+    <loc>https://exceleasy.org/pic-to-excel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/pic-to-excel"/>
@@ -48,8 +48,8 @@
   </url>
 
   <url>
-    <loc>https://exceleasy.org/en/ai-excel-chart</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-chart"/>
+    <loc>https://exceleasy.org/ai-excel-chart</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-chart"/>
@@ -60,8 +60,8 @@
 
   <!-- Information Pages -->
   <url>
-    <loc>https://exceleasy.org/en/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/about"/>
+    <loc>https://exceleasy.org/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/about"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/about"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/about"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/about"/>
@@ -71,8 +71,8 @@
   </url>
 
   <url>
-    <loc>https://exceleasy.org/en/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/privacy"/>
+    <loc>https://exceleasy.org/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/privacy"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/privacy"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/privacy"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/privacy"/>
@@ -82,8 +82,8 @@
   </url>
 
   <url>
-    <loc>https://exceleasy.org/en/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/contact"/>
+    <loc>https://exceleasy.org/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/contact"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/contact"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/contact"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/contact"/>
@@ -94,8 +94,8 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://exceleasy.org/en/blog</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/blog"/>
+    <loc>https://exceleasy.org/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/blog"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/blog"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/blog"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/blog"/>
@@ -107,7 +107,7 @@
   <!-- Chinese Pages -->
   <url>
     <loc>https://exceleasy.org/zh</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko"/>
@@ -117,7 +117,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/zh/ai-excel-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-generator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-generator"/>
@@ -127,7 +127,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/zh/excel-functions</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/excel-functions"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/excel-functions"/>
@@ -137,7 +137,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/zh/pic-to-excel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/pic-to-excel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/pic-to-excel"/>
@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/zh/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/about"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/about"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/about"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/about"/>
@@ -157,7 +157,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/zh/ai-excel-chart</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-chart"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-chart"/>
@@ -169,7 +169,7 @@
   <!-- German Pages -->
   <url>
     <loc>https://exceleasy.org/de</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko"/>
@@ -179,7 +179,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/de/ai-excel-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-generator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-generator"/>
@@ -189,7 +189,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/de/excel-functions</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/excel-functions"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/excel-functions"/>
@@ -199,7 +199,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/de/pic-to-excel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/pic-to-excel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/pic-to-excel"/>
@@ -209,7 +209,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/de/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/about"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/about"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/about"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/about"/>
@@ -219,7 +219,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/de/ai-excel-chart</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-chart"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-chart"/>
@@ -231,7 +231,7 @@
   <!-- Korean Pages -->
   <url>
     <loc>https://exceleasy.org/ko</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko"/>
@@ -241,7 +241,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/ko/ai-excel-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-generator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-generator"/>
@@ -251,7 +251,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/ko/excel-functions</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/excel-functions"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/excel-functions"/>
@@ -261,7 +261,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/ko/pic-to-excel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/pic-to-excel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/pic-to-excel"/>
@@ -271,7 +271,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/ko/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/about"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/about"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/about"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/about"/>
@@ -281,7 +281,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/ko/ai-excel-chart</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-chart"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-chart"/>
@@ -293,7 +293,7 @@
   <!-- Hindi Pages -->
   <url>
     <loc>https://exceleasy.org/hi</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko"/>
@@ -303,7 +303,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/hi/ai-excel-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-generator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-generator"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-generator"/>
@@ -313,7 +313,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/hi/excel-functions</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/excel-functions"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/excel-functions"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/excel-functions"/>
@@ -323,7 +323,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/hi/pic-to-excel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/pic-to-excel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/pic-to-excel"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/pic-to-excel"/>
@@ -333,7 +333,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/hi/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/about"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/about"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/about"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/about"/>
@@ -343,7 +343,7 @@
   </url>
   <url>
     <loc>https://exceleasy.org/hi/ai-excel-chart</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/en/ai-excel-chart"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exceleasy.org/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://exceleasy.org/de/ai-excel-chart"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/ai-excel-chart"/>
