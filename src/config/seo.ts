@@ -28,11 +28,11 @@ type SchemaType = 'SoftwareApplication' | 'WebPage' | 'Blog' | 'Article' | 'Cont
 export const SEOConfig: Record<string, SEOConfigType> = {
   home: {
     title: {
-      zh: 'ExcelEasy - AI智能Excel生成工具 | 自动化办公效率提升',
-      en: 'ExcelEasy - AI-Powered Excel Generation Tool | Boost Office Efficiency',
-      de: 'ExcelEasy - KI-gestützte Excel-Generierung | Büroeffizienz steigern',
-      ko: 'ExcelEasy - AI 기반 Excel 생성 도구 | 업무 효율성 향상',
-      hi: 'ExcelEasy - AI एक्सेल जनरेटर | कार्यालय दक्षता बढ़ाएं'
+      zh: 'ExcelEasy - 免费AI Excel生成器 | 无需登录 | 智能办公效率提升',
+      en: 'ExcelEasy - Free AI Excel Generator & Function Assistant | No Login Required',
+      de: 'ExcelEasy - Kostenloser KI Excel-Generator | Keine Anmeldung erforderlich',
+      ko: 'ExcelEasy - 무료 AI Excel 생성기 | 로그인 불필요',
+      hi: 'ExcelEasy - मुफ्त AI एक्सेल जनरेटर | लॉगिन की आवश्यकता नहीं'
     },
     description: {
       zh: '使用AI智能技术，一键将自然语言转换为专业Excel表格。支持数据可视化、图表生成、VBA宏等功能，完全免费，无需登录。让Excel工作更轻松、更智能、更高效。',
