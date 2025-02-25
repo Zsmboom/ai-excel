@@ -5,6 +5,7 @@ import { Features } from '../components/about/Features';
 import { Step } from '../components/about/Step';
 import { PageSEO } from '../components/seo/PageSEO';
 import { SiDevpost } from 'react-icons/si';
+import { OptimizedImage } from '../components/ui/OptimizedImage';
 
 const About: React.FC = () => {
   const { t } = useTranslation();
@@ -113,12 +114,13 @@ const About: React.FC = () => {
           <div className="mt-4 flex items-center">
             <span className="text-gray-600 mr-3">{t('about.mission.yodirectory')}</span>
             <a href="https://yo.directory/" target="_blank" rel="follow">
-              <img 
+              <OptimizedImage 
                 src="https://cdn.prod.website-files.com/65c1546fa73ea974db789e3d/65e1e171f89ebfa7bd0129ac_yodirectory-featured.png" 
                 alt="yo.directory" 
+                width={150}
+                height={54}
                 className="w-[150px] h-[54px]"
-                width="150" 
-                height="54"
+                priority={true}
               />
             </a>
           </div>

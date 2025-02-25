@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Calculator, FileSpreadsheet, GraduationCap } from 'lucide-react';
+import { OptimizedImage } from '../ui/OptimizedImage';
 
 interface Testimonial {
   quote: string;
@@ -41,10 +42,13 @@ const Testimonials = () => {
               </div>
               <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
               <div className="flex items-center">
-                <img 
+                <OptimizedImage 
                   src={testimonial.image}
                   alt={testimonial.author}
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full mr-4"
+                  priority={index === 0}
                 />
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.author}</h4>

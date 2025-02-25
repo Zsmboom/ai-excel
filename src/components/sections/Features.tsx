@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FileSpreadsheet, Calculator, Code, ArrowRight } from 'lucide-react';
 import { useNavigation } from '../../hooks/useNavigation';
+import { OptimizedImage } from '../ui/OptimizedImage';
 
 const Features = () => {
   const { t } = useTranslation();
@@ -9,28 +10,53 @@ const Features = () => {
 
   const features = [
     {
-      icon: <img src="/images/ai-excel-generator.png" alt={t('features.items.aiExcelGenerator.title')} className="w-4/5 rounded-lg shadow-lg" />,
+      icon: <OptimizedImage 
+              src="/images/ai-excel-generator.png" 
+              alt={t('features.items.aiExcelGenerator.title')} 
+              className="w-4/5 rounded-lg shadow-lg"
+              width={400}
+              height={300}
+              priority={true}
+            />,
       title: t('features.items.aiExcelGenerator.title'),
       description: t('features.items.aiExcelGenerator.description'),
       action: goToWorkspace,
       buttonText: t('common.getStarted')
     },
     {
-      icon: <img src="/images/ai-excel-functions.png" alt={t('features.items.aiExcelFunctions.title')} className="w-4/5 rounded-lg shadow-lg" />,
+      icon: <OptimizedImage 
+              src="/images/ai-excel-functions.png" 
+              alt={t('features.items.aiExcelFunctions.title')} 
+              className="w-4/5 rounded-lg shadow-lg"
+              width={400}
+              height={300}
+            />,
       title: t('features.items.aiExcelFunctions.title'),
       description: t('features.items.aiExcelFunctions.description'),
       action: goToFunctions,
       buttonText: t('common.getStarted')
     },
     {
-      icon: <img src="/images/image-to-excel.png" alt={t('features.items.imageToExcel.title')} className="w-4/5 rounded-lg shadow-lg" />,
+      icon: <OptimizedImage 
+              src="/images/image-to-excel.png" 
+              alt={t('features.items.imageToExcel.title')} 
+              className="w-4/5 rounded-lg shadow-lg"
+              width={400}
+              height={300}
+            />,
       title: t('features.items.imageToExcel.title'),
       description: t('features.items.imageToExcel.description'),
       action: goToWorkspace,
       buttonText: t('common.getStarted')
     },
     {
-      icon: <img src="/images/ai-excel-chart.png" alt={t('features.items.aiExcelChart.title')} className="w-4/5 rounded-lg shadow-lg" />,
+      icon: <OptimizedImage 
+              src="/images/ai-excel-chart.png" 
+              alt={t('features.items.aiExcelChart.title')} 
+              className="w-4/5 rounded-lg shadow-lg"
+              width={400}
+              height={300}
+            />,
       title: t('features.items.aiExcelChart.title'),
       description: t('features.items.aiExcelChart.description'),
       action: goToWorkspace,

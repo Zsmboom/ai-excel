@@ -36,13 +36,6 @@ const Hero = () => {
               {t('common.watchDemo')}
             </button>
           </div>
-          <div className="mt-12">
-            <img 
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
-              alt={t('hero.imageAlt')}
-              className="rounded-lg shadow-2xl"
-            />
-          </div>
         </div>
       </div>
     </section>
