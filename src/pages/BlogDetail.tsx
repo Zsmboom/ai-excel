@@ -153,6 +153,14 @@ const BlogDetail: React.FC = () => {
               p: 0.5,
               borderRadius: 0.5,
               bgcolor: 'grey.100'
+            },
+            '& a': {
+              color: '#0066cc',
+              textDecoration: 'underline',
+              transition: 'color 0.2s ease',
+              '&:hover': {
+                color: '#003d7a'
+              }
             }
           }}>
             <ReactMarkdown>{content.content}</ReactMarkdown>

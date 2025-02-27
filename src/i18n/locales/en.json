@@ -160,6 +160,10 @@
     "subtitle": "Learn how to make the most of our AI-powered Excel generation tools",
     "items": [
       {
+        "question": "How to Use ExcelEasy's AI Excel Sheet Creator?",
+        "answer": "If you choose to create a custom sheet, simply type in what you need. The AI understands natural language, so you don't need to be an Excel expert. Want a budget planner? Just say, \"Create an Excel sheet with income, expenses, and a balance summary.\" The tool processes your request and generates a fully functional spreadsheet in seconds. This eliminates the need to manually set up formulas or formatting, cutting your setup time dramatically."
+      },
+      {
         "question": "What is AI Excel Generator and how does it work?",
         "answer": "AI Excel Generator is an advanced tool that uses artificial intelligence to convert your text descriptions into fully-formatted Excel spreadsheets. Simply describe what you need in natural language, and our AI will analyze your requirements to generate a professional Excel file with appropriate formatting, formulas, and data structure. It's perfect for creating various types of spreadsheets including budgets, invoices, project trackers, and data analysis templates."
       },
