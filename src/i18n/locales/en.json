@@ -461,7 +461,7 @@
     }
   },
   "picToExcel": {
-    "title": "Image to Excel Converter - Extract Tables from Images",
+    "title": "Convert Picture to Excel",
     "subtitle": "Convert images containing tables, data, or text into editable Excel spreadsheets instantly",
     "description": "Our AI-powered Image to Excel converter accurately extracts tables and data from images, screenshots, or scanned documents. Perfect for digitizing printed tables, converting PDF tables, and processing image-based data.",
     "features": {

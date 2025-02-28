@@ -56,12 +56,33 @@ export const PageSEO: React.FC<PageSEOProps> = ({
 
   const pathWithoutLang = location.pathname.split('/').slice(2).join('/');
   const baseUrl = window.location.origin;
-  const currentUrl = canonicalUrl || `${baseUrl}/${i18n.language}/${pathWithoutLang}`;
-  const imageUrl = `${baseUrl}${config.image.url}`;
+  const currentUrl = canonicalUrl || (i18n.language === 'en' 
+    ? `${baseUrl}/${pathWithoutLang}` 
+    : `${baseUrl}/${i18n.language}/${pathWithoutLang}`);
+  const imageUrl = config?.image?.url ? `${baseUrl}${config.image.url}` : `${baseUrl}/logo.png`;
+
+  // 检查是否是工具页面或博客文章页面
+  const toolPaths = [
+    '/ai-excel-generator',
+    '/excel-functions',
+    '/pic-to-excel',
+    '/ai-excel-chart'
+  ];
+  
+  const isToolPage = toolPaths.some(tool => 
+    location.pathname === tool || // 英文版本
+    location.pathname.endsWith(tool) // 其他语言版本
+  );
+  
+  const isBlogPage = location.pathname.includes('/blog');
+
+  const shouldShowCanonical = !isToolPage && !isBlogPage;
 
   const alternateLinks = languages.map((lang) => ({
     hrefLang: lang.code,
-    href: `${baseUrl}/${lang.code}/${pathWithoutLang}`,
+    href: lang.code === 'en' 
+      ? `${baseUrl}/${pathWithoutLang}` 
+      : `${baseUrl}/${lang.code}/${pathWithoutLang}`,
   }));
 
   // 生成robots指令
@@ -89,8 +110,8 @@ export const PageSEO: React.FC<PageSEOProps> = ({
   const articleSchema = article ? {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    'headline': config.title,
-    'description': config.description,
+    'headline': getLocalizedValue(config?.title || ''),
+    'description': getLocalizedValue(config?.description || ''),
     'image': imageUrl,
     'datePublished': article.publishedTime,
     'dateModified': article.modifiedTime,
@@ -113,28 +134,30 @@ export const PageSEO: React.FC<PageSEOProps> = ({
     <>
       <Helmet>
         <html lang={i18n.language} />
-        <title>{getLocalizedValue(config.title)}</title>
-        <meta name="description" content={getLocalizedValue(config.description)} />
-        <meta name="keywords" content={getLocalizedValue(config.keywords)} />
+        <title>{getLocalizedValue(config?.title || '')}</title>
+        <meta name="description" content={getLocalizedValue(config?.description || '')} />
+        <meta name="keywords" content={getLocalizedValue(config?.keywords || '')} />
         
         {/* Robots 指令 */}
         <meta name="robots" content={robotsContent} />
         
-        {/* 规范链接 */}
-        <link rel="canonical" href={currentUrl} />
+        {/* 规范链接 - 只在非工具页面和非博客页面显示 */}
+        {shouldShowCanonical && (
+          <link rel="canonical" href={currentUrl} />
+        )}
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content={article ? 'article' : 'website'} />
         <meta property="og:site_name" content="ExcelEasy" />
         <meta property="og:url" content={currentUrl} />
-        <meta property="og:title" content={getLocalizedValue(config.title)} />
-        <meta property="og:description" content={getLocalizedValue(config.description)} />
+        <meta property="og:title" content={getLocalizedValue(config?.title || '')} />
+        <meta property="og:description" content={getLocalizedValue(config?.description || '')} />
         <meta property="og:image" content={imageUrl} />
         <meta property="og:image:secure_url" content={imageUrl} />
-        <meta property="og:image:alt" content={getLocalizedValue(config.image.alt)} />
-        <meta property="og:image:type" content={config.image.type} />
-        <meta property="og:image:width" content={String(config.image.width)} />
-        <meta property="og:image:height" content={String(config.image.height)} />
+        <meta property="og:image:alt" content={getLocalizedValue(config?.image?.alt || '')} />
+        <meta property="og:image:type" content={config?.image?.type || 'image/png'} />
+        <meta property="og:image:width" content={String(config?.image?.width || 1200)} />
+        <meta property="og:image:height" content={String(config?.image?.height || 630)} />
         <meta property="og:locale" content={i18n.language} />
         
         {/* 文章特定的Open Graph标签 */}
@@ -156,10 +179,10 @@ export const PageSEO: React.FC<PageSEOProps> = ({
         <meta name="twitter:site" content="@ExcelEasy" />
         <meta name="twitter:creator" content="@ExcelEasy" />
         <meta name="twitter:url" content={currentUrl} />
-        <meta name="twitter:title" content={getLocalizedValue(config.title)} />
-        <meta name="twitter:description" content={getLocalizedValue(config.description)} />
+        <meta name="twitter:title" content={getLocalizedValue(config?.title || '')} />
+        <meta name="twitter:description" content={getLocalizedValue(config?.description || '')} />
         <meta name="twitter:image" content={imageUrl} />
-        <meta name="twitter:image:alt" content={getLocalizedValue(config.image.alt)} />
+        <meta name="twitter:image:alt" content={getLocalizedValue(config?.image?.alt || '')} />
         <meta name="twitter:domain" content={baseUrl} />
 
         {/* 其他元标签 */}
@@ -178,7 +201,7 @@ export const PageSEO: React.FC<PageSEOProps> = ({
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`${baseUrl}/en/${pathWithoutLang}`}
+          href={`${baseUrl}/${pathWithoutLang}`}
         />
 
         {/* 最后修改日期 */}
