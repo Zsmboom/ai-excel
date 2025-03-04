@@ -15,26 +15,42 @@
     "save": "节省",
     "mostPopular": "最受欢迎",
     "allRightsReserved": "版权所有",
-    "excelTools": "Excel 工具",
-    "excelGenerator": "AI Excel 生成器",
-    "excelFunctions": "AI Excel 函数",
-    "picToExcel": "图片转 Excel",
-    "excelChart": "AI Excel 图表",
+    "excelTools": "Excel Easy 工具集",
+    "excelGenerator": "Excel Easy 生成器",
+    "excelFunctions": "Excel Easy 函数助手",
+    "picToExcel": "Excel Easy 图片转换",
+    "excelChart": "Excel Easy 图表生成",
     "imageLoadError": "图片加载失败",
     "loading": "加载中...",
     "error": "出错了",
     "retry": "重试",
-    "close": "关闭"
+    "close": "关闭",
+    "brand": {
+      "name": "Excel Easy",
+      "slogan": "让 Excel 更简单",
+      "description": "Excel Easy - 您的智能 Excel 助手"
+    },
+    "features": {
+      "free": "永久免费",
+      "noLogin": "无需登录",
+      "multiLanguage": "多语言支持"
+    },
+    "nav": {
+      "tools": "Excel Easy 工具",
+      "pricing": "Excel Easy 定价",
+      "about": "关于 Excel Easy",
+      "blog": "Excel Easy 博客"
+    }
   },
   "hero": {
-    "title": "用 AI 将文本转换为 Excel",
-    "subtitle": "只需用自然语言描述您的数据需求，我们的 AI 就能立即创建专业的 Excel 电子表格。",
-    "cta": "立即开始",
-    "imageAlt": "AI Excel 分析"
+    "title": "Excel Easy - 智能 Excel 助手平台",
+    "subtitle": "使用 Excel Easy，轻松处理各种 Excel 任务。完全免费，无需登录。",
+    "cta": "立即免费使用",
+    "imageAlt": "Excel Easy 智能助手"
   },
   "features": {
-    "title": "AI 驱动的 Excel 解决方案",
-    "subtitle": "使用我们先进的 AI 工具简化您的 Excel 工作",
+    "title": "Excel Easy 智能工具集",
+    "subtitle": "让 Excel 工作更轻松、更高效",
     "items": {
       "generation": {
         "title": "AI Excel 生成",
@@ -49,20 +65,20 @@
         "description": "生成自定义 VBA 宏以自动化您的 Excel 工作流程，并提供分步说明。"
       },
       "aiExcelGenerator": {
-        "title": "AI Excel 生成器",
-        "description": "AI Excel 生成器是一个强大的工具，可以帮助您快速生成 Excel 表格。"
+        "title": "Excel Easy 智能生成器",
+        "description": "使用 Excel Easy，将文本描述转换为专业的 Excel 表格。完全免费，无需编程经验。"
       },
       "aiExcelFunctions": {
-        "title": "AI Excel 函数 & AI Excel VBA 生成器",
-        "description": "使用 AI Excel 函数 & AI Excel VBA 生成器，您可以轻松创建复杂的 Excel 函数和 VBA 代码。"
+        "title": "Excel Easy 函数助手",
+        "description": "让 Excel Easy 帮您创建和优化 Excel 函数与公式。完全免费，提升工作效率。"
       },
       "imageToExcel": {
-        "title": "图片转 Excel",
-        "description": "图片转 Excel 工具可以将图片中的数据快速转换为 Excel 表格。"
+        "title": "Excel Easy 图片转换器",
+        "description": "使用 Excel Easy 的智能技术，将图片中的表格数据转换为 Excel 格式。完全免费，快速准确。"
       },
       "aiExcelChart": {
-        "title": "AI Excel 图表",
-        "description": "使用 AI 智能分析和可视化功能，将您的 Excel 数据转换为精美的图表。"
+        "title": "Excel Easy 图表生成器",
+        "description": "让 Excel Easy 为您创建专业的数据可视化图表。完全免费，一键生成。"
       }
     }
   },

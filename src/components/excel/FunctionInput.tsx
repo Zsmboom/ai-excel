@@ -21,7 +21,31 @@ export function FunctionInput({
   functionType,
   onTypeChange
 }: FunctionInputProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  // 根据当前语言选择显示内容
+  const currentLanguage = i18n.language;
+  
+  // 中文内容
+  const zhContent = {
+    formulaType: "AI Excel函数生成器",
+    vbaType: "AI Excel VBA生成器",
+    promptLabel: "描述您的AI Excel函数和VBA宏需求",
+    promptPlaceholder: "示例：创建一个VLOOKUP公式来查找两个表之间的匹配值，或生成一个用于自动数据处理的VBA宏...",
+    generateButton: "生成AI Excel函数和VBA宏"
+  };
+  
+  // 英文内容
+  const enContent = {
+    formulaType: "AI Excel Functions Generator",
+    vbaType: "AI Excel VBA Generator",
+    promptLabel: "Describe Your AI Excel Functions and VBA Macro Needs",
+    promptPlaceholder: "Example: Create a VLOOKUP formula to find matching values between two tables, or generate a VBA macro for automated data processing...",
+    generateButton: "Generate AI Excel Function & VBA"
+  };
+  
+  // 根据当前语言选择内容
+  const content = currentLanguage.startsWith('zh') ? zhContent : enContent;
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
@@ -33,7 +57,7 @@ export function FunctionInput({
             onChange={() => onTypeChange('formula')}
             className="w-4 h-4 text-blue-600"
           />
-          <span className="text-sm font-medium text-gray-700">{t('excelFunctions.form.typeSelector.formula')}</span>
+          <span className="text-sm font-medium text-gray-700">{content.formulaType}</span>
         </label>
         <label className="flex items-center gap-2">
           <input
@@ -42,19 +66,19 @@ export function FunctionInput({
             onChange={() => onTypeChange('vba')}
             className="w-4 h-4 text-blue-600"
           />
-          <span className="text-sm font-medium text-gray-700">{t('excelFunctions.form.typeSelector.macro')}</span>
+          <span className="text-sm font-medium text-gray-700">{content.vbaType}</span>
         </label>
       </div>
 
       <div>
         <label htmlFor="prompt" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('excelFunctions.form.promptLabel')}
+          {content.promptLabel}
         </label>
         <textarea
           id="prompt"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          placeholder={t('excelFunctions.form.promptPlaceholder')}
+          placeholder={content.promptPlaceholder}
           className="w-full h-32 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
         />
       </div>
@@ -67,7 +91,7 @@ export function FunctionInput({
           <LoadingSpinner />
         ) : (
           <>
-            {t('excelFunctions.form.generateButton')} <Send className="ml-2 h-4 w-4" />
+            {content.generateButton} <Send className="ml-2 h-4 w-4" />
           </>
         )}
       </button>

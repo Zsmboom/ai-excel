@@ -9,7 +9,6 @@ interface FAQItem {
 const FAQ = () => {
   const { t } = useTranslation();
   const faqItems = (t('faq.items', { returnObjects: true }) || []) as FAQItem[];
-  const filteredItems = faqItems.filter(item => !item.question.toLowerCase().includes('free'));
 
   return (
     <section className="py-20 bg-gray-50">
@@ -23,7 +22,7 @@ const FAQ = () => {
           </p>
 
           <div className="space-y-8">
-            {filteredItems.map((item, index) => (
+            {faqItems.map((item, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-xl font-semibold mb-3">
                   {item.question}

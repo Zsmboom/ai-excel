@@ -28,14 +28,14 @@
     "excelChart": "AI Excel Charts"
   },
   "hero": {
-    "title": "Transform Text to Excel with AI",
-    "subtitle": "Simply describe your data needs in natural language, and let our AI create professional Excel spreadsheets instantly.",
-    "cta": "Get Started",
-    "imageAlt": "AI Excel Analysis"
+    "title": "Excel Easy - Free AI Excel Tools Platform",
+    "subtitle": "Use Excel Easy's AI Excel Bot to handle your Excel tasks effortlessly. Completely free, no login required.",
+    "cta": "Start Free Now",
+    "imageAlt": "Excel Easy AI Excel Analysis"
   },
   "features": {
-    "title": "AI-Powered Excel Solutions",
-    "subtitle": "Simplify your Excel work with our advanced AI tools",
+    "title": "Free AI Excel Tools by Excel Easy",
+    "subtitle": "Complete your Excel tasks effortlessly with our AI Excel Bot",
     "items": {
       "generation": {
         "title": "AI Excel Generation",
@@ -50,20 +50,20 @@
         "description": "Generate custom VBA macros to automate your Excel workflows with step-by-step instructions."
       },
       "aiExcelGenerator": {
-        "title": "AI Excel Generator",
-        "description": "AI Excel Generator is a powerful tool that helps you quickly generate Excel spreadsheets."
+        "title": "Free AI Excel Generator",
+        "description": "Transform text descriptions into professional Excel spreadsheets with Excel Easy's AI Excel Bot. Completely free, no coding required."
       },
       "aiExcelFunctions": {
-        "title": "AI Excel Functions & AI Excel VBA Generator",
-        "description": "With AI Excel Functions & AI Excel VBA Generator, you can easily create complex Excel functions and VBA code."
+        "title": "Free AI Excel Function Assistant",
+        "description": "Let Excel Easy's AI Excel Bot help you create and optimize Excel functions and formulas. Completely free, boost your productivity."
       },
       "imageToExcel": {
-        "title": "Image to Excel",
-        "description": "Image to Excel tool quickly converts data from images into Excel spreadsheets."
+        "title": "Free Image to Excel Converter",
+        "description": "Convert table data from images to Excel format using Excel Easy's AI technology. Completely free, fast and accurate."
       },
       "aiExcelChart": {
-        "title": "AI Excel Chart",
-        "description": "Transform your Excel data into beautiful charts with AI-powered analysis and visualization."
+        "title": "Free AI Excel Chart Generator",
+        "description": "Let Excel Easy's AI Excel Bot create professional data visualizations for you. Completely free, generate with one click."
       }
     }
   },
@@ -156,40 +156,40 @@
     "copyright": "All rights reserved."
   },
   "faq": {
-    "title": "Frequently Asked Questions about AI Excel Generator",
-    "subtitle": "Learn how to make the most of our AI-powered Excel generation tools",
+    "title": "Frequently Asked Questions about AI Excel Generator and Excel Formula Generator",
+    "subtitle": "Learn how to make the most of our AI-powered Excel generation tools and Excel Formula Generator",
     "items": [
       {
-        "question": "How to Use ExcelEasy's AI Excel Sheet Creator?",
-        "answer": "If you choose to create a custom sheet, simply type in what you need. The AI understands natural language, so you don't need to be an Excel expert. Want a budget planner? Just say, \"Create an Excel sheet with income, expenses, and a balance summary.\" The tool processes your request and generates a fully functional spreadsheet in seconds. This eliminates the need to manually set up formulas or formatting, cutting your setup time dramatically."
+        "question": "How to Use ExcelEasy's AI Excel Sheet Creator and Excel Formula Generator?",
+        "answer": "If you choose to create a custom sheet, simply type in what you need. The AI understands natural language, so you don't need to be an Excel expert. Want a budget planner with formulas? Just say, \"Create an Excel sheet with income, expenses, and a balance summary formula.\" Our Excel Formula Generator processes your request and generates a fully functional spreadsheet with appropriate formulas in seconds. This eliminates the need to manually set up complex Excel formulas or formatting, cutting your setup time dramatically."
       },
       {
-        "question": "What is AI Excel Generator and how does it work?",
-        "answer": "AI Excel Generator is an advanced tool that uses artificial intelligence to convert your text descriptions into fully-formatted Excel spreadsheets. Simply describe what you need in natural language, and our AI will analyze your requirements to generate a professional Excel file with appropriate formatting, formulas, and data structure. It's perfect for creating various types of spreadsheets including budgets, invoices, project trackers, and data analysis templates."
+        "question": "What is AI Excel Generator and Excel Formula Generator, and how do they work?",
+        "answer": "AI Excel Generator with integrated Excel Formula Generator is an advanced tool that uses artificial intelligence to convert your text descriptions into fully-formatted Excel spreadsheets with complex formulas. Simply describe what you need in natural language, and our Excel Formula Generator will analyze your requirements to generate a professional Excel file with appropriate formatting, advanced formulas, and data structure. It's perfect for creating various types of spreadsheets including budgets with calculation formulas, invoices with tax formulas, project trackers with progress formulas, and data analysis templates with statistical formulas."
       },
       {
-        "question": "What types of Excel spreadsheets can I create with AI Excel Generator?",
-        "answer": "AI Excel Generator can create a wide variety of Excel spreadsheets including: financial spreadsheets (budgets, expense trackers, investment portfolios), business templates (invoices, inventory management, sales reports), project management tools (task trackers, timelines, resource allocation), data analysis templates (pivot tables, charts, statistical analysis), and personal organization spreadsheets (meal planners, workout trackers, habit trackers)."
+        "question": "What types of Excel spreadsheets and formulas can I create with AI Excel Generator?",
+        "answer": "Our Excel Formula Generator can create a wide variety of Excel spreadsheets with advanced formulas including: financial spreadsheets (budgets with income/expense formulas, expense trackers with summary formulas, investment portfolios with ROI calculation formulas), business templates (invoices with tax calculation formulas, inventory management with stock level formulas, sales reports with commission formulas), project management tools (task trackers with progress formulas, timelines with deadline formulas, resource allocation with utilization formulas), data analysis templates (pivot tables, charts with trend formulas, statistical analysis with complex statistical formulas), and personal organization spreadsheets (meal planners with nutrition formulas, workout trackers with progress formulas, habit trackers with consistency formulas)."
       },
       {
-        "question": "How accurate is the AI Excel Generator?",
-        "answer": "Our AI Excel Generator delivers highly accurate results by understanding context, formatting requirements, and data relationships. It applies professional Excel formatting standards and suggests appropriate formulas based on your needs. While the AI generates high-quality spreadsheets, you can always customize the output to perfectly match your requirements."
+        "question": "How accurate is the AI Excel Generator and its formula generation?",
+        "answer": "Our AI Excel Generator and Excel Formula Generator deliver highly accurate results by understanding context, formatting requirements, and data relationships. The Excel Formula Generator applies professional Excel formatting standards and suggests appropriate formulas based on your specific needs. While the AI generates high-quality spreadsheets with complex formulas, you can always customize the output to perfectly match your requirements. Our Excel Formula Generator is constantly improving to provide the most accurate and efficient formulas for your data."
       },
       {
-        "question": "Can I customize the generated Excel spreadsheets?",
-        "answer": "Yes! All Excel spreadsheets generated by our AI tool are fully customizable. You can modify the formatting, adjust formulas, add or remove columns and rows, and make any other changes needed. The AI-generated spreadsheet serves as a professional foundation that you can further refine to match your exact needs."
+        "question": "Can I customize the generated Excel spreadsheets and formulas?",
+        "answer": "Yes! All Excel spreadsheets and formulas generated by our Excel Formula Generator are fully customizable. You can modify the formatting, adjust complex formulas, add or remove columns and rows, and make any other changes needed. The AI-generated spreadsheet with its integrated formulas serves as a professional foundation that you can further refine to match your exact needs. Our Excel Formula Generator provides a solid starting point with working formulas that you can then customize."
       },
       {
-        "question": "How do I use the AI Excel Generator effectively?",
-        "answer": "To get the best results from AI Excel Generator: 1) Be specific in your description, including details about data structure, calculations needed, and desired formatting, 2) Specify any particular Excel formulas or functions you want to include, 3) Mention if you need specific features like conditional formatting or data validation, 4) Review and customize the generated spreadsheet to ensure it meets your exact requirements."
+        "question": "How do I use the AI Excel Generator and Excel Formula Generator effectively?",
+        "answer": "To get the best results from our Excel Formula Generator: 1) Be specific in your description, including details about data structure, calculations needed, and desired formatting, 2) Specify any particular Excel formulas or functions you want the Excel Formula Generator to include, 3) Mention if you need specific features like conditional formatting or data validation formulas, 4) Review and customize the generated spreadsheet and formulas to ensure they meet your exact requirements. The more specific you are about your formula needs, the better our Excel Formula Generator can serve you."
       },
       {
-        "question": "What makes AI Excel Generator different from traditional Excel templates?",
-        "answer": "AI Excel Generator offers unique advantages over traditional templates: 1) Customization through natural language - just describe what you need, 2) Dynamic adaptation to your specific requirements rather than rigid templates, 3) Intelligent formula suggestions based on your data needs, 4) Professional formatting automatically applied, 5) Time-saving automation of spreadsheet creation process."
+        "question": "What makes AI Excel Generator and Excel Formula Generator different from traditional Excel templates?",
+        "answer": "Our Excel Formula Generator offers unique advantages over traditional templates: 1) Customization through natural language - just describe what formulas you need, 2) Dynamic adaptation to your specific formula requirements rather than rigid templates, 3) Intelligent formula suggestions based on your data needs, 4) Professional formatting with integrated formulas automatically applied, 5) Time-saving automation of spreadsheet and formula creation process. Unlike static templates, our Excel Formula Generator creates custom solutions tailored to your exact specifications."
       },
       {
-        "question": "Can AI Excel Generator handle complex spreadsheet requirements?",
-        "answer": "Yes, AI Excel Generator can handle complex spreadsheet requirements including multiple worksheets, advanced Excel formulas, data validation rules, conditional formatting, and pivot tables. The AI understands relationships between data and can implement sophisticated calculations while maintaining a clean, professional layout."
+        "question": "Can AI Excel Generator and Excel Formula Generator handle complex spreadsheet requirements?",
+        "answer": "Yes, our Excel Formula Generator can handle complex spreadsheet requirements including multiple worksheets with linked formulas, advanced Excel formulas like nested IF statements and VLOOKUP combinations, data validation rules with custom formulas, conditional formatting with formula-based rules, and pivot tables with calculated fields. The Excel Formula Generator understands relationships between data and can implement sophisticated calculation formulas while maintaining a clean, professional layout. No matter how complex your formula needs are, our Excel Formula Generator is up to the task."
       }
     ]
   },
@@ -244,41 +244,41 @@
     }
   },
   "workspace": {
-    "title": "AI Excel Generator - Transform Text to Professional Excel Spreadsheets",
-    "subtitle": "Create custom Excel spreadsheets instantly using AI-powered natural language processing",
-    "description": "AI Excel Generator is an innovative tool that transforms your text descriptions into professionally formatted Excel spreadsheets. Perfect for creating budgets, invoices, project trackers, and data analysis templates.",
+    "title": "AI Excel Generator - Transform Text to Professional Excel Spreadsheets with Excel Formula Generator",
+    "subtitle": "Create custom Excel spreadsheets and complex formulas instantly using our AI-powered Excel Formula Generator",
+    "description": "AI Excel Generator is an innovative Excel Formula Generator tool that transforms your text descriptions into professionally formatted Excel spreadsheets with advanced formulas. Perfect for creating budgets, invoices, project trackers, and data analysis templates with complex Excel formulas.",
     "features": {
-      "title": "Key Features",
+      "title": "Key Features of Our Excel Formula Generator",
       "list": [
-        "Instant Excel spreadsheet generation from text descriptions",
-        "Smart formatting and formula suggestions",
-        "Professional templates for common business needs",
-        "Automated data organization and structure",
-        "Custom Excel formulas and functions integration"
+        "Instant Excel spreadsheet generation with advanced formula integration",
+        "Smart Excel formula generator for complex calculations and data analysis",
+        "Professional templates with pre-built Excel formulas for common business needs",
+        "Automated data organization with intelligent Excel formula suggestions",
+        "Custom Excel formulas and functions integration powered by our Excel Formula Generator"
       ]
     },
     "form": {
-      "promptLabel": "Describe your Excel requirements",
-      "promptPlaceholder": "Example: Create a sales data table with product name, price, quantity sold, and total revenue...",
-      "generateButton": "Generate Excel",
-      "generatingMessage": "Generating...",
-      "readyMessage": "Your Excel file is ready!",
-      "downloadButton": "Download File",
-      "previewTitle": "Preview",
+      "promptLabel": "Describe your Excel requirements and formula needs",
+      "promptPlaceholder": "Example: Create a sales data table with product name, price, quantity sold, and total revenue formula...",
+      "generateButton": "Generate Excel with Formulas",
+      "generatingMessage": "Generating Excel and Formulas...",
+      "readyMessage": "Your Excel file with formulas is ready!",
+      "downloadButton": "Download Excel File",
+      "previewTitle": "Excel Formula Preview",
       "progressStatus": {
-        "analyzing": "Analyzing your requirements...",
-        "structuring": "Using AI to analyze data structure...",
-        "generating": "Generating Excel file...",
-        "completed": "Generation complete!",
-        "failed": "Generation failed"
+        "analyzing": "Analyzing your formula requirements...",
+        "structuring": "Using AI to analyze data structure and formula needs...",
+        "generating": "Generating Excel file with formulas...",
+        "completed": "Excel formula generation complete!",
+        "failed": "Excel formula generation failed"
       }
     },
     "errors": {
       "quota": "You've used up your free generations. Please login or upgrade to continue.",
       "unknown": "Generation failed: "
     },
-    "shareTitle": "AI Excel Generator - Your Smart Spreadsheet Assistant",
-    "shareDescription": "Transform text to Excel spreadsheets instantly with AI. Free to use, no login required!"
+    "shareTitle": "AI Excel Generator & Excel Formula Generator - Your Smart Spreadsheet Assistant",
+    "shareDescription": "Transform text to Excel spreadsheets with powerful formulas instantly using our Excel Formula Generator. Free to use, no login required!"
   },
   "excelFunctions": {
     "title": "AI Excel Functions & VBA Macro Generator - Smart Excel Automation",

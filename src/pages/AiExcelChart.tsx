@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { ProgressBar } from '../components/ui/ProgressBar';
-import { UsageInfo } from '../components/excel/UsageInfo';
+import { ChartUsageInfo } from '../components/excel/ChartUsageInfo';
 import { PageSEO } from '../components/seo/PageSEO';
 import ShareButtons from '../components/common/ShareButtons';
 import { useExcelChartGeneration } from '../hooks/useExcelChartGeneration';
@@ -20,7 +20,7 @@ interface ChartOption {
 }
 
 export default function AIExcelChart() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -29,6 +29,66 @@ export default function AIExcelChart() {
   const [previewData, setPreviewData] = useState<ChartGenerationResult | null>(null);
   const [shareUrl, setShareUrl] = useState<string>('');
   const [showShareModal, setShowShareModal] = useState(false);
+  
+  // 根据当前语言选择显示内容
+  const currentLanguage = i18n.language;
+  
+  // 中文内容
+  const zhContent = {
+    title: "AI Excel图表生成器 - 智能数据可视化工具",
+    subtitle: "使用AI Excel图表生成器将Excel数据转换为专业图表和洞察",
+    description: "我们的AI Excel图表生成器分析您的数据并自动创建有意义的可视化。AI Excel图表生成器完美适用于业务报告、数据分析、趋势可视化和性能跟踪。",
+    featuresTitle: "AI Excel图表生成器核心功能",
+    features: [
+      "智能图表类型选择与推荐",
+      "自动数据分析和洞察生成",
+      "专业图表格式化和美化",
+      "多种可视化选项和图表类型",
+      "交互式图表定制和分享功能"
+    ],
+    uploadTitle: "上传数据到AI Excel图表生成器",
+    uploadExcel: "上传Excel数据文件",
+    uploadHint: "支持.xlsx和.xls文件用于AI Excel图表生成器分析",
+    selectChartType: "选择AI Excel图表生成器可视化类型",
+    analysisPrompt: "AI Excel图表生成器分析要求（可选）",
+    analysisPromptPlaceholder: "指定您的AI Excel图表生成器可视化需求，例如，显示销售趋势、比较区域表现、分析产品类别...",
+    generateButton: "使用AI Excel图表生成器创建图表和洞察",
+    previewTitle: "AI Excel图表生成器预览和分析",
+    chartTitle: "AI Excel图表生成器交互式预览",
+    downloadImageButton: "导出AI Excel图表生成器图表为图片",
+    shareButton: "分享AI Excel图表生成器交互式图表",
+    insights: "AI Excel图表生成器数据洞察"
+  };
+  
+  // 英文内容
+  const enContent = {
+    title: "AI Excel Chart Generator - Smart Data Visualization Tool",
+    subtitle: "Transform Excel data into professional charts and insights with AI Excel Chart Generator",
+    description: "Our AI Excel Chart Generator analyzes your data and creates meaningful visualizations automatically. AI Excel Chart Generator is perfect for business reports, data analysis, trend visualization, and performance tracking.",
+    featuresTitle: "Key Features of AI Excel Chart Generator",
+    features: [
+      "Intelligent chart type selection and recommendation",
+      "Automated data analysis and insight generation",
+      "Professional chart formatting and beautification",
+      "Multiple visualization options and chart types",
+      "Interactive chart customization and sharing capabilities"
+    ],
+    uploadTitle: "Upload Data to AI Excel Chart Generator",
+    uploadExcel: "Upload Excel Data File",
+    uploadHint: "Supports .xlsx and .xls files for AI Excel Chart Generator analysis",
+    selectChartType: "Choose AI Excel Chart Generator Visualization Type",
+    analysisPrompt: "AI Excel Chart Generator Analysis Requirements (Optional)",
+    analysisPromptPlaceholder: "Specify your AI Excel Chart Generator visualization needs, e.g., show sales trends over time, compare regional performance, analyze product categories...",
+    generateButton: "Create Charts & Insights with AI Excel Chart Generator",
+    previewTitle: "AI Excel Chart Generator Preview & Analysis",
+    chartTitle: "AI Excel Chart Generator Interactive Preview",
+    downloadImageButton: "Export AI Excel Chart Generator Chart as Image",
+    shareButton: "Share AI Excel Chart Generator Interactive Chart",
+    insights: "AI Excel Chart Generator Data Insights"
+  };
+  
+  // 根据当前语言选择内容
+  const content = currentLanguage.startsWith('zh') ? zhContent : enContent;
 
   const {
     generateFromExcel,
@@ -172,7 +232,7 @@ export default function AIExcelChart() {
                     className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     <Download className="h-4 w-4" />
-                    <span>{t('aiExcelChart.preview.downloadImageButton')}</span>
+                    <span>{content.downloadImageButton}</span>
                   </button>
                   <button
                     onClick={() => {
@@ -194,7 +254,7 @@ export default function AIExcelChart() {
               {previewData.insights && previewData.insights.length > 0 && (
                 <div className="mt-6 border-t pt-4">
                   <h4 className="text-sm font-medium text-gray-700 mb-2">
-                    {t('aiExcelChart.preview.insights')}
+                    {content.insights}
                   </h4>
                   <ul className="list-disc list-inside space-y-1">
                     {previewData.insights.map((insight, index) => (
@@ -217,16 +277,19 @@ export default function AIExcelChart() {
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-6xl mx-auto">
             <header className="mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">{t('aiExcelChart.title')}</h1>
-              <p className="text-gray-600 mt-2">
-                {t('aiExcelChart.subtitle')}
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">{content.title}</h1>
+              <p className="text-xl text-gray-600 mb-4">
+                {content.subtitle}
+              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                {content.description}
               </p>
               <div className="mt-4">
                 <ShareButtons
                   url={window.location.href}
                   title={t('pages.aiExcelChart.shareTitle')}
                   description={t('pages.aiExcelChart.shareDescription')}
-                  hashtags={['AIExcel', 'FreeTools', 'DataVisualization']}
+                  hashtags={['AIExcel', 'FreeTools', 'DataVisualization', 'ExcelChartGenerator']}
                 />
                 <div className="mt-2 flex flex-wrap gap-2 text-sm text-gray-600">
                   <span>✨ {t('common.shareFeatures.free')}</span>
@@ -235,8 +298,24 @@ export default function AIExcelChart() {
                 </div>
               </div>
             </header>
+            
+            {/* 功能特点部分 */}
+            <section className="bg-white rounded-lg shadow-md p-6 mb-8">
+              <h2 className="text-2xl font-bold mb-4">{content.featuresTitle}</h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {content.features.map((feature, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+                      <span className="text-blue-600 text-lg font-semibold">{index + 1}</span>
+                    </div>
+                    <p className="text-gray-700">{feature}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
             <section className="bg-white rounded-lg shadow-md p-6" aria-label="Chart Generation">
+              <h2 className="text-2xl font-bold mb-6">{content.uploadTitle}</h2>
               <form onSubmit={handleGenerateChart} className="space-y-6">
                 <div className="space-y-4">
                   <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-4 bg-gray-50 max-w-md mx-auto">
@@ -251,10 +330,10 @@ export default function AIExcelChart() {
                       <div className="flex flex-col items-center">
                         <Upload className="h-8 w-8 text-gray-400 mb-2" />
                         <span className="text-sm font-medium text-gray-900">
-                          {t('aiExcelChart.form.uploadExcel')}
+                          {content.uploadExcel}
                         </span>
                         <span className="text-xs text-gray-500 mt-1">
-                          {t('aiExcelChart.form.uploadHint')}
+                          {content.uploadHint}
                         </span>
                       </div>
                     </label>
@@ -269,7 +348,7 @@ export default function AIExcelChart() {
 
                   <div className="mt-4">
                     <h3 className="text-sm font-medium text-gray-700 mb-3">
-                      {t('aiExcelChart.form.selectChartType')}
+                      {content.selectChartType}
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {chartOptions.map((option) => (
@@ -294,12 +373,12 @@ export default function AIExcelChart() {
 
                   <div className="mt-4">
                     <h3 className="text-sm font-medium text-gray-700 mb-2">
-                      {t('aiExcelChart.form.analysisPrompt')}
+                      {content.analysisPrompt}
                     </h3>
                     <textarea
                       value={analysisPrompt}
                       onChange={(e) => setAnalysisPrompt(e.target.value)}
-                      placeholder={t('aiExcelChart.form.analysisPromptPlaceholder')}
+                      placeholder={content.analysisPromptPlaceholder}
                       className="w-full h-24 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                     />
                   </div>
@@ -314,7 +393,7 @@ export default function AIExcelChart() {
                     <LoadingSpinner size={20} />
                   ) : (
                     <>
-                      {t('aiExcelChart.form.generateButton')} <Send className="ml-2 h-4 w-4" />
+                      {content.generateButton} <Send className="ml-2 h-4 w-4" />
                     </>
                   )}
                 </button>
@@ -341,7 +420,7 @@ export default function AIExcelChart() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <FileSpreadsheet className="h-6 w-6 text-green-600" />
-                        <span className="font-medium">{t('aiExcelChart.preview.title')}</span>
+                        <span className="font-medium">{content.previewTitle}</span>
                       </div>
                       <div className="flex items-center space-x-4">
                         <button
@@ -349,14 +428,14 @@ export default function AIExcelChart() {
                           className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
                         >
                           <Share2 className="h-4 w-4" />
-                          <span>{t('aiExcelChart.preview.shareButton')}</span>
+                          <span>{content.shareButton}</span>
                         </button>
                         <button
                           onClick={handleDownload}
                           className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
                         >
                           <Download className="h-4 w-4" />
-                          <span>{t('aiExcelChart.preview.downloadImageButton')}</span>
+                          <span>{content.downloadImageButton}</span>
                         </button>
                       </div>
                     </div>
@@ -366,7 +445,7 @@ export default function AIExcelChart() {
                     {previewData.insights && previewData.insights.length > 0 && (
                       <div className="mt-4">
                         <h4 className="text-sm font-medium text-gray-700 mb-2">
-                          {t('aiExcelChart.preview.insights')}
+                          {content.insights}
                         </h4>
                         <ul className="list-disc list-inside space-y-1">
                           {previewData.insights.map((insight, index) => (
@@ -378,26 +457,16 @@ export default function AIExcelChart() {
                   </div>
                   
                   <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-semibold mb-4">{t('aiExcelChart.preview.chartTitle')}</h2>
+                    <h2 className="text-xl font-semibold mb-4">{content.chartTitle}</h2>
                     <ChartPreview ref={chartRef} config={previewData.chartConfig} chartType={selectedChartType} />
                   </div>
                 </article>
               )}
             </section>
 
-            {/* FAQ Section */}
-            <section className="mt-8 bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-bold mb-6">{t('aiExcelChart.faq.title')}</h2>
-              <div className="space-y-6">
-                <div className="border-b border-gray-200 pb-6">
-                  <h3 className="text-lg font-semibold mb-2">{t('aiExcelChart.faq.items.0.question')}</h3>
-                  <p className="text-gray-600">{t('aiExcelChart.faq.items.0.answer')}</p>
-                </div>
-                <div className="border-b border-gray-200 pb-6">
-                  <h3 className="text-lg font-semibold mb-2">{t('aiExcelChart.faq.items.1.question')}</h3>
-                  <p className="text-gray-600">{t('aiExcelChart.faq.items.1.answer')}</p>
-                </div>
-              </div>
+            {/* 使用新的ChartUsageInfo组件 */}
+            <section className="mt-8">
+              <ChartUsageInfo />
             </section>
           </div>
         </div>
