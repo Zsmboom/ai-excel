@@ -5,4 +5,5 @@ export type SchemaType =
   | 'Blog'
   | 'WebPage'
   | 'ContactPage'
-  | 'AboutPage'; 
+  | 'AboutPage'
+  | 'Article'; 

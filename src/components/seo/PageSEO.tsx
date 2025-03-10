@@ -54,29 +54,29 @@ export const PageSEO: React.FC<PageSEOProps> = ({
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
-  const pathWithoutLang = location.pathname.split('/').slice(2).join('/');
+  // 修复pathWithoutLang的计算逻辑
+  let pathWithoutLang = '';
+  const pathParts = location.pathname.split('/').filter(Boolean);
+  
+  // 检查第一部分是否是语言代码
+  const isFirstPartLang = languages.some(lang => lang.code === pathParts[0]);
+  
+  if (isFirstPartLang) {
+    // 如果第一部分是语言代码，移除它
+    pathWithoutLang = pathParts.slice(1).join('/');
+  } else {
+    // 如果第一部分不是语言代码，保留所有部分
+    pathWithoutLang = pathParts.join('/');
+  }
+  
   const baseUrl = window.location.origin;
   const currentUrl = canonicalUrl || (i18n.language === 'en' 
     ? `${baseUrl}/${pathWithoutLang}` 
     : `${baseUrl}/${i18n.language}/${pathWithoutLang}`);
   const imageUrl = config?.image?.url ? `${baseUrl}${config.image.url}` : `${baseUrl}/logo.png`;
 
-  // 检查是否是工具页面或博客文章页面
-  const toolPaths = [
-    '/ai-excel-generator',
-    '/excel-functions',
-    '/pic-to-excel',
-    '/ai-excel-chart'
-  ];
-  
-  const isToolPage = toolPaths.some(tool => 
-    location.pathname === tool || // 英文版本
-    location.pathname.endsWith(tool) // 其他语言版本
-  );
-  
-  const isBlogPage = location.pathname.includes('/blog');
-
-  const shouldShowCanonical = !isToolPage && !isBlogPage;
+  // 所有页面都添加规范链接
+  const shouldShowCanonical = true;
 
   const alternateLinks = languages.map((lang) => ({
     hrefLang: lang.code,
@@ -141,7 +141,7 @@ export const PageSEO: React.FC<PageSEOProps> = ({
         {/* Robots 指令 */}
         <meta name="robots" content={robotsContent} />
         
-        {/* 规范链接 - 只在非工具页面和非博客页面显示 */}
+        {/* 规范链接 - 所有页面都显示 */}
         {shouldShowCanonical && (
           <link rel="canonical" href={currentUrl} />
         )}
@@ -225,8 +225,8 @@ export const PageSEO: React.FC<PageSEOProps> = ({
       
       <SchemaOrg
         type={config.schemaType}
-        name={getLocalizedValue(config.schemaName)}
-        description={getLocalizedValue(config.schemaDescription)}
+        name={config.schemaName ? getLocalizedValue(config.schemaName) : getLocalizedValue(config.title)}
+        description={config.schemaDescription ? getLocalizedValue(config.schemaDescription) : getLocalizedValue(config.description)}
         applicationCategory={config.schemaCategory}
         url={currentUrl}
         image={imageUrl}

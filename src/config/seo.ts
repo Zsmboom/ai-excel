@@ -35,14 +35,14 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'ExcelEasy - मुफ्त AI एक्सेल जनरेटर | लॉगिन की आवश्यकता नहीं'
     },
     description: {
-      zh: '使用AI智能技术，一键将自然语言转换为专业Excel表格。支持数据可视化、图表生成、VBA宏等功能，完全免费，无需登录。让Excel工作更轻松、更智能、更高效。',
+      zh: 'ExcelEasy是您的智能Excel助手，使用AI智能技术，一键将自然语言转换为专业Excel表格。ExcelEasy支持数据可视化、图表生成、VBA宏等功能，完全免费，无需登录。让Excel工作更轻松、更智能、更高效。',
       en: 'Transform your data into professional Excel spreadsheets instantly with AI. 100% free to use, no login required. Create complex Excel files, charts, and reports with simple natural language commands.',
       de: 'Verwandeln Sie Ihre Daten sofort mit KI in professionelle Excel-Tabellen. 100% kostenlos, keine Anmeldung erforderlich. Erstellen Sie komplexe Excel-Dateien, Diagramme und Berichte mit einfachen Sprachbefehlen.',
       ko: 'AI를 사용하여 데이터를 즉시 전문적인 Excel 스프레드시트로 변환하세요. 100% 무료, 로그인 불필요. 간단한 자연어 명령으로 복잡한 Excel 파일, 차트, 보고서를 작성하세요.',
       hi: 'AI के साथ अपने डेटा को तुरंत पेशेवर Excel स्प्रेडशीट में बदलें। 100% मुफ्त, लॉगिन की आवश्यकता नहीं। सरल प्राकृतिक भाषा कमांड के साथ जटिल Excel फाइलें, चार्ट और रिपोर्ट बनाएं।'
     },
     keywords: {
-      zh: 'Excel生成器,AI Excel,表格自动化,数据可视化,智能办公,自动化办公,Excel助手,AI办公,智能表格,在线Excel',
+      zh: 'ExcelEasy,Excel生成器,AI Excel,ExcelEasy在线,ExcelEasy免费,表格自动化,数据可视化,智能办公,自动化办公,Excel助手,AI办公,智能表格,在线Excel,ExcelEasy工具',
       en: 'Excel generator,AI Excel,spreadsheet automation,data visualization,business intelligence,office automation,Excel assistant,AI office,smart spreadsheet,online Excel',
       de: 'Excel-Generator,KI Excel,Tabellenautomatisierung,Datenvisualisierung,Business Intelligence,Büroautomatisierung,Excel-Assistent,KI-Büro,intelligente Tabellenkalkulation,Online-Excel',
       ko: 'Excel 생성기,AI Excel,스프레드시트 자동화,데이터 시각화,비즈니스 인텔리전스,사무 자동화,Excel 어시스턴트,AI 오피스,스마트 스프레드시트,온라인 Excel',

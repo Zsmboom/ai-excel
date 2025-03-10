@@ -26,14 +26,14 @@
     "retry": "重试",
     "close": "关闭",
     "brand": {
-      "name": "Excel Easy",
-      "slogan": "让 Excel 更简单",
-      "description": "Excel Easy - 您的智能 Excel 助手"
+      "name": "ExcelEasy",
+      "slogan": "ExcelEasy - 让 Excel 更简单",
+      "description": "ExcelEasy - 您的智能 Excel 助手"
     },
     "features": {
-      "free": "永久免费",
-      "noLogin": "无需登录",
-      "multiLanguage": "多语言支持"
+      "free": "ExcelEasy 永久免费",
+      "noLogin": "ExcelEasy 无需登录",
+      "multiLanguage": "ExcelEasy 多语言支持"
     },
     "nav": {
       "tools": "Excel Easy 工具",
@@ -43,26 +43,26 @@
     }
   },
   "hero": {
-    "title": "Excel Easy - 智能 Excel 助手平台",
-    "subtitle": "使用 Excel Easy，轻松处理各种 Excel 任务。完全免费，无需登录。",
-    "cta": "立即免费使用",
-    "imageAlt": "Excel Easy 智能助手"
+    "title": "ExcelEasy - 您的智能 Excel 助手平台",
+    "subtitle": "使用 ExcelEasy，轻松处理各种 Excel 任务。ExcelEasy 完全免费，无需登录，立即体验智能办公。",
+    "cta": "立即免费使用 ExcelEasy",
+    "imageAlt": "ExcelEasy 智能助手"
   },
   "features": {
-    "title": "Excel Easy 智能工具集",
-    "subtitle": "让 Excel 工作更轻松、更高效",
+    "title": "ExcelEasy 智能工具集",
+    "subtitle": "ExcelEasy 让 Excel 工作更轻松、更高效",
     "items": {
       "generation": {
-        "title": "AI Excel 生成",
-        "description": "在几秒钟内将自然语言描述转换为完整、专业格式的 Excel 电子表格。"
+        "title": "ExcelEasy AI Excel 生成",
+        "description": "使用 ExcelEasy，在几秒钟内将自然语言描述转换为完整、专业格式的 Excel 电子表格。"
       },
       "assistant": {
-        "title": "Excel 函数助手",
-        "description": "获取复杂 Excel 公式的即时帮助，包含详细解释和实施指南。"
+        "title": "ExcelEasy Excel 函数助手",
+        "description": "通过 ExcelEasy，获取复杂 Excel 公式的即时帮助，包含详细解释和实施指南。"
       },
       "macro": {
-        "title": "VBA 宏生成",
-        "description": "生成自定义 VBA 宏以自动化您的 Excel 工作流程，并提供分步说明。"
+        "title": "ExcelEasy VBA 宏生成",
+        "description": "使用 ExcelEasy 生成自定义 VBA 宏以自动化您的 Excel 工作流程，并提供分步说明。"
       },
       "aiExcelGenerator": {
         "title": "Excel Easy 智能生成器",
@@ -128,25 +128,25 @@
     }
   },
   "testimonials": {
-    "title": "Excel 用户的选择",
-    "subtitle": "看看 ExcelEasy 如何帮助专业人士和学生更智能地工作",
+    "title": "ExcelEasy 用户评价",
+    "subtitle": "看看其他人如何使用 ExcelEasy 提升工作效率",
     "items": [
       {
-        "quote": "作为一名财务分析师，我每天都要处理复杂的 Excel 公式。ExcelEasy 的 AI 函数生成器已成为我创建和调试公式的首选工具。VBA 宏生成为我节省了大量编码时间。",
-        "author": "陈明",
-        "role": "高级财务分析师",
-        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80"
+        "quote": "ExcelEasy 彻底改变了我处理财务报表的方式。以前需要几个小时的工作，现在使用 ExcelEasy 只需几分钟就能完成。",
+        "author": "张明",
+        "role": "财务分析师",
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&h=100&q=80"
       },
       {
-        "quote": "管理销售数据曾经是一项耗时的任务。现在我只需描述我需要什么，ExcelEasy 就能立即创建格式完美的电子表格。它彻底改变了我们销售团队处理报告的方式。",
-        "author": "李强",
-        "role": "销售经理",
+        "quote": "作为一名教师，我使用 ExcelEasy 为学生成绩分析创建电子表格。ExcelEasy 的智能功能让我能够专注于教学而不是表格制作。",
+        "author": "李华",
+        "role": "高中教师",
         "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80"
       },
       {
-        "quote": "作为一名学生，Excel 函数一直是一个挑战。ExcelEasy 通过清晰的解释和示例帮助我理解复杂的公式。就像有一个全天候的个人 Excel 导师。",
-        "author": "张小雨",
-        "role": "商科学生",
+        "quote": "ExcelEasy 的图片转 Excel 功能太神奇了！我再也不用手动输入纸质报表上的数据了。ExcelEasy 节省了我大量的时间和精力。",
+        "author": "王芳",
+        "role": "市场经理",
         "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80"
       }
     ]
@@ -168,40 +168,40 @@
     "openSource": "访问我们的开源项目"
   },
   "faq": {
-    "title": "常见问题",
-    "subtitle": "查找有关我们服务的常见问题解答",
+    "title": "ExcelEasy 常见问题",
+    "subtitle": "查找有关 ExcelEasy 服务的常见问题解答",
     "items": [
       {
         "question": "如何使用 ExcelEasy 的 AI 电子表格创建器？",
-        "answer": "如果您想创建自定义表格，只需输入您的需求即可。AI 可以理解自然语言，所以您不需要成为 Excel 专家。想要制作预算计划表？只需说\"创建一个包含收入、支出和余额汇总的 Excel 表格\"即可。工具会在几秒钟内处理您的请求并生成功能完整的电子表格。这消除了手动设置公式或格式的需求，大大缩短了设置时间。"
+        "answer": "使用 ExcelEasy 创建自定义表格非常简单，只需输入您的需求即可。ExcelEasy 的 AI 可以理解自然语言，所以您不需要成为 Excel 专家。想要制作预算计划表？只需在 ExcelEasy 中说\"创建一个包含收入、支出和余额汇总的 Excel 表格\"即可。ExcelEasy 会在几秒钟内处理您的请求并生成功能完整的电子表格。这消除了手动设置公式或格式的需求，大大缩短了设置时间。"
       },
       {
         "question": "ExcelEasy 能把图片转换成 Excel 吗？",
-        "answer": "是的，ExcelEasy 可以使用先进的 AI 技术将图片转换为 Excel 表格。您只需上传包含表格数据的图片，我们的 AI 就会分析并将信息提取到结构良好的 Excel 文件中。您还可以添加可选的描述来帮助 AI 更好地理解上下文，并根据需要对生成的表格进行调整。"
+        "answer": "是的，ExcelEasy 可以使用先进的 AI 技术将图片转换为 Excel 表格。您只需在 ExcelEasy 上传包含表格数据的图片，ExcelEasy 的 AI 就会分析并将信息提取到结构良好的 Excel 文件中。您还可以添加可选的描述来帮助 ExcelEasy 的 AI 更好地理解上下文，并根据需要对生成的表格进行调整。"
       },
       {
-        "question": "AI 能创建 Excel 电子表格吗？",
-        "answer": "是的，AI 可以通过自然语言描述创建 Excel 电子表格。用户只需用文字描述他们的需求，AI 就会生成具有适当内容和格式的 Excel 文件。生成的电子表格可以根据需要进行进一步修改和自定义。这种方法使电子表格创建更加直观和高效，无需手动格式化和编写复杂的公式。"
+        "question": "ExcelEasy 的 AI 能创建 Excel 电子表格吗？",
+        "answer": "是的，ExcelEasy 的 AI 可以通过自然语言描述创建 Excel 电子表格。用户只需在 ExcelEasy 平台上用文字描述他们的需求，ExcelEasy 的 AI 就会生成具有适当内容和格式的 Excel 文件。ExcelEasy 生成的电子表格可以根据需要进行进一步修改和自定义。ExcelEasy 的这种方法使电子表格创建更加直观和高效，无需手动格式化和编写复杂的公式。"
       },
       {
-        "question": "AI Excel 生成的准确度如何？",
-        "answer": "我们的 AI Excel 生成非常准确，并且在不断改进。它能理解上下文、格式要求和复杂的数据关系。不过，我们始终建议根据您的具体需求检查生成的电子表格。"
+        "question": "ExcelEasy 的 AI Excel 生成的准确度如何？",
+        "answer": "ExcelEasy 的 AI Excel 生成非常准确，并且在不断改进。ExcelEasy 能理解上下文、格式要求和复杂的数据关系。不过，我们始终建议根据您的具体需求检查 ExcelEasy 生成的电子表格。"
       },
       {
-        "question": "我可以自定义生成的电子表格吗？",
-        "answer": "当然可以！所有生成的电子表格都是完全可编辑的。您可以像处理其他 Excel 文件一样修改公式、格式、数据和结构。"
+        "question": "我可以自定义 ExcelEasy 生成的电子表格吗？",
+        "answer": "当然可以！所有 ExcelEasy 生成的电子表格都是完全可编辑的。您可以像处理其他 Excel 文件一样修改 ExcelEasy 生成的公式、格式、数据和结构。"
       },
       {
-        "question": "支持哪些类型的 Excel 函数？",
-        "answer": "我们支持所有标准 Excel 函数和公式，包括复杂的数学运算、逻辑函数、查找函数等。我们的 AI 可以帮助您实现和理解任何 Excel 函数。"
+        "question": "ExcelEasy 支持哪些类型的 Excel 函数？",
+        "answer": "ExcelEasy 支持所有标准 Excel 函数和公式，包括复杂的数学运算、逻辑函数、查找函数等。ExcelEasy 的 AI 可以帮助您实现和理解任何 Excel 函数。"
       },
       {
-        "question": "如何自动生成 Excel 图表？",
-        "answer": "我们的 AI 可以帮助您自动创建各种类型的 Excel 图表。只需描述您想要的图表类型（例如柱状图、饼图、折线图）和要可视化的数据。AI 将生成一个格式正确的 Excel 文件，其中已经设置好图表。您可以在描述中指定图表标题、坐标轴标签、数据范围，甚至自定义格式。"
+        "question": "如何使用 ExcelEasy 自动生成 Excel 图表？",
+        "answer": "ExcelEasy 的 AI 可以帮助您自动创建各种类型的 Excel 图表。只需在 ExcelEasy 中描述您想要的图表类型（例如柱状图、饼图、折线图）和要可视化的数据。ExcelEasy 的 AI 将生成一个格式正确的 Excel 文件，其中已经设置好图表。您可以在 ExcelEasy 的描述中指定图表标题、坐标轴标签、数据范围，甚至自定义格式。"
       },
       {
-        "question": "如何使用在线 Excel 模板生成器？",
-        "answer": "使用我们的在线 Excel 模板生成器非常简单：1) 选择您需要的模板类型或用自然语言描述您的需求，2) 通过指定布局、格式和计算的偏好来自定义模板，3) AI 将生成一个您可以立即下载和使用的专业模板。您可以创建预算、发票、项目跟踪等各种模板。"
+        "question": "如何使用 ExcelEasy 的在线 Excel 模板生成器？",
+        "answer": "使用 ExcelEasy 的在线 Excel 模板生成器非常简单：1) 在 ExcelEasy 中选择您需要的模板类型或用自然语言描述您的需求，2) 通过指定布局、格式和计算的偏好来自定义 ExcelEasy 模板，3) ExcelEasy 的 AI 将生成一个您可以立即下载和使用的专业模板。您可以使用 ExcelEasy 创建预算、发票、项目跟踪等各种模板。"
       }
     ]
   },
