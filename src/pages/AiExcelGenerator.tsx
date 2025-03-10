@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { PageSEO } from '../components/seo/PageSEO';
-import FAQ from '../components/FAQ';
 import { UsageInfo } from '../components/excel/UsageInfo';
 import { Star, BookOpen, Video, Download } from 'lucide-react';
+import UserComments from '../components/sections/UserComments';
 
 const AiExcelGenerator: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -331,8 +331,8 @@ const AiExcelGenerator: React.FC = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <FAQ />
+      {/* User Comments Section */}
+      <UserComments />
     </>
   );
 };

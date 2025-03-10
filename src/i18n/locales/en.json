@@ -739,5 +739,20 @@
     "resources": "Resources",
     "company": "Company",
     "legal": "Legal"
+  },
+  "userComments": {
+    "title": "User Comments",
+    "subtitle": "See what users are saying about ExcelEasy and share your experience",
+    "leaveComment": "Leave a Comment",
+    "submitSuccess": "Comment submitted successfully! Thank you for your feedback.",
+    "recentComments": "Recent Comments",
+    "noComments": "No comments yet. Be the first to comment!",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "comment": "Comment",
+      "submit": "Submit Comment",
+      "submitting": "Submitting..."
+    }
   }
 } 

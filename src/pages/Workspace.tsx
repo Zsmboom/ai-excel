@@ -9,6 +9,7 @@ import { TableConfig } from '../components/excel/TableConfig';
 import { UsageInfo } from '../components/excel/UsageInfo';
 import { TemplateGallery } from '../components/excel/TemplateGallery';
 import { PageSEO } from '../components/seo/PageSEO';
+import UserComments from '../components/sections/UserComments';
 import type { AnalysisResult, TableConfigOptions, ExcelTemplate } from '../types/excel';
 import ShareButtons from '../components/common/ShareButtons';
 
@@ -175,6 +176,9 @@ export default function Workspace() {
           </div>
         </div>
       </main>
+      
+      {/* User Comments Section */}
+      <UserComments />
     </>
   );
 }

@@ -9,6 +9,8 @@ import PicToExcel from '../pages/PicToExcel';
 import Blog from '../pages/Blog';
 import BlogDetail from '../pages/BlogDetail';
 import AIExcelChart from '../pages/AiExcelChart';
+import Privacy from '../pages/Privacy';
+import Contact from '../pages/Contact';
 import { languages } from '../i18n/config';
 
 const AppRoutes = () => {
@@ -23,6 +25,8 @@ const AppRoutes = () => {
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogDetail />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/contact" element={<Contact />} />
 
       {/* 其他语言路由 */}
       <Route path=":lang/*" element={<LanguageRoute />}>
@@ -34,6 +38,8 @@ const AppRoutes = () => {
         <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:slug" element={<BlogDetail />} />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
 
       {/* 捕获所有其他路由并重定向到根路径 */}

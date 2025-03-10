@@ -629,5 +629,20 @@
     "loading": "加载中...",
     "error": "图片加载失败",
     "placeholder": "占位图片"
+  },
+  "userComments": {
+    "title": "用户评论",
+    "subtitle": "查看用户对 ExcelEasy 的真实评价，并分享您的使用体验",
+    "leaveComment": "留下您的评论",
+    "submitSuccess": "评论提交成功！感谢您的反馈。",
+    "recentComments": "最新评论",
+    "noComments": "暂无评论，成为第一个评论的用户吧！",
+    "form": {
+      "name": "您的姓名",
+      "email": "电子邮箱",
+      "comment": "评论内容",
+      "submit": "提交评论",
+      "submitting": "提交中..."
+    }
   }
 } 

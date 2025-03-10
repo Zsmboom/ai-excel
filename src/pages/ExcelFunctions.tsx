@@ -10,6 +10,7 @@ import { PageSEO } from '../components/seo/PageSEO';
 import ShareButtons from '../components/common/ShareButtons';
 import { useExcelFunctionGeneration } from '../hooks/useExcelFunctionGeneration';
 import { ProgressBar } from '../components/common/ProgressBar';
+import UserComments from '../components/sections/UserComments';
 
 export default function ExcelFunctions() {
   const [prompt, setPrompt] = useState('');
@@ -266,6 +267,9 @@ export default function ExcelFunctions() {
           </div>
         </div>
       </main>
+      
+      {/* User Comments Section */}
+      <UserComments />
     </>
   );
 }

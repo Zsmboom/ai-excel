@@ -8,6 +8,7 @@ import { TableConfig } from '../components/excel/TableConfig';
 import { PicUsageInfo } from '../components/excel/PicUsageInfo';
 import { PageSEO } from '../components/seo/PageSEO';
 import ShareButtons from '../components/common/ShareButtons';
+import UserComments from '../components/sections/UserComments';
 import { usePicToExcelGeneration } from '../hooks/usePicToExcelGeneration';
 import type { ExcelData } from '../types/excel';
 
@@ -299,6 +300,9 @@ export default function PicToExcel() {
           </div>
         </div>
       </main>
+
+      {/* User Comments Section */}
+      <UserComments />
     </>
   );
 } 

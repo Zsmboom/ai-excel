@@ -10,6 +10,7 @@ import ShareButtons from '../components/common/ShareButtons';
 import { useExcelChartGeneration } from '../hooks/useExcelChartGeneration';
 import { ChartPreview, ChartPreviewRef } from '../components/excel/ChartPreview';
 import type { ChartGenerationResult } from '../hooks/useExcelChart';
+import UserComments from '../components/sections/UserComments';
 
 type ChartType = 'bar' | 'line' | 'pie' | 'scatter';
 
@@ -508,6 +509,9 @@ export default function AIExcelChart() {
           </div>
         </div>
       )}
+
+      {/* User Comments Section */}
+      <UserComments />
     </>
   );
 } 
