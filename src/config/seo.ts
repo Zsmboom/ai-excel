@@ -36,7 +36,7 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     },
     description: {
       zh: 'ExcelEasy是您的智能Excel助手，使用AI智能技术，一键将自然语言转换为专业Excel表格。ExcelEasy支持数据可视化、图表生成、VBA宏等功能，完全免费，无需登录。让Excel工作更轻松、更智能、更高效。',
-      en: 'Transform your data into professional Excel spreadsheets instantly with AI. 100% free to use, no login required. Create complex Excel files, charts, and reports with simple natural language commands.',
+      en: 'ExcelEasy is your AI Excel assistant that transforms text into professional spreadsheets. Create complex Excel files, charts, and reports with AI technology. 100% free, no login required.',
       de: 'Verwandeln Sie Ihre Daten sofort mit KI in professionelle Excel-Tabellen. 100% kostenlos, keine Anmeldung erforderlich. Erstellen Sie komplexe Excel-Dateien, Diagramme und Berichte mit einfachen Sprachbefehlen.',
       ko: 'AI를 사용하여 데이터를 즉시 전문적인 Excel 스프레드시트로 변환하세요. 100% 무료, 로그인 불필요. 간단한 자연어 명령으로 복잡한 Excel 파일, 차트, 보고서를 작성하세요.',
       hi: 'AI के साथ अपने डेटा को तुरंत पेशेवर Excel स्प्रेडशीट में बदलें। 100% मुफ्त, लॉगिन की आवश्यकता नहीं। सरल प्राकृतिक भाषा कमांड के साथ जटिल Excel फाइलें, चार्ट और रिपोर्ट बनाएं।'
@@ -87,7 +87,7 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     },
     description: {
       zh: '使用AI自然语言处理技术，快速生成专业Excel表格。支持预算表、发票、项目跟踪表和数据分析模板。完全免费，即开即用，让Excel制作更简单。',
-      en: 'Create professional Excel spreadsheets instantly using AI natural language processing. Support for budgets, invoices, project trackers, and data analysis templates. Free to use, no setup required.',
+      en: 'Create professional Excel spreadsheets with AI natural language processing. Generate budgets, invoices, project trackers, and data analysis templates instantly. Free to use with no setup required.',
       de: 'Erstellen Sie professionelle Excel-Tabellen sofort mit KI-Sprachverarbeitung. Unterstützung für Budgets, Rechnungen, Projekt-Tracker und Datenanalysevorlagen. Kostenlos nutzbar, keine Einrichtung erforderlich.',
       ko: 'AI 자연어 처리를 사용하여 전문적인 Excel 스프레드시트를 즉시 생성하세요. 예산, 송장, 프로젝트 추적기 및 데이터 분석 템플릿을 지원합니다. 무료로 사용 가능하며 설정이 필요하지 않습니다.',
       hi: 'AI प्राकृतिक भाषा प्रसंस्करण का उपयोग करके तुरंत पेशेवर Excel स्प्रेडशीट बनाएं। बजट, चालान, प्रोजेक्ट ट्रैकर और डेटा विश्लेषण टेम्पलेट के लिए समर्थन। उपयोग करने के लिए मुफ्त, कोई सेटअप आवश्यक नहीं।'
@@ -139,7 +139,7 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     },
     description: {
       zh: '使用AI技术智能生成Excel函数和VBA宏，永久免费。自动化计算、数据处理和重复任务，支持自然语言命令，无需注册即可使用。',
-      en: 'Generate Excel functions and VBA macros intelligently using AI technology, forever free. Automate calculations, data processing, and repetitive tasks with natural language commands, no registration required.',
+      en: 'Generate Excel functions and VBA macros with AI technology. Automate calculations, data processing, and repetitive tasks using natural language commands. Free to use with no registration required.',
       de: 'Generieren Sie Excel-Funktionen und VBA-Makros intelligent mit KI-Technologie, für immer kostenlos. Automatisieren Sie Berechnungen, Datenverarbeitung und sich wiederholende Aufgaben mit natürlichen Sprachbefehlen, keine Registrierung erforderlich.',
       ko: 'AI 기술을 사용하여 Excel 함수와 VBA 매크로를 지능적으로 생성하세요, 영구 무료. 자연어 명령으로 계산, 데이터 처리, 반복 작업을 자동화하세요, 등록이 필요하지 않습니다.',
       hi: 'AI तकनीक का उपयोग करके Excel फंक्शन और VBA मैक्रो को बुद्धिमानी से जनरेट करें, हमेशा के लिए मुफ्त। प्राकृतिक भाषा कमांड के साथ गणना, डेटा प्रोसेसिंग और दोहराव कार्यों को स्वचालित करें, पंजीकरण की आवश्यकता नहीं है।'
@@ -191,7 +191,7 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     },
     description: {
       zh: '使用AI技术将图片中的表格和数据智能转换为可编辑的Excel文件。支持表格识别、数据提取、文字识别，完全免费，无限制使用。',
-      en: 'Convert images to Excel spreadsheets instantly with AI, 100% free. Extract tables, data, and text from images into editable Excel files. No login required, unlimited usage.',
+      en: 'Convert images to editable Excel files with AI technology. Extract tables, data, and text from pictures with high accuracy. Free to use with unlimited conversions, no login needed.',
       de: 'Konvertieren Sie Bilder sofort mit KI in Excel-Tabellen, 100% kostenlos. Extrahieren Sie Tabellen, Daten und Text aus Bildern in bearbeitbare Excel-Dateien.',
       ko: 'AI로 이미지를 즉시 Excel 스프레드시트로 변환, 100% 무료. 이미지에서 표, 데이터, 텍스트를 추출하여 편집 가능한 Excel 파일로 만듭니다.',
       hi: 'AI के साथ छवियों से टेबल डेटा निकालें। 100% मुफ्त, अनिश्चित उपयोग।'
@@ -291,7 +291,7 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     },
     description: {
       zh: '使用AI分析Excel数据并创建专业数据可视化图表。支持柱状图、折线图、饼图、散点图等多种图表类型。完全免费，无需登录。',
-      en: 'Use AI to analyze Excel data and create professional data visualization charts. Support bar charts, line charts, pie charts, scatter plots, and more. Free to use, no login required.',
+      en: 'Analyze Excel data and create professional charts with AI. Generate bar, line, pie, and scatter plots instantly. Enhance data visualization with smart insights, completely free.',
       de: 'Nutzen Sie KI zur Analyse von Excel-Daten und erstellen Sie professionelle Datenvisualisierungsdiagramme. Unterstützt Balken-, Linien-, Kreis-, Streudiagramme und mehr.',
       ko: 'AI를 사용하여 Excel 데이터를 분석하고 전문적인 데이터 시각화 차트를 만드세요. 막대 차트, 선 차트, 파이 차트, 산점도 등을 지원합니다.',
       hi: 'AI के साथ Excel डेटा को विश्लेषण करें और पेशेवर डेटा विज़ुअलाइज़ेशन चार्ट बनाएं। 100% मुफ्त, लॉगिन की आवश्यकता नहीं।'
