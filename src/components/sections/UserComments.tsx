@@ -27,7 +27,7 @@ const UserComments: React.FC = () => {
           id: '1',
           name: 'Michael Johnson',
           email: 'michael@example.com',
-          content: 'The Excel Generator is fantastic! I created a complex budget spreadsheet with formulas in minutes that would have taken me hours to build manually.',
+          content: 'The AI Excel Generator is absolutely fantastic! I\'ve tried many tools, but this AI Excel Generator stands out. I created a complex budget spreadsheet with formulas in minutes that would have taken hours manually. The AI Excel Generator\'s ability to understand context and create accurate formulas is impressive.',
           date: '2025-03-18',
           avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&h=100&q=80'
         },
@@ -35,7 +35,7 @@ const UserComments: React.FC = () => {
           id: '2',
           name: 'Sarah Williams',
           email: 'sarah@example.com',
-          content: 'I love how intuitive this tool is. The AI understood exactly what I needed and generated a perfect Excel file with all the formulas working correctly.',
+          content: 'As a financial analyst, the AI Excel Generator has revolutionized my workflow. The AI Excel Generator\'s intuitive interface and powerful features make spreadsheet creation effortless. What impresses me most is how the AI Excel Generator understands complex requirements and generates perfect Excel files with all formulas working correctly. This AI Excel Generator is truly a game-changer!',
           date: '2025-02-25',
           avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80'
         },
@@ -43,7 +43,7 @@ const UserComments: React.FC = () => {
           id: '3',
           name: 'David Chen',
           email: 'david@example.com',
-          content: 'This Excel Generator saved me so much time! The spreadsheet it created for my inventory tracking was perfect, with all the calculations and formulas I needed.',
+          content: 'The AI Excel Generator saved me countless hours! I use this AI Excel Generator daily for inventory tracking, and it creates perfect spreadsheets with all the calculations I need. The AI Excel Generator even suggests optimal formulas and formatting. I highly recommend this AI Excel Generator to anyone working with Excel - it\'s simply the best tool available.',
           date: '2025-02-08',
           avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80'
         }
@@ -146,7 +146,7 @@ const UserComments: React.FC = () => {
         id: '1',
         name: 'James Wilson',
         email: 'james@example.com',
-        content: 'ExcelEasy has transformed how I work with spreadsheets. The AI-powered tools are intuitive and save me hours of work every week!',
+        content: 'ExcelEasy has completely transformed how I work with spreadsheets. The AI-powered tools are so intuitive and save me hours of work every week! ExcelEasy has become my essential tool.',
         date: '2025-03-22',
         avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80'
       },
@@ -154,7 +154,7 @@ const UserComments: React.FC = () => {
         id: '2',
         name: 'Emma Thompson',
         email: 'emma@example.com',
-        content: 'I\'ve tried many Excel tools, but ExcelEasy is by far the best. The formula generator and chart tools are exceptional. Highly recommended!',
+        content: 'I\'ve tried many Excel tools, but ExcelEasy is by far the best. The formula generator and chart tools are exceptional. ExcelEasy has improved my productivity by 50%, highly recommend ExcelEasy!',
         date: '2025-03-10',
         avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80'
       },
@@ -162,7 +162,7 @@ const UserComments: React.FC = () => {
         id: '3',
         name: 'Alex Johnson',
         email: 'alex@example.com',
-        content: 'As someone who uses Excel daily, these tools have become essential for my workflow. The image-to-Excel feature is particularly impressive!',
+        content: 'As someone who uses Excel daily, ExcelEasy\'s tools have become an indispensable part of my workflow. The image to Excel feature is particularly impressive! ExcelEasy is my Excel assistant.',
         date: '2025-02-15',
         avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80'
       }
