@@ -43,7 +43,7 @@ export const SEOConfig: Record<string, SEOConfigType> = {
     },
     keywords: {
       zh: 'ExcelEasy,ExcelEasy免费,ExcelEasy在线,ExcelEasy工具,Excel生成器,AI Excel,ExcelEasy表格自动化,ExcelEasy数据可视化,ExcelEasy智能办公,ExcelEasy自动化办公,ExcelEasy助手,ExcelEasy AI办公,ExcelEasy智能表格,ExcelEasy在线Excel',
-      en: 'Excel generator,AI Excel,spreadsheet automation,data visualization,business intelligence,office automation,Excel assistant,AI office,smart spreadsheet,online Excel',
+      en: 'ExcelEasy,AI Excel,ExcelEasy tools,Excel generator,AI Excel generator,ExcelEasy AI Excel,spreadsheet automation,AI Excel tools,data visualization,ExcelEasy assistant,AI office,smart spreadsheet,online Excel,ExcelEasy free,ExcelEasy online',
       de: 'Excel-Generator,KI Excel,Tabellenautomatisierung,Datenvisualisierung,Business Intelligence,Büroautomatisierung,Excel-Assistent,KI-Büro,intelligente Tabellenkalkulation,Online-Excel',
       ko: 'Excel 생성기,AI Excel,스프레드시트 자동화,데이터 시각화,비즈니스 인텔리전스,사무 자동화,Excel 어시스턴트,AI 오피스,스마트 스프레드시트,온라인 Excel',
       hi: 'Excel जनरेटर,AI Excel,स्प्रेडशीट स्वचालन,डेटा विज़ुअलाइज़ेशन,बिजनेस इंटेलिजेंस,कार्यालय स्वचालन,Excel सहायक,AI कार्यालय,स्मार्ट स्प्रेडशीट,ऑनलाइन Excel'
