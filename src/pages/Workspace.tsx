@@ -12,6 +12,7 @@ import { PageSEO } from '../components/seo/PageSEO';
 import UserComments from '../components/sections/UserComments';
 import type { AnalysisResult, TableConfigOptions, ExcelTemplate } from '../types/excel';
 import ShareButtons from '../components/common/ShareButtons';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 export default function Workspace() {
   const [prompt, setPrompt] = useState('');
@@ -23,6 +24,7 @@ export default function Workspace() {
   
   const { generateFromPrompt, loading, error, progress } = useExcelGeneration();
   const { t } = useTranslation();
+  const { trackEvent } = useAnalytics();
   const [result, setResult] = useState<{
     fileName: string;
     blob: Blob;
@@ -32,19 +34,23 @@ export default function Workspace() {
 
   const handleTemplateSelect = (template: ExcelTemplate) => {
     setPrompt(template.prompt);
+    trackEvent('select_template', 'excel_generator', template.name);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      trackEvent('generate_excel', 'excel_generator', prompt.substring(0, 50));
       const generationResult = await generateFromPrompt(prompt, tableConfig);
       console.log('API Response:', generationResult);
       if (generationResult) {
         setResult(generationResult);
+        trackEvent('excel_generated_success', 'excel_generator', generationResult.fileName);
       }
     } catch (error) {
       console.error('Error generating Excel:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      trackEvent('excel_generated_error', 'excel_generator', errorMessage);
       if (errorMessage.includes('quota')) {
         alert(t('workspace.errors.quota'));
       } else {
@@ -56,6 +62,7 @@ export default function Workspace() {
   const handleDownload = () => {
     if (!result) return;
     
+    trackEvent('download_excel', 'excel_generator', result.fileName);
     const url = URL.createObjectURL(result.blob);
     const a = document.createElement('a');
     a.href = url;

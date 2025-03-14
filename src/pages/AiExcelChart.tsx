@@ -11,6 +11,7 @@ import { useExcelChartGeneration } from '../hooks/useExcelChartGeneration';
 import { ChartPreview, ChartPreviewRef } from '../components/excel/ChartPreview';
 import type { ChartGenerationResult } from '../hooks/useExcelChart';
 import UserComments from '../components/sections/UserComments';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 type ChartType = 'bar' | 'line' | 'pie' | 'scatter';
 
@@ -20,16 +21,38 @@ interface ChartOption {
   icon: React.ReactNode;
 }
 
+// 用于编码/解码分享数据的函数
+const encodeData = (data: ChartGenerationResult) => {
+  try {
+    const jsonStr = JSON.stringify(data);
+    return btoa(encodeURIComponent(jsonStr));
+  } catch (err) {
+    console.error('Error encoding chart data:', err);
+    return null;
+  }
+};
+
+const decodeData = (encoded: string): ChartGenerationResult | null => {
+  try {
+    const jsonStr = decodeURIComponent(atob(encoded));
+    return JSON.parse(jsonStr);
+  } catch (err) {
+    console.error('Error decoding chart data:', err);
+    return null;
+  }
+};
+
 export default function AIExcelChart() {
   const { t, i18n } = useTranslation();
+  const { trackEvent } = useAnalytics();
   const location = useLocation();
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [selectedChartType, setSelectedChartType] = useState<ChartType>('bar');
   const [analysisPrompt, setAnalysisPrompt] = useState('');
   const [previewData, setPreviewData] = useState<ChartGenerationResult | null>(null);
-  const [shareUrl, setShareUrl] = useState<string>('');
   const [showShareModal, setShowShareModal] = useState(false);
+  const [shareUrl, setShareUrl] = useState('');
   
   // 根据当前语言选择显示内容
   const currentLanguage = i18n.language;
@@ -37,8 +60,8 @@ export default function AIExcelChart() {
   // 中文内容
   const zhContent = {
     title: "AI Excel图表生成器 - 智能数据可视化工具",
-    subtitle: "使用AI Excel图表生成器将Excel数据转换为专业图表和洞察",
-    description: "我们的AI Excel图表生成器分析您的数据并自动创建有意义的可视化。AI Excel图表生成器完美适用于业务报告、数据分析、趋势可视化和性能跟踪。",
+    subtitle: "使用AI Excel图表生成器将Excel数据转换为专业图表和见解",
+    description: "我们的AI Excel图表生成器能够分析您的Excel数据并创建视觉上吸引人的图表。AI Excel图表生成器完美适用于数据分析、报告生成和商业演示。",
     featuresTitle: "AI Excel图表生成器核心功能",
     features: [
       "智能图表类型选择与推荐",
@@ -47,25 +70,35 @@ export default function AIExcelChart() {
       "多种可视化选项和图表类型",
       "交互式图表定制和分享功能"
     ],
-    uploadTitle: "上传数据到AI Excel图表生成器",
-    uploadExcel: "上传Excel数据文件",
-    uploadHint: "支持.xlsx和.xls文件用于AI Excel图表生成器分析",
-    selectChartType: "选择AI Excel图表生成器可视化类型",
-    analysisPrompt: "AI Excel图表生成器分析要求（可选）",
-    analysisPromptPlaceholder: "指定您的AI Excel图表生成器可视化需求，例如，显示销售趋势、比较区域表现、分析产品类别...",
-    generateButton: "使用AI Excel图表生成器创建图表和洞察",
-    previewTitle: "AI Excel图表生成器预览和分析",
+    uploadTitle: "上传到AI Excel图表生成器",
+    uploadFile: "上传Excel文件",
+    uploadHint: "支持.xlsx和.xls格式，最大10MB",
+    chartTypeLabel: "选择图表类型",
+    chartTypes: {
+      bar: "柱状图",
+      line: "折线图",
+      pie: "饼图",
+      scatter: "散点图"
+    },
+    promptLabel: "分析提示（可选）",
+    promptPlaceholder: "添加详细信息帮助AI Excel图表生成器更好地理解您的数据和可视化需求...",
+    generateButton: "使用AI Excel图表生成器生成图表",
+    previewTitle: "AI Excel图表生成器预览",
+    downloadButton: "下载图表",
+    shareButton: "分享图表",
+    insights: "AI Excel图表生成器数据洞察",
     chartTitle: "AI Excel图表生成器交互式预览",
-    downloadImageButton: "导出AI Excel图表生成器图表为图片",
-    shareButton: "分享AI Excel图表生成器交互式图表",
-    insights: "AI Excel图表生成器数据洞察"
+    errors: {
+      invalidFile: "无效的文件格式，请上传Excel文件",
+      processingError: "处理数据时出错，请重试"
+    }
   };
   
   // 英文内容
   const enContent = {
     title: "AI Excel Chart Generator - Smart Data Visualization Tool",
     subtitle: "Transform Excel data into professional charts and insights with AI Excel Chart Generator",
-    description: "Our AI Excel Chart Generator analyzes your data and creates meaningful visualizations automatically. AI Excel Chart Generator is perfect for business reports, data analysis, trend visualization, and performance tracking.",
+    description: "Our AI Excel Chart Generator analyzes your Excel data and creates visually appealing charts. Perfect for data analysis, report generation, and business presentations.",
     featuresTitle: "Key Features of AI Excel Chart Generator",
     features: [
       "Intelligent chart type selection and recommendation",
@@ -74,18 +107,28 @@ export default function AIExcelChart() {
       "Multiple visualization options and chart types",
       "Interactive chart customization and sharing capabilities"
     ],
-    uploadTitle: "Upload Data to AI Excel Chart Generator",
-    uploadExcel: "Upload Excel Data File",
-    uploadHint: "Supports .xlsx and .xls files for AI Excel Chart Generator analysis",
-    selectChartType: "Choose AI Excel Chart Generator Visualization Type",
-    analysisPrompt: "AI Excel Chart Generator Analysis Requirements (Optional)",
-    analysisPromptPlaceholder: "Specify your AI Excel Chart Generator visualization needs, e.g., show sales trends over time, compare regional performance, analyze product categories...",
-    generateButton: "Create Charts & Insights with AI Excel Chart Generator",
-    previewTitle: "AI Excel Chart Generator Preview & Analysis",
+    uploadTitle: "Upload to AI Excel Chart Generator",
+    uploadFile: "Upload Excel File",
+    uploadHint: "Supports .xlsx and .xls formats up to 10MB",
+    chartTypeLabel: "Select Chart Type",
+    chartTypes: {
+      bar: "Bar Chart",
+      line: "Line Chart",
+      pie: "Pie Chart",
+      scatter: "Scatter Plot"
+    },
+    promptLabel: "Analysis Prompt (Optional)",
+    promptPlaceholder: "Add details to help AI Excel Chart Generator better understand your data and visualization needs...",
+    generateButton: "Generate Chart with AI Excel Chart Generator",
+    previewTitle: "AI Excel Chart Generator Preview",
+    downloadButton: "Download Chart",
+    shareButton: "Share Chart",
+    insights: "AI Excel Chart Generator Data Insights",
     chartTitle: "AI Excel Chart Generator Interactive Preview",
-    downloadImageButton: "Export AI Excel Chart Generator Chart as Image",
-    shareButton: "Share AI Excel Chart Generator Interactive Chart",
-    insights: "AI Excel Chart Generator Data Insights"
+    errors: {
+      invalidFile: "Invalid file format, please upload an Excel file",
+      processingError: "Error processing data, please try again"
+    }
   };
   
   // 根据当前语言选择内容
@@ -110,30 +153,6 @@ export default function AIExcelChart() {
   // 检查是否是预览模式
   const isPreviewMode = new URLSearchParams(location.search).get('viewMode') === 'preview';
 
-  const encodeData = (data: any) => {
-    try {
-      const jsonString = JSON.stringify(data);
-      const utf8Bytes = new TextEncoder().encode(jsonString);
-      const base64 = btoa(String.fromCharCode(...utf8Bytes));
-      return base64;
-    } catch (err) {
-      console.error('Error encoding data:', err);
-      return '';
-    }
-  };
-
-  const decodeData = (base64: string) => {
-    try {
-      const binaryString = atob(base64);
-      const bytes = Uint8Array.from(binaryString, char => char.charCodeAt(0));
-      const decodedString = new TextDecoder().decode(bytes);
-      return JSON.parse(decodedString);
-    } catch (err) {
-      console.error('Error decoding data:', err);
-      return null;
-    }
-  };
-
   // 从URL参数中加载分享的图表数据
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -146,6 +165,7 @@ export default function AIExcelChart() {
         if (decodedData) {
           setPreviewData(decodedData);
           setSelectedChartType(sharedType);
+          trackEvent('view_shared_chart', 'excel_chart', sharedType);
         }
       } catch (err) {
         console.error('Error parsing shared chart data:', err);
@@ -157,11 +177,12 @@ export default function AIExcelChart() {
     const file = event.target.files?.[0];
     if (file) {
       if (!file.name.match(/\.(xlsx|xls)$/)) {
-        alert(t('aiExcelChart.errors.invalidFile'));
+        alert(content.errors.invalidFile);
         return;
       }
       setSelectedFile(file);
       setPreviewData(null);
+      trackEvent('upload_excel_file', 'excel_chart', file.name);
     }
   };
 
@@ -170,12 +191,17 @@ export default function AIExcelChart() {
     if (!selectedFile) return;
 
     try {
+      trackEvent('generate_chart', 'excel_chart', `${selectedChartType}_chart`);
       const result = await generateFromExcel(selectedFile, selectedChartType, analysisPrompt, {});
       if (result) {
         setPreviewData(result);
+        trackEvent('chart_generated_success', 'excel_chart', result.fileName);
       }
     } catch (err) {
       console.error('Error generating chart:', err);
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+      trackEvent('chart_generated_error', 'excel_chart', errorMessage);
+      alert(content.errors.processingError);
     }
   };
 
@@ -191,6 +217,8 @@ export default function AIExcelChart() {
       backgroundColor: '#fff'
     });
 
+    trackEvent('download_chart', 'excel_chart', `${selectedChartType}_chart`);
+    
     // 创建下载链接
     const link = document.createElement('a');
     link.download = `${previewData.fileName.replace('.xlsx', '')}.png`;
@@ -213,6 +241,8 @@ export default function AIExcelChart() {
     url.searchParams.set('chartType', selectedChartType);
     url.searchParams.set('viewMode', 'preview');
     
+    trackEvent('share_chart', 'excel_chart', `${selectedChartType}_chart`);
+    
     // 设置分享URL并显示弹窗
     setShareUrl(url.toString());
     setShowShareModal(true);
@@ -233,7 +263,7 @@ export default function AIExcelChart() {
                     className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     <Download className="h-4 w-4" />
-                    <span>{content.downloadImageButton}</span>
+                    <span>{content.downloadButton}</span>
                   </button>
                   <button
                     onClick={() => {
@@ -331,7 +361,7 @@ export default function AIExcelChart() {
                       <div className="flex flex-col items-center">
                         <Upload className="h-8 w-8 text-gray-400 mb-2" />
                         <span className="text-sm font-medium text-gray-900">
-                          {content.uploadExcel}
+                          {content.uploadFile}
                         </span>
                         <span className="text-xs text-gray-500 mt-1">
                           {content.uploadHint}
@@ -349,7 +379,7 @@ export default function AIExcelChart() {
 
                   <div className="mt-4">
                     <h3 className="text-sm font-medium text-gray-700 mb-3">
-                      {content.selectChartType}
+                      {content.chartTypeLabel}
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {chartOptions.map((option) => (
@@ -374,12 +404,12 @@ export default function AIExcelChart() {
 
                   <div className="mt-4">
                     <h3 className="text-sm font-medium text-gray-700 mb-2">
-                      {content.analysisPrompt}
+                      {content.promptLabel}
                     </h3>
                     <textarea
                       value={analysisPrompt}
                       onChange={(e) => setAnalysisPrompt(e.target.value)}
-                      placeholder={content.analysisPromptPlaceholder}
+                      placeholder={content.promptPlaceholder}
                       className="w-full h-24 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                     />
                   </div>
@@ -436,7 +466,7 @@ export default function AIExcelChart() {
                           className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
                         >
                           <Download className="h-4 w-4" />
-                          <span>{content.downloadImageButton}</span>
+                          <span>{content.downloadButton}</span>
                         </button>
                       </div>
                     </div>

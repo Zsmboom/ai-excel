@@ -11,6 +11,7 @@ import ShareButtons from '../components/common/ShareButtons';
 import UserComments from '../components/sections/UserComments';
 import { usePicToExcelGeneration } from '../hooks/usePicToExcelGeneration';
 import type { ExcelData } from '../types/excel';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface PreviewData {
   fileName: string;
@@ -21,6 +22,7 @@ interface PreviewData {
 
 export default function PicToExcel() {
   const { t, i18n } = useTranslation();
+  const { trackEvent } = useAnalytics();
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [description, setDescription] = useState('');
   const [previewData, setPreviewData] = useState<PreviewData | null>(null);
@@ -54,7 +56,11 @@ export default function PicToExcel() {
     descriptionPlaceholder: "添加详细信息帮助AI图片转Excel表格工具更好地理解表格结构和数据要求...",
     generateButton: "使用AI图片转Excel表格工具转换",
     previewTitle: "AI图片转Excel表格工具预览",
-    downloadButton: "下载AI图片转Excel表格工具生成的Excel文件"
+    downloadButton: "下载AI图片转Excel表格工具生成的Excel文件",
+    errors: {
+      invalidFile: "无效的文件格式，请上传图片文件",
+      processingError: "处理图片时出错，请重试"
+    }
   };
   
   // 英文内容
@@ -77,7 +83,11 @@ export default function PicToExcel() {
     descriptionPlaceholder: "Add details to help AI Picture to Excel spreadsheets tool better understand the table structure and data requirements...",
     generateButton: "Convert with AI Picture to Excel Spreadsheets Tool",
     previewTitle: "AI Picture to Excel Spreadsheets Preview",
-    downloadButton: "Download Excel File from AI Picture to Excel Spreadsheets Tool"
+    downloadButton: "Download Excel File from AI Picture to Excel Spreadsheets Tool",
+    errors: {
+      invalidFile: "Invalid file format, please upload an image file",
+      processingError: "Error processing the image, please try again"
+    }
   };
   
   // 根据当前语言选择内容
@@ -90,28 +100,34 @@ export default function PicToExcel() {
     progress
   } = usePicToExcelGeneration();
 
-  const handleImageUpload = (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      if (!file.type.startsWith('image/')) {
-        return;
-      }
-      setSelectedImage(file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string);
-      };
-      reader.readAsDataURL(file);
+  const handleImageUpload = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    
+    // 检查文件类型
+    if (!file.type.startsWith('image/')) {
+      alert(content.errors.invalidFile);
+      return;
     }
+    
+    setSelectedImage(file);
+    trackEvent('upload_image', 'pic_to_excel', file.name);
+    
+    // 创建图片预览
+    const reader = new FileReader();
+    reader.onload = () => {
+      setImagePreview(reader.result as string);
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleGenerateExcel = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedImage) {
-      return;
-    }
-
+    if (!selectedImage) return;
+    
     try {
+      trackEvent('generate_excel_from_image', 'pic_to_excel', selectedImage.name);
+      
       // 将图片转换为base64
       const reader = new FileReader();
       const imageBase64Promise = new Promise<string>((resolve) => {
@@ -122,21 +138,26 @@ export default function PicToExcel() {
         reader.readAsDataURL(selectedImage);
       });
       const imageBase64 = await imageBase64Promise;
-
-      // 使用新的 hook 处理图片转换
+      
+      // 使用正确的参数类型调用函数
       const result = await generateFromImage(imageBase64, description, tableConfig);
       
       if (result) {
         setPreviewData(result);
+        trackEvent('image_to_excel_success', 'pic_to_excel', result.fileName);
       }
-    } catch (err: unknown) {
-      console.error('Error generating Excel:', err);
+    } catch (err) {
+      console.error('Error generating Excel from image:', err);
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+      trackEvent('image_to_excel_error', 'pic_to_excel', errorMessage);
+      alert(content.errors.processingError);
     }
   };
 
   const handleDownload = () => {
     if (!previewData) return;
     
+    trackEvent('download_excel_from_image', 'pic_to_excel', previewData.fileName);
     const url = URL.createObjectURL(previewData.blob);
     const a = document.createElement('a');
     a.href = url;

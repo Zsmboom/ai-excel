@@ -11,6 +11,8 @@ import ShareButtons from '../components/common/ShareButtons';
 import { useExcelFunctionGeneration } from '../hooks/useExcelFunctionGeneration';
 import { ProgressBar } from '../components/common/ProgressBar';
 import UserComments from '../components/sections/UserComments';
+import { useAnalytics } from '../hooks/useAnalytics';
+import { FunctionType } from '../types/excel';
 
 export default function ExcelFunctions() {
   const [prompt, setPrompt] = useState('');
@@ -23,6 +25,7 @@ export default function ExcelFunctions() {
     setFunctionType
   } = useExcelFunctions();
   const { t, i18n } = useTranslation();
+  const { trackEvent } = useAnalytics();
   const {
     progress
   } = useExcelFunctionGeneration();
@@ -153,9 +156,32 @@ export default function ExcelFunctions() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleFunctionTypeChange = (type: FunctionType) => {
+    setFunctionType(type);
+    trackEvent('select_function_type', 'excel_functions', type);
+  };
+
+  const handleGenerateFunction = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!prompt.trim()) return;
+    
+    trackEvent('generate_function', 'excel_functions', `${functionType}_function`);
     await generateFunction(prompt);
+    
+    if (result) {
+      trackEvent('function_generated_success', 'excel_functions', functionType);
+    }
+  };
+
+  const handleCopyCode = () => {
+    if (result) {
+      const textToCopy = functionType === 'vba' && result.vbaCode 
+        ? result.vbaCode 
+        : result.formula;
+        
+      navigator.clipboard.writeText(textToCopy);
+      trackEvent('copy_function_code', 'excel_functions', functionType);
+    }
   };
 
   return (
@@ -206,10 +232,10 @@ export default function ExcelFunctions() {
               <FunctionInput
                 value={prompt}
                 onChange={setPrompt}
-                onSubmit={handleSubmit}
+                onSubmit={handleGenerateFunction}
                 loading={loading}
                 functionType={functionType}
-                onTypeChange={setFunctionType}
+                onTypeChange={handleFunctionTypeChange}
               />
 
               {loading && (

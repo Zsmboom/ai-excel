@@ -6,12 +6,16 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import AppRoutes from './routes';
 import { languages } from './i18n/config';
+import { useAnalytics } from './hooks/useAnalytics';
 
 export default function App() {
   const { i18n } = useTranslation();
   const location = useLocation();
   const supportedLangs = languages.map(l => l.code);
   const isPreviewMode = new URLSearchParams(location.search).get('viewMode') === 'preview';
+  
+  // 使用 useAnalytics Hook 跟踪页面浏览
+  useAnalytics();
 
   useEffect(() => {
     // 从路径中获取语言代码
