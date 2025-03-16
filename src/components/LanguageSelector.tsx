@@ -24,7 +24,7 @@ export const LanguageSelector = () => {
     // 英语版本使用根路径，其他语言添加语言前缀
     const newPath = newLang === 'en' 
       ? pathWithoutLang 
-      : `/${newLang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
+      : `/${newLang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`.replace(/\/+/g, '/');
     
     // 更新 URL
     navigate(newPath, { replace: true });

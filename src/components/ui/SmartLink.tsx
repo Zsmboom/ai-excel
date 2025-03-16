@@ -38,8 +38,11 @@ export const SmartLink: React.FC<SmartLinkProps> = ({
     // 确保路径以/开头
     const normalizedPath = path.startsWith('/') ? path : `/${path}`;
     
-    // 添加语言前缀
-    return `/${i18n.language}${normalizedPath}`;
+    // 英语版本使用根路径，其他语言添加语言前缀
+    // 修复：确保URL格式正确，避免多余的斜杠
+    return i18n.language === 'en' 
+      ? normalizedPath 
+      : `/${i18n.language}${normalizedPath}`.replace(/\/+/g, '/');
   };
 
   // 获取链接的rel属性

@@ -8,7 +8,13 @@ import { SiDevpost } from 'react-icons/si';
 import { OptimizedImage } from '../components/ui/OptimizedImage';
 
 const About: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // 确保规范链接正确
+  const baseUrl = window.location.origin;
+  const canonicalUrl = i18n.language === 'en' 
+    ? `${baseUrl}/about` 
+    : `${baseUrl}/${i18n.language}/about`;
 
   useEffect(() => {
     // 检测广告拦截器
@@ -29,7 +35,10 @@ const About: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
-      <PageSEO page="about" />
+      <PageSEO 
+        page="about" 
+        canonicalUrl={canonicalUrl}
+      />
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

@@ -134,36 +134,47 @@ app.get('/sitemap.xml', (_req: Request, res: Response) => {
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   ${routes.map(route => {
     // 为英文版本使用根路径（不带语言前缀）
-    const enUrl = `${baseUrl}${route.path}`;
+    const routePath = route.path === '/' ? '' : route.path;
+    const enUrl = `${baseUrl}${routePath}`.replace(/\/+/g, '/').replace(/\/$/, '');
     
     return `
   <url>
     <loc>${enUrl}</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
-    ${languages.filter(lang => lang !== 'en').map(lang => `
+    ${languages.filter(lang => lang !== 'en').map(lang => {
+      const langUrl = `${baseUrl}/${lang}${routePath}`.replace(/\/+/g, '/').replace(/\/$/, '');
+      return `
     <xhtml:link 
       rel="alternate" 
       hreflang="${lang}" 
-      href="${baseUrl}/${lang}${route.path}"/>`).join('')}
+      href="${langUrl}"/>`
+    }).join('')}
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
   </url>
-  ${languages.filter(lang => lang !== 'en').map(lang => `
+  ${languages.filter(lang => lang !== 'en').map(lang => {
+    // 修复：确保非英语URL格式正确
+    const langUrl = `${baseUrl}/${lang}${routePath}`.replace(/\/+/g, '/').replace(/\/$/, '');
+    return `
   <url>
-    <loc>${baseUrl}/${lang}${route.path}</loc>
+    <loc>${langUrl}</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
-    ${languages.filter(l => l !== 'en').map(l => `
+    ${languages.filter(l => l !== 'en').map(l => {
+      const otherLangUrl = `${baseUrl}/${l}${routePath}`.replace(/\/+/g, '/').replace(/\/$/, '');
+      return `
     <xhtml:link 
       rel="alternate" 
       hreflang="${l}" 
-      href="${baseUrl}/${l}${route.path}"/>`).join('')}
+      href="${otherLangUrl}"/>`
+    }).join('')}
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-  </url>`).join('')}`;
+  </url>`
+  }).join('')}`;
   }).join('')}
 </urlset>`;
 

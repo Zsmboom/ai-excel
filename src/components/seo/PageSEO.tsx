@@ -70,19 +70,23 @@ export const PageSEO: React.FC<PageSEOProps> = ({
   }
   
   const baseUrl = window.location.origin;
+  // 修复：确保URL格式正确，避免多余的斜杠
   const currentUrl = canonicalUrl || (i18n.language === 'en' 
-    ? `${baseUrl}/${pathWithoutLang}` 
-    : `${baseUrl}/${i18n.language}/${pathWithoutLang}`);
+    ? `${baseUrl}/${pathWithoutLang}`.replace(/\/+/g, '/').replace(/\/$/, '') 
+    : `${baseUrl}/${i18n.language}/${pathWithoutLang}`.replace(/\/+/g, '/').replace(/\/$/, ''));
+  
+  // 修复：确保baseUrl后面不会有多余的斜杠
   const imageUrl = config?.image?.url ? `${baseUrl}${config.image.url}` : `${baseUrl}/logo.png`;
 
   // 所有页面都添加规范链接
   const shouldShowCanonical = true;
 
+  // 修复：确保alternateLinks中的URL格式正确
   const alternateLinks = languages.map((lang) => ({
     hrefLang: lang.code,
     href: lang.code === 'en' 
-      ? `${baseUrl}/${pathWithoutLang}` 
-      : `${baseUrl}/${lang.code}/${pathWithoutLang}`,
+      ? `${baseUrl}/${pathWithoutLang}`.replace(/\/+/g, '/').replace(/\/$/, '') 
+      : `${baseUrl}/${lang.code}/${pathWithoutLang}`.replace(/\/+/g, '/').replace(/\/$/, ''),
   }));
 
   // 生成robots指令
