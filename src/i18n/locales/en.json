@@ -548,8 +548,10 @@
     }
   },
   "blog": {
-    "postNotFound": "Post not found",
-    "backToBlog": "Back to Blog"
+    "pageTitle": "Excel Tips & AI Insights | Professional Blog for Office Efficiency | ExcelEasy",
+    "pageDescription": "Discover the latest Excel tips, AI technology insights, and data processing best practices. Learn how to improve your productivity with ExcelEasy.",
+    "backToBlog": "Back to Blog",
+    "postNotFound": "Blog post not found"
   },
   "aiExcelChart": {
     "title": "AI Excel Chart Generator - Smart Data Visualization Tool",

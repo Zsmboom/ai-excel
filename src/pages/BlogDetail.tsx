@@ -4,12 +4,12 @@ import { Container, Typography, IconButton, Box, Paper, Chip, Divider, Button } 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ShareIcon from '@mui/icons-material/Share';
 import { useTranslation } from 'react-i18next';
-import SchemaMarkup from '../components/seo/SchemaMarkup';
 import ReactMarkdown from 'react-markdown';
 import { format } from 'date-fns';
 import { zhCN, enUS, de } from 'date-fns/locale';
 import blogPosts from '../data/blogPosts';
-console.log('导入的 blogPosts:', blogPosts);
+import { Helmet } from 'react-helmet';
+import { languages } from '../i18n/config';
 
 const getLocale = (lang: string) => {
   switch (lang) {
@@ -26,13 +26,8 @@ const BlogDetail: React.FC = () => {
   const { slug, lang = 'en' } = useParams<{ slug: string; lang: string }>();
   const navigate = useNavigate();
   const { t } = useTranslation();
-
-  console.log('当前 URL 参数:', { slug, lang });
-  console.log('所有文章:', blogPosts);
   
-  const post = blogPosts.find((post) => post.slug === slug);
-  console.log('找到的文章:', post);
-  
+  const post = blogPosts.find((p) => p.slug === slug);
   const content = post?.translations[lang] || post?.translations['en'];
 
   if (!post || !content) {
@@ -44,6 +39,19 @@ const BlogDetail: React.FC = () => {
       </Container>
     );
   }
+
+  const baseUrl = window.location.origin;
+  const canonicalUrl = lang === 'en' 
+    ? `${baseUrl}/blog/${post.slug}` 
+    : `${baseUrl}/${lang}/blog/${post.slug}`;
+
+  // 构建多语言链接
+  const alternateLinks = languages.map((langItem) => ({
+    hrefLang: langItem.code,
+    href: langItem.code === 'en' 
+      ? `${baseUrl}/blog/${post.slug}` 
+      : `${baseUrl}/${langItem.code}/blog/${post.slug}`
+  }));
 
   const formattedDate = format(new Date(post.date), 'PPP', { locale: getLocale(lang) });
 
@@ -64,31 +72,75 @@ const BlogDetail: React.FC = () => {
     }
   };
 
+  // 文章结构化数据
   const articleSchema = {
-    type: 'Article' as const,
-    headline: content.title,
-    description: content.preview,
-    image: `${window.location.origin}/images/blog/${post.id}.jpg`,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      type: 'Organization' as const,
-      name: 'ExcelEasy',
-      url: window.location.origin
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': content.title,
+    'description': content.preview,
+    'image': `${window.location.origin}/images/blog/${post.id}.jpg`,
+    'datePublished': post.date,
+    'dateModified': post.date,
+    'author': {
+      '@type': 'Organization',
+      'name': 'ExcelEasy',
+      'url': window.location.origin
     },
-    publisher: {
-      type: 'Organization' as const,
-      name: 'ExcelEasy',
-      logo: {
-        type: 'ImageObject' as const,
-        url: `${window.location.origin}/logo.png`
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'ExcelEasy',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': `${window.location.origin}/logo.png`
       }
     }
   };
 
   return (
     <>
-      <SchemaMarkup schema={articleSchema} />
+      <Helmet>
+        <title>{content.title}</title>
+        <meta name="description" content={content.preview} />
+        
+        {/* 规范链接 */}
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* 多语言备用链接 */}
+        {alternateLinks.map(({ hrefLang, href }) => (
+          <link
+            key={hrefLang}
+            rel="alternate"
+            hrefLang={hrefLang}
+            href={href}
+          />
+        ))}
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href={`${baseUrl}/blog/${post.slug}`}
+        />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={content.title} />
+        <meta property="og:description" content={content.preview} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={`${window.location.origin}/images/blog/${post.id}.jpg`} />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:modified_time" content={post.date} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={content.title} />
+        <meta name="twitter:description" content={content.preview} />
+        <meta name="twitter:image" content={`${window.location.origin}/images/blog/${post.id}.jpg`} />
+        
+        {/* 结构化数据 */}
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      </Helmet>
+      
       <Container maxWidth="lg" sx={{ py: 4, mt: 8 }}>
         <Box sx={{ mb: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <IconButton onClick={() => navigate(`/${lang}/blog`)} aria-label={t('common.back')}>

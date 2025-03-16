@@ -152,23 +152,26 @@
     ]
   },
   "footer": {
-    "description": "使用 AI 将您的数据转换为专业的 Excel 电子表格",
-    "tools": {
-      "title": "Excel 工具"
+    "description": "AI驱动的Excel工具，简化您的工作流程",
+    "features": {
+      "title": "功能",
+      "generator": "Excel生成器",
+      "functions": "Excel函数",
+      "picToExcel": "图片转Excel",
+      "chart": "图表生成器"
     },
     "company": {
       "title": "公司",
       "about": "关于我们",
-      "blog": "博客"
+      "blog": "博客",
+      "privacy": "隐私政策",
+      "contact": "联系我们",
+      "sitemap": "网站地图"
     },
-    "connect": {
-      "title": "关注我们",
-      "github": "在 GitHub 上查看"
-    },
-    "openSource": "访问我们的开源项目"
+    "copyright": "版权所有。"
   },
   "faq": {
-    "title": "ExcelEasy 常见问题",
+    "title": "关于ExcelEasy AI Excel工具的常见问题",
     "subtitle": "查找有关 ExcelEasy 服务的常见问题解答",
     "items": [
       {
@@ -530,8 +533,10 @@
   "imageToExcelTitle": "图片转 Excel",
   "imageToExcelDescription": "图片转 Excel 工具可以将图片中的数据快速转换为 Excel 表格。",
   "blog": {
-    "postNotFound": "文章未找到",
-    "backToBlog": "返回博客列表"
+    "pageTitle": "Excel技巧与AI洞察 | 提升办公效率的专业博客 | ExcelEasy",
+    "pageDescription": "发现最新Excel使用技巧、AI技术见解和数据处理最佳实践。学习如何使用ExcelEasy提高工作效率，掌握Excel和AI办公技能。",
+    "backToBlog": "返回博客列表",
+    "postNotFound": "未找到博客文章"
   },
   "aiExcelChart": {
     "title": "AI Excel 图表生成器 - 智能数据可视化工具",

@@ -134,13 +134,22 @@ export const PageSEO: React.FC<PageSEOProps> = ({
     }
   } : null;
 
+  // 确保所有传递给Helmet的值都是字符串
+  const title = getLocalizedValue(config?.title || '');
+  const description = getLocalizedValue(config?.description || '');
+  const keywords = getLocalizedValue(config?.keywords || '');
+  const imageAlt = getLocalizedValue(config?.image?.alt || '');
+  const imageType = config?.image?.type || 'image/png';
+  const imageWidth = String(config?.image?.width || 1200);
+  const imageHeight = String(config?.image?.height || 630);
+
   return (
     <>
       <Helmet>
         <html lang={i18n.language} />
-        <title>{getLocalizedValue(config?.title || '')}</title>
-        <meta name="description" content={getLocalizedValue(config?.description || '')} />
-        <meta name="keywords" content={getLocalizedValue(config?.keywords || '')} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         
         {/* Robots 指令 */}
         <meta name="robots" content={robotsContent} />
@@ -154,14 +163,14 @@ export const PageSEO: React.FC<PageSEOProps> = ({
         <meta property="og:type" content={article ? 'article' : 'website'} />
         <meta property="og:site_name" content="ExcelEasy" />
         <meta property="og:url" content={currentUrl} />
-        <meta property="og:title" content={getLocalizedValue(config?.title || '')} />
-        <meta property="og:description" content={getLocalizedValue(config?.description || '')} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={imageUrl} />
         <meta property="og:image:secure_url" content={imageUrl} />
-        <meta property="og:image:alt" content={getLocalizedValue(config?.image?.alt || '')} />
-        <meta property="og:image:type" content={config?.image?.type || 'image/png'} />
-        <meta property="og:image:width" content={String(config?.image?.width || 1200)} />
-        <meta property="og:image:height" content={String(config?.image?.height || 630)} />
+        <meta property="og:image:alt" content={imageAlt} />
+        <meta property="og:image:type" content={imageType} />
+        <meta property="og:image:width" content={imageWidth} />
+        <meta property="og:image:height" content={imageHeight} />
         <meta property="og:locale" content={i18n.language} />
         
         {/* 文章特定的Open Graph标签 */}
@@ -183,10 +192,10 @@ export const PageSEO: React.FC<PageSEOProps> = ({
         <meta name="twitter:site" content="@ExcelEasy" />
         <meta name="twitter:creator" content="@ExcelEasy" />
         <meta name="twitter:url" content={currentUrl} />
-        <meta name="twitter:title" content={getLocalizedValue(config?.title || '')} />
-        <meta name="twitter:description" content={getLocalizedValue(config?.description || '')} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={imageUrl} />
-        <meta name="twitter:image:alt" content={getLocalizedValue(config?.image?.alt || '')} />
+        <meta name="twitter:image:alt" content={imageAlt} />
         <meta name="twitter:domain" content={baseUrl} />
 
         {/* 其他元标签 */}
@@ -229,8 +238,8 @@ export const PageSEO: React.FC<PageSEOProps> = ({
       
       <SchemaOrg
         type={config.schemaType}
-        name={config.schemaName ? getLocalizedValue(config.schemaName) : getLocalizedValue(config.title)}
-        description={config.schemaDescription ? getLocalizedValue(config.schemaDescription) : getLocalizedValue(config.description)}
+        name={config.schemaName ? getLocalizedValue(config.schemaName) : title}
+        description={config.schemaDescription ? getLocalizedValue(config.schemaDescription) : description}
         applicationCategory={config.schemaCategory}
         url={currentUrl}
         image={imageUrl}
