@@ -1,17 +1,15 @@
 import React from 'react';
 import Hero from '../components/sections/Hero';
+import ToolsHero from '../components/sections/ToolsHero';
 import Features from '../components/sections/Features';
-// import HowItWorks from '../components/sections/HowItWorks';
-import UseCases from '../components/sections/UseCases';
+import UserGuide from '../components/sections/UserGuide';
+// import QuickStart from '../components/sections/QuickStart';
 import Benefits from '../components/sections/Benefits';
 import Comparison from '../components/sections/Comparison';
-import TechnologyInsights from '../components/sections/TechnologyInsights';
-import CaseStudies from '../components/sections/CaseStudies';
-import ExpertTips from '../components/sections/ExpertTips';
-// import Pricing from '../components/sections/Pricing';
 import UserComments from '../components/sections/UserComments';
 import FAQ from '../components/FAQ';
 import { PageSEO } from '../components/seo/PageSEO';
+import FeedbackWidget from '../components/common/FeedbackWidget';
 
 export default function LandingPage() {
   return (
@@ -19,17 +17,15 @@ export default function LandingPage() {
       <PageSEO page="home" />
       <main>
         <Hero />
+        <ToolsHero />
         <Features />
-        {/* <HowItWorks /> */}
-        <UseCases />
+        <UserGuide />
+        {/* <QuickStart /> */}
         <Benefits />
         <Comparison />
-        <TechnologyInsights />
-        <CaseStudies />
-        <ExpertTips />
-        {/* <Pricing /> */}
         <UserComments />
         <FAQ />
+        <FeedbackWidget />
       </main>
     </>
   );

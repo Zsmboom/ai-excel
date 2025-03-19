@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  /* 注释掉多语言配置
   const languages = [
     { code: 'en', name: 'English' },
     { code: 'zh', name: '中文' },
@@ -16,6 +17,7 @@ const Navbar: React.FC = () => {
     { code: 'ko', name: '한국어' },
     { code: 'hi', name: 'हिंदी' }
   ];
+  */
 
   const mainNavItems = [
     { path: `/${lang}/ai-excel-generator`, label: t('common.excelGenerator') },
@@ -29,10 +31,12 @@ const Navbar: React.FC = () => {
     return location.pathname === path;
   };
 
+  /* 注释掉语言切换函数
   const handleLanguageChange = (langCode: string) => {
     const newPath = location.pathname.replace(`/${lang}/`, `/${langCode}/`);
     window.location.href = newPath;
   };
+  */
 
   return (
     <nav className="bg-white shadow-sm fixed w-full top-0 z-50">
@@ -63,7 +67,7 @@ const Navbar: React.FC = () => {
 
           {/* Right Section */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* Language Selector */}
+            {/* 注释掉语言选择器 
             <div className="relative group">
               <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
                 <Globe className="h-5 w-5" />
@@ -85,6 +89,7 @@ const Navbar: React.FC = () => {
                 ))}
               </div>
             </div>
+            */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -120,7 +125,7 @@ const Navbar: React.FC = () => {
                   {item.label}
                 </Link>
               ))}
-              {/* Mobile Language Selector */}
+              {/* 注释掉移动版语言选择器 
               <div className="border-t pt-4">
                 <p className="text-sm font-medium text-gray-700 mb-2">
                   {t('common.language')}
@@ -141,6 +146,7 @@ const Navbar: React.FC = () => {
                   ))}
                 </div>
               </div>
+              */}
             </div>
           </div>
         )}

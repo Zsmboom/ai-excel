@@ -1,32 +1,31 @@
 import React, { useState } from 'react';
-import { Wrench, BookOpen, Video, Download, Star } from 'lucide-react';
+import { Wrench, BookOpen, Video, Download, Star, FileSpreadsheet } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { FunctionInput } from '../components/excel/FunctionInput';
 import { FunctionResult } from '../components/excel/FunctionResult';
 import { FunctionUsageInfo } from '../components/excel/FunctionUsageInfo';
-import { LoadingSpinner } from '../components/ui/LoadingSpinner';
-import { useExcelFunctions } from '../hooks/useExcelFunctions';
 import { PageSEO } from '../components/seo/PageSEO';
 import ShareButtons from '../components/common/ShareButtons';
-import { useExcelFunctionGeneration } from '../hooks/useExcelFunctionGeneration';
-import { ProgressBar } from '../components/common/ProgressBar';
+import { ProgressBar } from '../components/ui/ProgressBar';
 import UserComments from '../components/sections/UserComments';
 import { useAnalytics } from '../hooks/useAnalytics';
-import { FunctionType } from '../types/excel';
+import { FunctionType, FunctionGenerationResult } from '../types/excel';
+import Breadcrumb from '../components/common/Breadcrumb';
+import { Link } from 'react-router-dom';
+import FeedbackWidget from '../components/common/FeedbackWidget';
+import { useExcelFunctionGeneration } from '../hooks/useExcelFunctionGeneration';
 
-export default function ExcelFunctions() {
-  const [prompt, setPrompt] = useState('');
-  const { 
-    generateFunction, 
-    loading, 
-    error, 
-    result,
-    functionType,
-    setFunctionType
-  } = useExcelFunctions();
+const ExcelFunctions: React.FC = () => {
+  const [prompt, setPrompt] = useState<string>('');
+  const [functionType, setFunctionType] = useState<FunctionType>('formula');
+  const [resultData, setResultData] = useState<FunctionGenerationResult | null>(null);
   const { t, i18n } = useTranslation();
   const { trackEvent } = useAnalytics();
+  
   const {
+    generateFunction,
+    loading,
+    error,
     progress
   } = useExcelFunctionGeneration();
   
@@ -166,18 +165,19 @@ export default function ExcelFunctions() {
     if (!prompt.trim()) return;
     
     trackEvent('generate_function', 'excel_functions', `${functionType}_function`);
-    await generateFunction(prompt);
+    const result = await generateFunction(prompt, functionType);
     
     if (result) {
+      setResultData(result);
       trackEvent('function_generated_success', 'excel_functions', functionType);
     }
   };
 
   const handleCopyCode = () => {
-    if (result) {
-      const textToCopy = functionType === 'vba' && result.vbaCode 
-        ? result.vbaCode 
-        : result.formula;
+    if (resultData) {
+      const textToCopy = functionType === 'vba' && resultData.vbaCode 
+        ? resultData.vbaCode 
+        : resultData.formula;
         
       navigator.clipboard.writeText(textToCopy);
       trackEvent('copy_function_code', 'excel_functions', functionType);
@@ -187,18 +187,33 @@ export default function ExcelFunctions() {
   return (
     <>
       <PageSEO page="excelFunctions" />
-      <main className="min-h-screen bg-gray-50 pt-16">
-        <div className="container mx-auto px-4 py-8">
+      
+      <Breadcrumb />
+
+      {/* Hero Section */}
+      <section className="pt-16 pb-6 bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-4">
+              <FileSpreadsheet className="h-5 w-5 mr-2" />
+              <span className="text-sm font-medium">Excel Functions</span>
+            </div>
+            
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              {currentLanguage === 'zh' ? zhContent.title : enContent.title}
+            </h1>
+            <p className="text-lg text-gray-600">
+              {currentLanguage === 'zh' ? zhContent.subtitle : enContent.subtitle}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="function-generator" className="py-6">
+        <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <header className="mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">{content.title}</h1>
-              <p className="text-gray-600 mt-2">
-                {content.subtitle}
-              </p>
-              <p className="text-gray-700 mt-4">
-                {content.description}
-              </p>
-              <div className="mt-4">
+            <header className="mb-4">
+              <div>
                 <ShareButtons
                   url={window.location.href}
                   title={t('pages.excelFunctions.shareTitle')}
@@ -213,22 +228,8 @@ export default function ExcelFunctions() {
               </div>
             </header>
             
-            {/* 功能特点部分 */}
-            <section className="bg-white rounded-lg shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-bold mb-4">{content.featuresTitle}</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                {content.features.map((feature, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
-                      <span className="text-blue-600 text-lg font-semibold">{index + 1}</span>
-                    </div>
-                    <p className="text-gray-700">{feature}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section className="bg-white rounded-lg shadow-md p-6 mb-8" aria-label="Function Generation">
+            <section className="bg-white rounded-lg shadow-lg p-6 border border-gray-200" aria-label="Function Generation">
+              <h2 className="text-2xl font-bold mb-6">{currentLanguage.startsWith('zh') ? '创建Excel函数或VBA宏' : 'Create Excel Function or VBA Macro'}</h2>
               <FunctionInput
                 value={prompt}
                 onChange={setPrompt}
@@ -238,7 +239,7 @@ export default function ExcelFunctions() {
                 onTypeChange={handleFunctionTypeChange}
               />
 
-              {loading && (
+              {loading && progress.status && (
                 <div className="mt-4">
                   <ProgressBar 
                     progress={progress.progress} 
@@ -253,49 +254,81 @@ export default function ExcelFunctions() {
                 </div>
               )}
 
-              {result && <FunctionResult result={result} />}
+              {resultData && <FunctionResult result={resultData} />}
             </section>
             
-            {/* 优势部分 */}
-            <section className="bg-white rounded-lg shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-bold mb-4">{content.benefitsTitle}</h2>
-              <div className="space-y-4">
-                {content.benefits.map((benefit, index) => (
-                  <div key={index} className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                    <p className="text-gray-700">{benefit.description}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-            
-            {/* 学习资源部分 */}
-            <section className="bg-white rounded-lg shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-bold mb-4">{content.resourcesTitle}</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                {content.resources.map((resource, index) => (
-                  <div key={index} className="flex items-start p-4 border border-gray-200 rounded-lg hover:bg-blue-50 transition-colors">
-                    <div className="mr-3">
-                      {renderResourceIcon(resource.type)}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">{resource.title}</h3>
-                      <p className="text-gray-600 text-sm">{resource.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section aria-label="Usage Instructions">
+            <section className="mt-8">
               <FunctionUsageInfo />
             </section>
           </div>
         </div>
-      </main>
+      </section>
+      
+      {/* 功能特点部分 - 移到工具区域后面 */}
+      <section className="bg-white py-8">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">{content.featuresTitle}</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {content.features.map((feature, index) => (
+                <div key={index} className="flex items-start bg-gray-50 p-5 rounded-lg shadow-sm">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+                    <span className="text-blue-600 text-lg font-semibold">{index + 1}</span>
+                  </div>
+                  <p className="text-gray-700">{feature}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* 优势部分 */}
+      <section className="bg-gray-50 py-8">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">{content.benefitsTitle}</h2>
+            <div className="space-y-4">
+              {content.benefits.map((benefit, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                  <p className="text-gray-700">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* 学习资源部分 */}
+      <section className="bg-white py-8">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">{content.resourcesTitle}</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {content.resources.map((resource, index) => (
+                <div key={index} className="flex items-start p-5 bg-gray-50 border border-gray-200 rounded-lg hover:bg-blue-50 transition-colors">
+                  <div className="mr-3">
+                    {renderResourceIcon(resource.type)}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">{resource.title}</h3>
+                    <p className="text-gray-600 text-sm">{resource.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* User Comments Section */}
       <UserComments />
+
+      {/* 添加全局反馈组件 */}
+      <FeedbackWidget />
     </>
   );
-}
+};
+
+export default ExcelFunctions;

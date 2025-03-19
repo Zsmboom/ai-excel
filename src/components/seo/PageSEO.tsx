@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { SchemaOrg } from './SchemaOrg';
+import { EnhancedSchema } from './EnhancedSchema';
 import { SEOConfig } from '../../config/seo';
 import { useTranslation } from 'react-i18next';
 import { languages } from '../../i18n/config';
@@ -98,42 +99,6 @@ export const PageSEO: React.FC<PageSEOProps> = ({
     'max-video-preview:-1'
   ].join(', ');
 
-  // 生成面包屑结构化数据
-  const breadcrumbSchema = breadcrumbs ? {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': breadcrumbs.map((item, index) => ({
-      '@type': 'ListItem',
-      'position': index + 1,
-      'name': item.name,
-      'item': `${baseUrl}${item.item}`
-    }))
-  } : null;
-
-  // 生成文章结构化数据
-  const articleSchema = article ? {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    'headline': getLocalizedValue(config?.title || ''),
-    'description': getLocalizedValue(config?.description || ''),
-    'image': imageUrl,
-    'datePublished': article.publishedTime,
-    'dateModified': article.modifiedTime,
-    'author': article.authors.map(author => ({
-      '@type': 'Person',
-      'name': author
-    })),
-    'keywords': article.tags.join(', '),
-    'publisher': {
-      '@type': 'Organization',
-      'name': 'ExcelEasy',
-      'logo': {
-        '@type': 'ImageObject',
-        'url': `${baseUrl}/logo.png`
-      }
-    }
-  } : null;
-
   // 确保所有传递给Helmet的值都是字符串
   const title = getLocalizedValue(config?.title || '');
   const description = getLocalizedValue(config?.description || '');
@@ -142,6 +107,16 @@ export const PageSEO: React.FC<PageSEOProps> = ({
   const imageType = config?.image?.type || 'image/png';
   const imageWidth = String(config?.image?.width || 1200);
   const imageHeight = String(config?.image?.height || 630);
+
+  // 为EnhancedSchema准备Article数据
+  const enhancedArticle = article ? {
+    headline: title,
+    image: imageUrl,
+    author: article.authors[0] || 'ExcelEasy Team',
+    publishedTime: article.publishedTime,
+    modifiedTime: article.modifiedTime,
+    tags: article.tags
+  } : undefined;
 
   return (
     <>
@@ -221,29 +196,20 @@ export const PageSEO: React.FC<PageSEOProps> = ({
         {lastModified && (
           <meta name="last-modified" content={lastModified} />
         )}
-
-        {/* 结构化数据 */}
-        {breadcrumbSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(breadcrumbSchema)}
-          </script>
-        )}
-        
-        {articleSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(articleSchema)}
-          </script>
-        )}
       </Helmet>
       
-      <SchemaOrg
+      {/* 使用增强的Schema.org标记 */}
+      <EnhancedSchema
         type={config.schemaType}
-        name={config.schemaName ? getLocalizedValue(config.schemaName) : title}
-        description={config.schemaDescription ? getLocalizedValue(config.schemaDescription) : description}
-        applicationCategory={config.schemaCategory}
+        title={title}
+        description={description}
         url={currentUrl}
-        image={imageUrl}
-        lastModified={lastModified}
+        datePublished={article?.publishedTime}
+        dateModified={article?.modifiedTime || lastModified}
+        breadcrumbs={breadcrumbs}
+        applicationCategory={config.schemaCategory}
+        screenshot={imageUrl}
+        article={enhancedArticle}
       />
     </>
   );

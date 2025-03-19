@@ -1,20 +1,23 @@
-import { useNavigate, useParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 export const useNavigation = () => {
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
-  const { lang } = useParams<{ lang: string }>();
 
   const goToWorkspace = () => {
-    const currentLang = lang || i18n.language || 'en';
-    navigate(`/${currentLang}/ai-excel-generator`);
+    navigate('/workspace');
   };
 
   const goToFunctions = () => {
-    const currentLang = lang || i18n.language || 'en';
-    navigate(`/${currentLang}/excel-functions`);
+    navigate('/excel-functions');
+  };
+  
+  const goToExcelChart = () => {
+    navigate('/ai-excel-chart');
+  };
+  
+  const goToPicToExcel = () => {
+    navigate('/pic-to-excel');
   };
 
-  return { goToWorkspace, goToFunctions };
+  return { goToWorkspace, goToFunctions, goToExcelChart, goToPicToExcel };
 };

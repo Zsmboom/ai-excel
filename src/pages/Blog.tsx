@@ -82,7 +82,7 @@ const BlogPage: React.FC = () => {
           {blogPosts.map((post) => (
             <Grid item xs={12} key={post.id}>
               <Card sx={{ p: 3 }}>
-                <Link to={`/${lang}/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Typography variant="h5" gutterBottom>
                     {post.translations[lang]?.title || post.translations['en'].title}
                   </Typography>

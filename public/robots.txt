@@ -1,14 +1,11 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /*.json$
 
-# Allow all languages
-Allow: /en/
-Allow: /zh/
-Allow: /ko/
-Allow: /de/
-Allow: /hi/
+# 禁止爬取多语言URL
+Disallow: /zh/
+Disallow: /ko/
+Disallow: /de/
+Disallow: /hi/
 
-# Primary sitemap
-Sitemap: https://exceleasy.org/sitemap.xml 
+# Sitemap
+Sitemap: https://exceleasy.org/sitemap.xml

@@ -23,9 +23,10 @@ const getLocale = (lang: string) => {
 };
 
 const BlogDetail: React.FC = () => {
-  const { slug, lang = 'en' } = useParams<{ slug: string; lang: string }>();
+  const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language || 'en';
   
   const post = blogPosts.find((p) => p.slug === slug);
   const content = post?.translations[lang] || post?.translations['en'];
@@ -41,16 +42,12 @@ const BlogDetail: React.FC = () => {
   }
 
   const baseUrl = window.location.origin;
-  const canonicalUrl = lang === 'en' 
-    ? `${baseUrl}/blog/${post.slug}` 
-    : `${baseUrl}/${lang}/blog/${post.slug}`;
+  const canonicalUrl = `${baseUrl}/blog/${post.slug}`;
 
   // 构建多语言链接
   const alternateLinks = languages.map((langItem) => ({
     hrefLang: langItem.code,
-    href: langItem.code === 'en' 
-      ? `${baseUrl}/blog/${post.slug}` 
-      : `${baseUrl}/${langItem.code}/blog/${post.slug}`
+    href: `${baseUrl}/blog/${post.slug}`
   }));
 
   const formattedDate = format(new Date(post.date), 'PPP', { locale: getLocale(lang) });
@@ -143,7 +140,7 @@ const BlogDetail: React.FC = () => {
       
       <Container maxWidth="lg" sx={{ py: 4, mt: 8 }}>
         <Box sx={{ mb: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <IconButton onClick={() => navigate(`/${lang}/blog`)} aria-label={t('common.back')}>
+          <IconButton onClick={() => navigate('/blog')} aria-label={t('common.back')}>
             <ArrowBackIcon />
           </IconButton>
           <Button
@@ -222,7 +219,7 @@ const BlogDetail: React.FC = () => {
         <Box sx={{ mt: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Button
             startIcon={<ArrowBackIcon />}
-            onClick={() => navigate(`/${lang}/blog`)}
+            onClick={() => navigate('/blog')}
             variant="text"
           >
             {t('blog.backToBlog')}

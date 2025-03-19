@@ -5,18 +5,20 @@ import { useTranslation } from 'react-i18next';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import AppRoutes from './routes';
-import { languages } from './i18n/config';
+// import { languages } from './i18n/config';
 import { useAnalytics } from './hooks/useAnalytics';
+import FeedbackWidget from './components/common/FeedbackWidget';
 
 export default function App() {
   const { i18n } = useTranslation();
   const location = useLocation();
-  const supportedLangs = languages.map(l => l.code);
+  // const supportedLangs = languages.map(l => l.code);
   const isPreviewMode = new URLSearchParams(location.search).get('viewMode') === 'preview';
   
   // 使用 useAnalytics Hook 跟踪页面浏览
   useAnalytics();
 
+  /* 注释掉多语言相关代码
   useEffect(() => {
     // 从路径中获取语言代码
     const pathLang = location.pathname.split('/')[1];
@@ -34,6 +36,7 @@ export default function App() {
       }
     }
   }, [location.pathname, i18n, supportedLangs]);
+  */
 
   // 在预览模式下只显示主要内容
   if (isPreviewMode) {
@@ -51,6 +54,7 @@ export default function App() {
         <AppRoutes />
       </main>
       <Footer />
+      <FeedbackWidget />
     </div>
   );
 }

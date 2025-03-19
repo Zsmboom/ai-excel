@@ -116,7 +116,8 @@ app.get('/api/auth/callback', async (req: Request, res: Response) => {
 // 添加sitemap路由
 app.get('/sitemap.xml', (_req: Request, res: Response) => {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://exceleasy.org';
-  const languages = ['en', 'zh', 'ko', 'de', 'hi'];
+  // 移除多语言支持
+  // const languages = ['en', 'zh', 'ko', 'de', 'hi'];
   
   const routes = [
     { path: '/', changefreq: 'daily', priority: 1.0 },
@@ -130,56 +131,45 @@ app.get('/sitemap.xml', (_req: Request, res: Response) => {
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${routes.map(route => {
-    // 为英文版本使用根路径（不带语言前缀）
+    // 为英文版本使用根路径
     const routePath = route.path === '/' ? '' : route.path;
     const enUrl = `${baseUrl}${routePath}`.replace(/\/+/g, '/').replace(/\/$/, '');
     
     return `
   <url>
     <loc>${enUrl}</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
-    ${languages.filter(lang => lang !== 'en').map(lang => {
-      const langUrl = `${baseUrl}/${lang}${routePath}`.replace(/\/+/g, '/').replace(/\/$/, '');
-      return `
-    <xhtml:link 
-      rel="alternate" 
-      hreflang="${lang}" 
-      href="${langUrl}"/>`
-    }).join('')}
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-  </url>
-  ${languages.filter(lang => lang !== 'en').map(lang => {
-    // 修复：确保非英语URL格式正确
-    const langUrl = `${baseUrl}/${lang}${routePath}`.replace(/\/+/g, '/').replace(/\/$/, '');
-    return `
-  <url>
-    <loc>${langUrl}</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
-    ${languages.filter(l => l !== 'en').map(l => {
-      const otherLangUrl = `${baseUrl}/${l}${routePath}`.replace(/\/+/g, '/').replace(/\/$/, '');
-      return `
-    <xhtml:link 
-      rel="alternate" 
-      hreflang="${l}" 
-      href="${otherLangUrl}"/>`
-    }).join('')}
-    <changefreq>${route.changefreq}</changefreq>
-    <priority>${route.priority}</priority>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-  </url>`
-  }).join('')}`;
+  </url>`;
   }).join('')}
 </urlset>`;
 
   res.header('Content-Type', 'application/xml');
   res.send(xml);
+});
+
+// 添加301重定向：将所有多语言URL重定向到英文版
+const supportedLanguages = ['zh', 'ko', 'de', 'hi'];
+app.get('/:lang/*', (req: Request, res: Response, next) => {
+  const lang = req.params.lang;
+  if (supportedLanguages.includes(lang)) {
+    // 从URL中移除语言前缀
+    const redirectPath = req.path.substring(lang.length + 1);
+    return res.redirect(301, `/${redirectPath}`);
+  }
+  next();
+});
+
+// 添加对语言根路径的重定向
+app.get('/:lang', (req: Request, res: Response, next) => {
+  const lang = req.params.lang;
+  if (supportedLanguages.includes(lang)) {
+    return res.redirect(301, '/');
+  }
+  next();
 });
 
 app.listen(port, () => {

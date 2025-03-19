@@ -23,9 +23,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
     
-    <!-- Alternate Language Tags - Only English -->
+    <!-- Alternate Language Tags -->
     <link rel="alternate" hreflang="en" href="https://exceleasy.org" />
+    <link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh" />
+    <link rel="alternate" hreflang="de" href="https://exceleasy.org/de" />
+    <link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko" />
+    <link rel="alternate" hreflang="hi" href="https://exceleasy.org/hi" />
     <link rel="alternate" hreflang="x-default" href="https://exceleasy.org" />
+    
+    <!-- 修复：添加about页面的hreflang标签 -->
+    <link rel="alternate" hreflang="en" href="https://exceleasy.org/about" />
+    <link rel="alternate" hreflang="zh" href="https://exceleasy.org/zh/about" />
+    <link rel="alternate" hreflang="de" href="https://exceleasy.org/de/about" />
+    <link rel="alternate" hreflang="ko" href="https://exceleasy.org/ko/about" />
+    <link rel="alternate" hreflang="hi" href="https://exceleasy.org/hi/about" />
+    <link rel="alternate" hreflang="x-default" href="https://exceleasy.org/about" />
     
     <!-- Additional SEO Tags -->
     <meta name="application-name" content="ExcelEasy" />

@@ -246,6 +246,23 @@
       },
       "toolsfine": "Discover more AI tools and resources at",
       "yodirectory": "Featured on"
+    },
+    "howItWorks": {
+      "title": "How ExcelEasy Works",
+      "steps": {
+        "step1": {
+          "title": "Describe Your Needs",
+          "description": "Simply tell us what you want to create using natural language"
+        },
+        "step2": {
+          "title": "AI Processing",
+          "description": "Our AI analyzes your request and generates the perfect solution"
+        },
+        "step3": {
+          "title": "Get Results",
+          "description": "Download ready-to-use Excel files or copy generated formulas"
+        }
+      }
     }
   },
   "workspace": {

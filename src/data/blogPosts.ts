@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
         preview: "Looking for a fast, simple way to create custom Excel sheets? With ExcelEasy's AI Excel Generator, you can design tailored spreadsheets in minutes, saving time and effort while streamlining your workflow.",
         seoTitle: "ExcelEasy AI Excel Generator: Create Custom Spreadsheets Instantly",
         seoDescription: "Transform your Excel workflow with ExcelEasy's AI-powered sheet creator. Generate custom spreadsheets instantly, automate formatting, and boost productivity. Try it now!",
-        seoKeywords: "Excel generator, AI spreadsheet creator, automated Excel templates, custom Excel sheets, Excel automation tool",
+        seoKeywords: "Excel generator,AI spreadsheet creator,automated templates,custom Excel sheets,Excel automation",
         content: `Looking for a fast, simple way to create custom Excel sheets? Great news - you can try our [AI Excel Generator ➔](https://exceleasy.org/ai-excel-generator) right now! With this powerful tool, you can design tailored spreadsheets in minutes, saving time and effort while streamlining your workflow. Whether you're managing budgets, tracking projects, or organizing data, this powerful tool transforms your ideas into ready-to-use Excel templates with ease. Here's how to use it and why it's a game-changer for boosting efficiency.
 
 ![AI Excel Generator](/images/ai-excel-generator.webp)
@@ -59,7 +59,7 @@ Ready to simplify your Excel tasks? [Visit ExcelEasy Homepage ➔](https://excel
         preview: "想要快速、简单地创建自定义Excel表格？使用ExcelEasy的AI Excel生成器，您可以在几分钟内设计定制的电子表格，节省时间和精力，同时简化工作流程。",
         seoTitle: "ExcelEasy AI Excel生成器：轻松创建自定义电子表格",
         seoDescription: "使用ExcelEasy的AI驱动表格生成器改变您的Excel工作流程。即时生成自定义电子表格，自动化格式设置，提高工作效率。立即体验！",
-        seoKeywords: "Excel生成器, AI电子表格创建器, 自动化Excel模板, 自定义Excel表格, Excel自动化工具",
+        seoKeywords: "Excel生成器, AI电子表格, 自动化模板, Excel自动化",
         content: `想要快速、简单地创建自定义Excel表格？好消息 - 您现在就可以试用我们的[AI Excel生成器 ➔](https://exceleasy.org/ai-excel-generator)！使用这个强大的工具，您可以在几分钟内设计定制的电子表格，节省时间和精力，同时简化工作流程。无论是管理预算、跟踪项目还是组织数据，这个强大的工具都能轻松地将您的想法转化为即用型Excel模板。让我们来看看如何使用它，以及为什么它能成为提升效率的游戏规则改变者。
 
 ![AI Excel生成器](/images/ai-excel-generator.webp)

@@ -42,11 +42,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'AI के साथ अपने डेटा को तुरंत पेशेवर Excel स्प्रेडशीट में बदलें। 100% मुफ्त, लॉगिन की आवश्यकता नहीं। सरल प्राकृतिक भाषा कमांड के साथ जटिल Excel फाइलें, चार्ट और रिपोर्ट बनाएं।'
     },
     keywords: {
-      zh: 'ExcelEasy,ExcelEasy免费,ExcelEasy在线,ExcelEasy工具,Excel生成器,AI Excel,ExcelEasy表格自动化,ExcelEasy数据可视化,ExcelEasy智能办公,ExcelEasy自动化办公,ExcelEasy助手,ExcelEasy AI办公,ExcelEasy智能表格,ExcelEasy在线Excel',
-      en: 'ExcelEasy,AI Excel,ExcelEasy tools,Excel generator,AI Excel generator,ExcelEasy AI Excel,spreadsheet automation,AI Excel tools,data visualization,ExcelEasy assistant,AI office,smart spreadsheet,online Excel,ExcelEasy free,ExcelEasy online',
-      de: 'Excel-Generator,KI Excel,Tabellenautomatisierung,Datenvisualisierung,Business Intelligence,Büroautomatisierung,Excel-Assistent,KI-Büro,intelligente Tabellenkalkulation,Online-Excel',
-      ko: 'Excel 생성기,AI Excel,스프레드시트 자동화,데이터 시각화,비즈니스 인텔리전스,사무 자동화,Excel 어시스턴트,AI 오피스,스마트 스프레드시트,온라인 Excel',
-      hi: 'Excel जनरेटर,AI Excel,स्प्रेडशीट स्वचालन,डेटा विज़ुअलाइज़ेशन,बिजनेस इंटेलिजेंस,कार्यालय स्वचालन,Excel सहायक,AI कार्यालय,स्मार्ट स्प्रेडशीट,ऑनलाइन Excel'
+      zh: 'ExcelEasy,AI Excel,表格自动化,数据可视化,智能办公,自动化办公,智能表格',
+      en: 'ExcelEasy,AI Excel,spreadsheet automation,data visualization,smart office tools,Excel generator',
+      de: 'Excel-Generator,KI Excel,Tabellenautomatisierung,Datenvisualisierung,Büroautomatisierung',
+      ko: 'Excel 생성기,AI Excel,스프레드시트 자동화,데이터 시각화,사무 자동화',
+      hi: 'Excel जनरेटर,AI Excel,स्प्रेडशीट स्वचालन,डेटा विज़ुअलाइज़ेशन,कार्यालय स्वचालन'
     },
     schemaType: 'SoftwareApplication',
     schemaName: {
@@ -93,11 +93,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'AI प्राकृतिक भाषा प्रसंस्करण का उपयोग करके तुरंत पेशेवर Excel स्प्रेडशीट बनाएं। बजट, चालान, प्रोजेक्ट ट्रैकर और डेटा विश्लेषण टेम्पलेट के लिए समर्थन। उपयोग करने के लिए मुफ्त, कोई सेटअप आवश्यक नहीं।'
     },
     keywords: {
-      zh: 'AI Excel生成,Excel自动化,数据分析,商业报表,自动化表格,专业电子表格,Excel助手,智能表格生成',
-      en: 'AI Excel generation,Excel automation,data analysis,business reports,automated spreadsheets,professional spreadsheets,Excel assistant,smart table generation',
-      de: 'KI Excel-Generierung,Excel-Automatisierung,Datenanalyse,Geschäftsberichte,automatisierte Tabellen,professionelle Tabellenkalkulationen,Excel-Assistent,intelligente Tabellenerstellung',
-      ko: 'AI Excel 생성,Excel 자동화,데이터 분석,비즈니스 보고서,자동화된 스프레드시트,전문 스프레드시트,Excel 어시스턴트,스마트 테이블 생성',
-      hi: 'AI Excel जनरेशन,Excel स्वचालन,डेटा विश्लेषण,व्यापार रिपोर्ट,स्वचालित स्प्रेडशीट,पेशेवर स्प्रेडशीट,Excel सहायक,स्मार्ट टेबल जनरेशन'
+      zh: 'AI Excel生成,数据分析,商业报表,自动化表格,专业电子表格',
+      en: 'AI Excel generation,data analysis,business reports,automated spreadsheets,professional templates',
+      de: 'KI Excel-Generierung,Datenanalyse,Geschäftsberichte,automatisierte Tabellen',
+      ko: 'AI Excel 생성,데이터 분석,비즈니스 보고서,자동화된 스프레드시트',
+      hi: 'AI Excel जनरेशन,डेटा विश्लेषण,व्यापार रिपोर्ट,स्वचालित स्प्रेडशीट'
     },
     schemaType: 'SoftwareApplication',
     schemaName: {
@@ -145,11 +145,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'AI तकनीक का उपयोग करके Excel फंक्शन और VBA मैक्रो को बुद्धिमानी से जनरेट करें, हमेशा के लिए मुफ्त। प्राकृतिक भाषा कमांड के साथ गणना, डेटा प्रोसेसिंग और दोहराव कार्यों को स्वचालित करें, पंजीकरण की आवश्यकता नहीं है।'
     },
     keywords: {
-      zh: 'Excel函数,VBA宏,Excel自动化,公式生成器,办公脚本,Excel编程,智能函数,自动化工具',
-      en: 'Excel functions,VBA macros,Excel automation,formula generator,office scripts,Excel programming,smart functions,automation tools',
-      de: 'Excel-Funktionen,VBA-Makros,Excel-Automatisierung,Formelgenerator,Office-Skripte,Excel-Programmierung,intelligente Funktionen,Automatisierungstools',
-      ko: 'Excel 함수,VBA 매크로,Excel 자동화,수식 생성기,오피스 스크립트,Excel 프로그래밍,스마트 함수,자동화 도구',
-      hi: 'Excel फंक्शन,VBA मैक्रो,Excel स्वचालन,फॉर्मूला जनरेटर,ऑफिस स्क्रिप्ट,Excel प्रोग्रामिंग,स्मार्ट फंक्शन,स्वचालन टूल'
+      zh: 'Excel函数,VBA宏,Excel自动化,公式生成器,办公脚本',
+      en: 'Excel functions,VBA macros,Excel automation,formula generator,office scripts,Excel programming',
+      de: 'Excel-Funktionen,VBA-Makros,Excel-Automatisierung,Formelgenerator',
+      ko: 'Excel 함수,VBA 매크로,Excel 자동화,수식 생성기',
+      hi: 'Excel फंक्शन,VBA मैक्रो,Excel स्वचालन,फॉर्मूला जनरेटर'
     },
     schemaType: 'SoftwareApplication',
     schemaName: {
@@ -197,11 +197,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'AI के साथ छवियों से टेबल डेटा निकालें। 100% मुफ्त, अनिश्चित उपयोग।'
     },
     keywords: {
-      zh: '图片转Excel, OCR识别, 表格提取, 数据提取, 图像识别Excel',
-      en: 'image to Excel, OCR Excel, table extraction, data extraction, image recognition Excel',
-      de: 'Bild zu Excel, OCR Excel, Tabellenextraktion, Datenextraktion, Bilderkennung Excel',
-      ko: '이미지를 Excel로, OCR Excel, 표 추출, 데이터 추출, 이미지 인식 Excel',
-      hi: 'छवि को Excel में बदलने के उपकरण, OCR Excel, टेबल निकालने, डेटा निकालने, छवि पहचान Excel'
+      zh: '图片转Excel,OCR识别,表格提取,数据提取',
+      en: 'image to Excel,OCR Excel,table extraction,data extraction,picture converter,Excel OCR tool',
+      de: 'Bild zu Excel,OCR Excel,Tabellenextraktion,Datenextraktion',
+      ko: '이미지를 Excel로,OCR Excel,표 추출,데이터 추출',
+      hi: 'छवि को Excel,OCR Excel,टेबल निकालने,डेटा निकालने'
     },
     schemaType: 'SoftwareApplication',
     schemaName: {
@@ -246,11 +246,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'Excel टिप्स और AI अंदाज़ के बारे में जानें। ExcelEasy का उपयोग करके आपकी उत्पादकता बढ़ाने का तरीका सीखें।'
     },
     keywords: {
-      zh: 'Excel技巧, AI见解, 数据处理, Excel教程, 效率提升',
-      en: 'Excel tips, AI insights, data processing, Excel tutorials, productivity tips',
-      de: 'Excel-Tipps, KI-Einblicke, Datenverarbeitung, Excel-Tutorials, Produktivitätstipps',
-      ko: 'Excel 팁, AI 인사이트, 데이터 처리, Excel 튜토리얼, 생산성 팁',
-      hi: 'Excel टिप्स, AI अंदाज़, डेटा प्रोसेसिंग, Excel ट्यूटोरियल, उत्पादकता टिप्स'
+      zh: 'Excel技巧,AI见解,数据处理,Excel教程,效率提升',
+      en: 'Excel tips,AI insights,data processing,Excel tutorials,productivity tips,office efficiency',
+      de: 'Excel-Tipps,KI-Einblicke,Datenverarbeitung,Excel-Tutorials',
+      ko: 'Excel 팁,AI 인사이트,데이터 처리,Excel 튜토리얼',
+      hi: 'Excel टिप्स,AI अंदाज़,डेटा प्रोसेसिंग,Excel ट्यूटोरियल'
     },
     schemaType: 'Blog',
     schemaName: {
@@ -297,11 +297,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'AI के साथ Excel डेटा को विश्लेषण करें और पेशेवर डेटा विज़ुअलाइज़ेशन चार्ट बनाएं। 100% मुफ्त, लॉगिन की आवश्यकता नहीं।'
     },
     keywords: {
-      zh: 'Excel图表生成, AI数据可视化, Excel数据分析, 图表制作, 数据可视化工具',
-      en: 'Excel chart generator, AI data visualization, Excel data analysis, chart creation, data visualization tools',
-      de: 'Excel-Diagrammgenerator, KI-Datenvisualisierung, Excel-Datenanalyse, Diagrammerstellung',
-      ko: 'Excel 차트 생성기, AI 데이터 시각화, Excel 데이터 분석, 차트 제작, 데이터 시각화 도구',
-      hi: 'Excel चार्ट जनरेटर, AI डेटा विज़ुअलाइज़ेशन, Excel डेटा विश्लेषण, चार्ट बनाने, डेटा विज़ुअलाइज़ेशन उपकरण'
+      zh: 'Excel图表生成,AI数据可视化,Excel数据分析,图表制作',
+      en: 'Excel chart generator,AI data visualization,data analysis,chart creation,graph maker',
+      de: 'Excel-Diagrammgenerator,KI-Datenvisualisierung,Excel-Datenanalyse',
+      ko: 'Excel 차트 생성기,AI 데이터 시각화,Excel 데이터 분석',
+      hi: 'Excel चार्ट जनरेटर,AI डेटा विज़ुअलाइज़ेशन,डेटा विश्लेषण'
     },
     schemaType: 'SoftwareApplication',
     schemaName: {
@@ -349,11 +349,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'ExcelEasy को गोपनीयता और डेटा को कैसे सुरक्षित करते हैं और कैसे उपयोग करते हैं जानें। हमारी गोपनीयता नीति हमारी डेटा संग्रह, उपयोग और सुरक्षा प्रक्रियाएं स्पष्ट करती है।'
     },
     keywords: {
-      zh: '隐私政策, 数据保护, 用户隐私, GDPR合规',
-      en: 'privacy policy, data protection, user privacy, GDPR compliance',
-      de: 'Datenschutzerklärung, Datenschutz, Benutzerprivatsphäre, DSGVO-Konformität',
-      ko: '개인정보 보호정책, 데이터 보호, 사용자 개인정보, GDPR 준수',
-      hi: 'गोपनीयता नीति, डेटा सुरक्षा, उपयोगकर्ता गोपनीयता, GDPR कन्फोर्मिटी'
+      zh: '隐私政策,数据保护,用户隐私,安全',
+      en: 'privacy policy,data protection,user privacy,security,GDPR compliance,cookie policy',
+      de: 'Datenschutzerklärung,Datenschutz,Benutzerprivatsphäre',
+      ko: '개인정보 보호정책,데이터 보호,사용자 개인정보',
+      hi: 'गोपनीयता नीति,डेटा सुरक्षा,उपयोगकर्ता गोपनीयता'
     },
     schemaType: 'WebPage',
     schemaName: {
@@ -400,11 +400,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'ExcelEasy टीम को संपर्क करें। हम आपको उपयोग करते हुए और उपयोग करते हुए आपकी समस्याओं और समर्थन की आवश्यकताओं के बारे में आपकी मदद करने के लिए यहां हैं।'
     },
     keywords: {
-      zh: '联系ExcelEasy, 客户支持, 技术支持, 帮助中心',
-      en: 'contact ExcelEasy, customer support, technical support, help desk',
-      de: 'ExcelEasy kontaktieren, Kundensupport, technischer Support, Helpdesk',
-      ko: 'ExcelEasy 문의, 고객 지원, 기술 지원, 헬프 데스크',
-      hi: 'ExcelEasy संपर्क करें, ग्राहक समर्थन, तकनीकी समर्थन, हेल्प डेस्क'
+      zh: '联系ExcelEasy,客户支持,技术支持,帮助',
+      en: 'contact ExcelEasy,customer support,technical support,help desk,assistance,feedback',
+      de: 'ExcelEasy kontaktieren,Kundensupport,technischer Support',
+      ko: 'ExcelEasy 문의,고객 지원,기술 지원',
+      hi: 'ExcelEasy संपर्क,ग्राहक समर्थन,तकनीकी समर्थन'
     },
     schemaType: 'ContactPage',
     schemaName: {
@@ -451,11 +451,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'वांछित पेज नहीं मिला। कृपया URL को जाँचें या ExcelEasy के होमपेज पर वापस जाएं और हमारे AI Excel जनरेशन टूल्स का उपयोग जारी रखें।'
     },
     keywords: {
-      zh: '404错误, 页面未找到, 错误页面',
-      en: '404 error, page not found, error page',
-      de: '404 Fehler, Seite nicht gefunden, Fehlerseite',
-      ko: '404 오류, 페이지를 찾을 수 없음, 오류 페이지',
-      hi: '404 त्रुटि, पेज नहीं मिला, त्रुटि पेज'
+      zh: '404错误,页面未找到,错误页面',
+      en: '404 error,page not found,error page,missing page,broken link,lost page,website navigation',
+      de: '404 Fehler,Seite nicht gefunden,Fehlerseite',
+      ko: '404 오류,페이지를 찾을 수 없음,오류 페이지',
+      hi: '404 त्रुटि,पेज नहीं मिला,त्रुटि पेज'
     },
     schemaType: 'WebPage',
     schemaName: {
@@ -502,11 +502,11 @@ export const SEOConfig: Record<string, SEOConfigType> = {
       hi: 'जानें कैसे ExcelEasy AI तकनीक के साथ Excel कार्यप्रवाह को क्रांतिकारी बनाता है। देखें कैसे हम प्राकृतिक भाषा को पेशेवर स्प्रेडशीट में बदलते हैं।'
     },
     keywords: {
-      zh: 'ExcelEasy简介,AI Excel工具,表格自动化,Excel生成平台,智能办公工具',
-      en: 'about ExcelEasy,AI Excel tool,spreadsheet automation,Excel generation platform,smart office tools',
-      de: 'über ExcelEasy,KI Excel-Tool,Tabellenautomatisierung,Excel-Generierungsplattform,intelligente Bürowerkzeuge',
-      ko: 'ExcelEasy 소개,AI Excel 도구,스프레드시트 자동화,Excel 생성 플랫폼,스마트 오피스 도구',
-      hi: 'ExcelEasy परिचय,AI Excel टूल,स्प्रेडशीट स्वचालन,Excel जनरेशन प्लेटफॉर्म,स्मार्ट ऑफिस टूल्स'
+      zh: 'ExcelEasy简介,AI Excel工具,表格自动化,智能办公',
+      en: 'about ExcelEasy,AI Excel tool,spreadsheet automation,Excel platform,smart office tools',
+      de: 'über ExcelEasy,KI Excel-Tool,Tabellenautomatisierung',
+      ko: 'ExcelEasy 소개,AI Excel 도구,스프레드시트 자동화',
+      hi: 'ExcelEasy परिचय,AI Excel टूल,स्प्रेडशीट स्वचालन'
     },
     schemaType: 'AboutPage',
     schemaName: {

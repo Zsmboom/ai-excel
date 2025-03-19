@@ -2,8 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { PageSEO } from '../components/seo/PageSEO';
 import { UsageInfo } from '../components/excel/UsageInfo';
-import { Star, BookOpen, Video, Download } from 'lucide-react';
+import { Star, BookOpen, Video, Download, FileSpreadsheet, Calculator, ArrowRight, ChevronDown } from 'lucide-react';
 import UserComments from '../components/sections/UserComments';
+import Breadcrumb from '../components/common/Breadcrumb';
+import { Link } from 'react-router-dom';
+import FeedbackWidget from '../components/common/FeedbackWidget';
 
 const AiExcelGenerator: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -85,114 +88,120 @@ const AiExcelGenerator: React.FC = () => {
   
   // 英文内容
   const enContent = {
-    title: "Excel Formula Generator - Smart AI Excel Formula Creation Tool",
-    subtitle: "Use our Excel Formula Generator to easily create complex Excel formulas and spreadsheets",
-    description: "Excel Formula Generator is an innovative tool that transforms your text descriptions into professionally formatted Excel spreadsheets with advanced formulas. Perfect for creating budgets, invoices, project trackers, and data analysis templates, all with complex Excel formulas.",
-    featuresTitle: "Key Features of Excel Formula Generator",
+    title: "AI Excel Generator - Create Professional Spreadsheets Instantly",
+    subtitle: "Transform text descriptions into powerful Excel files with AI",
+    description: "Excel Generator uses advanced AI to convert your text into professionally formatted Excel spreadsheets with complex formulas. Create budgets, trackers, reports, and data analysis templates in seconds without manual work.",
+    featuresTitle: "Key Excel AI Features",
     features: [
-      "Instant Excel spreadsheet generation with advanced formula integration",
-      "Smart Excel Formula Generator for complex calculations and data analysis",
-      "Professional templates with pre-built Excel formulas for common business needs",
-      "Automated data organization with intelligent Excel formula suggestions",
-      "Custom Excel formulas and functions integration powered by our Excel Formula Generator"
+      "AI-powered spreadsheet creation with formula integration",
+      "Smart formula suggestions for complex calculations",
+      "Professional formatting and data organization",
+      "Compatible with all Excel versions",
+      "Time-saving templates for common business needs"
     ],
-    formTitle: "Describe your Excel requirements and formula needs",
-    formPlaceholder: "Example: Create a sales data table with product name, price, quantity sold, and total revenue formula...",
-    generateButton: "Generate Excel with Formulas",
-    benefitsTitle: "Why Choose Our Excel Formula Generator",
+    formTitle: "Describe what you need",
+    formPlaceholder: "Example: Create a sales tracker with product name, price, quantity, and total revenue formula...",
+    generateButton: "Generate Excel File",
+    benefitsTitle: "Why Choose ExcelEasy AI Generator",
     timeSaving: {
-      title: "Save Time",
-      description: "Excel Formula Generator creates complex formulas in seconds, eliminating the need for manual coding and debugging."
+      title: "Save Hours of Work",
+      description: "Our Excel AI creates complex spreadsheets in seconds that would take hours to build manually."
     },
     accuracy: {
-      title: "Improve Accuracy",
-      description: "Our Excel Formula Generator creates optimized formulas that reduce errors and calculation issues."
+      title: "Error-Free Formulas",
+      description: "AI-generated Excel formulas are optimized for accuracy and performance."
     },
     forEveryone: {
       title: "For All Skill Levels",
-      description: "Whether you're an Excel novice or expert, Excel Formula Generator helps you create professional-grade spreadsheets."
+      description: "Whether you're new to Excel or an expert, our AI helps you create professional-quality spreadsheets."
     },
-    testimonialsTitle: "Excel Formula Generator User Testimonials",
+    testimonialsTitle: "What Users Say About Our Excel AI",
     testimonials: [
       {
-        name: "John D., Financial Manager",
+        name: "Michael R., Financial Analyst",
         rating: 5,
-        comment: "Excel Formula Generator has completely transformed how I work. Complex formulas that used to take hours to write now take minutes. Excel Formula Generator is a must-have tool for every finance professional!"
+        comment: "This Excel AI tool has revolutionized how I build financial models. What used to take hours now takes minutes!"
       },
       {
-        name: "Sarah L., Data Analyst",
+        name: "Sarah K., Data Scientist",
         rating: 5,
-        comment: "As a data analyst, I work with Excel formulas daily. Excel Formula Generator not only saves me time but has taught me more efficient ways to write formulas. Highly recommend this Excel Formula Generator!"
+        comment: "As someone who works with Excel formulas daily, this AI tool has been a game-changer for efficiency and accuracy."
       },
       {
-        name: "Michael T., Small Business Owner",
+        name: "David L., Small Business Owner",
         rating: 4,
-        comment: "I'm not an Excel expert, but Excel Formula Generator allows me to create professional financial reports and budgets. This Excel Formula Generator is very intuitive, even for beginners."
+        comment: "I'm not an Excel expert, but this tool lets me create professional financial reports and budgets with ease."
       }
     ],
-    resourcesTitle: "Excel Formula Generator Learning Resources",
+    resourcesTitle: "Excel AI Resources",
     resources: [
       {
-        title: "Excel Formula Generator Getting Started Guide",
+        title: "Getting Started with Excel AI",
         type: "guide",
-        description: "Learn how to use Excel Formula Generator to create your first intelligent spreadsheet"
+        description: "Learn how to create your first AI-powered Excel spreadsheet"
       },
       {
-        title: "Excel Formula Generator Video Tutorials",
+        title: "Excel AI Video Tutorials",
         type: "video",
-        description: "Watch our video series to master advanced features of Excel Formula Generator"
+        description: "Watch our video series to master advanced Excel AI features"
       },
       {
-        title: "Excel Formula Generator Template Library",
+        title: "Excel Template Library",
         type: "templates",
-        description: "Download pre-made Excel formula templates to jumpstart your projects"
+        description: "Download pre-built Excel templates to jumpstart your projects"
       },
       {
-        title: "Excel Formula Generator FAQ",
+        title: "Excel AI FAQ",
         type: "faq",
-        description: "Find answers to common questions about using Excel Formula Generator"
+        description: "Find answers to common questions about using our Excel AI tools"
       }
     ]
   };
-  
-  // 根据当前语言选择内容
-  const content = currentLanguage.startsWith('zh') ? zhContent : enContent;
-  
+
+  // 选择当前语言的内容
+  const content = currentLanguage === 'zh' ? zhContent : enContent;
+
   // 渲染星级评分
   const renderStars = (rating: number) => {
     return Array(5).fill(0).map((_, i) => (
       <Star 
         key={i} 
-        className={`h-5 w-5 ${i < rating ? 'text-yellow-500 fill-yellow-500' : 'text-gray-300'}`} 
+        className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
       />
     ));
   };
-  
+
   // 渲染资源图标
   const renderResourceIcon = (type: string) => {
-    switch(type) {
+    switch (type) {
       case 'guide':
-        return <BookOpen className="h-5 w-5 text-blue-600" />;
+        return <BookOpen className="w-6 h-6 text-blue-600" />;
       case 'video':
-        return <Video className="h-5 w-5 text-blue-600" />;
+        return <Video className="w-6 h-6 text-blue-600" />;
       case 'templates':
+        return <Download className="w-6 h-6 text-blue-600" />;
       case 'faq':
+        return <ChevronDown className="w-6 h-6 text-blue-600" />;
       default:
-        return <Download className="h-5 w-5 text-blue-600" />;
+        return <FileSpreadsheet className="w-6 h-6 text-blue-600" />;
     }
   };
-  
+
   return (
     <>
-      <PageSEO 
-        page="workspace"
-        lastModified="2024-03-20"
-      />
-      
+      <PageSEO page="workspace" />
+
+      <Breadcrumb />
+
       {/* Hero Section */}
-      <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
+              <FileSpreadsheet className="h-5 w-5 mr-2" />
+              <span className="text-sm font-medium">Excel AI Tool</span>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {content.title}
             </h1>
@@ -202,6 +211,16 @@ const AiExcelGenerator: React.FC = () => {
             <p className="text-lg text-gray-700 mb-8">
               {content.description}
             </p>
+
+            <div className="mt-8">
+              <Link 
+                to="#generator-form" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Try Excel AI Generator
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -229,8 +248,8 @@ const AiExcelGenerator: React.FC = () => {
         </div>
       </section>
 
-      {/* Generator Form Section */}
-      <section className="py-12 bg-gray-50">
+      {/* Generator Form Section - 添加ID使锚点链接工作 */}
+      <section id="generator-form" className="py-12 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
@@ -242,8 +261,9 @@ const AiExcelGenerator: React.FC = () => {
                 placeholder={content.formPlaceholder}
               />
               <div className="mt-6">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
                   {content.generateButton}
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
               </div>
             </div>
@@ -333,6 +353,9 @@ const AiExcelGenerator: React.FC = () => {
 
       {/* User Comments Section */}
       <UserComments />
+
+      {/* 添加全局反馈组件 */}
+      <FeedbackWidget />
     </>
   );
 };
